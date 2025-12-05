@@ -19,17 +19,23 @@ export async function generatePlan(
   const ai = new GoogleGenAI({ apiKey: apiKey.trim() });
 
   const prompt = `
-Мета: ${goal}
-Дедлайн: ${deadline}
-Контекст: ${context || "нема"}
+Ти — генератор JSON.
 
-Згенеруй покроковий план у форматі JSON:
+Відповідай ТІЛЬКИ у валідному JSON форматі.
+Без пояснень, без тексту, без вступу.
 
+Схема:
 {
   "tasks": [
     { "title": "", "description": "", "dueDate": "" }
   ]
 }
+
+Мета: "${goal}"
+Дедлайн: "${deadline}"
+Контекст: "${context || "нема"}"
+
+Згенеруй детальний покроковий план по днях.
 `;
 
   try {
