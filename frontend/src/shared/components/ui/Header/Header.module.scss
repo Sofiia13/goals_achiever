@@ -1,0 +1,55 @@
+.header {
+  padding: 16px 24px;
+  background-color: $secondary-color;
+  border-radius: 50px;
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    font-size: 18px;
+    font-weight: 500;
+    color: $paragraph-color;
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.15s ease;
+
+    &:hover {
+      color: $tertiary-color;
+      transform: translateY(-1px);
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &__linkActive {
+    color: $tertiary-color;
+  }
+
+  &__user {
+    cursor: pointer;
+    display: flex;
+    position: absolute;
+    right: 24px;
+    align-items: center;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
