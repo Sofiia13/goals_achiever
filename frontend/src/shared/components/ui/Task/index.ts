@@ -1,1 +1,1 @@
-export { Task } from "./Task";
+export { TaskItem } from "./TaskItem";
