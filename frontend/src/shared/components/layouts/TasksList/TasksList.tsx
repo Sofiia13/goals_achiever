@@ -1,6 +1,6 @@
 import type React from "react";
 import type { Task } from "../../../types/api.types";
-import { TaskItem } from "../../ui/Task/Task";
+import { TaskItem } from "../../ui/Task/TaskItem";
 import styles from "./TasksList.module.scss";
 
 type Props = {
