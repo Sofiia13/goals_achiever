@@ -26,8 +26,10 @@
     transition: color 0.2s ease, transform 0.15s ease;
 
     &:hover {
-      color: $tertiary-color;
+      color: $paragraph-color;
       transform: translateY(-1px);
+      text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+        1px 1px 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000, 1px 0 0 #000;
     }
   }
 
@@ -37,7 +39,9 @@
   }
 
   &__linkActive {
-    color: $tertiary-color;
+    color: $paragraph-color;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+      1px 1px 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000, 1px 0 0 #000;
   }
 
   &__user {
