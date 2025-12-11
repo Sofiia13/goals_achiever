@@ -1,0 +1,60 @@
+.mainLayout {
+  padding: 75px;
+  background-color: $highlight-color;
+  border-radius: 20px;
+
+  &__topSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  &__heading {
+    font-family: "Fredoka Regular", sans-serif;
+    font-size: 42px;
+    align-self: flex-start;
+    // padding-bottom: 40px;
+    margin: 0;
+  }
+
+  &__quote {
+    width: 28%;
+  }
+
+  &__bottomSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 45px;
+  }
+
+  &__tasksList {
+    border-radius: 20px;
+    background-color: $paragraph-color;
+    padding-inline: 50px;
+    padding-block: 30px;
+    width: 60%;
+
+    &__title {
+      font-family: "Fredoka Regular", sans-serif;
+      font-size: 24px;
+      color: $main-color;
+      margin: 0;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__goalProgress {
+    padding-inline: 20px;
+    align-self: flex-end;
+    justify-content: center;
+  }
+
+  &__daysLeft {
+    font-family: "Fredoka Regular", sans-serif;
+    font-size: 24px;
+    color: $stroke-color;
+    margin: 0;
+  }
+}
