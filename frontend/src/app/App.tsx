@@ -1,13 +1,14 @@
-import { Button } from "../shared/components/ui/Button";
+import { MainLayout } from "../shared/components/layouts/MainLayout";
 import { Header } from "../shared/components/ui/Header";
-import "./App.css";
+import styles from "./App.module.scss";
 
 function App() {
   return (
-    <>
+    <div className={styles.app}>
       <Header />
-      <Button buttonText="Some text" onClick={() => alert("Button clicked!")} />
-    </>
+
+      <MainLayout />
+    </div>
   );
 }
 
