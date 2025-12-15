@@ -1,0 +1,45 @@
+.authForm {
+  width: 100%;
+  max-width: 420px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  padding: 24px;
+  border-radius: 12px;
+
+  background-color: $highlight-color;
+  border: 2px solid $paragraph-color;
+
+  &__title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+
+  &__fields {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__text {
+    text-align: center;
+    color: $stroke-color;
+  }
+
+  &__link {
+    color: $paragraph-color;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  &__submit {
+    margin-top: 8px;
+  }
+}
