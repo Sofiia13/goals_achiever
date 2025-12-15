@@ -1,6 +1,5 @@
 generator client {
   provider = "prisma-client-js"
-  output   = "../src/generated/prisma"
 }
 
 datasource db {
@@ -8,12 +7,13 @@ datasource db {
 }
 
 model User {
-  id        Int      @id @default(autoincrement())
-  name      String
-  email     String   @unique
-  password  String
-  createdAt DateTime @default(now())
-  goals     Goal[]
+  id           Int      @id @default(autoincrement())
+  name         String
+  email        String   @unique
+  password     String
+  refreshToken String?  // для refresh токену
+  createdAt    DateTime @default(now())
+  goals        Goal[]
 }
 
 model Goal {
