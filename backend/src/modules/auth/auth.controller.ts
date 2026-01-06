@@ -6,11 +6,11 @@ const authService = new AuthService();
 export class AuthController {
   static async register(req: Request, res: Response) {
     try {
-      const { email, password, firstName, lastName } = req.body;
-      
+      const { email, password, firstName, lastName, confirmPassword } = req.body;
+
       console.log(req.body);
 
-      const result = await authService.register(email, password, firstName, lastName);
+      const result = await authService.register(email, password, firstName, lastName, confirmPassword);
       res.json(result);
     } catch (err: any) {
       res.status(400).json({ message: err.message });

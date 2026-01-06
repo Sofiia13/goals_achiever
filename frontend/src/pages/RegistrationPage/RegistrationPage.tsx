@@ -22,6 +22,7 @@ export const RegistrationPage: React.FC = () => {
         password,
         firstName,
         lastName,
+        confirmPassword,
       });
 
       localStorage.setItem("accessToken", data.accessToken);

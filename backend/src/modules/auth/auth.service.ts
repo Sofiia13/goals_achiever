@@ -1,9 +1,8 @@
-
 import { hashPassword } from "../../utils/hash.utils.js";
 import { generateTokenPair } from "../../utils/jwt.utils.js";
 import bcrypt from "bcryptjs";
 
-import { prisma } from '../../prisma.js';
+import { prisma } from "../../prisma.js";
 
 export class AuthService {
   /**
@@ -13,10 +12,18 @@ export class AuthService {
     email: string,
     password: string,
     firstName?: string,
-    lastName?: string
+    lastName?: string,
+    confirmPassword?: string,
   ) {
     const existingUser = await prisma.user.findUnique({ where: { email } });
-    if (existingUser) throw new Error("User already exists");
+
+    if (existingUser) {
+      throw { status: 400, message: "Користувач з таким email вже існує" };
+    }
+
+    if (password !== confirmPassword) {
+      throw { status: 400, message: "Паролі не співпадають" };
+    }
 
     const hashedPassword = await hashPassword(password);
 

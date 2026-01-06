@@ -6,6 +6,7 @@ export const authApi = {
     password: string;
     firstName?: string;
     lastName?: string;
+    confirmPassword?: string;
   }) {
     console.log("REGISTER DATA:", data);
 
