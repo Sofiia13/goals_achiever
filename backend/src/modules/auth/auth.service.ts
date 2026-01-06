@@ -1,8 +1,9 @@
-import { PrismaClient } from "@prisma/client";
+
 import { hashPassword } from "../../utils/hash.utils.js";
 import { generateTokenPair } from "../../utils/jwt.utils.js";
+import bcrypt from "bcryptjs";
 
-const prisma = new PrismaClient();
+import { prisma } from '../../prisma.js';
 
 export class AuthService {
   /**
@@ -23,7 +24,7 @@ export class AuthService {
       data: {
         email,
         password: hashedPassword,
-        name: `${firstName || ''} ${lastName || ''}`.trim(),
+        name: `${firstName || ""} ${lastName || ""}`.trim(),
       },
     });
 
@@ -51,13 +52,51 @@ export class AuthService {
    * Логін користувача
    */
   async login(email: string, password: string) {
-    // Логіка логіну користувача
+    const user = await prisma.user.findUnique({ where: { email } });
+    if (!user) throw new Error("Invalid credentials");
+
+    const isPasswordValid = await bcrypt.compare(password, user.password);
+    if (!isPasswordValid) throw new Error("Invalid credentials");
+
+    const { accessToken, refreshToken } = generateTokenPair(
+      user.id,
+      user.email
+    );
+    await prisma.user.update({
+      where: { id: user.id },
+      data: { refreshToken },
+    });
+
+    return {
+      accessToken,
+      refreshToken,
+      user: {
+        id: user.id,
+        email: user.email,
+        name: user.name,
+      },
+    };
   }
 
   /**
    * Оновлення токенів
    */
   async refreshTokens(refreshToken: string) {
-    // Логіка оновлення токенів
+    const user = await prisma.user.findFirst({ where: { refreshToken } });
+    if (!user) throw new Error("Invalid refresh token");
+
+    const { accessToken, refreshToken: newRefreshToken } = generateTokenPair(
+      user.id,
+      user.email
+    );
+    await prisma.user.update({
+      where: { id: user.id },
+      data: { refreshToken: newRefreshToken },
+    });
+
+    return {
+      accessToken,
+      refreshToken: newRefreshToken,
+    };
   }
 }

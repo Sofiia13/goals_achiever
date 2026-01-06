@@ -12,7 +12,7 @@ model User {
   name         String
   email        String   @unique
   password     String
-  refreshToken String?  // для refresh токену
+  refreshToken String? // для refresh токену
   createdAt    DateTime @default(now())
   goals        Goal[]
 }

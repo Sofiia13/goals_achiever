@@ -4,18 +4,23 @@
     // File Layout
     "rootDir": "./src",
     "outDir": "./dist",
+    "allowSyntheticDefaultImports": true,
 
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
-    "module": "nodenext",
-    "target": "esnext",
+
     "types": ["node"],
     // For nodejs:
     // "lib": ["esnext"],
     // "types": ["node"],
     // and npm install -D @types/node
 
+    "target": "ES2023",
+    "module": "ESNext",
+    "moduleResolution": "Node",
     "esModuleInterop": true,
+    "strict": true,
+    "skipLibCheck": true,
 
     // Other Outputs
     "sourceMap": true,
@@ -35,8 +40,8 @@
     // "noPropertyAccessFromIndexSignature": true,
 
     // Recommended Options
-    "strict": true,
     "moduleDetection": "force",
-    "skipLibCheck": true
-  }
+
+  },
+  "include": ["src/**/*", "prisma.config.ts"]
 }
