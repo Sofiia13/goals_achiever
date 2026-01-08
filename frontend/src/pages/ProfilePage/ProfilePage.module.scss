@@ -1,0 +1,23 @@
+.profilePage {
+  padding: 20px;
+
+  &__main {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 100px;
+    justify-content: center;
+  }
+
+  &__img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+
+  &__info {
+    margin-bottom: 20px;
+  }
+}

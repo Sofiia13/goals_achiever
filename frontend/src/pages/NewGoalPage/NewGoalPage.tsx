@@ -8,11 +8,20 @@ export const NewGoalPage: React.FC = () => {
       <h1 className={styles.newGoalPage__title}>
         Write you goal and time duration
       </h1>
-      <Input
-        value=""
-        onChange={() => {}}
-        placeholder="Tell what you want to achieve"
-      />
+      <div>
+        <Input
+          value=""
+          onChange={() => {}}
+          placeholder="Tell what you want to achieve"
+        />
+
+        <Input
+          type="date"
+          value=""
+          onChange={() => {}}
+          placeholder="Set the deadline for your goal"
+        />
+      </div>
     </div>
   );
 };
