@@ -20,6 +20,8 @@ export const LoginPage: React.FC = () => {
       localStorage.setItem("refreshToken", data.refreshToken);
 
       navigate("/tasks");
+
+      
     } catch (err: any) {
       console.error("LOGIN ERROR:", err.response?.data?.message || err.message);
       alert(err.response?.data?.message || "Помилка логіну");

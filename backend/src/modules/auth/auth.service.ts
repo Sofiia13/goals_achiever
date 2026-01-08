@@ -1,6 +1,7 @@
 import { hashPassword } from "../../utils/hash.utils.js";
-import { generateTokenPair } from "../../utils/jwt.utils.js";
+import { generateTokenPair, verifyAccessToken } from "../../utils/jwt.utils.js";
 import bcrypt from "bcryptjs";
+import jwt from "jsonwebtoken";
 
 import { prisma } from "../../prisma.js";
 
@@ -13,7 +14,7 @@ export class AuthService {
     password: string,
     firstName?: string,
     lastName?: string,
-    confirmPassword?: string,
+    confirmPassword?: string
   ) {
     const existingUser = await prisma.user.findUnique({ where: { email } });
 
@@ -105,5 +106,19 @@ export class AuthService {
       accessToken,
       refreshToken: newRefreshToken,
     };
+  }
+
+  async getUserFromToken(token: string) {
+    try {
+      const decoded = verifyAccessToken(token);
+      const userId = decoded.userId;
+      if (!userId) return null;
+
+      const user = await prisma.user.findUnique({ where: { id: userId } });
+      return user;
+    } catch (err: any) {
+      console.log("TOKEN ERROR:", err.message);
+      return null;
+    }
   }
 }

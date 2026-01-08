@@ -5,6 +5,7 @@ import styles from "./App.module.scss";
 import { NewGoalPage } from "../pages/NewGoalPage/NewGoalPage";
 import { RegistrationPage } from "../pages/RegistrationPage";
 import { LoginPage } from "../pages/LoginPage";
+import { ProfilePage } from "../pages/ProfilePage";
 
 function App() {
   const location = useLocation();
@@ -21,6 +22,7 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/tasks" element={<MainLayout />} />
         <Route path="/goals" element={<NewGoalPage />} />
+        <Route path="/profile" element={<ProfilePage />} />
       </Routes>
     </div>
   );
