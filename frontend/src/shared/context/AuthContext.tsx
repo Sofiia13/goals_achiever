@@ -1,5 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const AuthContext = createContext<AuthContextType | null>(null);
 
@@ -39,13 +40,16 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
       .catch(() => {
         // console.log("ME ERROR:", err.response?.status, err.message);
         setUser(null);
-        // localStorage.removeItem("accessToken");
+        localStorage.removeItem("accessToken");
       });
   }, []);
+
+  const navigate = useNavigate();
 
   const logout = () => {
     setUser(null);
     localStorage.removeItem("accessToken");
+    navigate("/login");
   };
 
   return (
