@@ -15,6 +15,7 @@ model User {
   refreshToken String?  // для refresh токену
   createdAt    DateTime @default(now())
   goals        Goal[]
+  photoUrl     String?
 }
 
 model Goal {
