@@ -13,6 +13,7 @@ type InputProps = {
 
 export const Input: React.FC<InputProps> = ({
   onChange, 
+  value,
   placeholder = "",
   type = "text",
   label = "",
@@ -33,6 +34,7 @@ export const Input: React.FC<InputProps> = ({
       <input
         className={inputClass}
         type={type}
+        value={value}
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
       />

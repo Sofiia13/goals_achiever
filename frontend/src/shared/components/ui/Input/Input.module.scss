@@ -33,4 +33,14 @@
     cursor: not-allowed;
     border-color: #e0e0e0;
   }
+
+  &::-webkit-datetime-edit {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+  }
+
+  &::-webkit-calendar-picker-indicator {
+    filter: opacity(0.7);
+  }
 }
