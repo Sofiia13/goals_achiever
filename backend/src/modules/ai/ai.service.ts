@@ -76,8 +76,6 @@ Generate a realistic, detailed step-by-step plan.
               status: "pending",
               description: task.description || "",
               dueDate: task.dueDate ? new Date(task.dueDate) : null,
-              order: task.order || 0,
-              priority: task.priority || 1,
             })),
           },
         },
