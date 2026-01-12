@@ -6,6 +6,7 @@ import { NewGoalPage } from "../pages/NewGoalPage/NewGoalPage";
 import { RegistrationPage } from "../pages/RegistrationPage";
 import { LoginPage } from "../pages/LoginPage";
 import { ProfilePage } from "../pages/ProfilePage";
+import { RoadMap } from "../shared/components/layouts/RoadMap";
 
 function App() {
   const location = useLocation();
@@ -23,6 +24,7 @@ function App() {
         <Route path="/tasks" element={<MainLayout />} />
         <Route path="/goals" element={<NewGoalPage />} />
         <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/roadmaps" element={<RoadMap />} />
       </Routes>
     </div>
   );
