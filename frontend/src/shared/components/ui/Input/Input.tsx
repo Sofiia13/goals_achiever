@@ -7,15 +7,17 @@ type InputProps = {
   placeholder?: string;
   type?: string;
   label?: string;
+  textarea?: boolean;
   className?: string;
   id?: string;
 };
 
 export const Input: React.FC<InputProps> = ({
-  onChange, 
+  onChange,
   value,
   placeholder = "",
   type = "text",
+  textarea = false,
   label = "",
   className = "",
   id,
@@ -31,13 +33,22 @@ export const Input: React.FC<InputProps> = ({
           {label}
         </label>
       )}
-      <input
-        className={inputClass}
-        type={type}
-        value={value}
-        onChange={(e) => onChange(e.target.value)}
-        placeholder={placeholder}
-      />
+      {textarea ? (
+        <textarea
+          className={inputClass}
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
+          placeholder={placeholder}
+        />
+      ) : (
+        <input
+          className={inputClass}
+          type={type}
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
+          placeholder={placeholder}
+        />
+      )}
     </>
   );
 };

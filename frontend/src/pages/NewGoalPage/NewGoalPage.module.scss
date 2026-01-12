@@ -18,4 +18,13 @@
   &__dateInput {
     flex: 1;
   }
+
+  &__goalContextInput {
+    resize: vertical;
+  }
+
+  &__createButton {
+    margin-top: 20px;
+    width: 200px;
+  }
 }

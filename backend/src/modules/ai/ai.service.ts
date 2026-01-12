@@ -1,6 +1,9 @@
 import { GoogleGenAI } from "@google/genai";
+import { prisma } from "../../prisma";
 
-export async function generatePlan(
+export class AiService {
+  static async generatePlan(
+  userId: number,
   goal: string,
   deadline: string,
   context?: string
@@ -54,7 +57,25 @@ export async function generatePlan(
       .replace(/^```json\s*/, "")
       .replace(/```$/, "");
 
-    return JSON.parse(cleaned);
+    const planJson = JSON.parse(cleaned);
+
+    const goalRecord = await prisma.goal.create({
+      data: {
+        title: goal,
+        context: context || "",
+        deadline: new Date(deadline),
+        userId,
+        tasks: {
+          create: planJson.tasks.map((task: any) => ({
+            title: task.title,
+            status: "pending",
+          })),
+        },
+      },
+      include: { tasks: true },
+    });
+
+    return goalRecord;
   } catch (err) {
     console.error("Failed to generate plan:", err);
 
@@ -65,3 +86,5 @@ export async function generatePlan(
     return { tasks: [] };
   }
 }
+}
+

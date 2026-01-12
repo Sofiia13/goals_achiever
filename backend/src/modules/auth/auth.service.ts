@@ -107,18 +107,4 @@ export class AuthService {
       refreshToken: newRefreshToken,
     };
   }
-
-  async getUserFromToken(token: string) {
-    try {
-      const decoded = verifyAccessToken(token);
-      const userId = decoded.userId;
-      if (!userId) return null;
-
-      const user = await prisma.user.findUnique({ where: { id: userId } });
-      return user;
-    } catch (err: any) {
-      console.log("TOKEN ERROR:", err.message);
-      return null;
-    }
-  }
 }

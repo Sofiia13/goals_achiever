@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-import aiRouter from "./modules/ai/ai.controller.js";
+import { aiRouter } from "./modules/ai/ai.routes.js";
 import { authRouter } from "./modules/auth/auth.routes.js";
 import path from "path";
 import { fileURLToPath } from "url";
