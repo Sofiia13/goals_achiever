@@ -1,0 +1,11 @@
+.item {
+  // border-radius: 100%;
+  padding: 1px;
+  background-color: $tertiary-color;
+  color: $background-color;
+
+  &__active {
+    background-color: $highlight-color;
+    color: $main-color;
+  }
+}
