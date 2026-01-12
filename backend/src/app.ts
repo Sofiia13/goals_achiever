@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import { aiRouter } from "./modules/ai/ai.routes.js";
 import { authRouter } from "./modules/auth/auth.routes.js";
 import { goalRouter } from "./modules/goal/goal.routes.js";
+import { taskRouter } from "./modules/task/task.routes.js";
 import path from "path";
 import { fileURLToPath } from "url";
 
@@ -36,6 +37,7 @@ app.get("/", (req, res) => {
 app.use("/api/ai", aiRouter);
 app.use("/auth", authRouter);
 app.use("/goals", goalRouter);
+app.use("/tasks", taskRouter);
 
 app.use((req, res) => {
   console.log("404 - Route not found:", req.path);
