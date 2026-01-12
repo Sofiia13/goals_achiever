@@ -4,6 +4,6 @@ import { Router } from "express";
 
 const router = Router();
 
-router.get("/", authMiddleware, TaskController.getTasksByGoalId);
+router.get("/goals/:goalId/", authMiddleware, TaskController.getTasksByGoalId);
 
 export const taskRouter = router;
