@@ -1,7 +1,6 @@
 import { hashPassword } from "../../utils/hash.utils.js";
 import { generateTokenPair, verifyAccessToken } from "../../utils/jwt.utils.js";
 import bcrypt from "bcryptjs";
-import jwt from "jsonwebtoken";
 
 import { prisma } from "../../prisma.js";
 
