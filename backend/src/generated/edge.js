@@ -98,23 +98,26 @@ exports.Prisma.UserScalarFieldEnum = {
   email: 'email',
   password: 'password',
   refreshToken: 'refreshToken',
-  createdAt: 'createdAt'
+  createdAt: 'createdAt',
+  photoUrl: 'photoUrl'
 };
 
 exports.Prisma.GoalScalarFieldEnum = {
   id: 'id',
   title: 'title',
-  description: 'description',
   context: 'context',
   deadline: 'deadline',
   userId: 'userId',
-  createdAt: 'createdAt'
+  createdAt: 'createdAt',
+  completedAt: 'completedAt'
 };
 
 exports.Prisma.TaskScalarFieldEnum = {
   id: 'id',
   title: 'title',
+  description: 'description',
   status: 'status',
+  dueDate: 'dueDate',
   goalId: 'goalId',
   generatedAt: 'generatedAt'
 };
@@ -148,10 +151,10 @@ const config = {
   "clientVersion": "7.2.0",
   "engineVersion": "0c8ef2ce45c83248ab3df073180d5eda9e8be7a3",
   "activeProvider": "postgresql",
-  "inlineSchema": "generator client {\n  provider = \"prisma-client-js\"\n  output   = \"../src/generated\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n}\n\nmodel User {\n  id           Int      @id @default(autoincrement())\n  name         String\n  email        String   @unique\n  password     String\n  refreshToken String? // для refresh токену\n  createdAt    DateTime @default(now())\n  goals        Goal[]\n}\n\nmodel Goal {\n  id          Int      @id @default(autoincrement())\n  title       String\n  description String?\n  context     String?\n  deadline    DateTime\n  userId      Int\n  createdAt   DateTime @default(now())\n  user        User     @relation(fields: [userId], references: [id])\n  tasks       Task[]\n}\n\nmodel Task {\n  id          Int      @id @default(autoincrement())\n  title       String\n  status      String   @default(\"pending\")\n  goalId      Int\n  generatedAt DateTime @default(now())\n  goal        Goal     @relation(fields: [goalId], references: [id])\n}\n"
+  "inlineSchema": "generator client {\n  provider = \"prisma-client-js\"\n  output   = \"../src/generated\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n}\n\nmodel User {\n  id           Int      @id @default(autoincrement())\n  name         String\n  email        String   @unique\n  password     String\n  refreshToken String? // для refresh токену\n  createdAt    DateTime @default(now())\n  goals        Goal[]\n  photoUrl     String?\n}\n\nmodel Goal {\n  id          Int       @id @default(autoincrement())\n  title       String\n  context     String?\n  deadline    DateTime\n  userId      Int\n  createdAt   DateTime  @default(now())\n  user        User      @relation(fields: [userId], references: [id])\n  tasks       Task[]\n  completedAt DateTime?\n}\n\nmodel Task {\n  id          Int       @id @default(autoincrement())\n  title       String\n  description String?\n  status      String    @default(\"pending\")\n  dueDate     DateTime?\n  goalId      Int\n  generatedAt DateTime  @default(now())\n  goal        Goal      @relation(fields: [goalId], references: [id])\n}\n"
 }
 
-config.runtimeDataModel = JSON.parse("{\"models\":{\"User\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"name\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"email\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"password\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"refreshToken\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"goals\",\"kind\":\"object\",\"type\":\"Goal\",\"relationName\":\"GoalToUser\"}],\"dbName\":null},\"Goal\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"title\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"description\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"context\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"deadline\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"userId\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"user\",\"kind\":\"object\",\"type\":\"User\",\"relationName\":\"GoalToUser\"},{\"name\":\"tasks\",\"kind\":\"object\",\"type\":\"Task\",\"relationName\":\"GoalToTask\"}],\"dbName\":null},\"Task\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"title\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"status\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"goalId\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"generatedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"goal\",\"kind\":\"object\",\"type\":\"Goal\",\"relationName\":\"GoalToTask\"}],\"dbName\":null}},\"enums\":{},\"types\":{}}")
+config.runtimeDataModel = JSON.parse("{\"models\":{\"User\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"name\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"email\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"password\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"refreshToken\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"goals\",\"kind\":\"object\",\"type\":\"Goal\",\"relationName\":\"GoalToUser\"},{\"name\":\"photoUrl\",\"kind\":\"scalar\",\"type\":\"String\"}],\"dbName\":null},\"Goal\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"title\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"context\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"deadline\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"userId\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"user\",\"kind\":\"object\",\"type\":\"User\",\"relationName\":\"GoalToUser\"},{\"name\":\"tasks\",\"kind\":\"object\",\"type\":\"Task\",\"relationName\":\"GoalToTask\"},{\"name\":\"completedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"}],\"dbName\":null},\"Task\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"title\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"description\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"status\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"dueDate\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"goalId\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"generatedAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"},{\"name\":\"goal\",\"kind\":\"object\",\"type\":\"Goal\",\"relationName\":\"GoalToTask\"}],\"dbName\":null}},\"enums\":{},\"types\":{}}")
 defineDmmfProperty(exports.Prisma, config.runtimeDataModel)
 config.compilerWasm = {
   getRuntime: async () => require('./query_compiler_bg.js'),

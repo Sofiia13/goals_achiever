@@ -1,8 +1,12 @@
 import { Request, Response } from "express";
 import { AiService } from "./ai.service.js";
+import { Models } from "@google/genai";
 
 export class AiController {
   static async generatePlan(req: Request, res: Response) {
+    // const models = await Models.list();
+    // console.log("Models:", models);
+
     console.log("=== POST /plan endpoint hit ===");
     console.log("Request body:", req.body);
 

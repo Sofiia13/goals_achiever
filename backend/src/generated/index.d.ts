@@ -1132,6 +1132,7 @@ export namespace Prisma {
     password: string | null
     refreshToken: string | null
     createdAt: Date | null
+    photoUrl: string | null
   }
 
   export type UserMaxAggregateOutputType = {
@@ -1141,6 +1142,7 @@ export namespace Prisma {
     password: string | null
     refreshToken: string | null
     createdAt: Date | null
+    photoUrl: string | null
   }
 
   export type UserCountAggregateOutputType = {
@@ -1150,6 +1152,7 @@ export namespace Prisma {
     password: number
     refreshToken: number
     createdAt: number
+    photoUrl: number
     _all: number
   }
 
@@ -1169,6 +1172,7 @@ export namespace Prisma {
     password?: true
     refreshToken?: true
     createdAt?: true
+    photoUrl?: true
   }
 
   export type UserMaxAggregateInputType = {
@@ -1178,6 +1182,7 @@ export namespace Prisma {
     password?: true
     refreshToken?: true
     createdAt?: true
+    photoUrl?: true
   }
 
   export type UserCountAggregateInputType = {
@@ -1187,6 +1192,7 @@ export namespace Prisma {
     password?: true
     refreshToken?: true
     createdAt?: true
+    photoUrl?: true
     _all?: true
   }
 
@@ -1283,6 +1289,7 @@ export namespace Prisma {
     password: string
     refreshToken: string | null
     createdAt: Date
+    photoUrl: string | null
     _count: UserCountAggregateOutputType | null
     _avg: UserAvgAggregateOutputType | null
     _sum: UserSumAggregateOutputType | null
@@ -1311,6 +1318,7 @@ export namespace Prisma {
     password?: boolean
     refreshToken?: boolean
     createdAt?: boolean
+    photoUrl?: boolean
     goals?: boolean | User$goalsArgs<ExtArgs>
     _count?: boolean | UserCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["user"]>
@@ -1322,6 +1330,7 @@ export namespace Prisma {
     password?: boolean
     refreshToken?: boolean
     createdAt?: boolean
+    photoUrl?: boolean
   }, ExtArgs["result"]["user"]>
 
   export type UserSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
@@ -1331,6 +1340,7 @@ export namespace Prisma {
     password?: boolean
     refreshToken?: boolean
     createdAt?: boolean
+    photoUrl?: boolean
   }, ExtArgs["result"]["user"]>
 
   export type UserSelectScalar = {
@@ -1340,9 +1350,10 @@ export namespace Prisma {
     password?: boolean
     refreshToken?: boolean
     createdAt?: boolean
+    photoUrl?: boolean
   }
 
-  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "email" | "password" | "refreshToken" | "createdAt", ExtArgs["result"]["user"]>
+  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "email" | "password" | "refreshToken" | "createdAt" | "photoUrl", ExtArgs["result"]["user"]>
   export type UserInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     goals?: boolean | User$goalsArgs<ExtArgs>
     _count?: boolean | UserCountOutputTypeDefaultArgs<ExtArgs>
@@ -1362,6 +1373,7 @@ export namespace Prisma {
       password: string
       refreshToken: string | null
       createdAt: Date
+      photoUrl: string | null
     }, ExtArgs["result"]["user"]>
     composites: {}
   }
@@ -1792,6 +1804,7 @@ export namespace Prisma {
     readonly password: FieldRef<"User", 'String'>
     readonly refreshToken: FieldRef<"User", 'String'>
     readonly createdAt: FieldRef<"User", 'DateTime'>
+    readonly photoUrl: FieldRef<"User", 'String'>
   }
     
 
@@ -2247,31 +2260,31 @@ export namespace Prisma {
   export type GoalMinAggregateOutputType = {
     id: number | null
     title: string | null
-    description: string | null
     context: string | null
     deadline: Date | null
     userId: number | null
     createdAt: Date | null
+    completedAt: Date | null
   }
 
   export type GoalMaxAggregateOutputType = {
     id: number | null
     title: string | null
-    description: string | null
     context: string | null
     deadline: Date | null
     userId: number | null
     createdAt: Date | null
+    completedAt: Date | null
   }
 
   export type GoalCountAggregateOutputType = {
     id: number
     title: number
-    description: number
     context: number
     deadline: number
     userId: number
     createdAt: number
+    completedAt: number
     _all: number
   }
 
@@ -2289,31 +2302,31 @@ export namespace Prisma {
   export type GoalMinAggregateInputType = {
     id?: true
     title?: true
-    description?: true
     context?: true
     deadline?: true
     userId?: true
     createdAt?: true
+    completedAt?: true
   }
 
   export type GoalMaxAggregateInputType = {
     id?: true
     title?: true
-    description?: true
     context?: true
     deadline?: true
     userId?: true
     createdAt?: true
+    completedAt?: true
   }
 
   export type GoalCountAggregateInputType = {
     id?: true
     title?: true
-    description?: true
     context?: true
     deadline?: true
     userId?: true
     createdAt?: true
+    completedAt?: true
     _all?: true
   }
 
@@ -2406,11 +2419,11 @@ export namespace Prisma {
   export type GoalGroupByOutputType = {
     id: number
     title: string
-    description: string | null
     context: string | null
     deadline: Date
     userId: number
     createdAt: Date
+    completedAt: Date | null
     _count: GoalCountAggregateOutputType | null
     _avg: GoalAvgAggregateOutputType | null
     _sum: GoalSumAggregateOutputType | null
@@ -2435,11 +2448,11 @@ export namespace Prisma {
   export type GoalSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     title?: boolean
-    description?: boolean
     context?: boolean
     deadline?: boolean
     userId?: boolean
     createdAt?: boolean
+    completedAt?: boolean
     user?: boolean | UserDefaultArgs<ExtArgs>
     tasks?: boolean | Goal$tasksArgs<ExtArgs>
     _count?: boolean | GoalCountOutputTypeDefaultArgs<ExtArgs>
@@ -2448,36 +2461,36 @@ export namespace Prisma {
   export type GoalSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     title?: boolean
-    description?: boolean
     context?: boolean
     deadline?: boolean
     userId?: boolean
     createdAt?: boolean
+    completedAt?: boolean
     user?: boolean | UserDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["goal"]>
 
   export type GoalSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     title?: boolean
-    description?: boolean
     context?: boolean
     deadline?: boolean
     userId?: boolean
     createdAt?: boolean
+    completedAt?: boolean
     user?: boolean | UserDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["goal"]>
 
   export type GoalSelectScalar = {
     id?: boolean
     title?: boolean
-    description?: boolean
     context?: boolean
     deadline?: boolean
     userId?: boolean
     createdAt?: boolean
+    completedAt?: boolean
   }
 
-  export type GoalOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "title" | "description" | "context" | "deadline" | "userId" | "createdAt", ExtArgs["result"]["goal"]>
+  export type GoalOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "title" | "context" | "deadline" | "userId" | "createdAt" | "completedAt", ExtArgs["result"]["goal"]>
   export type GoalInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     user?: boolean | UserDefaultArgs<ExtArgs>
     tasks?: boolean | Goal$tasksArgs<ExtArgs>
@@ -2499,11 +2512,11 @@ export namespace Prisma {
     scalars: $Extensions.GetPayloadResult<{
       id: number
       title: string
-      description: string | null
       context: string | null
       deadline: Date
       userId: number
       createdAt: Date
+      completedAt: Date | null
     }, ExtArgs["result"]["goal"]>
     composites: {}
   }
@@ -2931,11 +2944,11 @@ export namespace Prisma {
   interface GoalFieldRefs {
     readonly id: FieldRef<"Goal", 'Int'>
     readonly title: FieldRef<"Goal", 'String'>
-    readonly description: FieldRef<"Goal", 'String'>
     readonly context: FieldRef<"Goal", 'String'>
     readonly deadline: FieldRef<"Goal", 'DateTime'>
     readonly userId: FieldRef<"Goal", 'Int'>
     readonly createdAt: FieldRef<"Goal", 'DateTime'>
+    readonly completedAt: FieldRef<"Goal", 'DateTime'>
   }
     
 
@@ -3399,7 +3412,9 @@ export namespace Prisma {
   export type TaskMinAggregateOutputType = {
     id: number | null
     title: string | null
+    description: string | null
     status: string | null
+    dueDate: Date | null
     goalId: number | null
     generatedAt: Date | null
   }
@@ -3407,7 +3422,9 @@ export namespace Prisma {
   export type TaskMaxAggregateOutputType = {
     id: number | null
     title: string | null
+    description: string | null
     status: string | null
+    dueDate: Date | null
     goalId: number | null
     generatedAt: Date | null
   }
@@ -3415,7 +3432,9 @@ export namespace Prisma {
   export type TaskCountAggregateOutputType = {
     id: number
     title: number
+    description: number
     status: number
+    dueDate: number
     goalId: number
     generatedAt: number
     _all: number
@@ -3435,7 +3454,9 @@ export namespace Prisma {
   export type TaskMinAggregateInputType = {
     id?: true
     title?: true
+    description?: true
     status?: true
+    dueDate?: true
     goalId?: true
     generatedAt?: true
   }
@@ -3443,7 +3464,9 @@ export namespace Prisma {
   export type TaskMaxAggregateInputType = {
     id?: true
     title?: true
+    description?: true
     status?: true
+    dueDate?: true
     goalId?: true
     generatedAt?: true
   }
@@ -3451,7 +3474,9 @@ export namespace Prisma {
   export type TaskCountAggregateInputType = {
     id?: true
     title?: true
+    description?: true
     status?: true
+    dueDate?: true
     goalId?: true
     generatedAt?: true
     _all?: true
@@ -3546,7 +3571,9 @@ export namespace Prisma {
   export type TaskGroupByOutputType = {
     id: number
     title: string
+    description: string | null
     status: string
+    dueDate: Date | null
     goalId: number
     generatedAt: Date
     _count: TaskCountAggregateOutputType | null
@@ -3573,7 +3600,9 @@ export namespace Prisma {
   export type TaskSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     title?: boolean
+    description?: boolean
     status?: boolean
+    dueDate?: boolean
     goalId?: boolean
     generatedAt?: boolean
     goal?: boolean | GoalDefaultArgs<ExtArgs>
@@ -3582,7 +3611,9 @@ export namespace Prisma {
   export type TaskSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     title?: boolean
+    description?: boolean
     status?: boolean
+    dueDate?: boolean
     goalId?: boolean
     generatedAt?: boolean
     goal?: boolean | GoalDefaultArgs<ExtArgs>
@@ -3591,7 +3622,9 @@ export namespace Prisma {
   export type TaskSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     title?: boolean
+    description?: boolean
     status?: boolean
+    dueDate?: boolean
     goalId?: boolean
     generatedAt?: boolean
     goal?: boolean | GoalDefaultArgs<ExtArgs>
@@ -3600,12 +3633,14 @@ export namespace Prisma {
   export type TaskSelectScalar = {
     id?: boolean
     title?: boolean
+    description?: boolean
     status?: boolean
+    dueDate?: boolean
     goalId?: boolean
     generatedAt?: boolean
   }
 
-  export type TaskOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "title" | "status" | "goalId" | "generatedAt", ExtArgs["result"]["task"]>
+  export type TaskOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "title" | "description" | "status" | "dueDate" | "goalId" | "generatedAt", ExtArgs["result"]["task"]>
   export type TaskInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     goal?: boolean | GoalDefaultArgs<ExtArgs>
   }
@@ -3624,7 +3659,9 @@ export namespace Prisma {
     scalars: $Extensions.GetPayloadResult<{
       id: number
       title: string
+      description: string | null
       status: string
+      dueDate: Date | null
       goalId: number
       generatedAt: Date
     }, ExtArgs["result"]["task"]>
@@ -4053,7 +4090,9 @@ export namespace Prisma {
   interface TaskFieldRefs {
     readonly id: FieldRef<"Task", 'Int'>
     readonly title: FieldRef<"Task", 'String'>
+    readonly description: FieldRef<"Task", 'String'>
     readonly status: FieldRef<"Task", 'String'>
+    readonly dueDate: FieldRef<"Task", 'DateTime'>
     readonly goalId: FieldRef<"Task", 'Int'>
     readonly generatedAt: FieldRef<"Task", 'DateTime'>
   }
@@ -4490,7 +4529,8 @@ export namespace Prisma {
     email: 'email',
     password: 'password',
     refreshToken: 'refreshToken',
-    createdAt: 'createdAt'
+    createdAt: 'createdAt',
+    photoUrl: 'photoUrl'
   };
 
   export type UserScalarFieldEnum = (typeof UserScalarFieldEnum)[keyof typeof UserScalarFieldEnum]
@@ -4499,11 +4539,11 @@ export namespace Prisma {
   export const GoalScalarFieldEnum: {
     id: 'id',
     title: 'title',
-    description: 'description',
     context: 'context',
     deadline: 'deadline',
     userId: 'userId',
-    createdAt: 'createdAt'
+    createdAt: 'createdAt',
+    completedAt: 'completedAt'
   };
 
   export type GoalScalarFieldEnum = (typeof GoalScalarFieldEnum)[keyof typeof GoalScalarFieldEnum]
@@ -4512,7 +4552,9 @@ export namespace Prisma {
   export const TaskScalarFieldEnum: {
     id: 'id',
     title: 'title',
+    description: 'description',
     status: 'status',
+    dueDate: 'dueDate',
     goalId: 'goalId',
     generatedAt: 'generatedAt'
   };
@@ -4618,6 +4660,7 @@ export namespace Prisma {
     password?: StringFilter<"User"> | string
     refreshToken?: StringNullableFilter<"User"> | string | null
     createdAt?: DateTimeFilter<"User"> | Date | string
+    photoUrl?: StringNullableFilter<"User"> | string | null
     goals?: GoalListRelationFilter
   }
 
@@ -4628,6 +4671,7 @@ export namespace Prisma {
     password?: SortOrder
     refreshToken?: SortOrderInput | SortOrder
     createdAt?: SortOrder
+    photoUrl?: SortOrderInput | SortOrder
     goals?: GoalOrderByRelationAggregateInput
   }
 
@@ -4641,6 +4685,7 @@ export namespace Prisma {
     password?: StringFilter<"User"> | string
     refreshToken?: StringNullableFilter<"User"> | string | null
     createdAt?: DateTimeFilter<"User"> | Date | string
+    photoUrl?: StringNullableFilter<"User"> | string | null
     goals?: GoalListRelationFilter
   }, "id" | "email">
 
@@ -4651,6 +4696,7 @@ export namespace Prisma {
     password?: SortOrder
     refreshToken?: SortOrderInput | SortOrder
     createdAt?: SortOrder
+    photoUrl?: SortOrderInput | SortOrder
     _count?: UserCountOrderByAggregateInput
     _avg?: UserAvgOrderByAggregateInput
     _max?: UserMaxOrderByAggregateInput
@@ -4668,6 +4714,7 @@ export namespace Prisma {
     password?: StringWithAggregatesFilter<"User"> | string
     refreshToken?: StringNullableWithAggregatesFilter<"User"> | string | null
     createdAt?: DateTimeWithAggregatesFilter<"User"> | Date | string
+    photoUrl?: StringNullableWithAggregatesFilter<"User"> | string | null
   }
 
   export type GoalWhereInput = {
@@ -4676,11 +4723,11 @@ export namespace Prisma {
     NOT?: GoalWhereInput | GoalWhereInput[]
     id?: IntFilter<"Goal"> | number
     title?: StringFilter<"Goal"> | string
-    description?: StringNullableFilter<"Goal"> | string | null
     context?: StringNullableFilter<"Goal"> | string | null
     deadline?: DateTimeFilter<"Goal"> | Date | string
     userId?: IntFilter<"Goal"> | number
     createdAt?: DateTimeFilter<"Goal"> | Date | string
+    completedAt?: DateTimeNullableFilter<"Goal"> | Date | string | null
     user?: XOR<UserScalarRelationFilter, UserWhereInput>
     tasks?: TaskListRelationFilter
   }
@@ -4688,11 +4735,11 @@ export namespace Prisma {
   export type GoalOrderByWithRelationInput = {
     id?: SortOrder
     title?: SortOrder
-    description?: SortOrderInput | SortOrder
     context?: SortOrderInput | SortOrder
     deadline?: SortOrder
     userId?: SortOrder
     createdAt?: SortOrder
+    completedAt?: SortOrderInput | SortOrder
     user?: UserOrderByWithRelationInput
     tasks?: TaskOrderByRelationAggregateInput
   }
@@ -4703,11 +4750,11 @@ export namespace Prisma {
     OR?: GoalWhereInput[]
     NOT?: GoalWhereInput | GoalWhereInput[]
     title?: StringFilter<"Goal"> | string
-    description?: StringNullableFilter<"Goal"> | string | null
     context?: StringNullableFilter<"Goal"> | string | null
     deadline?: DateTimeFilter<"Goal"> | Date | string
     userId?: IntFilter<"Goal"> | number
     createdAt?: DateTimeFilter<"Goal"> | Date | string
+    completedAt?: DateTimeNullableFilter<"Goal"> | Date | string | null
     user?: XOR<UserScalarRelationFilter, UserWhereInput>
     tasks?: TaskListRelationFilter
   }, "id">
@@ -4715,11 +4762,11 @@ export namespace Prisma {
   export type GoalOrderByWithAggregationInput = {
     id?: SortOrder
     title?: SortOrder
-    description?: SortOrderInput | SortOrder
     context?: SortOrderInput | SortOrder
     deadline?: SortOrder
     userId?: SortOrder
     createdAt?: SortOrder
+    completedAt?: SortOrderInput | SortOrder
     _count?: GoalCountOrderByAggregateInput
     _avg?: GoalAvgOrderByAggregateInput
     _max?: GoalMaxOrderByAggregateInput
@@ -4733,11 +4780,11 @@ export namespace Prisma {
     NOT?: GoalScalarWhereWithAggregatesInput | GoalScalarWhereWithAggregatesInput[]
     id?: IntWithAggregatesFilter<"Goal"> | number
     title?: StringWithAggregatesFilter<"Goal"> | string
-    description?: StringNullableWithAggregatesFilter<"Goal"> | string | null
     context?: StringNullableWithAggregatesFilter<"Goal"> | string | null
     deadline?: DateTimeWithAggregatesFilter<"Goal"> | Date | string
     userId?: IntWithAggregatesFilter<"Goal"> | number
     createdAt?: DateTimeWithAggregatesFilter<"Goal"> | Date | string
+    completedAt?: DateTimeNullableWithAggregatesFilter<"Goal"> | Date | string | null
   }
 
   export type TaskWhereInput = {
@@ -4746,7 +4793,9 @@ export namespace Prisma {
     NOT?: TaskWhereInput | TaskWhereInput[]
     id?: IntFilter<"Task"> | number
     title?: StringFilter<"Task"> | string
+    description?: StringNullableFilter<"Task"> | string | null
     status?: StringFilter<"Task"> | string
+    dueDate?: DateTimeNullableFilter<"Task"> | Date | string | null
     goalId?: IntFilter<"Task"> | number
     generatedAt?: DateTimeFilter<"Task"> | Date | string
     goal?: XOR<GoalScalarRelationFilter, GoalWhereInput>
@@ -4755,7 +4804,9 @@ export namespace Prisma {
   export type TaskOrderByWithRelationInput = {
     id?: SortOrder
     title?: SortOrder
+    description?: SortOrderInput | SortOrder
     status?: SortOrder
+    dueDate?: SortOrderInput | SortOrder
     goalId?: SortOrder
     generatedAt?: SortOrder
     goal?: GoalOrderByWithRelationInput
@@ -4767,7 +4818,9 @@ export namespace Prisma {
     OR?: TaskWhereInput[]
     NOT?: TaskWhereInput | TaskWhereInput[]
     title?: StringFilter<"Task"> | string
+    description?: StringNullableFilter<"Task"> | string | null
     status?: StringFilter<"Task"> | string
+    dueDate?: DateTimeNullableFilter<"Task"> | Date | string | null
     goalId?: IntFilter<"Task"> | number
     generatedAt?: DateTimeFilter<"Task"> | Date | string
     goal?: XOR<GoalScalarRelationFilter, GoalWhereInput>
@@ -4776,7 +4829,9 @@ export namespace Prisma {
   export type TaskOrderByWithAggregationInput = {
     id?: SortOrder
     title?: SortOrder
+    description?: SortOrderInput | SortOrder
     status?: SortOrder
+    dueDate?: SortOrderInput | SortOrder
     goalId?: SortOrder
     generatedAt?: SortOrder
     _count?: TaskCountOrderByAggregateInput
@@ -4792,7 +4847,9 @@ export namespace Prisma {
     NOT?: TaskScalarWhereWithAggregatesInput | TaskScalarWhereWithAggregatesInput[]
     id?: IntWithAggregatesFilter<"Task"> | number
     title?: StringWithAggregatesFilter<"Task"> | string
+    description?: StringNullableWithAggregatesFilter<"Task"> | string | null
     status?: StringWithAggregatesFilter<"Task"> | string
+    dueDate?: DateTimeNullableWithAggregatesFilter<"Task"> | Date | string | null
     goalId?: IntWithAggregatesFilter<"Task"> | number
     generatedAt?: DateTimeWithAggregatesFilter<"Task"> | Date | string
   }
@@ -4803,6 +4860,7 @@ export namespace Prisma {
     password: string
     refreshToken?: string | null
     createdAt?: Date | string
+    photoUrl?: string | null
     goals?: GoalCreateNestedManyWithoutUserInput
   }
 
@@ -4813,6 +4871,7 @@ export namespace Prisma {
     password: string
     refreshToken?: string | null
     createdAt?: Date | string
+    photoUrl?: string | null
     goals?: GoalUncheckedCreateNestedManyWithoutUserInput
   }
 
@@ -4822,6 +4881,7 @@ export namespace Prisma {
     password?: StringFieldUpdateOperationsInput | string
     refreshToken?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    photoUrl?: NullableStringFieldUpdateOperationsInput | string | null
     goals?: GoalUpdateManyWithoutUserNestedInput
   }
 
@@ -4832,6 +4892,7 @@ export namespace Prisma {
     password?: StringFieldUpdateOperationsInput | string
     refreshToken?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    photoUrl?: NullableStringFieldUpdateOperationsInput | string | null
     goals?: GoalUncheckedUpdateManyWithoutUserNestedInput
   }
 
@@ -4842,6 +4903,7 @@ export namespace Prisma {
     password: string
     refreshToken?: string | null
     createdAt?: Date | string
+    photoUrl?: string | null
   }
 
   export type UserUpdateManyMutationInput = {
@@ -4850,6 +4912,7 @@ export namespace Prisma {
     password?: StringFieldUpdateOperationsInput | string
     refreshToken?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    photoUrl?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
   export type UserUncheckedUpdateManyInput = {
@@ -4859,14 +4922,15 @@ export namespace Prisma {
     password?: StringFieldUpdateOperationsInput | string
     refreshToken?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    photoUrl?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
   export type GoalCreateInput = {
     title: string
-    description?: string | null
     context?: string | null
     deadline: Date | string
     createdAt?: Date | string
+    completedAt?: Date | string | null
     user: UserCreateNestedOneWithoutGoalsInput
     tasks?: TaskCreateNestedManyWithoutGoalInput
   }
@@ -4874,20 +4938,20 @@ export namespace Prisma {
   export type GoalUncheckedCreateInput = {
     id?: number
     title: string
-    description?: string | null
     context?: string | null
     deadline: Date | string
     userId: number
     createdAt?: Date | string
+    completedAt?: Date | string | null
     tasks?: TaskUncheckedCreateNestedManyWithoutGoalInput
   }
 
   export type GoalUpdateInput = {
     title?: StringFieldUpdateOperationsInput | string
-    description?: NullableStringFieldUpdateOperationsInput | string | null
     context?: NullableStringFieldUpdateOperationsInput | string | null
     deadline?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    completedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     user?: UserUpdateOneRequiredWithoutGoalsNestedInput
     tasks?: TaskUpdateManyWithoutGoalNestedInput
   }
@@ -4895,45 +4959,47 @@ export namespace Prisma {
   export type GoalUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
     title?: StringFieldUpdateOperationsInput | string
-    description?: NullableStringFieldUpdateOperationsInput | string | null
     context?: NullableStringFieldUpdateOperationsInput | string | null
     deadline?: DateTimeFieldUpdateOperationsInput | Date | string
     userId?: IntFieldUpdateOperationsInput | number
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    completedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     tasks?: TaskUncheckedUpdateManyWithoutGoalNestedInput
   }
 
   export type GoalCreateManyInput = {
     id?: number
     title: string
-    description?: string | null
     context?: string | null
     deadline: Date | string
     userId: number
     createdAt?: Date | string
+    completedAt?: Date | string | null
   }
 
   export type GoalUpdateManyMutationInput = {
     title?: StringFieldUpdateOperationsInput | string
-    description?: NullableStringFieldUpdateOperationsInput | string | null
     context?: NullableStringFieldUpdateOperationsInput | string | null
     deadline?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    completedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   }
 
   export type GoalUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
     title?: StringFieldUpdateOperationsInput | string
-    description?: NullableStringFieldUpdateOperationsInput | string | null
     context?: NullableStringFieldUpdateOperationsInput | string | null
     deadline?: DateTimeFieldUpdateOperationsInput | Date | string
     userId?: IntFieldUpdateOperationsInput | number
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    completedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   }
 
   export type TaskCreateInput = {
     title: string
+    description?: string | null
     status?: string
+    dueDate?: Date | string | null
     generatedAt?: Date | string
     goal: GoalCreateNestedOneWithoutTasksInput
   }
@@ -4941,14 +5007,18 @@ export namespace Prisma {
   export type TaskUncheckedCreateInput = {
     id?: number
     title: string
+    description?: string | null
     status?: string
+    dueDate?: Date | string | null
     goalId: number
     generatedAt?: Date | string
   }
 
   export type TaskUpdateInput = {
     title?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
     status?: StringFieldUpdateOperationsInput | string
+    dueDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     generatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     goal?: GoalUpdateOneRequiredWithoutTasksNestedInput
   }
@@ -4956,7 +5026,9 @@ export namespace Prisma {
   export type TaskUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
     title?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
     status?: StringFieldUpdateOperationsInput | string
+    dueDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     goalId?: IntFieldUpdateOperationsInput | number
     generatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -4964,21 +5036,27 @@ export namespace Prisma {
   export type TaskCreateManyInput = {
     id?: number
     title: string
+    description?: string | null
     status?: string
+    dueDate?: Date | string | null
     goalId: number
     generatedAt?: Date | string
   }
 
   export type TaskUpdateManyMutationInput = {
     title?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
     status?: StringFieldUpdateOperationsInput | string
+    dueDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     generatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type TaskUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
     title?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
     status?: StringFieldUpdateOperationsInput | string
+    dueDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     goalId?: IntFieldUpdateOperationsInput | number
     generatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -5057,6 +5135,7 @@ export namespace Prisma {
     password?: SortOrder
     refreshToken?: SortOrder
     createdAt?: SortOrder
+    photoUrl?: SortOrder
   }
 
   export type UserAvgOrderByAggregateInput = {
@@ -5070,6 +5149,7 @@ export namespace Prisma {
     password?: SortOrder
     refreshToken?: SortOrder
     createdAt?: SortOrder
+    photoUrl?: SortOrder
   }
 
   export type UserMinOrderByAggregateInput = {
@@ -5079,6 +5159,7 @@ export namespace Prisma {
     password?: SortOrder
     refreshToken?: SortOrder
     createdAt?: SortOrder
+    photoUrl?: SortOrder
   }
 
   export type UserSumOrderByAggregateInput = {
@@ -5151,6 +5232,17 @@ export namespace Prisma {
     _max?: NestedDateTimeFilter<$PrismaModel>
   }
 
+  export type DateTimeNullableFilter<$PrismaModel = never> = {
+    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel> | null
+    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
+    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
+    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    not?: NestedDateTimeNullableFilter<$PrismaModel> | Date | string | null
+  }
+
   export type UserScalarRelationFilter = {
     is?: UserWhereInput
     isNot?: UserWhereInput
@@ -5169,11 +5261,11 @@ export namespace Prisma {
   export type GoalCountOrderByAggregateInput = {
     id?: SortOrder
     title?: SortOrder
-    description?: SortOrder
     context?: SortOrder
     deadline?: SortOrder
     userId?: SortOrder
     createdAt?: SortOrder
+    completedAt?: SortOrder
   }
 
   export type GoalAvgOrderByAggregateInput = {
@@ -5184,26 +5276,40 @@ export namespace Prisma {
   export type GoalMaxOrderByAggregateInput = {
     id?: SortOrder
     title?: SortOrder
-    description?: SortOrder
     context?: SortOrder
     deadline?: SortOrder
     userId?: SortOrder
     createdAt?: SortOrder
+    completedAt?: SortOrder
   }
 
   export type GoalMinOrderByAggregateInput = {
     id?: SortOrder
     title?: SortOrder
-    description?: SortOrder
     context?: SortOrder
     deadline?: SortOrder
     userId?: SortOrder
     createdAt?: SortOrder
+    completedAt?: SortOrder
   }
 
   export type GoalSumOrderByAggregateInput = {
     id?: SortOrder
     userId?: SortOrder
+  }
+
+  export type DateTimeNullableWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel> | null
+    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
+    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
+    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    not?: NestedDateTimeNullableWithAggregatesFilter<$PrismaModel> | Date | string | null
+    _count?: NestedIntNullableFilter<$PrismaModel>
+    _min?: NestedDateTimeNullableFilter<$PrismaModel>
+    _max?: NestedDateTimeNullableFilter<$PrismaModel>
   }
 
   export type GoalScalarRelationFilter = {
@@ -5214,7 +5320,9 @@ export namespace Prisma {
   export type TaskCountOrderByAggregateInput = {
     id?: SortOrder
     title?: SortOrder
+    description?: SortOrder
     status?: SortOrder
+    dueDate?: SortOrder
     goalId?: SortOrder
     generatedAt?: SortOrder
   }
@@ -5227,7 +5335,9 @@ export namespace Prisma {
   export type TaskMaxOrderByAggregateInput = {
     id?: SortOrder
     title?: SortOrder
+    description?: SortOrder
     status?: SortOrder
+    dueDate?: SortOrder
     goalId?: SortOrder
     generatedAt?: SortOrder
   }
@@ -5235,7 +5345,9 @@ export namespace Prisma {
   export type TaskMinOrderByAggregateInput = {
     id?: SortOrder
     title?: SortOrder
+    description?: SortOrder
     status?: SortOrder
+    dueDate?: SortOrder
     goalId?: SortOrder
     generatedAt?: SortOrder
   }
@@ -5325,6 +5437,10 @@ export namespace Prisma {
     connectOrCreate?: TaskCreateOrConnectWithoutGoalInput | TaskCreateOrConnectWithoutGoalInput[]
     createMany?: TaskCreateManyGoalInputEnvelope
     connect?: TaskWhereUniqueInput | TaskWhereUniqueInput[]
+  }
+
+  export type NullableDateTimeFieldUpdateOperationsInput = {
+    set?: Date | string | null
   }
 
   export type UserUpdateOneRequiredWithoutGoalsNestedInput = {
@@ -5513,22 +5629,47 @@ export namespace Prisma {
     _max?: NestedDateTimeFilter<$PrismaModel>
   }
 
+  export type NestedDateTimeNullableFilter<$PrismaModel = never> = {
+    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel> | null
+    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
+    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
+    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    not?: NestedDateTimeNullableFilter<$PrismaModel> | Date | string | null
+  }
+
+  export type NestedDateTimeNullableWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel> | null
+    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
+    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
+    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    not?: NestedDateTimeNullableWithAggregatesFilter<$PrismaModel> | Date | string | null
+    _count?: NestedIntNullableFilter<$PrismaModel>
+    _min?: NestedDateTimeNullableFilter<$PrismaModel>
+    _max?: NestedDateTimeNullableFilter<$PrismaModel>
+  }
+
   export type GoalCreateWithoutUserInput = {
     title: string
-    description?: string | null
     context?: string | null
     deadline: Date | string
     createdAt?: Date | string
+    completedAt?: Date | string | null
     tasks?: TaskCreateNestedManyWithoutGoalInput
   }
 
   export type GoalUncheckedCreateWithoutUserInput = {
     id?: number
     title: string
-    description?: string | null
     context?: string | null
     deadline: Date | string
     createdAt?: Date | string
+    completedAt?: Date | string | null
     tasks?: TaskUncheckedCreateNestedManyWithoutGoalInput
   }
 
@@ -5564,11 +5705,11 @@ export namespace Prisma {
     NOT?: GoalScalarWhereInput | GoalScalarWhereInput[]
     id?: IntFilter<"Goal"> | number
     title?: StringFilter<"Goal"> | string
-    description?: StringNullableFilter<"Goal"> | string | null
     context?: StringNullableFilter<"Goal"> | string | null
     deadline?: DateTimeFilter<"Goal"> | Date | string
     userId?: IntFilter<"Goal"> | number
     createdAt?: DateTimeFilter<"Goal"> | Date | string
+    completedAt?: DateTimeNullableFilter<"Goal"> | Date | string | null
   }
 
   export type UserCreateWithoutGoalsInput = {
@@ -5577,6 +5718,7 @@ export namespace Prisma {
     password: string
     refreshToken?: string | null
     createdAt?: Date | string
+    photoUrl?: string | null
   }
 
   export type UserUncheckedCreateWithoutGoalsInput = {
@@ -5586,6 +5728,7 @@ export namespace Prisma {
     password: string
     refreshToken?: string | null
     createdAt?: Date | string
+    photoUrl?: string | null
   }
 
   export type UserCreateOrConnectWithoutGoalsInput = {
@@ -5595,14 +5738,18 @@ export namespace Prisma {
 
   export type TaskCreateWithoutGoalInput = {
     title: string
+    description?: string | null
     status?: string
+    dueDate?: Date | string | null
     generatedAt?: Date | string
   }
 
   export type TaskUncheckedCreateWithoutGoalInput = {
     id?: number
     title: string
+    description?: string | null
     status?: string
+    dueDate?: Date | string | null
     generatedAt?: Date | string
   }
 
@@ -5633,6 +5780,7 @@ export namespace Prisma {
     password?: StringFieldUpdateOperationsInput | string
     refreshToken?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    photoUrl?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
   export type UserUncheckedUpdateWithoutGoalsInput = {
@@ -5642,6 +5790,7 @@ export namespace Prisma {
     password?: StringFieldUpdateOperationsInput | string
     refreshToken?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    photoUrl?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
   export type TaskUpsertWithWhereUniqueWithoutGoalInput = {
@@ -5666,28 +5815,30 @@ export namespace Prisma {
     NOT?: TaskScalarWhereInput | TaskScalarWhereInput[]
     id?: IntFilter<"Task"> | number
     title?: StringFilter<"Task"> | string
+    description?: StringNullableFilter<"Task"> | string | null
     status?: StringFilter<"Task"> | string
+    dueDate?: DateTimeNullableFilter<"Task"> | Date | string | null
     goalId?: IntFilter<"Task"> | number
     generatedAt?: DateTimeFilter<"Task"> | Date | string
   }
 
   export type GoalCreateWithoutTasksInput = {
     title: string
-    description?: string | null
     context?: string | null
     deadline: Date | string
     createdAt?: Date | string
+    completedAt?: Date | string | null
     user: UserCreateNestedOneWithoutGoalsInput
   }
 
   export type GoalUncheckedCreateWithoutTasksInput = {
     id?: number
     title: string
-    description?: string | null
     context?: string | null
     deadline: Date | string
     userId: number
     createdAt?: Date | string
+    completedAt?: Date | string | null
   }
 
   export type GoalCreateOrConnectWithoutTasksInput = {
@@ -5708,84 +5859,92 @@ export namespace Prisma {
 
   export type GoalUpdateWithoutTasksInput = {
     title?: StringFieldUpdateOperationsInput | string
-    description?: NullableStringFieldUpdateOperationsInput | string | null
     context?: NullableStringFieldUpdateOperationsInput | string | null
     deadline?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    completedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     user?: UserUpdateOneRequiredWithoutGoalsNestedInput
   }
 
   export type GoalUncheckedUpdateWithoutTasksInput = {
     id?: IntFieldUpdateOperationsInput | number
     title?: StringFieldUpdateOperationsInput | string
-    description?: NullableStringFieldUpdateOperationsInput | string | null
     context?: NullableStringFieldUpdateOperationsInput | string | null
     deadline?: DateTimeFieldUpdateOperationsInput | Date | string
     userId?: IntFieldUpdateOperationsInput | number
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    completedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   }
 
   export type GoalCreateManyUserInput = {
     id?: number
     title: string
-    description?: string | null
     context?: string | null
     deadline: Date | string
     createdAt?: Date | string
+    completedAt?: Date | string | null
   }
 
   export type GoalUpdateWithoutUserInput = {
     title?: StringFieldUpdateOperationsInput | string
-    description?: NullableStringFieldUpdateOperationsInput | string | null
     context?: NullableStringFieldUpdateOperationsInput | string | null
     deadline?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    completedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     tasks?: TaskUpdateManyWithoutGoalNestedInput
   }
 
   export type GoalUncheckedUpdateWithoutUserInput = {
     id?: IntFieldUpdateOperationsInput | number
     title?: StringFieldUpdateOperationsInput | string
-    description?: NullableStringFieldUpdateOperationsInput | string | null
     context?: NullableStringFieldUpdateOperationsInput | string | null
     deadline?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    completedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     tasks?: TaskUncheckedUpdateManyWithoutGoalNestedInput
   }
 
   export type GoalUncheckedUpdateManyWithoutUserInput = {
     id?: IntFieldUpdateOperationsInput | number
     title?: StringFieldUpdateOperationsInput | string
-    description?: NullableStringFieldUpdateOperationsInput | string | null
     context?: NullableStringFieldUpdateOperationsInput | string | null
     deadline?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    completedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   }
 
   export type TaskCreateManyGoalInput = {
     id?: number
     title: string
+    description?: string | null
     status?: string
+    dueDate?: Date | string | null
     generatedAt?: Date | string
   }
 
   export type TaskUpdateWithoutGoalInput = {
     title?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
     status?: StringFieldUpdateOperationsInput | string
+    dueDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     generatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type TaskUncheckedUpdateWithoutGoalInput = {
     id?: IntFieldUpdateOperationsInput | number
     title?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
     status?: StringFieldUpdateOperationsInput | string
+    dueDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     generatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type TaskUncheckedUpdateManyWithoutGoalInput = {
     id?: IntFieldUpdateOperationsInput | number
     title?: StringFieldUpdateOperationsInput | string
+    description?: NullableStringFieldUpdateOperationsInput | string | null
     status?: StringFieldUpdateOperationsInput | string
+    dueDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     generatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 

@@ -126,23 +126,26 @@ exports.Prisma.UserScalarFieldEnum = {
   email: 'email',
   password: 'password',
   refreshToken: 'refreshToken',
-  createdAt: 'createdAt'
+  createdAt: 'createdAt',
+  photoUrl: 'photoUrl'
 };
 
 exports.Prisma.GoalScalarFieldEnum = {
   id: 'id',
   title: 'title',
-  description: 'description',
   context: 'context',
   deadline: 'deadline',
   userId: 'userId',
-  createdAt: 'createdAt'
+  createdAt: 'createdAt',
+  completedAt: 'completedAt'
 };
 
 exports.Prisma.TaskScalarFieldEnum = {
   id: 'id',
   title: 'title',
+  description: 'description',
   status: 'status',
+  dueDate: 'dueDate',
   goalId: 'goalId',
   generatedAt: 'generatedAt'
 };

@@ -15,25 +15,28 @@ model User {
   refreshToken String? // для refresh токену
   createdAt    DateTime @default(now())
   goals        Goal[]
+  photoUrl     String?
 }
 
 model Goal {
-  id          Int      @id @default(autoincrement())
+  id          Int       @id @default(autoincrement())
   title       String
-  description String?
   context     String?
   deadline    DateTime
   userId      Int
-  createdAt   DateTime @default(now())
-  user        User     @relation(fields: [userId], references: [id])
+  createdAt   DateTime  @default(now())
+  user        User      @relation(fields: [userId], references: [id])
   tasks       Task[]
+  completedAt DateTime?
 }
 
 model Task {
-  id          Int      @id @default(autoincrement())
+  id          Int       @id @default(autoincrement())
   title       String
-  status      String   @default("pending")
+  description String?
+  status      String    @default("pending")
+  dueDate     DateTime?
   goalId      Int
-  generatedAt DateTime @default(now())
-  goal        Goal     @relation(fields: [goalId], references: [id])
+  generatedAt DateTime  @default(now())
+  goal        Goal      @relation(fields: [goalId], references: [id])
 }

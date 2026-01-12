@@ -24,7 +24,9 @@ export class AiService {
     const prompt = `
 You are a JSON generator.
 
-Respond ONLY in valid JSON. Do NOT add any explanations, comments, or extra text.
+Respond ONLY with valid JSON.
+Do NOT include any text, comments, explanations, or line breaks outside the JSON.
+Do not truncate the output.
 
 JSON Schema:
 {
@@ -33,19 +35,18 @@ JSON Schema:
   ]
 }
 
-Instructions:
-- Goal: "${goal}"
-- Deadline: "${deadline}"
-- Context: "${context || "none"}"
-- Break the main goal into smaller, sequential objectives (like stations).
-- Each task should have a clear title, a brief description, and a due date.
-- Generate a detailed step-by-step plan covering all days until the deadline.
-- Make the plan realistic and actionable.
+Goal: "${goal}"
+Deadline: "${deadline}"
+Context: "${context || "none"}"
 
-Output must strictly follow the JSON schema above.
+Break the main goal into smaller objectives (like stations).
+Each task must have a title, description, and due date.
+Generate a realistic, detailed step-by-step plan.
 `;
 
     try {
+      
+
       const response = await ai.models.generateContent({
         model: "gemini-2.5-flash",
         contents: prompt,
@@ -73,6 +74,10 @@ Output must strictly follow the JSON schema above.
             create: planJson.tasks.map((task: any) => ({
               title: task.title,
               status: "pending",
+              description: task.description || "",
+              dueDate: task.dueDate ? new Date(task.dueDate) : null,
+              order: task.order || 0,
+              priority: task.priority || 1,
             })),
           },
         },

@@ -21,19 +21,21 @@ model User {
 model Goal {
   id          Int      @id @default(autoincrement())
   title       String
-  description String?
   context     String?
   deadline    DateTime
   userId      Int
   createdAt   DateTime @default(now())
   user        User     @relation(fields: [userId], references: [id])
   tasks       Task[]
+  completedAt DateTime?
 }
 
 model Task {
   id          Int      @id @default(autoincrement())
   title       String
+  description String?
   status      String   @default("pending")
+  dueDate     DateTime?
   goalId      Int
   generatedAt DateTime @default(now())
   goal        Goal     @relation(fields: [goalId], references: [id])
