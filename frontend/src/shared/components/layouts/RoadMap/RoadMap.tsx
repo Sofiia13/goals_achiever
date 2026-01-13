@@ -43,7 +43,7 @@ export const RoadMap: React.FC = () => {
     <>
       {isModalOpen && selectedTaskId && (
         <Modal
-          isOpen={isModalOpen}
+        isOpen={isModalOpen}
           onClose={() => setIsModalOpen(false)}
           title={tasks.find((task) => task.id === selectedTaskId)?.title}
         >
