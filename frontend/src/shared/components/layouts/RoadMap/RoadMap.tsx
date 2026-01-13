@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import styles from "./RoadMap.module.scss";
 import { Canvas } from "@react-three/fiber";
 import { Station } from "../../ui/Station";
-import { OrbitControls, Sky } from "@react-three/drei";
+import { OrbitControls } from "@react-three/drei";
 import type { Goal, Task } from "../../../types/api.types";
-import { ItemsList } from "../../ui/ItemsList/ItemsList";
 import { goalsApi } from "../../../api/goals.api";
 import { tasksApi } from "../../../api/tasks.api";
+import { ItemsList } from "../../ui/ItemsList";
 
 // type RoadMapProps = {
 //   plan: Task[];
@@ -16,6 +16,7 @@ export const RoadMap: React.FC = () => {
   const [goals, setGoals] = useState<Goal[]>([]);
   const [selectedGoalId, setSelectedGoalId] = useState<number | null>(null);
   const [tasks, setTasks] = useState<Task[]>([]);
+  const [selectedTaskId, setSelectedTaskId] = useState<number | null>(null);
 
   useEffect(() => {
     goalsApi.getUserGoals().then((res) => {
@@ -51,9 +52,13 @@ export const RoadMap: React.FC = () => {
           {tasks.map((task, index) => (
             <Station
               position={
-                index % 2 !== 0 ? [-100, 0, index * -100] : [100, 0, index * -100]
+                index % 2 !== 0
+                  ? [-200, 0, index * -150]
+                  : [200, 0, index * -150]
               }
               scale={[0.1, 0.1, 0.1]}
+              onClick={() => setSelectedTaskId(task.id)}
+              active={selectedTaskId === task.id}
             />
           ))}
 
