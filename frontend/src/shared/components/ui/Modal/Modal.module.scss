@@ -15,7 +15,8 @@
 .modal {
   background-color: $highlight-color;
   border-radius: 8px;
-  padding: 20px;
+  padding-block: 20px;
+  padding-inline: 50px;
   max-width: 900px;
   width: 100%;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
