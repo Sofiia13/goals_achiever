@@ -70,14 +70,7 @@ export const NewGoalPage: React.FC = () => {
 
       {plan && (
         <div className={styles.newGoalPage__plan}>
-          <h2>Generated Plan:</h2>
-          <ul>
-            {/* {plan.tasks.map((task, i) => (
-              <li key={i}>
-                <strong>{task.title}</strong> {task.description && `- ${task.description}`}
-              </li>
-            ))} */}
-          </ul>
+          <h2>Plan is generated</h2>
         </div>
       )}
     </div>

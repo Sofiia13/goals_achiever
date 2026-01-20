@@ -8,6 +8,7 @@ import { goalsApi } from "../../../api/goals.api";
 import { tasksApi } from "../../../api/tasks.api";
 import { ItemsList } from "../../ui/ItemsList";
 import { Modal } from "../../ui/Modal";
+import { Bridge } from "../../ui/Bridge";
 
 // type RoadMapProps = {
 //   plan: Task[];
@@ -43,7 +44,7 @@ export const RoadMap: React.FC = () => {
     <>
       {isModalOpen && selectedTaskId && (
         <Modal
-        isOpen={isModalOpen}
+          isOpen={isModalOpen}
           onClose={() => setIsModalOpen(false)}
           title={tasks.find((task) => task.id === selectedTaskId)?.title}
         >
@@ -66,18 +67,32 @@ export const RoadMap: React.FC = () => {
             <ambientLight intensity={0.6} />
             <directionalLight position={[20, 20, 10]} intensity={1} />
 
-            {tasks.map((task, index) => (
-              <Station
-                position={
-                  index % 2 !== 0
-                    ? [-200, 0, index * -150]
-                    : [200, 0, index * -150]
-                }
-                scale={[0.1, 0.1, 0.1]}
-                onClick={() => handleOpenModal(task)}
-                active={selectedTaskId === task.id}
-              />
-            ))}
+            {tasks.map((task, index) => {
+              const currentPos: [number, number, number] =
+                index % 2 !== 0
+                  ? [-200, 0, index * -150]
+                  : [200, 0, index * -150];
+
+              const nextPos: [number, number, number] =
+                index % 2 === 0
+                  ? [-200, 0, (index + 1) * -150]
+                  : [200, 0, (index + 1) * -150];
+
+              return (
+                <React.Fragment key={task.id}>
+                  <Station
+                    position={currentPos}
+                    scale={[0.1, 0.1, 0.1]}
+                    onClick={() => handleOpenModal(task)}
+                    active={selectedTaskId === task.id}
+                  />
+
+                  {index < tasks.length - 1 && (
+                    <Bridge start={currentPos} end={nextPos} />
+                  )}
+                </React.Fragment>
+              );
+            })}
 
             {/* станції одна за одною */}
             {/* <Station position={[-50, 0, 0]} scale={[0.1, 0.1, 0.1]} /> */}
