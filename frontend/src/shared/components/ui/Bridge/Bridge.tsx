@@ -20,18 +20,15 @@ export const Bridge: React.FC<Props> = ({ start, end }) => {
     const endVec = new THREE.Vector3(...end);
     const distance = startVec.distanceTo(endVec);
 
-    // Позиціонуємо в середину між двома точками
     const middle = startVec.clone().add(endVec).multiplyScalar(0.5);
-    // Трохи піднімаємо міст над островами
+
     middle.y -= 2;
     bridgeRef.current.position.copy(middle);
 
-    // Обертаємо міст у напрямку до другого острова
     const direction = new THREE.Vector3().subVectors(endVec, startVec);
     const angle = Math.atan2(direction.x, direction.z);
-    bridgeRef.current.rotation.y = angle + Math.PI / 2; // Додаємо 90 градусів
+    bridgeRef.current.rotation.y = angle + Math.PI / 2;
 
-    // Однаковий масштаб по всіх осях - просто збільшуємо
     const scale = 110;
     bridgeRef.current.scale.set(scale + 90, scale, scale);
   }, [start, end]);
