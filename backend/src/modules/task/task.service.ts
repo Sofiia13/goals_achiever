@@ -6,4 +6,14 @@ export class TaskService {
       where: { goalId },
     });
   }
+
+  async getDailyTasksByGoalId(goalId: number) {
+    return prisma.task.findMany({
+      where: { 
+        goalId,
+        type: "daily"
+      },
+      orderBy: { generatedAt: "desc" },
+    });
+  }
 }
