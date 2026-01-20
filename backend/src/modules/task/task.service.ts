@@ -16,4 +16,11 @@ export class TaskService {
       orderBy: { generatedAt: "desc" },
     });
   }
+
+  async updateTaskStatus(taskId: number, status: string) {
+    return prisma.task.update({
+      where: { id: taskId },
+      data: { status },
+    });
+  }
 }

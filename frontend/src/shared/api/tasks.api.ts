@@ -9,6 +9,10 @@ export const tasksApi = {
     return api.get(`/tasks/goals/${goalId}/daily-tasks`);
   },
 
+  updateTaskStatus(taskId: number, status: string) {
+    return api.patch(`/tasks/${taskId}/status`, { status });
+  },
+
   // createTask(goalId: number, data: { title: string; description?: string; dueDate?: string }) {
   //   return api.post(`/goals/${goalId}/tasks`, data);
   // },
