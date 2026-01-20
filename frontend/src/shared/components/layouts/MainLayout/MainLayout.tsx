@@ -1,10 +1,26 @@
 import type React from "react";
+import { useEffect, useState } from "react";
 import styles from "./MainLayout.module.scss";
 import { Quote } from "../../ui/Quote";
 import { TasksList } from "../TasksList";
-import { mockTasks } from "../../../../mocks/mockTasks";
+import type { Task } from "../../../types/api.types";
+import { tasksApi } from "../../../api/tasks.api";
 
 export const MainLayout: React.FC = () => {
+  const [dailyTasks, setDailyTasks] = useState<Task[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Отримуємо daily tasks для першої мети (goalId = 1)
+    tasksApi.getDailyTasks(1).then((res) => {
+      setDailyTasks(res.data || []);
+      setLoading(false);
+    }).catch((err) => {
+      console.error("Failed to load daily tasks:", err);
+      setLoading(false);
+    });
+  }, []);
+
   return (
     <div className={styles.mainLayout}>
       <div className={styles.mainLayout__topSection}>
@@ -18,7 +34,7 @@ export const MainLayout: React.FC = () => {
           <p className={styles.mainLayout__tasksList__title}>
             Your tasks today:
           </p>
-          <TasksList tasks={mockTasks} />
+          {loading ? <p>Loading...</p> : <TasksList tasks={dailyTasks} />}
         </div>
         <div className={styles.mainLayout__goalProgress}>
           <p className={styles.mainLayout__daysLeft}>

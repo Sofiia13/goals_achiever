@@ -7,7 +7,7 @@ type Props = {
 };
 
 export const TaskItem: React.FC<Props> = ({ task }) => {
-  const [checked, setChecked] = useState(task.completed);
+  const [checked, setChecked] = useState(task.status === "done");
 
   return (
     <div className={styles.task}>

@@ -36,7 +36,9 @@ const CameraRig: React.FC<{
     const damp = 1 - Math.exp(-3 * delta);
     camera.position.lerp(desired, damp);
 
-    const look = lookAt ? new THREE.Vector3(...lookAt) : new THREE.Vector3(0, 0, 0);
+    const look = lookAt
+      ? new THREE.Vector3(...lookAt)
+      : new THREE.Vector3(0, 0, 0);
     camera.lookAt(look);
 
     if (!arrivedRef.current && camera.position.distanceTo(desired) < 2) {
@@ -54,8 +56,12 @@ export const RoadMap: React.FC = () => {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [selectedTaskId, setSelectedTaskId] = useState<number | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [cameraTarget, setCameraTarget] = useState<[number, number, number] | null>(null);
-  const [cameraLookAt, setCameraLookAt] = useState<[number, number, number] | null>(null);
+  const [cameraTarget, setCameraTarget] = useState<
+    [number, number, number] | null
+  >(null);
+  const [cameraLookAt, setCameraLookAt] = useState<
+    [number, number, number] | null
+  >(null);
   const [cameraMode, setCameraMode] = useState<CameraMode>("idle");
   const [pendingTaskId, setPendingTaskId] = useState<number | null>(null);
 
@@ -135,19 +141,26 @@ export const RoadMap: React.FC = () => {
           selectedGoalId={selectedGoalId}
           onSelect={setSelectedGoalId}
         />
-        <div
-          className={styles.roadMap}
-          style={{  height: "100vh" }}
-        >
+        <div className={styles.roadMap} style={{ height: "100vh" }}>
           <Canvas
-            camera={{ position: DEFAULT_CAMERA_POS, fov: 50, near: 0.1, far: 3000 }}
+            camera={{
+              position: DEFAULT_CAMERA_POS,
+              fov: 50,
+              near: 0.1,
+              far: 3000,
+            }}
           >
             <color attach="background" args={["#f9f4ef"]} />
-            <fog attach="fog" args={["#fbf7f2", 300, 1400]} />
+            <fog attach="fog" args={["#fbf7f2", 500, 1400]} />
             <ambientLight intensity={0.8} />
             <directionalLight position={[20, 40, 20]} intensity={1.15} />
 
-            <CameraRig target={cameraTarget} lookAt={cameraLookAt} mode={cameraMode} onArrive={handleArrive} />
+            <CameraRig
+              target={cameraTarget}
+              lookAt={cameraLookAt}
+              mode={cameraMode}
+              onArrive={handleArrive}
+            />
 
             {tasks.map((task, index) => {
               const currentPos: [number, number, number] =
@@ -166,7 +179,9 @@ export const RoadMap: React.FC = () => {
                     position={currentPos}
                     scale={[0.1, 0.1, 0.1]}
                     onClick={() => handleMoveToTask(task, currentPos)}
-                    active={selectedTaskId === task.id || pendingTaskId === task.id}
+                    active={
+                      selectedTaskId === task.id || pendingTaskId === task.id
+                    }
                   />
 
                   {index < tasks.length - 1 && (

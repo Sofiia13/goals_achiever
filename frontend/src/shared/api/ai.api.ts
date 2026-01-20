@@ -4,4 +4,8 @@ export const aiApi = {
   generatePlan(data: { goal: string; deadline: string; context?: string }) {
     return api.post("/api/ai/plan", data);
   },
+
+  generateDailyTasks(goalId: number) {
+    return api.post("/api/ai/daily-tasks", { goalId });
+  },
 };

@@ -5,6 +5,10 @@ export const tasksApi = {
     return api.get(`/tasks/goals/${goalId}`);
   },
 
+  getDailyTasks(goalId: number) {
+    return api.get(`/tasks/goals/${goalId}/daily-tasks`);
+  },
+
   // createTask(goalId: number, data: { title: string; description?: string; dueDate?: string }) {
   //   return api.post(`/goals/${goalId}/tasks`, data);
   // },
