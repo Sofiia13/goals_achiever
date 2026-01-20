@@ -146,8 +146,11 @@ exports.Prisma.TaskScalarFieldEnum = {
   description: 'description',
   status: 'status',
   dueDate: 'dueDate',
-  goalId: 'goalId',
-  generatedAt: 'generatedAt'
+  generatedAt: 'generatedAt',
+  type: 'type',
+  estimatedMinutes: 'estimatedMinutes',
+  station: 'station',
+  goalId: 'goalId'
 };
 
 exports.Prisma.SortOrder = {

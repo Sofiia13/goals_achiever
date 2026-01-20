@@ -31,12 +31,18 @@ model Goal {
 }
 
 model Task {
-  id          Int      @id @default(autoincrement())
-  title       String
-  description String?
-  status      String   @default("pending")
-  dueDate     DateTime?
-  goalId      Int
-  generatedAt DateTime @default(now())
-  goal        Goal     @relation(fields: [goalId], references: [id])
+  id                Int       @id @default(autoincrement())
+  title             String
+  description       String?
+  status            String    @default("pending") 
+  dueDate           DateTime?
+  generatedAt       DateTime  @default(now())
+
+  // AI / planning metadata
+  type              String?   // "learn" | "practice" | "review" | "reflect"
+  estimatedMinutes  Int?
+  station           String?   // для якої "станції" це завдання
+
+  goalId            Int
+  goal              Goal      @relation(fields: [goalId], references: [id])
 }
