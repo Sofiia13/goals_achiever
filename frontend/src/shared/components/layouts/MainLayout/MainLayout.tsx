@@ -11,7 +11,6 @@ export const MainLayout: React.FC = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Отримуємо daily tasks для першої мети (goalId = 1)
     tasksApi.getDailyTasks(1).then((res) => {
       setDailyTasks(res.data || []);
       setLoading(false);

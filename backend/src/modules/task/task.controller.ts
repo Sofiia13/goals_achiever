@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import { TaskService } from "./task.service";
+import { AiService } from "../ai/ai.service";
 
 const taskService = new TaskService();
 
@@ -35,7 +36,14 @@ export class TaskController {
       }
 
       const goalId = parseInt(req.params.goalId, 10);
-      const tasks = await taskService.getDailyTasksByGoalId(goalId);
+      let tasks = await taskService.getDailyTasksByGoalId(goalId);
+
+      if (!tasks.length) {
+        const { nextStation, previousProgress } = await AiService.getProgressInfo(goalId);
+        const generated = await AiService.generateDailyTasks(goalId, nextStation, previousProgress);
+        tasks = generated.tasks;
+      }
+
       res.json(tasks);
     } catch (err: any) {
       res.status(500).json({ message: err.message });

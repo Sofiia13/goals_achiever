@@ -141,7 +141,6 @@ Generate a realistic, detailed step-by-step plan.
       throw new Error("GEMINI_API_KEY is not set");
     }
 
-    // Отримуємо goal для контексту
     const goalData = await prisma.goal.findUnique({
       where: { id: goalId },
       include: { tasks: true },
@@ -149,6 +148,27 @@ Generate a realistic, detailed step-by-step plan.
 
     if (!goalData) {
       throw new Error("Goal not found");
+    }
+
+    const startOfToday = new Date();
+    startOfToday.setUTCHours(0, 0, 0, 0);
+    const endOfToday = new Date();
+    endOfToday.setUTCHours(23, 59, 59, 999);
+
+    const todaysDailyTasks = await prisma.task.findMany({
+      where: {
+        goalId,
+        type: "daily",
+        generatedAt: {
+          gte: startOfToday,
+          lte: endOfToday,
+        },
+      },
+      orderBy: { generatedAt: "asc" },
+    });
+
+    if (todaysDailyTasks.length > 0) {
+      return { tasks: todaysDailyTasks };
     }
 
     const ai = new GoogleGenAI({ apiKey: apiKey.trim() });
@@ -233,11 +253,15 @@ Return ONLY valid JSON.
       });
 
       const tasks = await prisma.task.findMany({
-        where: { 
+        where: {
           goalId: goalId,
-          generatedAt: { gte: new Date(Date.now() - 60000) }
+          type: "daily",
+          generatedAt: {
+            gte: startOfToday,
+            lte: endOfToday,
+          },
         },
-        orderBy: { generatedAt: "desc" },
+        orderBy: { generatedAt: "asc" },
       });
 
       return { tasks };
