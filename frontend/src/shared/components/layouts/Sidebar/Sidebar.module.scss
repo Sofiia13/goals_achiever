@@ -1,0 +1,13 @@
+.sidebar {
+  width: 250px;
+  background-color: $paragraph-color;
+  height: 100vh;
+  padding: 20px;
+  border-radius: 16px;
+
+  &__title {
+    color: #ffffff;
+    font-size: 24px;
+    margin: 0;
+  }
+}
