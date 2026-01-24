@@ -17,4 +17,5 @@ export interface Task {
   goalId: number;
   generatedAt: Date;
   dueDate?: Date;
+  type: string;
 }
