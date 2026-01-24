@@ -10,7 +10,7 @@ import { Modal } from "../../ui/Modal";
 import { Bridge } from "../../ui/Bridge";
 import * as THREE from "three";
 
-const DEFAULT_CAMERA_POS: [number, number, number] = [0, 200, 380];
+const DEFAULT_CAMERA_POS: [number, number, number] = [-50, 200, 500];
 const DEFAULT_CAMERA_LOOK: [number, number, number] = [0, 0, 0];
 
 type CameraMode = "idle" | "toTask" | "reset";
