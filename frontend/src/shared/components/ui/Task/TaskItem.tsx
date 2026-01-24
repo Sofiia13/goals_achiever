@@ -39,11 +39,12 @@ export const TaskItem: React.FC<Props> = ({ task }) => {
           {task.description || "No description provided"}
         </Modal>
       )}
-      <div className={styles.task} onClick={() => setIsModalOpen(true)}>
+      <div className={styles.task}>
         <p
           className={`${styles.task__text} ${
             checked ? styles["task__text--done"] : ""
           }`}
+          onClick={() => setIsModalOpen(true)}
         >
           {task?.title}
         </p>
