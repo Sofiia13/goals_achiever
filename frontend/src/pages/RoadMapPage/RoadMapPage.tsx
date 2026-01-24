@@ -10,17 +10,25 @@ export const RoadMapPage: React.FC = () => {
   const [selectedGoalId, setSelectedGoalId] = useState<number | null>(null);
 
   useEffect(() => {
-      if (!selectedGoalId) return;
-  
-      tasksApi.getTasksByGoal(selectedGoalId).then((res) => {
-        setTasks(res.data);
-      });
-    }, [selectedGoalId]);
+    if (!selectedGoalId) return;
+
+    tasksApi.getTasksByGoal(selectedGoalId).then((res) => {
+      const nonDailyTasks = res.data.filter(
+        (task: Task) => task.type !== "daily",
+      );
+      setTasks(nonDailyTasks);
+    });
+  }, [selectedGoalId]);
 
   return (
     <div className={styles.roadMapPage}>
       <SideBar tasks={tasks} />
-      <RoadMap tasks={tasks} setTasks={setTasks} selectedGoalId={selectedGoalId} setSelectedGoalId={setSelectedGoalId} />
+      <RoadMap
+        tasks={tasks}
+        setTasks={setTasks}
+        selectedGoalId={selectedGoalId}
+        setSelectedGoalId={setSelectedGoalId}
+      />
     </div>
   );
 };
