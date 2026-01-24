@@ -5,7 +5,6 @@ import { Station } from "../../ui/Station";
 import { OrbitControls } from "@react-three/drei";
 import type { Goal, Task } from "../../../types/api.types";
 import { goalsApi } from "../../../api/goals.api";
-import { tasksApi } from "../../../api/tasks.api";
 import { ItemsList } from "../../ui/ItemsList";
 import { Modal } from "../../ui/Modal";
 import { Bridge } from "../../ui/Bridge";
@@ -50,10 +49,15 @@ const CameraRig: React.FC<{
   return null;
 };
 
-export const RoadMap: React.FC = () => {
+type Props = {
+  tasks: Task[];
+  setTasks: React.Dispatch<React.SetStateAction<Task[]>>;
+  selectedGoalId: number | null;
+  setSelectedGoalId: React.Dispatch<React.SetStateAction<number | null>>;
+};
+
+export const RoadMap: React.FC<Props> = ({ tasks, selectedGoalId, setSelectedGoalId }) => {
   const [goals, setGoals] = useState<Goal[]>([]);
-  const [selectedGoalId, setSelectedGoalId] = useState<number | null>(null);
-  const [tasks, setTasks] = useState<Task[]>([]);
   const [selectedTaskId, setSelectedTaskId] = useState<number | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [cameraTarget, setCameraTarget] = useState<
@@ -108,14 +112,6 @@ export const RoadMap: React.FC = () => {
       setGoals(res.data);
     });
   }, []);
-
-  useEffect(() => {
-    if (!selectedGoalId) return;
-
-    tasksApi.getTasksByGoal(selectedGoalId).then((res) => {
-      setTasks(res.data);
-    });
-  }, [selectedGoalId]);
 
   useEffect(() => {
     setSelectedTaskId(null);

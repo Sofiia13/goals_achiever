@@ -1,0 +1,15 @@
+.roadMapPage {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  height: 100vh;
+}
+
+.roadMapPage > :first-child {
+  flex-shrink: 0;
+}
+
+.roadMapPage > :last-child {
+  flex: 1;
+  min-width: 0;
+}
