@@ -10,6 +10,12 @@
     display: flex;
     flex-direction: row;
     gap: 10px;
+    align-items: center;
+  }
+
+  &__text {
+    margin: 0;
+    font-size: 16px;
   }
 
   &__editIcon {
@@ -22,5 +28,9 @@
     &:hover {
       transform: scale(1.2);
     }
+  }
+
+  &__description {
+    margin-top: 5px;
   }
 }

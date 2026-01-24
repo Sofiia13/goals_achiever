@@ -15,7 +15,7 @@ export const SidebarItem: React.FC<Props> = ({ task }) => {
   return (
     <div className={styles.sidebarItem}>
       <div className={styles.sidebarItem__title}>
-        <p>{task.title}</p>
+        <p className={styles.sidebarItem__text}>{task.title}</p>
 
         <img
           src={ArrowDownImg}
