@@ -17,6 +17,10 @@ export const tasksApi = {
     return api.patch(`/tasks/${taskId}/status`, { status });
   },
 
+  getStationProgress(goalId: number, stationTitle: string) {
+    return api.get(`/tasks/goals/${goalId}/stations/${encodeURIComponent(stationTitle)}/progress`);
+  },
+
   // createTask(goalId: number, data: { title: string; description?: string; dueDate?: string }) {
   //   return api.post(`/goals/${goalId}/tasks`, data);
   // },

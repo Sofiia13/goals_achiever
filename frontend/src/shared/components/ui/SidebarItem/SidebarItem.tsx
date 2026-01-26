@@ -3,7 +3,7 @@ import styles from "./SidebarItem.module.scss";
 import EditImg from "/icons/edit-icon.svg";
 import ArrowDownImg from "/icons/arrow-down.svg";
 import type { Task } from "../../../types/api.types";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "../Button";
 import { tasksApi } from "../../../api/tasks.api";
 
@@ -19,6 +19,36 @@ export const SidebarItem: React.FC<Props> = ({ task, setTasks }) => {
   const [draftDescription, setDraftDescription] = useState<string>(
     task.description ?? ""
   );
+  const [progress, setProgress] = useState<{ 
+    daysWorked: number; 
+    requiredDays: number; 
+    totalTasks: number; 
+    percentage: number 
+  } | null>(null);
+
+  useEffect(() => {
+    // Якщо це roadmap task (не daily), завантажуємо прогрес
+    if (task.type !== "daily" && task.goalId) {
+      tasksApi.getStationProgress(task.goalId, task.title)
+        .then((res) => setProgress(res.data))
+        .catch((err) => console.error("Failed to load progress:", err));
+    }
+  }, [task]);
+
+  const handleToggleStatus = async () => {
+    const newStatus = task.status === "done" ? "pending" : "done";
+    try {
+      await tasksApi.updateTaskStatus(task.id, newStatus);
+      if (setTasks) {
+        setTasks((prev) =>
+          prev.map((t) => (t.id === task.id ? { ...t, status: newStatus } : t))
+        );
+      }
+    } catch (err) {
+      console.error("ERROR UPDATING TASK STATUS:", err);
+      alert("Failed to update task status. Please try again.");
+    }
+  };
 
   const handleStartEditing = () => {
     setDraftTitle(task.title);
@@ -59,7 +89,15 @@ export const SidebarItem: React.FC<Props> = ({ task, setTasks }) => {
             onChange={(e) => setDraftTitle(e.target.value)}
           />
         ) : (
-          <p className={styles.sidebarItem__text}>{task.title}</p>
+          <p 
+            className={styles.sidebarItem__text}
+            style={{ 
+              textDecoration: task.status === "done" ? "line-through" : "none",
+              opacity: task.status === "done" ? 0.6 : 1 
+            }}
+          >
+            {task.title}
+          </p>
         )}
 
         <img
@@ -77,6 +115,19 @@ export const SidebarItem: React.FC<Props> = ({ task, setTasks }) => {
           onClick={handleStartEditing}
         />
       </div>
+      
+      {progress && task.type !== "daily" && progress.daysWorked > 0 && (
+        <div className={styles.sidebarItem__progressBar}>
+          <div 
+            className={styles.sidebarItem__progressFill}
+            style={{ width: `${progress.percentage}%` }}
+          />
+          <span className={styles.sidebarItem__progressText}>
+            {progress.daysWorked}/{progress.requiredDays} days worked • {progress.totalTasks} tasks completed
+          </span>
+        </div>
+      )}
+      
       {isOpen && (
         <div className={styles.sidebarItem__description}>
           {isEditing ? (
@@ -86,7 +137,14 @@ export const SidebarItem: React.FC<Props> = ({ task, setTasks }) => {
               onChange={(e) => setDraftDescription(e.target.value)}
             />
           ) : (
-            <p className={styles.sidebarItem__text}>{task.description}</p>
+            <>
+              <p className={styles.sidebarItem__text}>{task.description}</p>
+              <Button
+                buttonText={task.status === "done" ? "Mark as Pending" : "Mark as Done"}
+                className={styles.sidebarItem__statusButton}
+                onClick={handleToggleStatus}
+              />
+            </>
           )}
         </div>
       )}

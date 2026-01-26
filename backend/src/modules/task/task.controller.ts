@@ -107,4 +107,30 @@ export class TaskController {
       res.status(500).json({ message: err.message });
     }
   }
+
+  static async getStationProgress(req: Request, res: Response) {
+    try {
+      const user = req.user;
+      if (!user) {
+        return res.status(401).json({ message: "Unauthorized" });
+      }
+
+      const { goalId, stationTitle } = req.params;
+
+      if (!goalId || !stationTitle) {
+        return res
+          .status(400)
+          .json({ message: "Goal ID and station title are required" });
+      }
+
+      const progress = await taskService.getStationProgress(
+        parseInt(goalId, 10),
+        decodeURIComponent(stationTitle),
+      );
+      
+      res.json(progress);
+    } catch (err: any) {
+      res.status(500).json({ message: err.message });
+    }
+  }
 }

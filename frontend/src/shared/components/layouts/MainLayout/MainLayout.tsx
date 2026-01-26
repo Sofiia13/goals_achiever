@@ -8,7 +8,6 @@ import { tasksApi } from "../../../api/tasks.api";
 import { goalsApi } from "../../../api/goals.api";
 import { aiApi } from "../../../api/ai.api";
 import { useAuth } from "../../../context/AuthContext";
-import { Button } from "../../ui/Button";
 
 export const MainLayout: React.FC = () => {
   const [dailyTasks, setDailyTasks] = useState<Task[]>([]);

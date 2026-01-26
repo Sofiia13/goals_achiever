@@ -10,6 +10,11 @@ router.get(
   authMiddleware,
   TaskController.getDailyTasksByGoalId,
 );
+router.get(
+  "/goals/:goalId/stations/:stationTitle/progress",
+  authMiddleware,
+  TaskController.getStationProgress,
+);
 router.patch(
   "/:taskId/status",
   authMiddleware,
