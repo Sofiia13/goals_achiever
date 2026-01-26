@@ -45,6 +45,57 @@
     }
   }
 
+  &__goalTabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-wrap: nowrap;
+    
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+    
+    &::-webkit-scrollbar {
+      display: none; 
+    }
+  }
+
+    white-space: nowrap;
+    flex-shrink: 0;
+  &__goalTab {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 2px solid $stroke-color;
+    background-color: transparent;
+    color: $main-color;
+    font-family: "Fredoka Regular", sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background-color: rgba(140, 120, 81, 0.1);
+    }
+
+    &_active {
+      background-color: $main-color;
+      color: $paragraph-color;
+      border-color: $main-color;
+    }
+  }
+
+  &__tasksHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    p {
+      margin: 0;
+    }
+  }
+
   &__goalProgress {
     padding-inline: 20px;
     align-self: flex-end;
