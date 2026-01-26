@@ -39,12 +39,44 @@ export class TaskController {
       let tasks = await taskService.getDailyTasksByGoalId(goalId);
 
       if (!tasks.length) {
-        const { nextStation, previousProgress } = await AiService.getProgressInfo(goalId);
-        const generated = await AiService.generateDailyTasks(goalId, nextStation, previousProgress);
+        const { nextStation, previousProgress } =
+          await AiService.getProgressInfo(goalId);
+        const generated = await AiService.generateDailyTasks(
+          goalId,
+          nextStation,
+          previousProgress,
+        );
         tasks = generated.tasks;
       }
 
       res.json(tasks);
+    } catch (err: any) {
+      res.status(500).json({ message: err.message });
+    }
+  }
+
+  static async updateTaskDetails(req: Request, res: Response) {
+    try {
+      const user = req.user;
+      if (!user) {
+        return res.status(401).json({ message: "Unauthorized" });
+      }
+
+      const { taskId } = req.params;
+      const { title, description } = req.body;
+
+      if (!taskId || !title || !description) {
+        return res
+          .status(400)
+          .json({ message: "Task ID, title and description are required" });
+      }
+
+      const task = await taskService.updateTaskDetails(
+        parseInt(taskId, 10),
+        title,
+        description,
+      );
+      res.json(task);
     } catch (err: any) {
       res.status(500).json({ message: err.message });
     }
@@ -61,10 +93,15 @@ export class TaskController {
       const { status } = req.body;
 
       if (!taskId || !status) {
-        return res.status(400).json({ message: "Task ID and status are required" });
+        return res
+          .status(400)
+          .json({ message: "Task ID and status are required" });
       }
 
-      const task = await taskService.updateTaskStatus(parseInt(taskId, 10), status);
+      const task = await taskService.updateTaskStatus(
+        parseInt(taskId, 10),
+        status,
+      );
       res.json(task);
     } catch (err: any) {
       res.status(500).json({ message: err.message });

@@ -4,6 +4,7 @@ export class TaskService {
   async getTasksByGoalId(goalId: number) {
     return prisma.task.findMany({
       where: { goalId },
+      orderBy: [{ generatedAt: "asc" }, { id: "asc" }],
     });
   }
 
@@ -14,15 +15,22 @@ export class TaskService {
     endOfToday.setUTCHours(23, 59, 59, 999);
 
     return prisma.task.findMany({
-      where: { 
+      where: {
         goalId,
         type: "daily",
         generatedAt: {
           gte: startOfToday,
           lte: endOfToday,
-        }
+        },
       },
       orderBy: { generatedAt: "desc" },
+    });
+  }
+
+  async updateTaskDetails(taskId: number, title: string, description: string) {
+    return prisma.task.update({
+      where: { id: taskId },
+      data: { title, description },
     });
   }
 

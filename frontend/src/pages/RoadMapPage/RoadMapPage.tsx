@@ -34,7 +34,7 @@ export const RoadMapPage: React.FC = () => {
 
   return (
     <div className={styles.roadMapPage}>
-      <SideBar tasks={tasks} />
+      <SideBar tasks={tasks} setTasks={setTasks} />
       <RoadMap
         tasks={tasks}
         setTasks={setTasks}

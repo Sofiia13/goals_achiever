@@ -30,7 +30,57 @@
     }
   }
 
+  &__editInput {
+    font-size: 16px;
+    padding: 5px;
+    border: 1px solid $stroke-color;
+    border-radius: 4px;
+    width: 100%;
+    background-color: $highlight-color;
+    font-family: inherit;
+    text-transform: none;
+
+    &:focus {
+      outline: none;
+      border-color: #d4a574;
+      box-shadow: 0 0 0 2px rgba(212, 165, 116, 0.2);
+    }
+  }
+
+  &__editTextarea {
+    font-size: 16px;
+    padding: 5px;
+    border: 1px solid $stroke-color;
+    border-radius: 4px;
+    width: 100%;
+    height: 100px;
+    background-color: $highlight-color;
+    font-family: inherit;
+    text-transform: none;
+    resize: vertical;
+    box-sizing: border-box;
+
+    &:focus {
+      outline: none;
+      border-color: #d4a574;
+      box-shadow: 0 0 0 2px rgba(212, 165, 116, 0.2);
+    }
+  }
+
   &__description {
     margin-top: 5px;
+    margin-left: 0;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: flex-end;
+    padding-top: 10px;
+  }
+
+  &__cancelButton {
+    color: $tertiary-color;
   }
 }
