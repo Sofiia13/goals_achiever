@@ -8,6 +8,7 @@ import { goalsApi } from "../../../api/goals.api";
 import { ItemsList } from "../../ui/ItemsList";
 import { Modal } from "../../ui/Modal";
 import { Bridge } from "../../ui/Bridge";
+import { AvatarRig } from "../../ui/Avatar";
 import * as THREE from "three";
 
 const DEFAULT_CAMERA_POS: [number, number, number] = [-50, 200, 500];
@@ -56,7 +57,11 @@ type Props = {
   setSelectedGoalId: React.Dispatch<React.SetStateAction<number | null>>;
 };
 
-export const RoadMap: React.FC<Props> = ({ tasks, selectedGoalId, setSelectedGoalId }) => {
+export const RoadMap: React.FC<Props> = ({
+  tasks,
+  selectedGoalId,
+  setSelectedGoalId,
+}) => {
   const [goals, setGoals] = useState<Goal[]>([]);
   const [selectedTaskId, setSelectedTaskId] = useState<number | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -68,6 +73,14 @@ export const RoadMap: React.FC<Props> = ({ tasks, selectedGoalId, setSelectedGoa
   >(null);
   const [cameraMode, setCameraMode] = useState<CameraMode>("idle");
   const [pendingTaskId, setPendingTaskId] = useState<number | null>(null);
+
+  const [avatarCurrentPos, setAvatarCurrentPos] = useState<
+    [number, number, number]
+  >([0, 0, 0]);
+  const [avatarTargetPos, setAvatarTargetPos] = useState<
+    [number, number, number]
+  >([0, 0, 0]);
+  const [isAvatarMoving, setIsAvatarMoving] = useState(false);
 
   const resetCamera = () => {
     setCameraMode("reset");
@@ -114,11 +127,60 @@ export const RoadMap: React.FC<Props> = ({ tasks, selectedGoalId, setSelectedGoa
   }, []);
 
   useEffect(() => {
+    if (!selectedGoalId && goals.length > 0) {
+      setSelectedGoalId(goals[0].id);
+    }
+  }, [goals, selectedGoalId, setSelectedGoalId]);
+
+  useEffect(() => {
     setSelectedTaskId(null);
     setPendingTaskId(null);
     resetCamera();
     setIsModalOpen(false);
   }, [selectedGoalId]);
+
+  useEffect(() => {
+    if (tasks.length !== 0) {
+      // Стартова позиція на першій станції
+      setAvatarCurrentPos([200, 55, 0]);
+      setAvatarTargetPos([200, 55, 0]);
+      setIsAvatarMoving(false);
+      return;
+    }
+
+    const completedTasks = tasks.filter(task => task.status === "done");
+    const lastCompletedIndex = completedTasks.length > 0 
+      ? tasks.findIndex(task => task.id === completedTasks[completedTasks.length - 1].id)
+      : -1;
+
+    let currentIndex = lastCompletedIndex >= 0 ? lastCompletedIndex : 0;
+    const currentPos: [number, number, number] = 
+      currentIndex % 2 !== 0
+        ? [-200, 15, currentIndex * -150]
+        : [200, 15, currentIndex * -150];
+
+    const nextTask = tasks[currentIndex + 1];
+    if (nextTask && nextTask.status === "pending" && completedTasks.length > 0) {
+      const nextIndex = currentIndex + 1;
+      const nextPos: [number, number, number] = 
+        nextIndex % 2 !== 0
+          ? [-200, 15, nextIndex * -150]
+          : [200, 15, nextIndex * -150];
+      
+      setAvatarCurrentPos(currentPos);
+      setAvatarTargetPos(nextPos);
+      setIsAvatarMoving(true);
+    } else {
+      setAvatarCurrentPos(currentPos);
+      setAvatarTargetPos(currentPos);
+      setIsAvatarMoving(false);
+    }
+  }, [tasks]);
+
+  const handleAvatarReachTarget = () => {
+    setIsAvatarMoving(false);
+    setAvatarCurrentPos(avatarTargetPos);
+  };
 
   return (
     <>
@@ -187,12 +249,12 @@ export const RoadMap: React.FC<Props> = ({ tasks, selectedGoalId, setSelectedGoa
               );
             })}
 
-            {/* станції одна за одною */}
-            {/* <Station position={[-50, 0, 0]} scale={[0.1, 0.1, 0.1]} /> */}
-            {/* <Station position={[-20, 0, 0]} scale={[0.1, 0.1, 0.1]} />
-        <Station position={[0, 0, 0]} scale={[0.1, 0.1, 0.1]} />
-        <Station position={[50, 0, -200]} scale={[0.1, 0.1, 0.1]} />
-        <Station position={[100, 0, -600]} scale={[0.1, 0.1, 0.1]} /> */}
+            <AvatarRig
+              currentPosition={avatarCurrentPos}
+              targetPosition={avatarTargetPos}
+              isMoving={isAvatarMoving}
+              onReachTarget={handleAvatarReachTarget}
+            />
 
             <OrbitControls target={[0, 0, 0]} />
           </Canvas>

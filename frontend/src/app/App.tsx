@@ -26,6 +26,7 @@ function App() {
         <Route path="/goals" element={<NewGoalPage />} />
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/roadmaps" element={<RoadMapPage />} />
+        <Route path="/roadmaps/:goalId" element={<RoadMapPage />} />
         <Route path="/analytics" element={<AnalyticsPage />} />
       </Routes>
     </div>

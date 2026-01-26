@@ -4,6 +4,8 @@ import { Input } from "../../shared/components/ui/Input";
 import { useState } from "react";
 import { Button } from "../../shared/components/ui/Button";
 import { aiApi } from "../../shared/api/ai.api";
+import { Slab } from "react-loading-indicators";
+import { useNavigate } from "react-router-dom";
 
 export const NewGoalPage: React.FC = () => {
   const [goal, setGoal] = useState("");
@@ -12,6 +14,7 @@ export const NewGoalPage: React.FC = () => {
   const [plan, setPlan] = useState<string | null>(null);
 
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   const handleCreateGoal = async () => {
     if (!goal || !deadline) {
@@ -24,18 +27,36 @@ export const NewGoalPage: React.FC = () => {
     try {
       const { data } = await aiApi.generatePlan({ goal, deadline, context });
       setPlan(data);
+      
+      if (data?.id) {
+        navigate(`/roadmaps/${data.id}`);
+      } else {
+        navigate("/roadmaps");
+      }
+
+      setGoal("");
+      setContext("");
+      setDeadline("");
     } catch (err: any) {
       console.error(
         "GENERATION ERROR:",
-        err.response?.data?.message || err.message
+        err.response?.data?.message || err.message,
       );
       alert(err.response?.data?.message || "Помилка генерації плану");
     } finally {
       setLoading(false);
     }
   };
+
+  const colors = ["#2F2418", "#4A3A28", "#6B563F", "#8C7458", "#A89172"];
+
   return (
     <div className={styles.newGoalPage}>
+      {loading && (
+        <div className={styles.newGoalPage__loading}>
+          <Slab color={colors} />
+        </div>
+      )}
       <h1 className={styles.newGoalPage__title}>
         Write you goal and the deadline to achieve it
       </h1>

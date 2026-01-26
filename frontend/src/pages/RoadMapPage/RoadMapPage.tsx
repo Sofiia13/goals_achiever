@@ -4,13 +4,25 @@ import { SideBar } from "../../shared/components/layouts/Sidebar";
 import { RoadMap } from "../../shared/components/layouts/RoadMap";
 import type { Task } from "../../shared/types/api.types";
 import { tasksApi } from "../../shared/api/tasks.api";
+import { useParams, useNavigate } from "react-router-dom";
 
 export const RoadMapPage: React.FC = () => {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [selectedGoalId, setSelectedGoalId] = useState<number | null>(null);
+  const { goalId } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
-    if (!selectedGoalId) return;
+    const parsed = goalId ? Number(goalId) : null;
+    if (parsed && !Number.isNaN(parsed)) {
+      setSelectedGoalId(parsed);
+    }
+  }, [goalId]);
+
+  useEffect(() => {
+    if (selectedGoalId == null) return;
+
+    navigate(`/roadmaps/${selectedGoalId}`, { replace: true });
 
     tasksApi.getTasksByGoal(selectedGoalId).then((res) => {
       const nonDailyTasks = res.data.filter(
@@ -18,7 +30,7 @@ export const RoadMapPage: React.FC = () => {
       );
       setTasks(nonDailyTasks);
     });
-  }, [selectedGoalId]);
+  }, [selectedGoalId, navigate]);
 
   return (
     <div className={styles.roadMapPage}>
