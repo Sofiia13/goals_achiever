@@ -112,6 +112,7 @@ Generate a realistic, detailed step-by-step plan.
               status: "pending",
               description: task.description || "",
               dueDate: task.dueDate ? new Date(task.dueDate) : null,
+              estimatedMinutes: Number(task.estimatedMinutes) || null,
             })),
           },
         },
@@ -186,7 +187,8 @@ JSON Schema:
     {
       "title": "",
       "description": "",
-      "dueDate": ""
+      "dueDate": "",
+      "estimatedMinutes": 0
     }
   ]
 }
@@ -246,6 +248,7 @@ Return ONLY valid JSON.
           status: "pending",
           description: task.description || "",
           dueDate: task.dueDate ? new Date(task.dueDate) : new Date(),
+          estimatedMinutes: Number(task.estimatedMinutes) || null,
           station: nextStation,
           type: "daily",
           goalId: goalId,

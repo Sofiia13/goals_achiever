@@ -35,21 +35,6 @@ export const SidebarItem: React.FC<Props> = ({ task, setTasks }) => {
     }
   }, [task]);
 
-  const handleToggleStatus = async () => {
-    const newStatus = task.status === "done" ? "pending" : "done";
-    try {
-      await tasksApi.updateTaskStatus(task.id, newStatus);
-      if (setTasks) {
-        setTasks((prev) =>
-          prev.map((t) => (t.id === task.id ? { ...t, status: newStatus } : t))
-        );
-      }
-    } catch (err) {
-      console.error("ERROR UPDATING TASK STATUS:", err);
-      alert("Failed to update task status. Please try again.");
-    }
-  };
-
   const handleStartEditing = () => {
     setDraftTitle(task.title);
     setDraftDescription(task.description || "");
@@ -60,7 +45,6 @@ export const SidebarItem: React.FC<Props> = ({ task, setTasks }) => {
   const handleSaveChanges = async () => {
     try {
       await tasksApi.updateTaskDetails(task.id, draftTitle, draftDescription);
-      // Локально оновлюємо у списку, щоб не потрібно було рефрешити
       if (setTasks) {
         setTasks((prev) =>
           prev.map((t) =>
@@ -116,18 +100,6 @@ export const SidebarItem: React.FC<Props> = ({ task, setTasks }) => {
         />
       </div>
       
-      {progress && task.type !== "daily" && progress.daysWorked > 0 && (
-        <div className={styles.sidebarItem__progressBar}>
-          <div 
-            className={styles.sidebarItem__progressFill}
-            style={{ width: `${progress.percentage}%` }}
-          />
-          <span className={styles.sidebarItem__progressText}>
-            {progress.daysWorked}/{progress.requiredDays} days worked • {progress.totalTasks} tasks completed
-          </span>
-        </div>
-      )}
-      
       {isOpen && (
         <div className={styles.sidebarItem__description}>
           {isEditing ? (
@@ -137,14 +109,7 @@ export const SidebarItem: React.FC<Props> = ({ task, setTasks }) => {
               onChange={(e) => setDraftDescription(e.target.value)}
             />
           ) : (
-            <>
-              <p className={styles.sidebarItem__text}>{task.description}</p>
-              <Button
-                buttonText={task.status === "done" ? "Mark as Pending" : "Mark as Done"}
-                className={styles.sidebarItem__statusButton}
-                onClick={handleToggleStatus}
-              />
-            </>
+            <p className={styles.sidebarItem__text}>{task.description}</p>
           )}
         </div>
       )}

@@ -90,6 +90,8 @@ export const RoadMap: React.FC<Props> = ({
   };
 
   const handleMoveToTask = (task: Task, pos: [number, number, number]) => {
+    setSelectedTaskId(task.id);
+    setIsModalOpen(true);
     setPendingTaskId(task.id);
     setCameraMode("toTask");
     setCameraTarget([pos[0], pos[1] + 60, pos[2] + 180]);

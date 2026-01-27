@@ -40,7 +40,6 @@ export class TaskService {
       data: { status },
     });
 
-    // Якщо це daily task і він виконаний, перевіряємо чи потрібно оновити станцію
     if (updatedTask.type === "daily" && status === "done" && updatedTask.station) {
       await this.checkAndUpdateStationProgress(updatedTask.goalId, updatedTask.station);
     }
@@ -49,7 +48,6 @@ export class TaskService {
   }
 
   async checkAndUpdateStationProgress(goalId: number, stationTitle: string) {
-    // Знаходимо всі daily tasks для цієї станції
     const dailyTasksForStation = await prisma.task.findMany({
       where: {
         goalId,
@@ -63,9 +61,35 @@ export class TaskService {
       return;
     }
 
-    // Рахуємо унікальні дні, коли були виконані daily tasks
+    // Дістаємо goal, щоб знати дедлайн і кількість станцій що залишилися
+    const goal = await prisma.goal.findUnique({
+      where: { id: goalId },
+      include: {
+        tasks: {
+          where: { type: { not: "daily" } },
+        },
+      },
+    });
+
+    if (!goal) return;
+
+    // Рахуємо скільки днів до дедлайну
+    const now = new Date();
+    const msPerDay = 24 * 60 * 60 * 1000;
+    const daysToDeadline = Math.max(1, Math.ceil((goal.deadline.getTime() - now.getTime()) / msPerDay));
+    
+    // Рахуємо скільки станцій залишилось
+    const pendingStations = Math.max(
+      1,
+      goal.tasks.filter((t) => t.status === "pending").length
+    );
+
+    // Динамічний поріг: скільки днів на цю станцію з урахуванням дедлайну і кількості станцій
+    const requiredDays = Math.max(1, Math.ceil(daysToDeadline / pendingStations));
+
+    // Рахуємо унікальні дні роботи по цій станції
     const uniqueDays = new Set<string>();
-    dailyTasksForStation.forEach(task => {
+    dailyTasksForStation.forEach((task) => {
       const date = new Date(task.generatedAt);
       const dayKey = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
       uniqueDays.add(dayKey);
@@ -73,11 +97,7 @@ export class TaskService {
 
     const daysWorked = uniqueDays.size;
 
-    // Якщо користувач працював над станцією протягом 5+ днів, відмічаємо станцію як виконану
-    const REQUIRED_DAYS = 5;
-    
-    if (daysWorked >= REQUIRED_DAYS) {
-      // Знаходимо roadmap task (станцію) з таким title
+    if (daysWorked >= requiredDays) {
       const stationTask = await prisma.task.findFirst({
         where: {
           goalId,
@@ -93,10 +113,14 @@ export class TaskService {
           data: { status: "done" },
         });
 
-        console.log(`✅ Станція "${stationTitle}" автоматично відмічена як виконана! (${daysWorked} днів роботи)`);
+        console.log(
+          `✅ Станція "${stationTitle}" виконана: ${daysWorked}/${requiredDays} днів (дедлайн через ${daysToDeadline} дн., станцій лишилось ${pendingStations})`
+        );
       }
     } else {
-      console.log(`📊 Прогрес для "${stationTitle}": ${daysWorked}/${REQUIRED_DAYS} днів`);
+      console.log(
+        `📊 Прогрес для "${stationTitle}": ${daysWorked}/${requiredDays} днів (дедлайн через ${daysToDeadline} дн., станцій лишилось ${pendingStations})`
+      );
     }
   }
 
@@ -110,9 +134,28 @@ export class TaskService {
       },
     });
 
+    // Дістаємо goal для розрахунку динамічного порогу
+    const goal = await prisma.goal.findUnique({
+      where: { id: goalId },
+      include: {
+        tasks: {
+          where: { type: { not: "daily" } },
+        },
+      },
+    });
+
+    if (!goal) {
+      return {
+        daysWorked: 0,
+        requiredDays: 5,
+        totalTasks: 0,
+        percentage: 0,
+      };
+    }
+
     // Рахуємо унікальні дні
     const uniqueDays = new Set<string>();
-    dailyTasksForStation.forEach(task => {
+    dailyTasksForStation.forEach((task) => {
       const date = new Date(task.generatedAt);
       const dayKey = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
       uniqueDays.add(dayKey);
@@ -120,7 +163,17 @@ export class TaskService {
 
     const daysWorked = uniqueDays.size;
     const totalTasks = dailyTasksForStation.length;
-    const requiredDays = 5;
+
+    // Динамічний поріг
+    const now = new Date();
+    const msPerDay = 24 * 60 * 60 * 1000;
+    const daysToDeadline = Math.max(1, Math.ceil((goal.deadline.getTime() - now.getTime()) / msPerDay));
+    const pendingStations = Math.max(
+      1,
+      goal.tasks.filter((t) => t.status === "pending").length
+    );
+    const requiredDays = Math.max(1, Math.ceil(daysToDeadline / pendingStations));
+
     const percentage = (daysWorked / requiredDays) * 100;
 
     return {
