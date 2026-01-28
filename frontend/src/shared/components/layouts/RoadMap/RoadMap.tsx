@@ -91,7 +91,6 @@ export const RoadMap: React.FC<Props> = ({
 
   const handleMoveToTask = (task: Task, pos: [number, number, number]) => {
     setSelectedTaskId(task.id);
-    setIsModalOpen(true);
     setPendingTaskId(task.id);
     setCameraMode("toTask");
     setCameraTarget([pos[0], pos[1] + 60, pos[2] + 180]);
@@ -108,19 +107,30 @@ export const RoadMap: React.FC<Props> = ({
     if (mode === "toTask" && pendingTaskId) {
       setSelectedTaskId(pendingTaskId);
       setIsModalOpen(true);
+      stopCamera();
+      return;
+    }
+    if (mode === "toTask" && !pendingTaskId) {
+      // Повернулася на аватара
+      stopCamera();
+      return;
     }
     if (mode === "reset") {
       setSelectedTaskId(null);
       setPendingTaskId(null);
+      stopCamera();
     }
-    stopCamera();
   };
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
     setSelectedTaskId(null);
     setPendingTaskId(null);
-    resetCamera();
+    // Плавне повернення камери на аватара
+    const z = isAvatarMoving ? avatarTargetPos[2] : avatarCurrentPos[2];
+    setCameraMode("toTask");
+    setCameraTarget([-50, 180, z + 360]);
+    setCameraLookAt([0, 0, z]);
   };
 
   useEffect(() => {
@@ -153,6 +163,7 @@ export const RoadMap: React.FC<Props> = ({
       setAvatarCurrentPos(startPos);
       setAvatarTargetPos(startPos);
       setIsAvatarMoving(false);
+      setOrbitTargetZ(0);
       return;
     }
 
@@ -166,8 +177,8 @@ export const RoadMap: React.FC<Props> = ({
     let currentIndex = lastCompletedIndex >= 0 ? lastCompletedIndex : 0;
     const currentPos: [number, number, number] = 
       currentIndex % 2 !== 0
-        ? [-200, 15, currentIndex * -150]
-        : [200, 15, currentIndex * -150];
+        ? [-165, 15, currentIndex * -150]
+        : [165, 15, currentIndex * -150];
 
     console.log('Last completed index:', lastCompletedIndex);
     console.log('Current index:', currentIndex, 'Position:', currentPos);
@@ -186,26 +197,16 @@ export const RoadMap: React.FC<Props> = ({
       setAvatarCurrentPos(currentPos);
       setAvatarTargetPos(nextPos);
       setIsAvatarMoving(true);
+      setOrbitTargetZ(nextPos[2]);
     } else {
       console.log('Staying at current position:', currentPos, 'isMoving: false');
       setAvatarCurrentPos(currentPos);
       setAvatarTargetPos(currentPos);
       setIsAvatarMoving(false);
+      setOrbitTargetZ(currentPos[2]);
     }
   }, [tasks]);
 
-  // Active follow: keep camera centered around avatar and update OrbitControls focus
-  useEffect(() => {
-    if (cameraMode === "toTask" || cameraMode === "reset") return;
-    const z = isAvatarMoving ? avatarTargetPos[2] : avatarCurrentPos[2];
-    const followTarget: [number, number, number] = [-50, 180, z + 360];
-    const followLookAt: [number, number, number] = [0, 0, z];
-
-    setCameraTarget(followTarget);
-    setCameraLookAt(followLookAt);
-    setCameraMode("follow");
-    setOrbitTargetZ(z);
-  }, [avatarCurrentPos, avatarTargetPos, isAvatarMoving, cameraMode]);
 
   const handleAvatarReachTarget = () => {
     setIsAvatarMoving(false);

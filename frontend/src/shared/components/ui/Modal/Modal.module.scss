@@ -37,5 +37,11 @@
     font-size: 20px;
     color: $secondary-color;
     margin-bottom: 20px;
+    padding-inline: 20px;
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    max-width: 800px;
   }
 }

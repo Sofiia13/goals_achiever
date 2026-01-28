@@ -97,7 +97,7 @@ export const MainLayout: React.FC = () => {
         </div>
         <div className={styles.mainLayout__goalProgress}>
           <p className={styles.mainLayout__daysLeft}>
-            X days left to reach the goal
+            67 days left to reach the goal
           </p>
         </div>
       </div>
