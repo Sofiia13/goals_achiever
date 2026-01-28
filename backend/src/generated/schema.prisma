@@ -19,15 +19,16 @@ model User {
 }
 
 model Goal {
-  id          Int       @id @default(autoincrement())
-  title       String
-  context     String?
-  deadline    DateTime
-  userId      Int
-  createdAt   DateTime  @default(now())
-  user        User      @relation(fields: [userId], references: [id])
-  tasks       Task[]
-  completedAt DateTime?
+  id                     Int       @id @default(autoincrement())
+  title                  String
+  context                String?
+  deadline               DateTime
+  userId                 Int
+  createdAt              DateTime  @default(now())
+  user                   User      @relation(fields: [userId], references: [id])
+  tasks                  Task[]
+  completedAt            DateTime?
+  currentStationProgress Float     @default(0) // прогрес до наступної станції (0-100%)
 }
 
 model Task {
@@ -39,9 +40,10 @@ model Task {
   generatedAt DateTime  @default(now())
 
   // AI / planning metadata
-  type             String? // "learn" | "practice" | "review" | "reflect"
-  estimatedMinutes Int?
-  station          String? // для якої "станції" це завдання
+  type                 String? // "learn" | "practice" | "review" | "reflect"
+  estimatedMinutes     Int?
+  station              String? // для якої "станції" це завдання
+  progressContribution Float?
 
   goalId Int
   goal   Goal @relation(fields: [goalId], references: [id])

@@ -35,16 +35,68 @@ export class TaskService {
   }
 
   async updateTaskStatus(taskId: number, status: string) {
+    const task = await prisma.task.findUnique({
+      where: { id: taskId },
+      include: { goal: true },
+    });
+
+    if (!task) {
+      throw new Error("Task not found");
+    }
+
     const updatedTask = await prisma.task.update({
       where: { id: taskId },
       data: { status },
     });
 
-    if (updatedTask.type === "daily" && status === "done" && updatedTask.station) {
-      await this.checkAndUpdateStationProgress(updatedTask.goalId, updatedTask.station);
+    if (updatedTask.type === "daily" && status === "done" && updatedTask.progressContribution) {
+      const newProgress = (task.goal.currentStationProgress || 0) + updatedTask.progressContribution;
+      
+      await prisma.goal.update({
+        where: { id: task.goalId },
+        data: { currentStationProgress: Math.min(newProgress, 100) },
+      });
+
+      if (newProgress >= 100 && updatedTask.station) {
+        await this.completeCurrentStation(task.goalId, updatedTask.station);
+      }
+    }
+
+    if (updatedTask.type === "daily" && status === "pending" && updatedTask.progressContribution) {
+      const newProgress = Math.max(0, (task.goal.currentStationProgress || 0) - updatedTask.progressContribution);
+      
+      await prisma.goal.update({
+        where: { id: task.goalId },
+        data: { currentStationProgress: newProgress },
+      });
     }
 
     return updatedTask;
+  }
+
+  async completeCurrentStation(goalId: number, stationTitle: string) {
+    const stationTask = await prisma.task.findFirst({
+      where: {
+        goalId,
+        type: { not: "daily" },
+        title: stationTitle,
+        status: "pending",
+      },
+    });
+
+    if (stationTask) {
+      await prisma.task.update({
+        where: { id: stationTask.id },
+        data: { status: "done" },
+      });
+
+      await prisma.goal.update({
+        where: { id: goalId },
+        data: { currentStationProgress: 0 },
+      });
+
+      console.log(`✅ Станція "${stationTitle}" виконана! Прогрес: 100%`);
+    }
   }
 
   async checkAndUpdateStationProgress(goalId: number, stationTitle: string) {

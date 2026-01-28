@@ -40,8 +40,11 @@ export const RoadMap: React.FC<Props> = ({
   const [avatarTargetPos, setAvatarTargetPos] = useState<[number, number, number]>([0, 0, 0]);
   const [isAvatarMoving, setIsAvatarMoving] = useState(false);
 
+  const selectedGoal = goals.find(g => g.id === selectedGoalId);
+
   const { updateAvatarPosition: updateAvatarPositionFn } = useAvatarLogic(
     tasks,
+    selectedGoal,
     setAvatarCurrentPos,
     setAvatarTargetPos,
     setIsAvatarMoving,

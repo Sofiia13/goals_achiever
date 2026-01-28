@@ -6,4 +6,10 @@ export class GoalService {
       where: { userId },
     });
   }
+
+  async getGoalById(goalId: number) {
+    return prisma.goal.findUnique({
+      where: { id: goalId },
+    });
+  }
 }

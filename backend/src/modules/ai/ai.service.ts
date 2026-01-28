@@ -188,7 +188,8 @@ JSON Schema:
       "title": "",
       "description": "",
       "dueDate": "",
-      "estimatedMinutes": 0
+      "estimatedMinutes": 0,
+      "progressContribution": 0
     }
   ]
 }
@@ -209,18 +210,30 @@ What the user has already done in previous days:
 Rules:
 - Generate tasks ONLY for ONE day (today).
 - Generate 3–5 small, realistic, actionable tasks.
+- Each task should contribute 15-25% progress (sum = 60-100% for ONE day).
+- A typical station takes 3-7 days to complete with consistent daily progress.
 - Tasks must be achievable in a normal day (no overload).
 - Tasks must logically follow from what the user has already done.
 - Do NOT repeat tasks that were already completed.
 - Focus on progress, not perfection.
 - Each task should take 15–60 minutes.
-- Due date must be today’s date in ISO format (YYYY-MM-DD).
+- Due date must be today's date in ISO format (YYYY-MM-DD).
+- progressContribution must be a number between 15 and 25 (total should sum to ~70%).
 
 Think step-by-step:
 1. Understand what the user has already completed.
 2. Determine what is the most logical NEXT step toward the station.
-3. Generate today’s tasks to move closer to that station.
+3. Generate today’s tasks to move closer to that station.4. Assign progress contribution based on task importance and difficulty.
 
+Example:
+{
+  "tasks": [
+    { "title": "Read chapter 1", "description": "...", "dueDate": "2024-01-15", "estimatedMinutes": 30, "progressContribution": 20 },
+    { "title": "Take notes", "description": "...", "dueDate": "2024-01-15", "estimatedMinutes": 20, "progressContribution": 20 },
+    { "title": "Practice exercises", "description": "...", "dueDate": "2024-01-15", "estimatedMinutes": 40, "progressContribution": 20 },
+    { "title": "Review key concepts", "description": "...", "dueDate": "2024-01-15", "estimatedMinutes": 15, "progressContribution": 15 }
+  ]
+}
 Return ONLY valid JSON.
 `;
 
@@ -249,6 +262,7 @@ Return ONLY valid JSON.
           description: task.description || "",
           dueDate: task.dueDate ? new Date(task.dueDate) : new Date(),
           estimatedMinutes: Number(task.estimatedMinutes) || null,
+          progressContribution: Number(task.progressContribution) || null,
           station: nextStation,
           type: "daily",
           goalId: goalId,

@@ -5,5 +5,6 @@ import { GoalController } from "./goal.controller";
 const router = Router();
 
 router.get("/", authMiddleware, GoalController.getUserGoals);
+router.get("/:id", authMiddleware, GoalController.getGoalById);
 
 export const goalRouter = router;

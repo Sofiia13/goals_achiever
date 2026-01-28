@@ -47,6 +47,10 @@
     }
   }
 
+  &__progressFill {
+    color: red;
+  }
+
   &__editTextarea {
     font-size: 16px;
     padding: 5px;
@@ -104,6 +108,13 @@
     background: linear-gradient(90deg, $main-color, #d4a574);
     border-radius: 3px;
     transition: width 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    min-width: 30px;
   }
 
   &__progressText {

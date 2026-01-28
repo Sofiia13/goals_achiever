@@ -7,6 +7,7 @@ export interface Goal {
   userId: number;
   tasks?: Task[];
   completedAt?: Date;
+  currentStationProgress: number; // прогрес до наступної станції (0-100%)
 }
 
 export interface Task {
@@ -18,4 +19,5 @@ export interface Task {
   generatedAt: Date;
   dueDate?: Date;
   type: string;
+  progressContribution?: number; // скільки % прогресу дає ця таска
 }

@@ -2250,11 +2250,13 @@ export namespace Prisma {
   export type GoalAvgAggregateOutputType = {
     id: number | null
     userId: number | null
+    currentStationProgress: number | null
   }
 
   export type GoalSumAggregateOutputType = {
     id: number | null
     userId: number | null
+    currentStationProgress: number | null
   }
 
   export type GoalMinAggregateOutputType = {
@@ -2265,6 +2267,7 @@ export namespace Prisma {
     userId: number | null
     createdAt: Date | null
     completedAt: Date | null
+    currentStationProgress: number | null
   }
 
   export type GoalMaxAggregateOutputType = {
@@ -2275,6 +2278,7 @@ export namespace Prisma {
     userId: number | null
     createdAt: Date | null
     completedAt: Date | null
+    currentStationProgress: number | null
   }
 
   export type GoalCountAggregateOutputType = {
@@ -2285,6 +2289,7 @@ export namespace Prisma {
     userId: number
     createdAt: number
     completedAt: number
+    currentStationProgress: number
     _all: number
   }
 
@@ -2292,11 +2297,13 @@ export namespace Prisma {
   export type GoalAvgAggregateInputType = {
     id?: true
     userId?: true
+    currentStationProgress?: true
   }
 
   export type GoalSumAggregateInputType = {
     id?: true
     userId?: true
+    currentStationProgress?: true
   }
 
   export type GoalMinAggregateInputType = {
@@ -2307,6 +2314,7 @@ export namespace Prisma {
     userId?: true
     createdAt?: true
     completedAt?: true
+    currentStationProgress?: true
   }
 
   export type GoalMaxAggregateInputType = {
@@ -2317,6 +2325,7 @@ export namespace Prisma {
     userId?: true
     createdAt?: true
     completedAt?: true
+    currentStationProgress?: true
   }
 
   export type GoalCountAggregateInputType = {
@@ -2327,6 +2336,7 @@ export namespace Prisma {
     userId?: true
     createdAt?: true
     completedAt?: true
+    currentStationProgress?: true
     _all?: true
   }
 
@@ -2424,6 +2434,7 @@ export namespace Prisma {
     userId: number
     createdAt: Date
     completedAt: Date | null
+    currentStationProgress: number
     _count: GoalCountAggregateOutputType | null
     _avg: GoalAvgAggregateOutputType | null
     _sum: GoalSumAggregateOutputType | null
@@ -2453,6 +2464,7 @@ export namespace Prisma {
     userId?: boolean
     createdAt?: boolean
     completedAt?: boolean
+    currentStationProgress?: boolean
     user?: boolean | UserDefaultArgs<ExtArgs>
     tasks?: boolean | Goal$tasksArgs<ExtArgs>
     _count?: boolean | GoalCountOutputTypeDefaultArgs<ExtArgs>
@@ -2466,6 +2478,7 @@ export namespace Prisma {
     userId?: boolean
     createdAt?: boolean
     completedAt?: boolean
+    currentStationProgress?: boolean
     user?: boolean | UserDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["goal"]>
 
@@ -2477,6 +2490,7 @@ export namespace Prisma {
     userId?: boolean
     createdAt?: boolean
     completedAt?: boolean
+    currentStationProgress?: boolean
     user?: boolean | UserDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["goal"]>
 
@@ -2488,9 +2502,10 @@ export namespace Prisma {
     userId?: boolean
     createdAt?: boolean
     completedAt?: boolean
+    currentStationProgress?: boolean
   }
 
-  export type GoalOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "title" | "context" | "deadline" | "userId" | "createdAt" | "completedAt", ExtArgs["result"]["goal"]>
+  export type GoalOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "title" | "context" | "deadline" | "userId" | "createdAt" | "completedAt" | "currentStationProgress", ExtArgs["result"]["goal"]>
   export type GoalInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     user?: boolean | UserDefaultArgs<ExtArgs>
     tasks?: boolean | Goal$tasksArgs<ExtArgs>
@@ -2517,6 +2532,7 @@ export namespace Prisma {
       userId: number
       createdAt: Date
       completedAt: Date | null
+      currentStationProgress: number
     }, ExtArgs["result"]["goal"]>
     composites: {}
   }
@@ -2949,6 +2965,7 @@ export namespace Prisma {
     readonly userId: FieldRef<"Goal", 'Int'>
     readonly createdAt: FieldRef<"Goal", 'DateTime'>
     readonly completedAt: FieldRef<"Goal", 'DateTime'>
+    readonly currentStationProgress: FieldRef<"Goal", 'Float'>
   }
     
 
@@ -3402,12 +3419,14 @@ export namespace Prisma {
   export type TaskAvgAggregateOutputType = {
     id: number | null
     estimatedMinutes: number | null
+    progressContribution: number | null
     goalId: number | null
   }
 
   export type TaskSumAggregateOutputType = {
     id: number | null
     estimatedMinutes: number | null
+    progressContribution: number | null
     goalId: number | null
   }
 
@@ -3421,6 +3440,7 @@ export namespace Prisma {
     type: string | null
     estimatedMinutes: number | null
     station: string | null
+    progressContribution: number | null
     goalId: number | null
   }
 
@@ -3434,6 +3454,7 @@ export namespace Prisma {
     type: string | null
     estimatedMinutes: number | null
     station: string | null
+    progressContribution: number | null
     goalId: number | null
   }
 
@@ -3447,6 +3468,7 @@ export namespace Prisma {
     type: number
     estimatedMinutes: number
     station: number
+    progressContribution: number
     goalId: number
     _all: number
   }
@@ -3455,12 +3477,14 @@ export namespace Prisma {
   export type TaskAvgAggregateInputType = {
     id?: true
     estimatedMinutes?: true
+    progressContribution?: true
     goalId?: true
   }
 
   export type TaskSumAggregateInputType = {
     id?: true
     estimatedMinutes?: true
+    progressContribution?: true
     goalId?: true
   }
 
@@ -3474,6 +3498,7 @@ export namespace Prisma {
     type?: true
     estimatedMinutes?: true
     station?: true
+    progressContribution?: true
     goalId?: true
   }
 
@@ -3487,6 +3512,7 @@ export namespace Prisma {
     type?: true
     estimatedMinutes?: true
     station?: true
+    progressContribution?: true
     goalId?: true
   }
 
@@ -3500,6 +3526,7 @@ export namespace Prisma {
     type?: true
     estimatedMinutes?: true
     station?: true
+    progressContribution?: true
     goalId?: true
     _all?: true
   }
@@ -3600,6 +3627,7 @@ export namespace Prisma {
     type: string | null
     estimatedMinutes: number | null
     station: string | null
+    progressContribution: number | null
     goalId: number
     _count: TaskCountAggregateOutputType | null
     _avg: TaskAvgAggregateOutputType | null
@@ -3632,6 +3660,7 @@ export namespace Prisma {
     type?: boolean
     estimatedMinutes?: boolean
     station?: boolean
+    progressContribution?: boolean
     goalId?: boolean
     goal?: boolean | GoalDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["task"]>
@@ -3646,6 +3675,7 @@ export namespace Prisma {
     type?: boolean
     estimatedMinutes?: boolean
     station?: boolean
+    progressContribution?: boolean
     goalId?: boolean
     goal?: boolean | GoalDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["task"]>
@@ -3660,6 +3690,7 @@ export namespace Prisma {
     type?: boolean
     estimatedMinutes?: boolean
     station?: boolean
+    progressContribution?: boolean
     goalId?: boolean
     goal?: boolean | GoalDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["task"]>
@@ -3674,10 +3705,11 @@ export namespace Prisma {
     type?: boolean
     estimatedMinutes?: boolean
     station?: boolean
+    progressContribution?: boolean
     goalId?: boolean
   }
 
-  export type TaskOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "title" | "description" | "status" | "dueDate" | "generatedAt" | "type" | "estimatedMinutes" | "station" | "goalId", ExtArgs["result"]["task"]>
+  export type TaskOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "title" | "description" | "status" | "dueDate" | "generatedAt" | "type" | "estimatedMinutes" | "station" | "progressContribution" | "goalId", ExtArgs["result"]["task"]>
   export type TaskInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     goal?: boolean | GoalDefaultArgs<ExtArgs>
   }
@@ -3703,6 +3735,7 @@ export namespace Prisma {
       type: string | null
       estimatedMinutes: number | null
       station: string | null
+      progressContribution: number | null
       goalId: number
     }, ExtArgs["result"]["task"]>
     composites: {}
@@ -4137,6 +4170,7 @@ export namespace Prisma {
     readonly type: FieldRef<"Task", 'String'>
     readonly estimatedMinutes: FieldRef<"Task", 'Int'>
     readonly station: FieldRef<"Task", 'String'>
+    readonly progressContribution: FieldRef<"Task", 'Float'>
     readonly goalId: FieldRef<"Task", 'Int'>
   }
     
@@ -4586,7 +4620,8 @@ export namespace Prisma {
     deadline: 'deadline',
     userId: 'userId',
     createdAt: 'createdAt',
-    completedAt: 'completedAt'
+    completedAt: 'completedAt',
+    currentStationProgress: 'currentStationProgress'
   };
 
   export type GoalScalarFieldEnum = (typeof GoalScalarFieldEnum)[keyof typeof GoalScalarFieldEnum]
@@ -4602,6 +4637,7 @@ export namespace Prisma {
     type: 'type',
     estimatedMinutes: 'estimatedMinutes',
     station: 'station',
+    progressContribution: 'progressContribution',
     goalId: 'goalId'
   };
 
@@ -4774,6 +4810,7 @@ export namespace Prisma {
     userId?: IntFilter<"Goal"> | number
     createdAt?: DateTimeFilter<"Goal"> | Date | string
     completedAt?: DateTimeNullableFilter<"Goal"> | Date | string | null
+    currentStationProgress?: FloatFilter<"Goal"> | number
     user?: XOR<UserScalarRelationFilter, UserWhereInput>
     tasks?: TaskListRelationFilter
   }
@@ -4786,6 +4823,7 @@ export namespace Prisma {
     userId?: SortOrder
     createdAt?: SortOrder
     completedAt?: SortOrderInput | SortOrder
+    currentStationProgress?: SortOrder
     user?: UserOrderByWithRelationInput
     tasks?: TaskOrderByRelationAggregateInput
   }
@@ -4801,6 +4839,7 @@ export namespace Prisma {
     userId?: IntFilter<"Goal"> | number
     createdAt?: DateTimeFilter<"Goal"> | Date | string
     completedAt?: DateTimeNullableFilter<"Goal"> | Date | string | null
+    currentStationProgress?: FloatFilter<"Goal"> | number
     user?: XOR<UserScalarRelationFilter, UserWhereInput>
     tasks?: TaskListRelationFilter
   }, "id">
@@ -4813,6 +4852,7 @@ export namespace Prisma {
     userId?: SortOrder
     createdAt?: SortOrder
     completedAt?: SortOrderInput | SortOrder
+    currentStationProgress?: SortOrder
     _count?: GoalCountOrderByAggregateInput
     _avg?: GoalAvgOrderByAggregateInput
     _max?: GoalMaxOrderByAggregateInput
@@ -4831,6 +4871,7 @@ export namespace Prisma {
     userId?: IntWithAggregatesFilter<"Goal"> | number
     createdAt?: DateTimeWithAggregatesFilter<"Goal"> | Date | string
     completedAt?: DateTimeNullableWithAggregatesFilter<"Goal"> | Date | string | null
+    currentStationProgress?: FloatWithAggregatesFilter<"Goal"> | number
   }
 
   export type TaskWhereInput = {
@@ -4846,6 +4887,7 @@ export namespace Prisma {
     type?: StringNullableFilter<"Task"> | string | null
     estimatedMinutes?: IntNullableFilter<"Task"> | number | null
     station?: StringNullableFilter<"Task"> | string | null
+    progressContribution?: FloatNullableFilter<"Task"> | number | null
     goalId?: IntFilter<"Task"> | number
     goal?: XOR<GoalScalarRelationFilter, GoalWhereInput>
   }
@@ -4860,6 +4902,7 @@ export namespace Prisma {
     type?: SortOrderInput | SortOrder
     estimatedMinutes?: SortOrderInput | SortOrder
     station?: SortOrderInput | SortOrder
+    progressContribution?: SortOrderInput | SortOrder
     goalId?: SortOrder
     goal?: GoalOrderByWithRelationInput
   }
@@ -4877,6 +4920,7 @@ export namespace Prisma {
     type?: StringNullableFilter<"Task"> | string | null
     estimatedMinutes?: IntNullableFilter<"Task"> | number | null
     station?: StringNullableFilter<"Task"> | string | null
+    progressContribution?: FloatNullableFilter<"Task"> | number | null
     goalId?: IntFilter<"Task"> | number
     goal?: XOR<GoalScalarRelationFilter, GoalWhereInput>
   }, "id">
@@ -4891,6 +4935,7 @@ export namespace Prisma {
     type?: SortOrderInput | SortOrder
     estimatedMinutes?: SortOrderInput | SortOrder
     station?: SortOrderInput | SortOrder
+    progressContribution?: SortOrderInput | SortOrder
     goalId?: SortOrder
     _count?: TaskCountOrderByAggregateInput
     _avg?: TaskAvgOrderByAggregateInput
@@ -4912,6 +4957,7 @@ export namespace Prisma {
     type?: StringNullableWithAggregatesFilter<"Task"> | string | null
     estimatedMinutes?: IntNullableWithAggregatesFilter<"Task"> | number | null
     station?: StringNullableWithAggregatesFilter<"Task"> | string | null
+    progressContribution?: FloatNullableWithAggregatesFilter<"Task"> | number | null
     goalId?: IntWithAggregatesFilter<"Task"> | number
   }
 
@@ -4992,6 +5038,7 @@ export namespace Prisma {
     deadline: Date | string
     createdAt?: Date | string
     completedAt?: Date | string | null
+    currentStationProgress?: number
     user: UserCreateNestedOneWithoutGoalsInput
     tasks?: TaskCreateNestedManyWithoutGoalInput
   }
@@ -5004,6 +5051,7 @@ export namespace Prisma {
     userId: number
     createdAt?: Date | string
     completedAt?: Date | string | null
+    currentStationProgress?: number
     tasks?: TaskUncheckedCreateNestedManyWithoutGoalInput
   }
 
@@ -5013,6 +5061,7 @@ export namespace Prisma {
     deadline?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     completedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    currentStationProgress?: FloatFieldUpdateOperationsInput | number
     user?: UserUpdateOneRequiredWithoutGoalsNestedInput
     tasks?: TaskUpdateManyWithoutGoalNestedInput
   }
@@ -5025,6 +5074,7 @@ export namespace Prisma {
     userId?: IntFieldUpdateOperationsInput | number
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     completedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    currentStationProgress?: FloatFieldUpdateOperationsInput | number
     tasks?: TaskUncheckedUpdateManyWithoutGoalNestedInput
   }
 
@@ -5036,6 +5086,7 @@ export namespace Prisma {
     userId: number
     createdAt?: Date | string
     completedAt?: Date | string | null
+    currentStationProgress?: number
   }
 
   export type GoalUpdateManyMutationInput = {
@@ -5044,6 +5095,7 @@ export namespace Prisma {
     deadline?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     completedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    currentStationProgress?: FloatFieldUpdateOperationsInput | number
   }
 
   export type GoalUncheckedUpdateManyInput = {
@@ -5054,6 +5106,7 @@ export namespace Prisma {
     userId?: IntFieldUpdateOperationsInput | number
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     completedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    currentStationProgress?: FloatFieldUpdateOperationsInput | number
   }
 
   export type TaskCreateInput = {
@@ -5065,6 +5118,7 @@ export namespace Prisma {
     type?: string | null
     estimatedMinutes?: number | null
     station?: string | null
+    progressContribution?: number | null
     goal: GoalCreateNestedOneWithoutTasksInput
   }
 
@@ -5078,6 +5132,7 @@ export namespace Prisma {
     type?: string | null
     estimatedMinutes?: number | null
     station?: string | null
+    progressContribution?: number | null
     goalId: number
   }
 
@@ -5090,6 +5145,7 @@ export namespace Prisma {
     type?: NullableStringFieldUpdateOperationsInput | string | null
     estimatedMinutes?: NullableIntFieldUpdateOperationsInput | number | null
     station?: NullableStringFieldUpdateOperationsInput | string | null
+    progressContribution?: NullableFloatFieldUpdateOperationsInput | number | null
     goal?: GoalUpdateOneRequiredWithoutTasksNestedInput
   }
 
@@ -5103,6 +5159,7 @@ export namespace Prisma {
     type?: NullableStringFieldUpdateOperationsInput | string | null
     estimatedMinutes?: NullableIntFieldUpdateOperationsInput | number | null
     station?: NullableStringFieldUpdateOperationsInput | string | null
+    progressContribution?: NullableFloatFieldUpdateOperationsInput | number | null
     goalId?: IntFieldUpdateOperationsInput | number
   }
 
@@ -5116,6 +5173,7 @@ export namespace Prisma {
     type?: string | null
     estimatedMinutes?: number | null
     station?: string | null
+    progressContribution?: number | null
     goalId: number
   }
 
@@ -5128,6 +5186,7 @@ export namespace Prisma {
     type?: NullableStringFieldUpdateOperationsInput | string | null
     estimatedMinutes?: NullableIntFieldUpdateOperationsInput | number | null
     station?: NullableStringFieldUpdateOperationsInput | string | null
+    progressContribution?: NullableFloatFieldUpdateOperationsInput | number | null
   }
 
   export type TaskUncheckedUpdateManyInput = {
@@ -5140,6 +5199,7 @@ export namespace Prisma {
     type?: NullableStringFieldUpdateOperationsInput | string | null
     estimatedMinutes?: NullableIntFieldUpdateOperationsInput | number | null
     station?: NullableStringFieldUpdateOperationsInput | string | null
+    progressContribution?: NullableFloatFieldUpdateOperationsInput | number | null
     goalId?: IntFieldUpdateOperationsInput | number
   }
 
@@ -5325,6 +5385,17 @@ export namespace Prisma {
     not?: NestedDateTimeNullableFilter<$PrismaModel> | Date | string | null
   }
 
+  export type FloatFilter<$PrismaModel = never> = {
+    equals?: number | FloatFieldRefInput<$PrismaModel>
+    in?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    lt?: number | FloatFieldRefInput<$PrismaModel>
+    lte?: number | FloatFieldRefInput<$PrismaModel>
+    gt?: number | FloatFieldRefInput<$PrismaModel>
+    gte?: number | FloatFieldRefInput<$PrismaModel>
+    not?: NestedFloatFilter<$PrismaModel> | number
+  }
+
   export type UserScalarRelationFilter = {
     is?: UserWhereInput
     isNot?: UserWhereInput
@@ -5348,11 +5419,13 @@ export namespace Prisma {
     userId?: SortOrder
     createdAt?: SortOrder
     completedAt?: SortOrder
+    currentStationProgress?: SortOrder
   }
 
   export type GoalAvgOrderByAggregateInput = {
     id?: SortOrder
     userId?: SortOrder
+    currentStationProgress?: SortOrder
   }
 
   export type GoalMaxOrderByAggregateInput = {
@@ -5363,6 +5436,7 @@ export namespace Prisma {
     userId?: SortOrder
     createdAt?: SortOrder
     completedAt?: SortOrder
+    currentStationProgress?: SortOrder
   }
 
   export type GoalMinOrderByAggregateInput = {
@@ -5373,11 +5447,13 @@ export namespace Prisma {
     userId?: SortOrder
     createdAt?: SortOrder
     completedAt?: SortOrder
+    currentStationProgress?: SortOrder
   }
 
   export type GoalSumOrderByAggregateInput = {
     id?: SortOrder
     userId?: SortOrder
+    currentStationProgress?: SortOrder
   }
 
   export type DateTimeNullableWithAggregatesFilter<$PrismaModel = never> = {
@@ -5394,6 +5470,22 @@ export namespace Prisma {
     _max?: NestedDateTimeNullableFilter<$PrismaModel>
   }
 
+  export type FloatWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: number | FloatFieldRefInput<$PrismaModel>
+    in?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    lt?: number | FloatFieldRefInput<$PrismaModel>
+    lte?: number | FloatFieldRefInput<$PrismaModel>
+    gt?: number | FloatFieldRefInput<$PrismaModel>
+    gte?: number | FloatFieldRefInput<$PrismaModel>
+    not?: NestedFloatWithAggregatesFilter<$PrismaModel> | number
+    _count?: NestedIntFilter<$PrismaModel>
+    _avg?: NestedFloatFilter<$PrismaModel>
+    _sum?: NestedFloatFilter<$PrismaModel>
+    _min?: NestedFloatFilter<$PrismaModel>
+    _max?: NestedFloatFilter<$PrismaModel>
+  }
+
   export type IntNullableFilter<$PrismaModel = never> = {
     equals?: number | IntFieldRefInput<$PrismaModel> | null
     in?: number[] | ListIntFieldRefInput<$PrismaModel> | null
@@ -5403,6 +5495,17 @@ export namespace Prisma {
     gt?: number | IntFieldRefInput<$PrismaModel>
     gte?: number | IntFieldRefInput<$PrismaModel>
     not?: NestedIntNullableFilter<$PrismaModel> | number | null
+  }
+
+  export type FloatNullableFilter<$PrismaModel = never> = {
+    equals?: number | FloatFieldRefInput<$PrismaModel> | null
+    in?: number[] | ListFloatFieldRefInput<$PrismaModel> | null
+    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel> | null
+    lt?: number | FloatFieldRefInput<$PrismaModel>
+    lte?: number | FloatFieldRefInput<$PrismaModel>
+    gt?: number | FloatFieldRefInput<$PrismaModel>
+    gte?: number | FloatFieldRefInput<$PrismaModel>
+    not?: NestedFloatNullableFilter<$PrismaModel> | number | null
   }
 
   export type GoalScalarRelationFilter = {
@@ -5420,12 +5523,14 @@ export namespace Prisma {
     type?: SortOrder
     estimatedMinutes?: SortOrder
     station?: SortOrder
+    progressContribution?: SortOrder
     goalId?: SortOrder
   }
 
   export type TaskAvgOrderByAggregateInput = {
     id?: SortOrder
     estimatedMinutes?: SortOrder
+    progressContribution?: SortOrder
     goalId?: SortOrder
   }
 
@@ -5439,6 +5544,7 @@ export namespace Prisma {
     type?: SortOrder
     estimatedMinutes?: SortOrder
     station?: SortOrder
+    progressContribution?: SortOrder
     goalId?: SortOrder
   }
 
@@ -5452,12 +5558,14 @@ export namespace Prisma {
     type?: SortOrder
     estimatedMinutes?: SortOrder
     station?: SortOrder
+    progressContribution?: SortOrder
     goalId?: SortOrder
   }
 
   export type TaskSumOrderByAggregateInput = {
     id?: SortOrder
     estimatedMinutes?: SortOrder
+    progressContribution?: SortOrder
     goalId?: SortOrder
   }
 
@@ -5475,6 +5583,22 @@ export namespace Prisma {
     _sum?: NestedIntNullableFilter<$PrismaModel>
     _min?: NestedIntNullableFilter<$PrismaModel>
     _max?: NestedIntNullableFilter<$PrismaModel>
+  }
+
+  export type FloatNullableWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: number | FloatFieldRefInput<$PrismaModel> | null
+    in?: number[] | ListFloatFieldRefInput<$PrismaModel> | null
+    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel> | null
+    lt?: number | FloatFieldRefInput<$PrismaModel>
+    lte?: number | FloatFieldRefInput<$PrismaModel>
+    gt?: number | FloatFieldRefInput<$PrismaModel>
+    gte?: number | FloatFieldRefInput<$PrismaModel>
+    not?: NestedFloatNullableWithAggregatesFilter<$PrismaModel> | number | null
+    _count?: NestedIntNullableFilter<$PrismaModel>
+    _avg?: NestedFloatNullableFilter<$PrismaModel>
+    _sum?: NestedFloatNullableFilter<$PrismaModel>
+    _min?: NestedFloatNullableFilter<$PrismaModel>
+    _max?: NestedFloatNullableFilter<$PrismaModel>
   }
 
   export type GoalCreateNestedManyWithoutUserInput = {
@@ -5563,6 +5687,14 @@ export namespace Prisma {
     set?: Date | string | null
   }
 
+  export type FloatFieldUpdateOperationsInput = {
+    set?: number
+    increment?: number
+    decrement?: number
+    multiply?: number
+    divide?: number
+  }
+
   export type UserUpdateOneRequiredWithoutGoalsNestedInput = {
     create?: XOR<UserCreateWithoutGoalsInput, UserUncheckedCreateWithoutGoalsInput>
     connectOrCreate?: UserCreateOrConnectWithoutGoalsInput
@@ -5606,6 +5738,14 @@ export namespace Prisma {
   }
 
   export type NullableIntFieldUpdateOperationsInput = {
+    set?: number | null
+    increment?: number
+    decrement?: number
+    multiply?: number
+    divide?: number
+  }
+
+  export type NullableFloatFieldUpdateOperationsInput = {
     set?: number | null
     increment?: number
     decrement?: number
@@ -5782,6 +5922,33 @@ export namespace Prisma {
     _max?: NestedDateTimeNullableFilter<$PrismaModel>
   }
 
+  export type NestedFloatWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: number | FloatFieldRefInput<$PrismaModel>
+    in?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    lt?: number | FloatFieldRefInput<$PrismaModel>
+    lte?: number | FloatFieldRefInput<$PrismaModel>
+    gt?: number | FloatFieldRefInput<$PrismaModel>
+    gte?: number | FloatFieldRefInput<$PrismaModel>
+    not?: NestedFloatWithAggregatesFilter<$PrismaModel> | number
+    _count?: NestedIntFilter<$PrismaModel>
+    _avg?: NestedFloatFilter<$PrismaModel>
+    _sum?: NestedFloatFilter<$PrismaModel>
+    _min?: NestedFloatFilter<$PrismaModel>
+    _max?: NestedFloatFilter<$PrismaModel>
+  }
+
+  export type NestedFloatNullableFilter<$PrismaModel = never> = {
+    equals?: number | FloatFieldRefInput<$PrismaModel> | null
+    in?: number[] | ListFloatFieldRefInput<$PrismaModel> | null
+    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel> | null
+    lt?: number | FloatFieldRefInput<$PrismaModel>
+    lte?: number | FloatFieldRefInput<$PrismaModel>
+    gt?: number | FloatFieldRefInput<$PrismaModel>
+    gte?: number | FloatFieldRefInput<$PrismaModel>
+    not?: NestedFloatNullableFilter<$PrismaModel> | number | null
+  }
+
   export type NestedIntNullableWithAggregatesFilter<$PrismaModel = never> = {
     equals?: number | IntFieldRefInput<$PrismaModel> | null
     in?: number[] | ListIntFieldRefInput<$PrismaModel> | null
@@ -5798,7 +5965,7 @@ export namespace Prisma {
     _max?: NestedIntNullableFilter<$PrismaModel>
   }
 
-  export type NestedFloatNullableFilter<$PrismaModel = never> = {
+  export type NestedFloatNullableWithAggregatesFilter<$PrismaModel = never> = {
     equals?: number | FloatFieldRefInput<$PrismaModel> | null
     in?: number[] | ListFloatFieldRefInput<$PrismaModel> | null
     notIn?: number[] | ListFloatFieldRefInput<$PrismaModel> | null
@@ -5806,7 +5973,12 @@ export namespace Prisma {
     lte?: number | FloatFieldRefInput<$PrismaModel>
     gt?: number | FloatFieldRefInput<$PrismaModel>
     gte?: number | FloatFieldRefInput<$PrismaModel>
-    not?: NestedFloatNullableFilter<$PrismaModel> | number | null
+    not?: NestedFloatNullableWithAggregatesFilter<$PrismaModel> | number | null
+    _count?: NestedIntNullableFilter<$PrismaModel>
+    _avg?: NestedFloatNullableFilter<$PrismaModel>
+    _sum?: NestedFloatNullableFilter<$PrismaModel>
+    _min?: NestedFloatNullableFilter<$PrismaModel>
+    _max?: NestedFloatNullableFilter<$PrismaModel>
   }
 
   export type GoalCreateWithoutUserInput = {
@@ -5815,6 +5987,7 @@ export namespace Prisma {
     deadline: Date | string
     createdAt?: Date | string
     completedAt?: Date | string | null
+    currentStationProgress?: number
     tasks?: TaskCreateNestedManyWithoutGoalInput
   }
 
@@ -5825,6 +5998,7 @@ export namespace Prisma {
     deadline: Date | string
     createdAt?: Date | string
     completedAt?: Date | string | null
+    currentStationProgress?: number
     tasks?: TaskUncheckedCreateNestedManyWithoutGoalInput
   }
 
@@ -5865,6 +6039,7 @@ export namespace Prisma {
     userId?: IntFilter<"Goal"> | number
     createdAt?: DateTimeFilter<"Goal"> | Date | string
     completedAt?: DateTimeNullableFilter<"Goal"> | Date | string | null
+    currentStationProgress?: FloatFilter<"Goal"> | number
   }
 
   export type UserCreateWithoutGoalsInput = {
@@ -5900,6 +6075,7 @@ export namespace Prisma {
     type?: string | null
     estimatedMinutes?: number | null
     station?: string | null
+    progressContribution?: number | null
   }
 
   export type TaskUncheckedCreateWithoutGoalInput = {
@@ -5912,6 +6088,7 @@ export namespace Prisma {
     type?: string | null
     estimatedMinutes?: number | null
     station?: string | null
+    progressContribution?: number | null
   }
 
   export type TaskCreateOrConnectWithoutGoalInput = {
@@ -5983,6 +6160,7 @@ export namespace Prisma {
     type?: StringNullableFilter<"Task"> | string | null
     estimatedMinutes?: IntNullableFilter<"Task"> | number | null
     station?: StringNullableFilter<"Task"> | string | null
+    progressContribution?: FloatNullableFilter<"Task"> | number | null
     goalId?: IntFilter<"Task"> | number
   }
 
@@ -5992,6 +6170,7 @@ export namespace Prisma {
     deadline: Date | string
     createdAt?: Date | string
     completedAt?: Date | string | null
+    currentStationProgress?: number
     user: UserCreateNestedOneWithoutGoalsInput
   }
 
@@ -6003,6 +6182,7 @@ export namespace Prisma {
     userId: number
     createdAt?: Date | string
     completedAt?: Date | string | null
+    currentStationProgress?: number
   }
 
   export type GoalCreateOrConnectWithoutTasksInput = {
@@ -6027,6 +6207,7 @@ export namespace Prisma {
     deadline?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     completedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    currentStationProgress?: FloatFieldUpdateOperationsInput | number
     user?: UserUpdateOneRequiredWithoutGoalsNestedInput
   }
 
@@ -6038,6 +6219,7 @@ export namespace Prisma {
     userId?: IntFieldUpdateOperationsInput | number
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     completedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    currentStationProgress?: FloatFieldUpdateOperationsInput | number
   }
 
   export type GoalCreateManyUserInput = {
@@ -6047,6 +6229,7 @@ export namespace Prisma {
     deadline: Date | string
     createdAt?: Date | string
     completedAt?: Date | string | null
+    currentStationProgress?: number
   }
 
   export type GoalUpdateWithoutUserInput = {
@@ -6055,6 +6238,7 @@ export namespace Prisma {
     deadline?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     completedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    currentStationProgress?: FloatFieldUpdateOperationsInput | number
     tasks?: TaskUpdateManyWithoutGoalNestedInput
   }
 
@@ -6065,6 +6249,7 @@ export namespace Prisma {
     deadline?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     completedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    currentStationProgress?: FloatFieldUpdateOperationsInput | number
     tasks?: TaskUncheckedUpdateManyWithoutGoalNestedInput
   }
 
@@ -6075,6 +6260,7 @@ export namespace Prisma {
     deadline?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     completedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    currentStationProgress?: FloatFieldUpdateOperationsInput | number
   }
 
   export type TaskCreateManyGoalInput = {
@@ -6087,6 +6273,7 @@ export namespace Prisma {
     type?: string | null
     estimatedMinutes?: number | null
     station?: string | null
+    progressContribution?: number | null
   }
 
   export type TaskUpdateWithoutGoalInput = {
@@ -6098,6 +6285,7 @@ export namespace Prisma {
     type?: NullableStringFieldUpdateOperationsInput | string | null
     estimatedMinutes?: NullableIntFieldUpdateOperationsInput | number | null
     station?: NullableStringFieldUpdateOperationsInput | string | null
+    progressContribution?: NullableFloatFieldUpdateOperationsInput | number | null
   }
 
   export type TaskUncheckedUpdateWithoutGoalInput = {
@@ -6110,6 +6298,7 @@ export namespace Prisma {
     type?: NullableStringFieldUpdateOperationsInput | string | null
     estimatedMinutes?: NullableIntFieldUpdateOperationsInput | number | null
     station?: NullableStringFieldUpdateOperationsInput | string | null
+    progressContribution?: NullableFloatFieldUpdateOperationsInput | number | null
   }
 
   export type TaskUncheckedUpdateManyWithoutGoalInput = {
@@ -6122,6 +6311,7 @@ export namespace Prisma {
     type?: NullableStringFieldUpdateOperationsInput | string | null
     estimatedMinutes?: NullableIntFieldUpdateOperationsInput | number | null
     station?: NullableStringFieldUpdateOperationsInput | string | null
+    progressContribution?: NullableFloatFieldUpdateOperationsInput | number | null
   }
 
 

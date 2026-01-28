@@ -3,37 +3,23 @@ import styles from "./SidebarItem.module.scss";
 import EditImg from "/icons/edit-icon.svg";
 import ArrowDownImg from "/icons/arrow-down.svg";
 import type { Task } from "../../../types/api.types";
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import { Button } from "../Button";
 import { tasksApi } from "../../../api/tasks.api";
 
 type Props = {
   task: Task;
   setTasks?: React.Dispatch<React.SetStateAction<Task[]>>;
+  goalProgress?: number;
 };
 
-export const SidebarItem: React.FC<Props> = ({ task, setTasks }) => {
+export const SidebarItem: React.FC<Props> = ({ task, setTasks, goalProgress }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
   const [draftTitle, setDraftTitle] = useState<string>(task.title || "");
   const [draftDescription, setDraftDescription] = useState<string>(
-    task.description ?? ""
+    task.description ?? "",
   );
-  const [progress, setProgress] = useState<{ 
-    daysWorked: number; 
-    requiredDays: number; 
-    totalTasks: number; 
-    percentage: number 
-  } | null>(null);
-
-  useEffect(() => {
-    // Якщо це roadmap task (не daily), завантажуємо прогрес
-    if (task.type !== "daily" && task.goalId) {
-      tasksApi.getStationProgress(task.goalId, task.title)
-        .then((res) => setProgress(res.data))
-        .catch((err) => console.error("Failed to load progress:", err));
-    }
-  }, [task]);
 
   const handleStartEditing = () => {
     setDraftTitle(task.title);
@@ -50,8 +36,8 @@ export const SidebarItem: React.FC<Props> = ({ task, setTasks }) => {
           prev.map((t) =>
             t.id === task.id
               ? { ...t, title: draftTitle, description: draftDescription }
-              : t
-          )
+              : t,
+          ),
         );
       }
       setIsEditing(false);
@@ -73,11 +59,11 @@ export const SidebarItem: React.FC<Props> = ({ task, setTasks }) => {
             onChange={(e) => setDraftTitle(e.target.value)}
           />
         ) : (
-          <p 
+          <p
             className={styles.sidebarItem__text}
-            style={{ 
+            style={{
               textDecoration: task.status === "done" ? "line-through" : "none",
-              opacity: task.status === "done" ? 0.6 : 1 
+              opacity: task.status === "done" ? 0.6 : 1,
             }}
           >
             {task.title}
@@ -99,7 +85,7 @@ export const SidebarItem: React.FC<Props> = ({ task, setTasks }) => {
           onClick={handleStartEditing}
         />
       </div>
-      
+
       {isOpen && (
         <div className={styles.sidebarItem__description}>
           {isEditing ? (
@@ -134,6 +120,19 @@ export const SidebarItem: React.FC<Props> = ({ task, setTasks }) => {
           />
         </div>
       )}
+      {goalProgress !== undefined && goalProgress > 0 && (
+        <div className={styles.sidebarItem__progress}>
+          <div className={styles.sidebarItem__progressBar}>
+            <div
+              className={styles.sidebarItem__progressFill}
+              style={{ width: `${goalProgress}%` }}
+            >
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
+
+export default SidebarItem;

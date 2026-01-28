@@ -28,6 +28,7 @@ model Goal {
   user        User     @relation(fields: [userId], references: [id])
   tasks       Task[]
   completedAt DateTime?
+  currentStationProgress Float @default(0) // прогрес до наступної станції (0-100%)
 }
 
 model Task {
@@ -42,6 +43,7 @@ model Task {
   type              String?   // "learn" | "practice" | "review" | "reflect"
   estimatedMinutes  Int?
   station           String?   // для якої "станції" це завдання
+  progressContribution Float?
 
   goalId            Int
   goal              Goal      @relation(fields: [goalId], references: [id])

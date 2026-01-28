@@ -137,7 +137,8 @@ exports.Prisma.GoalScalarFieldEnum = {
   deadline: 'deadline',
   userId: 'userId',
   createdAt: 'createdAt',
-  completedAt: 'completedAt'
+  completedAt: 'completedAt',
+  currentStationProgress: 'currentStationProgress'
 };
 
 exports.Prisma.TaskScalarFieldEnum = {
@@ -150,6 +151,7 @@ exports.Prisma.TaskScalarFieldEnum = {
   type: 'type',
   estimatedMinutes: 'estimatedMinutes',
   station: 'station',
+  progressContribution: 'progressContribution',
   goalId: 'goalId'
 };
 
