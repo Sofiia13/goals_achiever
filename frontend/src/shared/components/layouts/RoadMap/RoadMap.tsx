@@ -13,7 +13,7 @@ import { CameraRig } from "./CameraRig";
 import { useAvatarLogic } from "./useAvatarLogic";
 import { useCameraHandlers } from "./useCameraHandlers";
 
-const DEFAULT_CAMERA_POS: [number, number, number] = [-50, 200, 500];
+// const DEFAULT_CAMERA_POS: [number, number, number] = [-50, 200, 500];
 
 type Props = {
   tasks: Task[];
@@ -30,17 +30,27 @@ export const RoadMap: React.FC<Props> = ({
   const [goals, setGoals] = useState<Goal[]>([]);
   const [selectedTaskId, setSelectedTaskId] = useState<number | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [cameraTarget, setCameraTarget] = useState<[number, number, number] | null>(null);
-  const [cameraLookAt, setCameraLookAt] = useState<[number, number, number] | null>(null);
-  const [cameraMode, setCameraMode] = useState<"idle" | "toTask" | "reset" | "follow">("idle");
+  const [cameraTarget, setCameraTarget] = useState<
+    [number, number, number] | null
+  >(null);
+  const [cameraLookAt, setCameraLookAt] = useState<
+    [number, number, number] | null
+  >(null);
+  const [cameraMode, setCameraMode] = useState<
+    "idle" | "toTask" | "reset" | "follow"
+  >("idle");
   const [pendingTaskId, setPendingTaskId] = useState<number | null>(null);
   const [orbitTargetZ, setOrbitTargetZ] = useState(0);
 
-  const [avatarCurrentPos, setAvatarCurrentPos] = useState<[number, number, number]>([0, 0, 0]);
-  const [avatarTargetPos, setAvatarTargetPos] = useState<[number, number, number]>([0, 0, 0]);
+  const [avatarCurrentPos, setAvatarCurrentPos] = useState<
+    [number, number, number]
+  >([0, 0, 0]);
+  const [avatarTargetPos, setAvatarTargetPos] = useState<
+    [number, number, number]
+  >([0, 0, 0]);
   const [isAvatarMoving, setIsAvatarMoving] = useState(false);
 
-  const selectedGoal = goals.find(g => g.id === selectedGoalId);
+  const selectedGoal = goals.find((g) => g.id === selectedGoalId);
 
   const { updateAvatarPosition: updateAvatarPositionFn } = useAvatarLogic(
     tasks,
@@ -48,7 +58,7 @@ export const RoadMap: React.FC<Props> = ({
     setAvatarCurrentPos,
     setAvatarTargetPos,
     setIsAvatarMoving,
-    setOrbitTargetZ
+    setOrbitTargetZ,
   );
 
   const resetCamera = useCallback(() => {
@@ -61,22 +71,19 @@ export const RoadMap: React.FC<Props> = ({
     updateAvatarPositionFn();
   }, [updateAvatarPositionFn]);
 
-  const {
-    handleMoveToTask,
-    handleArrive,
-    handleCloseModal,
-  } = useCameraHandlers(
-    setCameraTarget,
-    setCameraLookAt,
-    setCameraMode,
-    avatarCurrentPos,
-    avatarTargetPos,
-    isAvatarMoving,
-    setIsModalOpen,
-    setSelectedTaskId,
-    setPendingTaskId,
-    pendingTaskId
-  );
+  const { handleMoveToTask, handleArrive, handleCloseModal } =
+    useCameraHandlers(
+      setCameraTarget,
+      setCameraLookAt,
+      setCameraMode,
+      avatarCurrentPos,
+      avatarTargetPos,
+      isAvatarMoving,
+      setIsModalOpen,
+      setSelectedTaskId,
+      setPendingTaskId,
+      pendingTaskId,
+    );
 
   useEffect(() => {
     goalsApi.getUserGoals().then((res) => {
@@ -98,11 +105,13 @@ export const RoadMap: React.FC<Props> = ({
   }, [selectedGoalId]);
 
   useEffect(() => {
-    console.log('Avatar update - tasks:', tasks.length);
-    console.log('Tasks statuses:', tasks.map(t => ({ id: t.id, title: t.title, status: t.status })));
+    console.log("Avatar update - tasks:", tasks.length);
+    console.log(
+      "Tasks statuses:",
+      tasks.map((t) => ({ id: t.id, title: t.title, status: t.status })),
+    );
     updateAvatarPosition();
   }, [tasks]);
-
 
   const handleAvatarReachTarget = () => {
     setIsAvatarMoving(false);
@@ -129,7 +138,7 @@ export const RoadMap: React.FC<Props> = ({
         <div className={styles.roadMap} style={{ height: "100vh" }}>
           <Canvas
             camera={{
-              position: DEFAULT_CAMERA_POS,
+              position: avatarCurrentPos,
               fov: 50,
               near: 0.1,
               far: 3000,

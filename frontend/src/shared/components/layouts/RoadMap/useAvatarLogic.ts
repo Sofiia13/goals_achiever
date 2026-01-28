@@ -23,22 +23,19 @@ export const useAvatarLogic = (
       return;
     }
 
-    // Фільтруємо тільки станції (не дейлі таски)
     const stations = tasks.filter(task => task.type !== "daily");
     const completedStations = stations.filter(station => station.status === "done");
     
     console.log('Completed stations:', completedStations.length, completedStations.map(t => t.id));
     
-    // Індекс поточної станції (останньої завершеної)
     const lastCompletedIndex = completedStations.length > 0 
       ? stations.findIndex(station => station.id === completedStations[completedStations.length - 1].id)
       : -1;
 
-    // Індекс наступної станції
+
     const currentStationIndex = lastCompletedIndex >= 0 ? lastCompletedIndex : 0;
     const nextStationIndex = currentStationIndex + 1;
 
-    // Позиції станцій
     const currentStationPos: [number, number, number] = 
       currentStationIndex % 2 !== 0
         ? [-165, 0, currentStationIndex * -150]
@@ -49,11 +46,9 @@ export const useAvatarLogic = (
         ? [-165, 0, nextStationIndex * -150]
         : [165, 0, nextStationIndex * -150];
 
-    // Якщо є прогрес і є наступна станція
     const progress = selectedGoal?.currentStationProgress || 0;
     
     if (nextStationIndex < stations.length && progress > 0) {
-      // Розраховуємо позицію аватара між двома станціями
       const progressRatio = progress / 100;
       
       const avatarPos: [number, number, number] = [
