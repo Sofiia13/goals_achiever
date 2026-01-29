@@ -1119,10 +1119,12 @@ export namespace Prisma {
 
   export type UserAvgAggregateOutputType = {
     id: number | null
+    money: number | null
   }
 
   export type UserSumAggregateOutputType = {
     id: number | null
+    money: number | null
   }
 
   export type UserMinAggregateOutputType = {
@@ -1132,6 +1134,7 @@ export namespace Prisma {
     password: string | null
     refreshToken: string | null
     createdAt: Date | null
+    money: number | null
     photoUrl: string | null
   }
 
@@ -1142,6 +1145,7 @@ export namespace Prisma {
     password: string | null
     refreshToken: string | null
     createdAt: Date | null
+    money: number | null
     photoUrl: string | null
   }
 
@@ -1152,6 +1156,7 @@ export namespace Prisma {
     password: number
     refreshToken: number
     createdAt: number
+    money: number
     photoUrl: number
     _all: number
   }
@@ -1159,10 +1164,12 @@ export namespace Prisma {
 
   export type UserAvgAggregateInputType = {
     id?: true
+    money?: true
   }
 
   export type UserSumAggregateInputType = {
     id?: true
+    money?: true
   }
 
   export type UserMinAggregateInputType = {
@@ -1172,6 +1179,7 @@ export namespace Prisma {
     password?: true
     refreshToken?: true
     createdAt?: true
+    money?: true
     photoUrl?: true
   }
 
@@ -1182,6 +1190,7 @@ export namespace Prisma {
     password?: true
     refreshToken?: true
     createdAt?: true
+    money?: true
     photoUrl?: true
   }
 
@@ -1192,6 +1201,7 @@ export namespace Prisma {
     password?: true
     refreshToken?: true
     createdAt?: true
+    money?: true
     photoUrl?: true
     _all?: true
   }
@@ -1289,6 +1299,7 @@ export namespace Prisma {
     password: string
     refreshToken: string | null
     createdAt: Date
+    money: number
     photoUrl: string | null
     _count: UserCountAggregateOutputType | null
     _avg: UserAvgAggregateOutputType | null
@@ -1318,6 +1329,7 @@ export namespace Prisma {
     password?: boolean
     refreshToken?: boolean
     createdAt?: boolean
+    money?: boolean
     photoUrl?: boolean
     goals?: boolean | User$goalsArgs<ExtArgs>
     _count?: boolean | UserCountOutputTypeDefaultArgs<ExtArgs>
@@ -1330,6 +1342,7 @@ export namespace Prisma {
     password?: boolean
     refreshToken?: boolean
     createdAt?: boolean
+    money?: boolean
     photoUrl?: boolean
   }, ExtArgs["result"]["user"]>
 
@@ -1340,6 +1353,7 @@ export namespace Prisma {
     password?: boolean
     refreshToken?: boolean
     createdAt?: boolean
+    money?: boolean
     photoUrl?: boolean
   }, ExtArgs["result"]["user"]>
 
@@ -1350,10 +1364,11 @@ export namespace Prisma {
     password?: boolean
     refreshToken?: boolean
     createdAt?: boolean
+    money?: boolean
     photoUrl?: boolean
   }
 
-  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "email" | "password" | "refreshToken" | "createdAt" | "photoUrl", ExtArgs["result"]["user"]>
+  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "email" | "password" | "refreshToken" | "createdAt" | "money" | "photoUrl", ExtArgs["result"]["user"]>
   export type UserInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     goals?: boolean | User$goalsArgs<ExtArgs>
     _count?: boolean | UserCountOutputTypeDefaultArgs<ExtArgs>
@@ -1373,6 +1388,7 @@ export namespace Prisma {
       password: string
       refreshToken: string | null
       createdAt: Date
+      money: number
       photoUrl: string | null
     }, ExtArgs["result"]["user"]>
     composites: {}
@@ -1804,6 +1820,7 @@ export namespace Prisma {
     readonly password: FieldRef<"User", 'String'>
     readonly refreshToken: FieldRef<"User", 'String'>
     readonly createdAt: FieldRef<"User", 'DateTime'>
+    readonly money: FieldRef<"User", 'Float'>
     readonly photoUrl: FieldRef<"User", 'String'>
   }
     
@@ -4607,6 +4624,7 @@ export namespace Prisma {
     password: 'password',
     refreshToken: 'refreshToken',
     createdAt: 'createdAt',
+    money: 'money',
     photoUrl: 'photoUrl'
   };
 
@@ -4742,6 +4760,7 @@ export namespace Prisma {
     password?: StringFilter<"User"> | string
     refreshToken?: StringNullableFilter<"User"> | string | null
     createdAt?: DateTimeFilter<"User"> | Date | string
+    money?: FloatFilter<"User"> | number
     photoUrl?: StringNullableFilter<"User"> | string | null
     goals?: GoalListRelationFilter
   }
@@ -4753,6 +4772,7 @@ export namespace Prisma {
     password?: SortOrder
     refreshToken?: SortOrderInput | SortOrder
     createdAt?: SortOrder
+    money?: SortOrder
     photoUrl?: SortOrderInput | SortOrder
     goals?: GoalOrderByRelationAggregateInput
   }
@@ -4767,6 +4787,7 @@ export namespace Prisma {
     password?: StringFilter<"User"> | string
     refreshToken?: StringNullableFilter<"User"> | string | null
     createdAt?: DateTimeFilter<"User"> | Date | string
+    money?: FloatFilter<"User"> | number
     photoUrl?: StringNullableFilter<"User"> | string | null
     goals?: GoalListRelationFilter
   }, "id" | "email">
@@ -4778,6 +4799,7 @@ export namespace Prisma {
     password?: SortOrder
     refreshToken?: SortOrderInput | SortOrder
     createdAt?: SortOrder
+    money?: SortOrder
     photoUrl?: SortOrderInput | SortOrder
     _count?: UserCountOrderByAggregateInput
     _avg?: UserAvgOrderByAggregateInput
@@ -4796,6 +4818,7 @@ export namespace Prisma {
     password?: StringWithAggregatesFilter<"User"> | string
     refreshToken?: StringNullableWithAggregatesFilter<"User"> | string | null
     createdAt?: DateTimeWithAggregatesFilter<"User"> | Date | string
+    money?: FloatWithAggregatesFilter<"User"> | number
     photoUrl?: StringNullableWithAggregatesFilter<"User"> | string | null
   }
 
@@ -4967,6 +4990,7 @@ export namespace Prisma {
     password: string
     refreshToken?: string | null
     createdAt?: Date | string
+    money?: number
     photoUrl?: string | null
     goals?: GoalCreateNestedManyWithoutUserInput
   }
@@ -4978,6 +5002,7 @@ export namespace Prisma {
     password: string
     refreshToken?: string | null
     createdAt?: Date | string
+    money?: number
     photoUrl?: string | null
     goals?: GoalUncheckedCreateNestedManyWithoutUserInput
   }
@@ -4988,6 +5013,7 @@ export namespace Prisma {
     password?: StringFieldUpdateOperationsInput | string
     refreshToken?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    money?: FloatFieldUpdateOperationsInput | number
     photoUrl?: NullableStringFieldUpdateOperationsInput | string | null
     goals?: GoalUpdateManyWithoutUserNestedInput
   }
@@ -4999,6 +5025,7 @@ export namespace Prisma {
     password?: StringFieldUpdateOperationsInput | string
     refreshToken?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    money?: FloatFieldUpdateOperationsInput | number
     photoUrl?: NullableStringFieldUpdateOperationsInput | string | null
     goals?: GoalUncheckedUpdateManyWithoutUserNestedInput
   }
@@ -5010,6 +5037,7 @@ export namespace Prisma {
     password: string
     refreshToken?: string | null
     createdAt?: Date | string
+    money?: number
     photoUrl?: string | null
   }
 
@@ -5019,6 +5047,7 @@ export namespace Prisma {
     password?: StringFieldUpdateOperationsInput | string
     refreshToken?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    money?: FloatFieldUpdateOperationsInput | number
     photoUrl?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
@@ -5029,6 +5058,7 @@ export namespace Prisma {
     password?: StringFieldUpdateOperationsInput | string
     refreshToken?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    money?: FloatFieldUpdateOperationsInput | number
     photoUrl?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
@@ -5255,6 +5285,17 @@ export namespace Prisma {
     not?: NestedDateTimeFilter<$PrismaModel> | Date | string
   }
 
+  export type FloatFilter<$PrismaModel = never> = {
+    equals?: number | FloatFieldRefInput<$PrismaModel>
+    in?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    lt?: number | FloatFieldRefInput<$PrismaModel>
+    lte?: number | FloatFieldRefInput<$PrismaModel>
+    gt?: number | FloatFieldRefInput<$PrismaModel>
+    gte?: number | FloatFieldRefInput<$PrismaModel>
+    not?: NestedFloatFilter<$PrismaModel> | number
+  }
+
   export type GoalListRelationFilter = {
     every?: GoalWhereInput
     some?: GoalWhereInput
@@ -5277,11 +5318,13 @@ export namespace Prisma {
     password?: SortOrder
     refreshToken?: SortOrder
     createdAt?: SortOrder
+    money?: SortOrder
     photoUrl?: SortOrder
   }
 
   export type UserAvgOrderByAggregateInput = {
     id?: SortOrder
+    money?: SortOrder
   }
 
   export type UserMaxOrderByAggregateInput = {
@@ -5291,6 +5334,7 @@ export namespace Prisma {
     password?: SortOrder
     refreshToken?: SortOrder
     createdAt?: SortOrder
+    money?: SortOrder
     photoUrl?: SortOrder
   }
 
@@ -5301,11 +5345,13 @@ export namespace Prisma {
     password?: SortOrder
     refreshToken?: SortOrder
     createdAt?: SortOrder
+    money?: SortOrder
     photoUrl?: SortOrder
   }
 
   export type UserSumOrderByAggregateInput = {
     id?: SortOrder
+    money?: SortOrder
   }
 
   export type IntWithAggregatesFilter<$PrismaModel = never> = {
@@ -5374,6 +5420,22 @@ export namespace Prisma {
     _max?: NestedDateTimeFilter<$PrismaModel>
   }
 
+  export type FloatWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: number | FloatFieldRefInput<$PrismaModel>
+    in?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    lt?: number | FloatFieldRefInput<$PrismaModel>
+    lte?: number | FloatFieldRefInput<$PrismaModel>
+    gt?: number | FloatFieldRefInput<$PrismaModel>
+    gte?: number | FloatFieldRefInput<$PrismaModel>
+    not?: NestedFloatWithAggregatesFilter<$PrismaModel> | number
+    _count?: NestedIntFilter<$PrismaModel>
+    _avg?: NestedFloatFilter<$PrismaModel>
+    _sum?: NestedFloatFilter<$PrismaModel>
+    _min?: NestedFloatFilter<$PrismaModel>
+    _max?: NestedFloatFilter<$PrismaModel>
+  }
+
   export type DateTimeNullableFilter<$PrismaModel = never> = {
     equals?: Date | string | DateTimeFieldRefInput<$PrismaModel> | null
     in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
@@ -5383,17 +5445,6 @@ export namespace Prisma {
     gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
     gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
     not?: NestedDateTimeNullableFilter<$PrismaModel> | Date | string | null
-  }
-
-  export type FloatFilter<$PrismaModel = never> = {
-    equals?: number | FloatFieldRefInput<$PrismaModel>
-    in?: number[] | ListFloatFieldRefInput<$PrismaModel>
-    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel>
-    lt?: number | FloatFieldRefInput<$PrismaModel>
-    lte?: number | FloatFieldRefInput<$PrismaModel>
-    gt?: number | FloatFieldRefInput<$PrismaModel>
-    gte?: number | FloatFieldRefInput<$PrismaModel>
-    not?: NestedFloatFilter<$PrismaModel> | number
   }
 
   export type UserScalarRelationFilter = {
@@ -5468,22 +5519,6 @@ export namespace Prisma {
     _count?: NestedIntNullableFilter<$PrismaModel>
     _min?: NestedDateTimeNullableFilter<$PrismaModel>
     _max?: NestedDateTimeNullableFilter<$PrismaModel>
-  }
-
-  export type FloatWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: number | FloatFieldRefInput<$PrismaModel>
-    in?: number[] | ListFloatFieldRefInput<$PrismaModel>
-    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel>
-    lt?: number | FloatFieldRefInput<$PrismaModel>
-    lte?: number | FloatFieldRefInput<$PrismaModel>
-    gt?: number | FloatFieldRefInput<$PrismaModel>
-    gte?: number | FloatFieldRefInput<$PrismaModel>
-    not?: NestedFloatWithAggregatesFilter<$PrismaModel> | number
-    _count?: NestedIntFilter<$PrismaModel>
-    _avg?: NestedFloatFilter<$PrismaModel>
-    _sum?: NestedFloatFilter<$PrismaModel>
-    _min?: NestedFloatFilter<$PrismaModel>
-    _max?: NestedFloatFilter<$PrismaModel>
   }
 
   export type IntNullableFilter<$PrismaModel = never> = {
@@ -5627,6 +5662,14 @@ export namespace Prisma {
     set?: Date | string
   }
 
+  export type FloatFieldUpdateOperationsInput = {
+    set?: number
+    increment?: number
+    decrement?: number
+    multiply?: number
+    divide?: number
+  }
+
   export type GoalUpdateManyWithoutUserNestedInput = {
     create?: XOR<GoalCreateWithoutUserInput, GoalUncheckedCreateWithoutUserInput> | GoalCreateWithoutUserInput[] | GoalUncheckedCreateWithoutUserInput[]
     connectOrCreate?: GoalCreateOrConnectWithoutUserInput | GoalCreateOrConnectWithoutUserInput[]
@@ -5685,14 +5728,6 @@ export namespace Prisma {
 
   export type NullableDateTimeFieldUpdateOperationsInput = {
     set?: Date | string | null
-  }
-
-  export type FloatFieldUpdateOperationsInput = {
-    set?: number
-    increment?: number
-    decrement?: number
-    multiply?: number
-    divide?: number
   }
 
   export type UserUpdateOneRequiredWithoutGoalsNestedInput = {
@@ -5811,6 +5846,17 @@ export namespace Prisma {
     not?: NestedDateTimeFilter<$PrismaModel> | Date | string
   }
 
+  export type NestedFloatFilter<$PrismaModel = never> = {
+    equals?: number | FloatFieldRefInput<$PrismaModel>
+    in?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    lt?: number | FloatFieldRefInput<$PrismaModel>
+    lte?: number | FloatFieldRefInput<$PrismaModel>
+    gt?: number | FloatFieldRefInput<$PrismaModel>
+    gte?: number | FloatFieldRefInput<$PrismaModel>
+    not?: NestedFloatFilter<$PrismaModel> | number
+  }
+
   export type NestedIntWithAggregatesFilter<$PrismaModel = never> = {
     equals?: number | IntFieldRefInput<$PrismaModel>
     in?: number[] | ListIntFieldRefInput<$PrismaModel>
@@ -5825,17 +5871,6 @@ export namespace Prisma {
     _sum?: NestedIntFilter<$PrismaModel>
     _min?: NestedIntFilter<$PrismaModel>
     _max?: NestedIntFilter<$PrismaModel>
-  }
-
-  export type NestedFloatFilter<$PrismaModel = never> = {
-    equals?: number | FloatFieldRefInput<$PrismaModel>
-    in?: number[] | ListFloatFieldRefInput<$PrismaModel>
-    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel>
-    lt?: number | FloatFieldRefInput<$PrismaModel>
-    lte?: number | FloatFieldRefInput<$PrismaModel>
-    gt?: number | FloatFieldRefInput<$PrismaModel>
-    gte?: number | FloatFieldRefInput<$PrismaModel>
-    not?: NestedFloatFilter<$PrismaModel> | number
   }
 
   export type NestedStringWithAggregatesFilter<$PrismaModel = never> = {
@@ -5897,6 +5932,22 @@ export namespace Prisma {
     _max?: NestedDateTimeFilter<$PrismaModel>
   }
 
+  export type NestedFloatWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: number | FloatFieldRefInput<$PrismaModel>
+    in?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    lt?: number | FloatFieldRefInput<$PrismaModel>
+    lte?: number | FloatFieldRefInput<$PrismaModel>
+    gt?: number | FloatFieldRefInput<$PrismaModel>
+    gte?: number | FloatFieldRefInput<$PrismaModel>
+    not?: NestedFloatWithAggregatesFilter<$PrismaModel> | number
+    _count?: NestedIntFilter<$PrismaModel>
+    _avg?: NestedFloatFilter<$PrismaModel>
+    _sum?: NestedFloatFilter<$PrismaModel>
+    _min?: NestedFloatFilter<$PrismaModel>
+    _max?: NestedFloatFilter<$PrismaModel>
+  }
+
   export type NestedDateTimeNullableFilter<$PrismaModel = never> = {
     equals?: Date | string | DateTimeFieldRefInput<$PrismaModel> | null
     in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
@@ -5920,22 +5971,6 @@ export namespace Prisma {
     _count?: NestedIntNullableFilter<$PrismaModel>
     _min?: NestedDateTimeNullableFilter<$PrismaModel>
     _max?: NestedDateTimeNullableFilter<$PrismaModel>
-  }
-
-  export type NestedFloatWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: number | FloatFieldRefInput<$PrismaModel>
-    in?: number[] | ListFloatFieldRefInput<$PrismaModel>
-    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel>
-    lt?: number | FloatFieldRefInput<$PrismaModel>
-    lte?: number | FloatFieldRefInput<$PrismaModel>
-    gt?: number | FloatFieldRefInput<$PrismaModel>
-    gte?: number | FloatFieldRefInput<$PrismaModel>
-    not?: NestedFloatWithAggregatesFilter<$PrismaModel> | number
-    _count?: NestedIntFilter<$PrismaModel>
-    _avg?: NestedFloatFilter<$PrismaModel>
-    _sum?: NestedFloatFilter<$PrismaModel>
-    _min?: NestedFloatFilter<$PrismaModel>
-    _max?: NestedFloatFilter<$PrismaModel>
   }
 
   export type NestedFloatNullableFilter<$PrismaModel = never> = {
@@ -6048,6 +6083,7 @@ export namespace Prisma {
     password: string
     refreshToken?: string | null
     createdAt?: Date | string
+    money?: number
     photoUrl?: string | null
   }
 
@@ -6058,6 +6094,7 @@ export namespace Prisma {
     password: string
     refreshToken?: string | null
     createdAt?: Date | string
+    money?: number
     photoUrl?: string | null
   }
 
@@ -6118,6 +6155,7 @@ export namespace Prisma {
     password?: StringFieldUpdateOperationsInput | string
     refreshToken?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    money?: FloatFieldUpdateOperationsInput | number
     photoUrl?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
@@ -6128,6 +6166,7 @@ export namespace Prisma {
     password?: StringFieldUpdateOperationsInput | string
     refreshToken?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    money?: FloatFieldUpdateOperationsInput | number
     photoUrl?: NullableStringFieldUpdateOperationsInput | string | null
   }
 

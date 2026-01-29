@@ -5,6 +5,7 @@ import { aiRouter } from "./modules/ai/ai.routes.js";
 import { authRouter } from "./modules/auth/auth.routes.js";
 import { goalRouter } from "./modules/goal/goal.routes.js";
 import { taskRouter } from "./modules/task/task.routes.js";
+import { userRouter } from "./modules/user/user.routes.js";
 import path from "path";
 import { fileURLToPath } from "url";
 
@@ -38,6 +39,7 @@ app.use("/api/ai", aiRouter);
 app.use("/auth", authRouter);
 app.use("/goals", goalRouter);
 app.use("/tasks", taskRouter);
+app.use("/user", userRouter);
 
 app.use((req, res) => {
   console.log("404 - Route not found:", req.path);
