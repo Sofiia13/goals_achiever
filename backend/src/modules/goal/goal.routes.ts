@@ -6,5 +6,10 @@ const router = Router();
 
 router.get("/", authMiddleware, GoalController.getUserGoals);
 router.get("/:id", authMiddleware, GoalController.getGoalById);
+router.get(
+  "/:id/days-till-deadline",
+  authMiddleware,
+  GoalController.getDaysTillDeadline,
+);
 
 export const goalRouter = router;

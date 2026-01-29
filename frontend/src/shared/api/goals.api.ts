@@ -8,4 +8,8 @@ export const goalsApi = {
   getGoalById(goalId: number) {
     return api.get(`/goals/${goalId}`);
   },
+
+  getDaysTillDeadline(goalId: number) {
+    return api.get(`/goals/${goalId}/days-till-deadline`);
+  },
 };

@@ -16,6 +16,24 @@ export const MainLayout: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [generating, setGenerating] = useState(false);
   const { user } = useAuth();
+  const [daysTillDeadline, setDaysTillDeadline] = useState<number | null>(null);
+
+  useEffect(() => {
+    const getDaysTillDeadline = async () => {
+      if (!selectedGoalId) return;
+
+      try {
+        const res = await goalsApi.getDaysTillDeadline(selectedGoalId);
+        console.log("Days till deadline response:", res.data);
+
+        setDaysTillDeadline(res.data.daysTillDeadline);
+      } catch (err) {
+        console.error("Failed to get days till deadline:", err);
+      }
+    };
+
+    getDaysTillDeadline();
+  }, [selectedGoalId]);
 
   useEffect(() => {
     goalsApi.getUserGoals().then((res) => {
@@ -97,7 +115,7 @@ export const MainLayout: React.FC = () => {
         </div>
         <div className={styles.mainLayout__goalProgress}>
           <p className={styles.mainLayout__daysLeft}>
-            67 days left to reach the goal
+            {daysTillDeadline} days left to reach the goal
           </p>
         </div>
       </div>

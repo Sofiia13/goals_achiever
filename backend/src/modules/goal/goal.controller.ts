@@ -42,4 +42,25 @@ export class GoalController {
       res.status(500).json({ message: err.message });
     }
   }
+
+  static async getDaysTillDeadline(req: Request, res: Response) {
+    try {
+      const user = req.user;
+
+      if (!user) {
+        return res.status(401).json({ message: "Unauthorized" });
+      }
+
+      if (!req.params.id) {
+        return res.status(400).json({ message: "Goal ID is required" });
+      }
+
+      const goalId = parseInt(req.params.id, 10);
+      const daysTillDeadline = await goalService.getDaysTillDeadline(goalId);
+
+      res.json({ daysTillDeadline });
+    } catch (err: any) {
+      res.status(500).json({ message: err.message });
+    }
+  }
 }
