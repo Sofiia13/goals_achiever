@@ -14,6 +14,7 @@ interface AuthContextType {
   user: User | null;
   setUser: (user: User | null) => void;
   logout: () => void;
+  refreshUser: () => void;
 }
 
 interface AuthProviderProps {
@@ -22,38 +23,81 @@ interface AuthProviderProps {
 
 export const AuthProvider = ({ children }: AuthProviderProps) => {
   const [user, setUser] = useState<User | null>(null);
+  const navigate = useNavigate();
 
-  useEffect(() => {
+  const loadUser = async () => {
     const token = localStorage.getItem("accessToken");
-    if (!token) return;
+    if (!token) {
+      setUser(null);
+      return;
+    }
 
-    console.log("TOKEN:", token);
-
-    axios
-      .get(`${import.meta.env.VITE_API_URL}/auth/me`, {
+    try {
+      console.log("TOKEN:", token);
+      const res = await axios.get(`${import.meta.env.VITE_API_URL}/auth/me`, {
         headers: { Authorization: `Bearer ${token}` },
-      })
-      .then((res) => {
-        console.log("ME RESPONSE:", res.data);
-        setUser(res.data);
-      })
-      .catch(() => {
-        // console.log("ME ERROR:", err.response?.status, err.message);
+      });
+      console.log("ME RESPONSE:", res.data);
+      setUser(res.data);
+    } catch (err: any) {
+      console.error("Failed to load user:", err);
+      if (err.response?.status === 401) {
+        // Токен закінчився або невалідний
         setUser(null);
         localStorage.removeItem("accessToken");
-      });
+        localStorage.removeItem("refreshToken");
+        navigate("/login");
+      }
+      setUser(null);
+      localStorage.removeItem("accessToken");
+    }
+  };
+
+  useEffect(() => {
+    loadUser();
   }, []);
 
-  const navigate = useNavigate();
+  useEffect(() => {
+    const interceptor = axios.interceptors.response.use(
+      (response) => response,
+      (error) => {
+        if (error.response?.status === 401) {
+          setUser(null);
+          localStorage.removeItem("accessToken");
+          localStorage.removeItem("refreshToken");
+          navigate("/login");
+        }
+        return Promise.reject(error);
+      }
+    );
+
+    return () => axios.interceptors.response.eject(interceptor);
+  }, [navigate]);
+
+  useEffect(() => {
+    const handleStorageChange = (e: StorageEvent) => {
+      if (e.key === "accessToken") {
+        loadUser();
+      }
+    };
+
+    window.addEventListener("storage", handleStorageChange);
+    return () => window.removeEventListener("storage", handleStorageChange);
+  }, []);
 
   const logout = () => {
     setUser(null);
     localStorage.removeItem("accessToken");
+    localStorage.removeItem("refreshToken");
     navigate("/login");
   };
 
+  const refreshUser = () => {
+    loadUser();
+  };
+
   return (
-    <AuthContext.Provider value={{ user, setUser, logout }}>
+    <AuthContext.Provider value={{ user, setUser, logout, refreshUser }}>
       {children}
     </AuthContext.Provider>
   );

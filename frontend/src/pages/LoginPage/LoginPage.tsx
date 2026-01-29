@@ -5,12 +5,14 @@ import styles from "./LoginPage.module.scss";
 import { AuthForm } from "../../shared/components/layouts/AuthForm";
 import { useNavigate } from "react-router-dom";
 import { authApi } from "../../shared/api/auth.api";
+import { useAuth } from "../../shared/context/AuthContext";
 
 export const LoginPage: React.FC = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const navigate = useNavigate();
+  const { refreshUser } = useAuth();
 
   const handleLogin = async () => {
     try {
@@ -19,9 +21,10 @@ export const LoginPage: React.FC = () => {
       localStorage.setItem("accessToken", data.accessToken);
       localStorage.setItem("refreshToken", data.refreshToken);
 
-      navigate("/tasks");
+      // Оновлюємо контекст після логіну
+      await refreshUser();
 
-      
+      navigate("/tasks");
     } catch (err: any) {
       console.error("LOGIN ERROR:", err.response?.data?.message || err.message);
       alert(err.response?.data?.message || "Помилка логіну");

@@ -5,6 +5,7 @@ import styles from "./RegistrationPage.module.scss";
 import { AuthForm } from "../../shared/components/layouts/AuthForm";
 import { authApi } from "../../shared/api/auth.api";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../shared/context/AuthContext";
 
 export const RegistrationPage: React.FC = () => {
   const [firstName, setFirstName] = useState("");
@@ -14,6 +15,7 @@ export const RegistrationPage: React.FC = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
 
   const navigate = useNavigate();
+  const { refreshUser } = useAuth();
 
   const handleRegister = async () => {
     try {
@@ -27,6 +29,9 @@ export const RegistrationPage: React.FC = () => {
 
       localStorage.setItem("accessToken", data.accessToken);
       localStorage.setItem("refreshToken", data.refreshToken);
+
+      // Оновлюємо контекст після реєстрації
+      await refreshUser();
 
       navigate("/login");
     } catch (err: any) {
