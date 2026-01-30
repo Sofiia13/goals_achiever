@@ -63,6 +63,7 @@
 
     white-space: nowrap;
     flex-shrink: 0;
+    
   &__goalTab {
     padding: 10px 20px;
     border-radius: 20px;
@@ -75,13 +76,13 @@
     transition: all 0.2s ease;
 
     &:hover {
-      background-color: rgba(140, 120, 81, 0.1);
+      // background-color: rgba(140, 120, 81, 0.1);
     }
 
     &_active {
-      background-color: $main-color;
+      background-color: $stroke-color;
       color: $paragraph-color;
-      border-color: $main-color;
+      border-color: $stroke-color;
     }
   }
 
