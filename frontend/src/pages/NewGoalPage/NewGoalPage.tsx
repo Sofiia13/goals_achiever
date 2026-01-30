@@ -28,6 +28,8 @@ export const NewGoalPage: React.FC = () => {
       const { data } = await aiApi.generatePlan({ goal, deadline, context });
       setPlan(data);
       
+      window.dispatchEvent(new Event("moneyUpdated"));
+      
       if (data?.id) {
         navigate(`/roadmaps/${data.id}`);
       } else {

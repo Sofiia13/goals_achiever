@@ -23,7 +23,7 @@ export class AiService {
     const nextStation = stations.find((task) => task.status === "pending");
 
     const completedDailyTasks = dailyTasks.filter(
-      (task) => task.status === "done"
+      (task) => task.status === "done",
     );
 
     let previousProgress = null;
@@ -100,6 +100,16 @@ Generate a realistic, detailed step-by-step plan.
 
       const planJson = JSON.parse(cleaned);
 
+      const MONEY_FOR_PLAN_GENERATION = 10;
+
+      const user = await prisma.user.findUnique({
+        where: { id: userId },
+      });
+
+      if (!user || user.money < MONEY_FOR_PLAN_GENERATION) {
+        throw new Error("Insufficient funds to generate a plan");
+      }
+
       const goalRecord = await prisma.goal.create({
         data: {
           title: goal,
@@ -117,6 +127,11 @@ Generate a realistic, detailed step-by-step plan.
           },
         },
         include: { tasks: true },
+      });
+
+      await prisma.user.updateMany({
+        where: { id: userId },
+        data: { money: { decrement: MONEY_FOR_PLAN_GENERATION } },
       });
 
       return goalRecord;
@@ -155,6 +170,8 @@ Generate a realistic, detailed step-by-step plan.
     startOfToday.setUTCHours(0, 0, 0, 0);
     const endOfToday = new Date();
     endOfToday.setUTCHours(23, 59, 59, 999);
+
+    const MONEY_FOR_DAILY_TASKS_GENERATION = 1;
 
     const todaysDailyTasks = await prisma.task.findMany({
       where: {
@@ -255,6 +272,14 @@ Return ONLY valid JSON.
 
       const planJson = JSON.parse(cleaned);
 
+      const user = await prisma.user.findUnique({
+        where: { id: goalData.userId },
+      });
+
+      if (!user || user.money < MONEY_FOR_DAILY_TASKS_GENERATION) {
+        throw new Error("Insufficient funds to generate daily tasks");
+      }
+
       await prisma.task.createMany({
         data: planJson.tasks.map((task: any) => ({
           title: task.title,
@@ -279,6 +304,11 @@ Return ONLY valid JSON.
           },
         },
         orderBy: { generatedAt: "asc" },
+      });
+
+      await prisma.user.updateMany({
+        where: { id: user.id },
+        data: { money: { decrement: MONEY_FOR_DAILY_TASKS_GENERATION } },
       });
 
       return { tasks };

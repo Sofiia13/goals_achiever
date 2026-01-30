@@ -47,6 +47,8 @@
   &__user {
     cursor: pointer;
     display: flex;
+    flex-direction: row;
+    gap: 30px;
     position: absolute;
     right: 24px;
     align-items: center;

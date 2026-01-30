@@ -13,7 +13,7 @@ export class AuthService {
     password: string,
     firstName?: string,
     lastName?: string,
-    confirmPassword?: string
+    confirmPassword?: string,
   ) {
     const existingUser = await prisma.user.findUnique({ where: { email } });
 
@@ -37,8 +37,11 @@ export class AuthService {
 
     const { accessToken, refreshToken } = generateTokenPair(
       user.id,
-      user.email
+      user.email,
     );
+
+    const money = 20;
+
     await prisma.user.update({
       where: { id: user.id },
       data: { refreshToken },
@@ -51,6 +54,7 @@ export class AuthService {
         id: user.id,
         email: user.email,
         name: user.name,
+        money,
       },
     };
   }
@@ -67,7 +71,7 @@ export class AuthService {
 
     const { accessToken, refreshToken } = generateTokenPair(
       user.id,
-      user.email
+      user.email,
     );
     await prisma.user.update({
       where: { id: user.id },
@@ -94,7 +98,7 @@ export class AuthService {
 
     const { accessToken, refreshToken: newRefreshToken } = generateTokenPair(
       user.id,
-      user.email
+      user.email,
     );
     await prisma.user.update({
       where: { id: user.id },
