@@ -1,4 +1,24 @@
 .newGoalPage {
+  &__tabs {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-bottom: 40px;
+    justify-content: center;
+  }
+
+  &__tab {
+    font-size: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &__tabActive {
+    font-size: 15px;
+    color: $paragraph-color;
+  }
+
   &__title {
     font-size: 30px;
     margin-bottom: 20px;

@@ -1,54 +1,14 @@
 import type React from "react";
 import styles from "./NewGoalPage.module.scss";
-import { Input } from "../../shared/components/ui/Input";
 import { useState } from "react";
-import { Button } from "../../shared/components/ui/Button";
-import { aiApi } from "../../shared/api/ai.api";
 import { Slab } from "react-loading-indicators";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
+import { AIGenerationForm } from "../../shared/components/layouts/AIGenerationForm";
 
 export const NewGoalPage: React.FC = () => {
-  const [goal, setGoal] = useState("");
-  const [context, setContext] = useState("");
-  const [deadline, setDeadline] = useState("");
-  const [plan, setPlan] = useState<string | null>(null);
-
   const [loading, setLoading] = useState(false);
-  const navigate = useNavigate();
-
-  const handleCreateGoal = async () => {
-    if (!goal || !deadline) {
-      alert("Please fill in goal and deadline");
-      return;
-    }
-
-    setLoading(true);
-
-    try {
-      const { data } = await aiApi.generatePlan({ goal, deadline, context });
-      setPlan(data);
-      
-      window.dispatchEvent(new Event("moneyUpdated"));
-      
-      if (data?.id) {
-        navigate(`/roadmaps/${data.id}`);
-      } else {
-        navigate("/roadmaps");
-      }
-
-      setGoal("");
-      setContext("");
-      setDeadline("");
-    } catch (err: any) {
-      console.error(
-        "GENERATION ERROR:",
-        err.response?.data?.message || err.message,
-      );
-      alert(err.response?.data?.message || "Помилка генерації плану");
-    } finally {
-      setLoading(false);
-    }
-  };
+  const location = useLocation();
+  const isManual = location.pathname === "/goals/manual";
 
   const colors = ["#2F2418", "#4A3A28", "#6B563F", "#8C7458", "#A89172"];
 
@@ -59,43 +19,27 @@ export const NewGoalPage: React.FC = () => {
           <Slab color={colors} />
         </div>
       )}
-      <h1 className={styles.newGoalPage__title}>
-        Write you goal and the deadline to achieve it
-      </h1>
-      <div className={styles.newGoalPage__inputs}>
-        <Input
-          value={goal}
-          onChange={setGoal}
-          className={styles.newGoalPage__goalInput}
-          placeholder="Tell what you want to achieve"
-        />
-
-        <Input
-          type="date"
-          value={deadline}
-          onChange={setDeadline}
-          className={styles.newGoalPage__dateInput}
-        />
+      <div className={styles.newGoalPage__tabs}>
+        <NavLink
+          to="/goals"
+          end
+          className={({ isActive }) =>
+            isActive ? styles.newGoalPage__tabActive : styles.newGoalPage__tab
+          }
+        >
+          <h2>AI Goal Generation</h2>
+        </NavLink>
+        <NavLink
+          to="/goals/manual"
+          className={({ isActive }) =>
+            isActive ? styles.newGoalPage__tabActive : styles.newGoalPage__tab
+          }
+        >
+          <h2>Manual Goal Creation</h2>
+        </NavLink>
       </div>
-      <Input
-        textarea
-        value={context}
-        onChange={setContext}
-        className={styles.newGoalPage__goalContextInput}
-        placeholder="Give some context about your goal"
-      />
-
-      <Button
-        className={styles.newGoalPage__createButton}
-        buttonText="Generate plan"
-        onClick={handleCreateGoal}
-      ></Button>
-
-      {plan && (
-        <div className={styles.newGoalPage__plan}>
-          <h2>Plan is generated</h2>
-        </div>
-      )}
+      {!isManual && <AIGenerationForm setLoading={setLoading} />}
+      {isManual && <div>Manual goal creation form (coming soon)</div>}
     </div>
   );
 };

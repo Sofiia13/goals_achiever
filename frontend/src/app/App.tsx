@@ -24,6 +24,7 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/tasks" element={<MainLayout />} />
         <Route path="/goals" element={<NewGoalPage />} />
+        <Route path="/goals/manual" element={<NewGoalPage />} />
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/roadmaps" element={<RoadMapPage />} />
         <Route path="/roadmaps/:goalId" element={<RoadMapPage />} />
