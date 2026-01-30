@@ -52,6 +52,7 @@ export const MainLayout: React.FC = () => {
       .getDailyTasks(selectedGoalId)
       .then((res) => {
         setDailyTasks(res.data || []);
+        window.dispatchEvent(new Event("moneyUpdated"));
         setLoading(false);
       })
       .catch((err) => {
@@ -66,6 +67,7 @@ export const MainLayout: React.FC = () => {
     setGenerating(true);
     try {
       await aiApi.generateDailyTasks(selectedGoalId);
+      window.dispatchEvent(new Event("moneyUpdated"));
       const res = await tasksApi.getDailyTasks(selectedGoalId);
       setDailyTasks(res.data || []);
     } catch (err) {
