@@ -7,6 +7,7 @@ type ButtonProps = {
   variant?: "default" | "text";
   disabled?: boolean;
   className?: string;
+  icon?: React.ReactNode;
 };
 
 export const Button: React.FC<ButtonProps> = ({
@@ -15,6 +16,7 @@ export const Button: React.FC<ButtonProps> = ({
   variant = "default",
   disabled = false,
   className = "",
+  icon,
 }) => {
   const buttonClass = `${styles.button} ${
     variant === "text" ? styles.text : ""
@@ -22,6 +24,7 @@ export const Button: React.FC<ButtonProps> = ({
 
   return (
     <button className={buttonClass} onClick={onClick} disabled={disabled}>
+      {icon && <span className={styles.icon}>{icon}</span>}
       {buttonText}
     </button>
   );

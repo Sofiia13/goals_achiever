@@ -7,7 +7,13 @@
   font-size: 16px;
   font-family: "Fredoka Regular", sans-serif;
   cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.1s ease;
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 
   &:hover:not(:disabled) {
     background-color: $highlight-color;
@@ -30,5 +36,17 @@
     text-decoration: underline;
     background: none;
     transform: none;
+  }
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
   }
 }
