@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Slab } from "react-loading-indicators";
 import { NavLink, useLocation } from "react-router-dom";
 import { AIGenerationForm } from "../../shared/components/layouts/AIGenerationForm";
+import { ManualGenarationForm } from "../../shared/components/layouts/ManualGenarationForm";
 
 export const NewGoalPage: React.FC = () => {
   const [loading, setLoading] = useState(false);
@@ -39,7 +40,7 @@ export const NewGoalPage: React.FC = () => {
         </NavLink>
       </div>
       {!isManual && <AIGenerationForm setLoading={setLoading} />}
-      {isManual && <div>Manual goal creation form (coming soon)</div>}
+      {isManual && <ManualGenarationForm />}
     </div>
   );
 };

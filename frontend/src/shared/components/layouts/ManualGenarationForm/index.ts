@@ -1,0 +1,1 @@
+export { ManualGenarationForm } from "./ManualGenarationForm";
