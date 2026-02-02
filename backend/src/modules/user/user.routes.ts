@@ -5,5 +5,7 @@ import { UserController } from "./user.controller";
 const router = Router();
 
 router.get("/money", authMiddleware, UserController.getUserMoney);
+router.post("/money/add", authMiddleware, UserController.addUserMoney);
+router.post("/money/remove", authMiddleware, UserController.removeUserMoney);
 
 export const userRouter = router;

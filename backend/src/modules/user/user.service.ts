@@ -11,4 +11,33 @@ export class UserService {
     const user = await this.getUserById(userId);
     return user ? user.money : null;
   }
+
+  async c(userId: number, amount: number) {
+    const user = await this.getUserById(userId);
+    if (!user) {
+      throw new Error("User not found");
+    }
+
+    const newMoney = user.money + amount;
+    await prisma.user.update({
+      where: { id: userId },
+      data: { money: newMoney },
+    });
+
+    return newMoney;
+  }
+
+  static async addUserMoney(userId: number, amount: number) {
+    return prisma.user.update({
+      where: { id: userId },
+      data: { money: { increment: amount } },
+    });
+  }
+
+  static async removeUserMoney(userId: number, amount: number) {
+    return prisma.user.update({
+      where: { id: userId },
+      data: { money: { decrement: amount } },
+    });
+  }
 }

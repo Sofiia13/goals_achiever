@@ -14,7 +14,10 @@ export const tasksApi = {
   },
 
   updateTaskStatus(taskId: number, status: string) {
-    return api.patch(`/tasks/${taskId}/status`, { status });
+    return api.patch<{ task: any; coinsRewarded: number }>(
+      `/tasks/${taskId}/status`,
+      { status },
+    );
   },
 
   getStationProgress(goalId: number, stationTitle: string) {

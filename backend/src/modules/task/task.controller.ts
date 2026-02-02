@@ -98,11 +98,11 @@ export class TaskController {
           .json({ message: "Task ID and status are required" });
       }
 
-      const task = await taskService.updateTaskStatus(
+      const result = await taskService.updateTaskStatus(
         parseInt(taskId, 10),
         status,
       );
-      res.json(task);
+      res.json(result);
     } catch (err: any) {
       res.status(500).json({ message: err.message });
     }

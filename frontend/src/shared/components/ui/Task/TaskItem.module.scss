@@ -60,4 +60,23 @@
       transition: opacity 0.2s ease;
     }
   }
+
+  &__reward {
+    font-size: 18px;
+    font-weight: bold;
+    color: #4caf50;
+    margin-left: auto;
+    animation: popUp 0.5s ease-out;
+  }
+}
+
+@keyframes popUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px) scale(1.2);
+  }
 }

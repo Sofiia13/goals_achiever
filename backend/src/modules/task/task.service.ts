@@ -1,4 +1,5 @@
 import { prisma } from "../../prisma";
+import { UserService } from "../user/user.service";
 
 export class TaskService {
   async getTasksByGoalId(goalId: number) {
@@ -49,6 +50,20 @@ export class TaskService {
       data: { status },
     });
 
+    let coinsRewarded = 0;
+
+    if (status === "done") {
+      const coinsPerTask = 2; 
+      coinsRewarded = coinsPerTask;
+      await UserService.addUserMoney(task.goal.userId, coinsRewarded);
+    }
+
+    if (status === "pending" && task.status === "done") {
+      const coinsPerTask = 2;
+      coinsRewarded = coinsPerTask;
+      await UserService.removeUserMoney(task.goal.userId, coinsRewarded);
+    }
+
     if (updatedTask.type === "daily" && status === "done" && updatedTask.progressContribution) {
       const newProgress = (task.goal.currentStationProgress || 0) + updatedTask.progressContribution;
       
@@ -71,7 +86,7 @@ export class TaskService {
       });
     }
 
-    return updatedTask;
+    return { task: updatedTask, coinsRewarded };
   }
 
   async completeCurrentStation(goalId: number, stationTitle: string) {
