@@ -1,0 +1,39 @@
+.manualGenarationForm {
+  &__title {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  &__inputs {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+
+  &__goalInput {
+    flex: 3;
+  }
+
+  &__dateInput {
+    flex: 1;
+  }
+
+  &__addTask {
+    gap: 15px;
+  }
+
+  &__taskInputs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &__addTaskButtons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+
+}

@@ -5,6 +5,7 @@ import { Router } from "express";
 const router = Router();
 
 router.get("/goals/:goalId/", authMiddleware, TaskController.getTasksByGoalId);
+router.post("/goals/:goalId/", authMiddleware, TaskController.createTask);
 router.get(
   "/goals/:goalId/daily-tasks",
   authMiddleware,

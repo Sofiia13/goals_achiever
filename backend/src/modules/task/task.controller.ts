@@ -133,4 +133,30 @@ export class TaskController {
       res.status(500).json({ message: err.message });
     }
   }
+
+  static async createTask(req: Request, res: Response) {
+    try {
+      const user = req.user;
+      if (!user) {
+        return res.status(401).json({ message: "Unauthorized" });
+      }
+
+      const { goalId } = req.params;
+      const { title, description, dueDate } = req.body;
+
+      if (!goalId || !title) {
+        return res.status(400).json({ message: "Goal ID and task title are required" });
+      }
+
+      const task = await taskService.createTask(parseInt(goalId, 10), {
+        title,
+        description,
+        dueDate,
+      });
+
+      res.status(201).json(task);
+    } catch (err: any) {
+      res.status(500).json({ message: err.message });
+    }
+  }
 }

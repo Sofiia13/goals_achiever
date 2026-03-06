@@ -9,6 +9,20 @@ export class TaskService {
     });
   }
 
+  async createTask(goalId: number, data: { title: string; description?: string; dueDate?: string }) {
+    return prisma.task.create({
+      data: {
+        title: data.title,
+        description: data.description,
+        dueDate: data.dueDate ? new Date(data.dueDate) : undefined,
+        goalId,
+        status: "pending",
+        generatedAt: new Date(),
+        type: "manual",
+      },
+    });
+  }
+
   async getDailyTasksByGoalId(goalId: number) {
     const startOfToday = new Date();
     startOfToday.setUTCHours(0, 0, 0, 0);

@@ -13,6 +13,16 @@ export class GoalService {
     });
   }
 
+  async createGoal(userId: number, data: { title: string; deadline: string }) {
+    return prisma.goal.create({
+      data: {
+        title: data.title,
+        deadline: new Date(data.deadline),
+        userId,
+      },
+    });
+  }
+
   async getDaysTillDeadline(goalId: number) {
     const goal = await this.getGoalById(goalId);
     if (!goal || !goal.deadline) {

@@ -9,6 +9,10 @@ export const tasksApi = {
     return api.get(`/tasks/goals/${goalId}/daily-tasks`);
   },
 
+  createTask(goalId: number, data: { title: string; description?: string; dueDate?: string }) {
+    return api.post(`/tasks/goals/${goalId}/`, data);
+  },
+
   updateTaskDetails(taskId: number, title: string, description: string) {
     return api.patch(`/tasks/${taskId}/details`, { title, description });
   },
@@ -23,8 +27,4 @@ export const tasksApi = {
   getStationProgress(goalId: number, stationTitle: string) {
     return api.get(`/tasks/goals/${goalId}/stations/${encodeURIComponent(stationTitle)}/progress`);
   },
-
-  // createTask(goalId: number, data: { title: string; description?: string; dueDate?: string }) {
-  //   return api.post(`/goals/${goalId}/tasks`, data);
-  // },
 };

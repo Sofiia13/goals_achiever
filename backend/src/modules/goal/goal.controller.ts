@@ -63,4 +63,26 @@ export class GoalController {
       res.status(500).json({ message: err.message });
     }
   }
+
+  static async createGoal(req: Request, res: Response) {
+    try {
+      const user = req.user;
+
+      if (!user) {
+        return res.status(401).json({ message: "Unauthorized" });
+      }
+
+      const { title, deadline } = req.body;
+
+      if (!title || !deadline) {
+        return res.status(400).json({ message: "Title and deadline are required" });
+      }
+
+      const goal = await goalService.createGoal(user.id, { title, deadline });
+
+      res.status(201).json(goal);
+    } catch (err: any) {
+      res.status(500).json({ message: err.message });
+    }
+  }
 }
