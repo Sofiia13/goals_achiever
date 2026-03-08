@@ -47,5 +47,5 @@ model Task {
   progressContribution Float?
 
   goalId            Int
-  goal              Goal      @relation(fields: [goalId], references: [id])
+  goal              Goal      @relation(fields: [goalId], references: [id], onDelete: Cascade)
 }

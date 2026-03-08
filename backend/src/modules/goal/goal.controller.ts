@@ -85,4 +85,28 @@ export class GoalController {
       res.status(500).json({ message: err.message });
     }
   }
+
+  static async deleteGoal(req: Request, res: Response) {
+    try {
+      const user = req.user;
+
+      if (!user) {
+        return res.status(401).json({ message: "Unauthorized" });
+      }
+
+      if (!req.params.id) {
+        return res.status(400).json({ message: "Goal ID is required" });
+      }
+
+      const goalId = parseInt(req.params.id, 10);
+      await goalService.deleteGoal(goalId, user.id);
+
+      res.status(204).send();
+    } catch (err: any) {
+      if (err.message.includes("not found") || err.message.includes("permission")) {
+        return res.status(404).json({ message: err.message });
+      }
+      res.status(500).json({ message: err.message });
+    }
+  }
 }

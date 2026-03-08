@@ -40,6 +40,23 @@ export const RoadMapPage: React.FC = () => {
     });
   }, [selectedGoalId, navigate]);
 
+  const handleDeleteGoal = async (goalId: number) => {
+    try {
+      await goalsApi.deleteGoal(goalId);
+      
+      // Якщо видаляємо поточну ціль, перенаправляємо на іншу сторінку
+      if (goalId === selectedGoalId) {
+        navigate('/roadmaps', { replace: true });
+        setSelectedGoalId(null);
+        setTasks([]);
+        setSelectedGoal(null);
+      }
+    } catch (error) {
+      console.error('Failed to delete goal:', error);
+      alert('Не вдалося видалити ціль');
+    }
+  };
+
   return (
     <div className={styles.roadMapPage}>
       <SideBar tasks={tasks} setTasks={setTasks} selectedGoal={selectedGoal || undefined} />
@@ -48,6 +65,7 @@ export const RoadMapPage: React.FC = () => {
         setTasks={setTasks}
         selectedGoalId={selectedGoalId}
         setSelectedGoalId={setSelectedGoalId}
+        onDeleteGoal={handleDeleteGoal}
       />
     </div>
   );

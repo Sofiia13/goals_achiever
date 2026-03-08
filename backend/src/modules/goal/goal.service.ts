@@ -36,4 +36,22 @@ export class GoalService {
 
     return daysDiff;
   }
+
+  async deleteGoal(goalId: number, userId: number) {
+    // Перевіряємо чи існує ціль і чи належить вона користувачу
+    const goal = await prisma.goal.findFirst({
+      where: {
+        id: goalId,
+        userId: userId,
+      },
+    });
+
+    if (!goal) {
+      throw new Error("Goal not found or you don't have permission to delete it");
+    }
+
+    return prisma.goal.delete({
+      where: { id: goalId },
+    });
+  }
 }

@@ -7,12 +7,14 @@ type ItemsListProps = {
   goals: Goal[];
   selectedGoalId?: number | null;
   onSelect: (goalId: number) => void;
+  onDelete?: (goalId: number) => void;
 };
 
 export const ItemsList: React.FC<ItemsListProps> = ({
   goals,
   selectedGoalId,
   onSelect,
+  onDelete,
 }) => {
   return (
     <div className={styles.itemsList}>
@@ -22,6 +24,7 @@ export const ItemsList: React.FC<ItemsListProps> = ({
           goal={goal}
           selectedGoalId={selectedGoalId}
           onSelect={onSelect}
+          onDelete={onDelete}
         />
       ))}
     </div>

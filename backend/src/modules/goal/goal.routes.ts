@@ -7,6 +7,7 @@ const router = Router();
 router.get("/", authMiddleware, GoalController.getUserGoals);
 router.post("/", authMiddleware, GoalController.createGoal);
 router.get("/:id", authMiddleware, GoalController.getGoalById);
+router.delete("/:id", authMiddleware, GoalController.deleteGoal);
 router.get(
   "/:id/days-till-deadline",
   authMiddleware,

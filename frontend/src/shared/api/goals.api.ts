@@ -16,4 +16,8 @@ export const goalsApi = {
   getDaysTillDeadline(goalId: number) {
     return api.get(`/goals/${goalId}/days-till-deadline`);
   },
+
+  deleteGoal(goalId: number) {
+    return api.delete(`/goals/${goalId}`);
+  },
 };

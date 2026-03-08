@@ -20,12 +20,14 @@ type Props = {
   setTasks: React.Dispatch<React.SetStateAction<Task[]>>;
   selectedGoalId: number | null;
   setSelectedGoalId: React.Dispatch<React.SetStateAction<number | null>>;
+  onDeleteGoal?: (goalId: number) => void;
 };
 
 export const RoadMap: React.FC<Props> = ({
   tasks,
   selectedGoalId,
   setSelectedGoalId,
+  onDeleteGoal,
 }) => {
   const [goals, setGoals] = useState<Goal[]>([]);
   const [selectedTaskId, setSelectedTaskId] = useState<number | null>(null);
@@ -91,6 +93,22 @@ export const RoadMap: React.FC<Props> = ({
     });
   }, []);
 
+  const refreshGoals = useCallback(() => {
+    goalsApi.getUserGoals().then((res) => {
+      setGoals(res.data);
+    });
+  }, []);
+
+  const handleDeleteGoal = useCallback(
+    async (goalId: number) => {
+      if (onDeleteGoal) {
+        await onDeleteGoal(goalId);
+        refreshGoals();
+      }
+    },
+    [onDeleteGoal, refreshGoals],
+  );
+
   useEffect(() => {
     if (!selectedGoalId && goals.length > 0) {
       setSelectedGoalId(goals[0].id);
@@ -134,6 +152,7 @@ export const RoadMap: React.FC<Props> = ({
           goals={goals}
           selectedGoalId={selectedGoalId}
           onSelect={setSelectedGoalId}
+          onDelete={handleDeleteGoal}
         />
         <div className={styles.roadMap} style={{ height: "100vh" }}>
           <Canvas

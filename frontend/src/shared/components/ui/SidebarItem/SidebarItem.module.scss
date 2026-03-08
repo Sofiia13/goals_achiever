@@ -12,12 +12,16 @@
     gap: 10px;
     align-items: center;
     color: $stroke-color;
+    width: 100%;
   }
 
   &__text {
     margin: 0;
     font-size: 16px;
     color: $stroke-color;
+    flex: 1;
+    min-width: 0;
+    word-wrap: break-word;
   }
 
   &__editIcon {
@@ -37,10 +41,11 @@
     padding: 5px;
     border: 1px solid $stroke-color;
     border-radius: 4px;
-    width: 100%;
+    flex: 1;
     background-color: $highlight-color;
     font-family: inherit;
     text-transform: none;
+    box-sizing: border-box;
 
     &:focus {
       outline: none;

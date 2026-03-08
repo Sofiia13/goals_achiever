@@ -10,8 +10,81 @@
   overflow-x: hidden;
 
   &__title {
-    color: #ffffff;
+    color: #fff;
     font-size: 24px;
     margin: 0;
+  }
+
+  &__addBtn {
+    margin-top: 20px;
+    width: 100%;
+    background-color: #d9c2c2;
+  }
+
+  &__newTask {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+  }
+
+  &__newTaskTitle {
+    margin-bottom: 10px;
+  }
+
+  &__newTaskDescription {
+    margin-bottom: 10px;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+    font-family: inherit;
+    color: $main-color;
+    box-sizing: border-box;
+
+    &:focus {
+      outline: none;
+      border-color: $highlight-color;
+    }
+  }
+
+  &__textarea {
+    width: 100%;
+    min-height: 60px;
+    padding: 8px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+    font-family: inherit;
+    color: $main-color;
+    resize: vertical;
+    box-sizing: border-box;
+
+    &:focus {
+      outline: none;
+      border-color: $highlight-color;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+  }
+
+  &__cancelButton {
+    background-color: transparent;
+    color: $background-color;
+  }
+
+  &__saveButton {
+    background-color: $highlight-color;
+    color: $main-color;
   }
 }
