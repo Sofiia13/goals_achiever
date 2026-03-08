@@ -1,4 +1,7 @@
 import { prisma } from "../../prisma";
+import { StreakService } from "../../services/streak/streak.service";
+
+const streakService = new StreakService();
 
 export class UserService {
   async getUserById(userId: number) {
@@ -39,5 +42,9 @@ export class UserService {
       where: { id: userId },
       data: { money: { decrement: amount } },
     });
+  }
+
+  async getUserStreak(userId: number) {
+    return streakService.getUserStreak(userId);
   }
 }

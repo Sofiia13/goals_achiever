@@ -1120,11 +1120,15 @@ export namespace Prisma {
   export type UserAvgAggregateOutputType = {
     id: number | null
     money: number | null
+    currentStreak: number | null
+    longestStreak: number | null
   }
 
   export type UserSumAggregateOutputType = {
     id: number | null
     money: number | null
+    currentStreak: number | null
+    longestStreak: number | null
   }
 
   export type UserMinAggregateOutputType = {
@@ -1136,6 +1140,9 @@ export namespace Prisma {
     createdAt: Date | null
     money: number | null
     photoUrl: string | null
+    currentStreak: number | null
+    longestStreak: number | null
+    lastActivityDate: Date | null
   }
 
   export type UserMaxAggregateOutputType = {
@@ -1147,6 +1154,9 @@ export namespace Prisma {
     createdAt: Date | null
     money: number | null
     photoUrl: string | null
+    currentStreak: number | null
+    longestStreak: number | null
+    lastActivityDate: Date | null
   }
 
   export type UserCountAggregateOutputType = {
@@ -1158,6 +1168,9 @@ export namespace Prisma {
     createdAt: number
     money: number
     photoUrl: number
+    currentStreak: number
+    longestStreak: number
+    lastActivityDate: number
     _all: number
   }
 
@@ -1165,11 +1178,15 @@ export namespace Prisma {
   export type UserAvgAggregateInputType = {
     id?: true
     money?: true
+    currentStreak?: true
+    longestStreak?: true
   }
 
   export type UserSumAggregateInputType = {
     id?: true
     money?: true
+    currentStreak?: true
+    longestStreak?: true
   }
 
   export type UserMinAggregateInputType = {
@@ -1181,6 +1198,9 @@ export namespace Prisma {
     createdAt?: true
     money?: true
     photoUrl?: true
+    currentStreak?: true
+    longestStreak?: true
+    lastActivityDate?: true
   }
 
   export type UserMaxAggregateInputType = {
@@ -1192,6 +1212,9 @@ export namespace Prisma {
     createdAt?: true
     money?: true
     photoUrl?: true
+    currentStreak?: true
+    longestStreak?: true
+    lastActivityDate?: true
   }
 
   export type UserCountAggregateInputType = {
@@ -1203,6 +1226,9 @@ export namespace Prisma {
     createdAt?: true
     money?: true
     photoUrl?: true
+    currentStreak?: true
+    longestStreak?: true
+    lastActivityDate?: true
     _all?: true
   }
 
@@ -1301,6 +1327,9 @@ export namespace Prisma {
     createdAt: Date
     money: number
     photoUrl: string | null
+    currentStreak: number
+    longestStreak: number
+    lastActivityDate: Date | null
     _count: UserCountAggregateOutputType | null
     _avg: UserAvgAggregateOutputType | null
     _sum: UserSumAggregateOutputType | null
@@ -1331,6 +1360,9 @@ export namespace Prisma {
     createdAt?: boolean
     money?: boolean
     photoUrl?: boolean
+    currentStreak?: boolean
+    longestStreak?: boolean
+    lastActivityDate?: boolean
     goals?: boolean | User$goalsArgs<ExtArgs>
     _count?: boolean | UserCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["user"]>
@@ -1344,6 +1376,9 @@ export namespace Prisma {
     createdAt?: boolean
     money?: boolean
     photoUrl?: boolean
+    currentStreak?: boolean
+    longestStreak?: boolean
+    lastActivityDate?: boolean
   }, ExtArgs["result"]["user"]>
 
   export type UserSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
@@ -1355,6 +1390,9 @@ export namespace Prisma {
     createdAt?: boolean
     money?: boolean
     photoUrl?: boolean
+    currentStreak?: boolean
+    longestStreak?: boolean
+    lastActivityDate?: boolean
   }, ExtArgs["result"]["user"]>
 
   export type UserSelectScalar = {
@@ -1366,9 +1404,12 @@ export namespace Prisma {
     createdAt?: boolean
     money?: boolean
     photoUrl?: boolean
+    currentStreak?: boolean
+    longestStreak?: boolean
+    lastActivityDate?: boolean
   }
 
-  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "email" | "password" | "refreshToken" | "createdAt" | "money" | "photoUrl", ExtArgs["result"]["user"]>
+  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "email" | "password" | "refreshToken" | "createdAt" | "money" | "photoUrl" | "currentStreak" | "longestStreak" | "lastActivityDate", ExtArgs["result"]["user"]>
   export type UserInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     goals?: boolean | User$goalsArgs<ExtArgs>
     _count?: boolean | UserCountOutputTypeDefaultArgs<ExtArgs>
@@ -1390,6 +1431,9 @@ export namespace Prisma {
       createdAt: Date
       money: number
       photoUrl: string | null
+      currentStreak: number
+      longestStreak: number
+      lastActivityDate: Date | null
     }, ExtArgs["result"]["user"]>
     composites: {}
   }
@@ -1822,6 +1866,9 @@ export namespace Prisma {
     readonly createdAt: FieldRef<"User", 'DateTime'>
     readonly money: FieldRef<"User", 'Float'>
     readonly photoUrl: FieldRef<"User", 'String'>
+    readonly currentStreak: FieldRef<"User", 'Int'>
+    readonly longestStreak: FieldRef<"User", 'Int'>
+    readonly lastActivityDate: FieldRef<"User", 'DateTime'>
   }
     
 
@@ -4625,7 +4672,10 @@ export namespace Prisma {
     refreshToken: 'refreshToken',
     createdAt: 'createdAt',
     money: 'money',
-    photoUrl: 'photoUrl'
+    photoUrl: 'photoUrl',
+    currentStreak: 'currentStreak',
+    longestStreak: 'longestStreak',
+    lastActivityDate: 'lastActivityDate'
   };
 
   export type UserScalarFieldEnum = (typeof UserScalarFieldEnum)[keyof typeof UserScalarFieldEnum]
@@ -4762,6 +4812,9 @@ export namespace Prisma {
     createdAt?: DateTimeFilter<"User"> | Date | string
     money?: FloatFilter<"User"> | number
     photoUrl?: StringNullableFilter<"User"> | string | null
+    currentStreak?: IntFilter<"User"> | number
+    longestStreak?: IntFilter<"User"> | number
+    lastActivityDate?: DateTimeNullableFilter<"User"> | Date | string | null
     goals?: GoalListRelationFilter
   }
 
@@ -4774,6 +4827,9 @@ export namespace Prisma {
     createdAt?: SortOrder
     money?: SortOrder
     photoUrl?: SortOrderInput | SortOrder
+    currentStreak?: SortOrder
+    longestStreak?: SortOrder
+    lastActivityDate?: SortOrderInput | SortOrder
     goals?: GoalOrderByRelationAggregateInput
   }
 
@@ -4789,6 +4845,9 @@ export namespace Prisma {
     createdAt?: DateTimeFilter<"User"> | Date | string
     money?: FloatFilter<"User"> | number
     photoUrl?: StringNullableFilter<"User"> | string | null
+    currentStreak?: IntFilter<"User"> | number
+    longestStreak?: IntFilter<"User"> | number
+    lastActivityDate?: DateTimeNullableFilter<"User"> | Date | string | null
     goals?: GoalListRelationFilter
   }, "id" | "email">
 
@@ -4801,6 +4860,9 @@ export namespace Prisma {
     createdAt?: SortOrder
     money?: SortOrder
     photoUrl?: SortOrderInput | SortOrder
+    currentStreak?: SortOrder
+    longestStreak?: SortOrder
+    lastActivityDate?: SortOrderInput | SortOrder
     _count?: UserCountOrderByAggregateInput
     _avg?: UserAvgOrderByAggregateInput
     _max?: UserMaxOrderByAggregateInput
@@ -4820,6 +4882,9 @@ export namespace Prisma {
     createdAt?: DateTimeWithAggregatesFilter<"User"> | Date | string
     money?: FloatWithAggregatesFilter<"User"> | number
     photoUrl?: StringNullableWithAggregatesFilter<"User"> | string | null
+    currentStreak?: IntWithAggregatesFilter<"User"> | number
+    longestStreak?: IntWithAggregatesFilter<"User"> | number
+    lastActivityDate?: DateTimeNullableWithAggregatesFilter<"User"> | Date | string | null
   }
 
   export type GoalWhereInput = {
@@ -4992,6 +5057,9 @@ export namespace Prisma {
     createdAt?: Date | string
     money?: number
     photoUrl?: string | null
+    currentStreak?: number
+    longestStreak?: number
+    lastActivityDate?: Date | string | null
     goals?: GoalCreateNestedManyWithoutUserInput
   }
 
@@ -5004,6 +5072,9 @@ export namespace Prisma {
     createdAt?: Date | string
     money?: number
     photoUrl?: string | null
+    currentStreak?: number
+    longestStreak?: number
+    lastActivityDate?: Date | string | null
     goals?: GoalUncheckedCreateNestedManyWithoutUserInput
   }
 
@@ -5015,6 +5086,9 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     money?: FloatFieldUpdateOperationsInput | number
     photoUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    currentStreak?: IntFieldUpdateOperationsInput | number
+    longestStreak?: IntFieldUpdateOperationsInput | number
+    lastActivityDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     goals?: GoalUpdateManyWithoutUserNestedInput
   }
 
@@ -5027,6 +5101,9 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     money?: FloatFieldUpdateOperationsInput | number
     photoUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    currentStreak?: IntFieldUpdateOperationsInput | number
+    longestStreak?: IntFieldUpdateOperationsInput | number
+    lastActivityDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     goals?: GoalUncheckedUpdateManyWithoutUserNestedInput
   }
 
@@ -5039,6 +5116,9 @@ export namespace Prisma {
     createdAt?: Date | string
     money?: number
     photoUrl?: string | null
+    currentStreak?: number
+    longestStreak?: number
+    lastActivityDate?: Date | string | null
   }
 
   export type UserUpdateManyMutationInput = {
@@ -5049,6 +5129,9 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     money?: FloatFieldUpdateOperationsInput | number
     photoUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    currentStreak?: IntFieldUpdateOperationsInput | number
+    longestStreak?: IntFieldUpdateOperationsInput | number
+    lastActivityDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   }
 
   export type UserUncheckedUpdateManyInput = {
@@ -5060,6 +5143,9 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     money?: FloatFieldUpdateOperationsInput | number
     photoUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    currentStreak?: IntFieldUpdateOperationsInput | number
+    longestStreak?: IntFieldUpdateOperationsInput | number
+    lastActivityDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   }
 
   export type GoalCreateInput = {
@@ -5296,6 +5382,17 @@ export namespace Prisma {
     not?: NestedFloatFilter<$PrismaModel> | number
   }
 
+  export type DateTimeNullableFilter<$PrismaModel = never> = {
+    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel> | null
+    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
+    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
+    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    not?: NestedDateTimeNullableFilter<$PrismaModel> | Date | string | null
+  }
+
   export type GoalListRelationFilter = {
     every?: GoalWhereInput
     some?: GoalWhereInput
@@ -5320,11 +5417,16 @@ export namespace Prisma {
     createdAt?: SortOrder
     money?: SortOrder
     photoUrl?: SortOrder
+    currentStreak?: SortOrder
+    longestStreak?: SortOrder
+    lastActivityDate?: SortOrder
   }
 
   export type UserAvgOrderByAggregateInput = {
     id?: SortOrder
     money?: SortOrder
+    currentStreak?: SortOrder
+    longestStreak?: SortOrder
   }
 
   export type UserMaxOrderByAggregateInput = {
@@ -5336,6 +5438,9 @@ export namespace Prisma {
     createdAt?: SortOrder
     money?: SortOrder
     photoUrl?: SortOrder
+    currentStreak?: SortOrder
+    longestStreak?: SortOrder
+    lastActivityDate?: SortOrder
   }
 
   export type UserMinOrderByAggregateInput = {
@@ -5347,11 +5452,16 @@ export namespace Prisma {
     createdAt?: SortOrder
     money?: SortOrder
     photoUrl?: SortOrder
+    currentStreak?: SortOrder
+    longestStreak?: SortOrder
+    lastActivityDate?: SortOrder
   }
 
   export type UserSumOrderByAggregateInput = {
     id?: SortOrder
     money?: SortOrder
+    currentStreak?: SortOrder
+    longestStreak?: SortOrder
   }
 
   export type IntWithAggregatesFilter<$PrismaModel = never> = {
@@ -5436,7 +5546,7 @@ export namespace Prisma {
     _max?: NestedFloatFilter<$PrismaModel>
   }
 
-  export type DateTimeNullableFilter<$PrismaModel = never> = {
+  export type DateTimeNullableWithAggregatesFilter<$PrismaModel = never> = {
     equals?: Date | string | DateTimeFieldRefInput<$PrismaModel> | null
     in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
     notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
@@ -5444,7 +5554,10 @@ export namespace Prisma {
     lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
     gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
     gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    not?: NestedDateTimeNullableFilter<$PrismaModel> | Date | string | null
+    not?: NestedDateTimeNullableWithAggregatesFilter<$PrismaModel> | Date | string | null
+    _count?: NestedIntNullableFilter<$PrismaModel>
+    _min?: NestedDateTimeNullableFilter<$PrismaModel>
+    _max?: NestedDateTimeNullableFilter<$PrismaModel>
   }
 
   export type UserScalarRelationFilter = {
@@ -5505,20 +5618,6 @@ export namespace Prisma {
     id?: SortOrder
     userId?: SortOrder
     currentStationProgress?: SortOrder
-  }
-
-  export type DateTimeNullableWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel> | null
-    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
-    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
-    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    not?: NestedDateTimeNullableWithAggregatesFilter<$PrismaModel> | Date | string | null
-    _count?: NestedIntNullableFilter<$PrismaModel>
-    _min?: NestedDateTimeNullableFilter<$PrismaModel>
-    _max?: NestedDateTimeNullableFilter<$PrismaModel>
   }
 
   export type IntNullableFilter<$PrismaModel = never> = {
@@ -5670,6 +5769,18 @@ export namespace Prisma {
     divide?: number
   }
 
+  export type IntFieldUpdateOperationsInput = {
+    set?: number
+    increment?: number
+    decrement?: number
+    multiply?: number
+    divide?: number
+  }
+
+  export type NullableDateTimeFieldUpdateOperationsInput = {
+    set?: Date | string | null
+  }
+
   export type GoalUpdateManyWithoutUserNestedInput = {
     create?: XOR<GoalCreateWithoutUserInput, GoalUncheckedCreateWithoutUserInput> | GoalCreateWithoutUserInput[] | GoalUncheckedCreateWithoutUserInput[]
     connectOrCreate?: GoalCreateOrConnectWithoutUserInput | GoalCreateOrConnectWithoutUserInput[]
@@ -5682,14 +5793,6 @@ export namespace Prisma {
     update?: GoalUpdateWithWhereUniqueWithoutUserInput | GoalUpdateWithWhereUniqueWithoutUserInput[]
     updateMany?: GoalUpdateManyWithWhereWithoutUserInput | GoalUpdateManyWithWhereWithoutUserInput[]
     deleteMany?: GoalScalarWhereInput | GoalScalarWhereInput[]
-  }
-
-  export type IntFieldUpdateOperationsInput = {
-    set?: number
-    increment?: number
-    decrement?: number
-    multiply?: number
-    divide?: number
   }
 
   export type GoalUncheckedUpdateManyWithoutUserNestedInput = {
@@ -5724,10 +5827,6 @@ export namespace Prisma {
     connectOrCreate?: TaskCreateOrConnectWithoutGoalInput | TaskCreateOrConnectWithoutGoalInput[]
     createMany?: TaskCreateManyGoalInputEnvelope
     connect?: TaskWhereUniqueInput | TaskWhereUniqueInput[]
-  }
-
-  export type NullableDateTimeFieldUpdateOperationsInput = {
-    set?: Date | string | null
   }
 
   export type UserUpdateOneRequiredWithoutGoalsNestedInput = {
@@ -5857,6 +5956,17 @@ export namespace Prisma {
     not?: NestedFloatFilter<$PrismaModel> | number
   }
 
+  export type NestedDateTimeNullableFilter<$PrismaModel = never> = {
+    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel> | null
+    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
+    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
+    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    not?: NestedDateTimeNullableFilter<$PrismaModel> | Date | string | null
+  }
+
   export type NestedIntWithAggregatesFilter<$PrismaModel = never> = {
     equals?: number | IntFieldRefInput<$PrismaModel>
     in?: number[] | ListIntFieldRefInput<$PrismaModel>
@@ -5946,17 +6056,6 @@ export namespace Prisma {
     _sum?: NestedFloatFilter<$PrismaModel>
     _min?: NestedFloatFilter<$PrismaModel>
     _max?: NestedFloatFilter<$PrismaModel>
-  }
-
-  export type NestedDateTimeNullableFilter<$PrismaModel = never> = {
-    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel> | null
-    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
-    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
-    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    not?: NestedDateTimeNullableFilter<$PrismaModel> | Date | string | null
   }
 
   export type NestedDateTimeNullableWithAggregatesFilter<$PrismaModel = never> = {
@@ -6085,6 +6184,9 @@ export namespace Prisma {
     createdAt?: Date | string
     money?: number
     photoUrl?: string | null
+    currentStreak?: number
+    longestStreak?: number
+    lastActivityDate?: Date | string | null
   }
 
   export type UserUncheckedCreateWithoutGoalsInput = {
@@ -6096,6 +6198,9 @@ export namespace Prisma {
     createdAt?: Date | string
     money?: number
     photoUrl?: string | null
+    currentStreak?: number
+    longestStreak?: number
+    lastActivityDate?: Date | string | null
   }
 
   export type UserCreateOrConnectWithoutGoalsInput = {
@@ -6157,6 +6262,9 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     money?: FloatFieldUpdateOperationsInput | number
     photoUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    currentStreak?: IntFieldUpdateOperationsInput | number
+    longestStreak?: IntFieldUpdateOperationsInput | number
+    lastActivityDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   }
 
   export type UserUncheckedUpdateWithoutGoalsInput = {
@@ -6168,6 +6276,9 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     money?: FloatFieldUpdateOperationsInput | number
     photoUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    currentStreak?: IntFieldUpdateOperationsInput | number
+    longestStreak?: IntFieldUpdateOperationsInput | number
+    lastActivityDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   }
 
   export type TaskUpsertWithWhereUniqueWithoutGoalInput = {

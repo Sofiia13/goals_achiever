@@ -128,7 +128,10 @@ exports.Prisma.UserScalarFieldEnum = {
   refreshToken: 'refreshToken',
   createdAt: 'createdAt',
   money: 'money',
-  photoUrl: 'photoUrl'
+  photoUrl: 'photoUrl',
+  currentStreak: 'currentStreak',
+  longestStreak: 'longestStreak',
+  lastActivityDate: 'lastActivityDate'
 };
 
 exports.Prisma.GoalScalarFieldEnum = {

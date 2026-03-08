@@ -14,6 +14,8 @@ interface Analytics {
   pendingTasks: number;
   completionRate: number;
   money: number;
+  currentStreak: number;
+  longestStreak: number;
   goalsWithDeadlines: {
     overdue: number;
     upcoming: number;
@@ -32,6 +34,8 @@ export const AnalyticsPage: React.FC = () => {
     pendingTasks: 0,
     completionRate: 0,
     money: 0,
+    currentStreak: 0,
+    longestStreak: 0,
     goalsWithDeadlines: {
       overdue: 0,
       upcoming: 0,
@@ -44,16 +48,19 @@ export const AnalyticsPage: React.FC = () => {
   useEffect(() => {
     const fetchAnalytics = async () => {
       try {
-        const [goalsRes, moneyRes] = await Promise.all([
+        const [goalsRes, moneyRes, streakRes] = await Promise.all([
           goalsApi.getUserGoals(),
           userApi.getUserMoney(),
+          userApi.getUserStreak(),
         ]);
 
         const goals: Goal[] = goalsRes.data;
         const money = moneyRes.data.money || 0;
+        const streak = streakRes.data;
 
         console.log("Goals:", goals);
         console.log("Money:", money);
+        console.log("Streak:", streak);
 
         const tasksPromises = goals.map((goal) =>
           tasksApi.getTasksByGoal(goal.id),
@@ -144,6 +151,8 @@ export const AnalyticsPage: React.FC = () => {
           pendingTasks,
           completionRate,
           money,
+          currentStreak: streak.currentStreak || 0,
+          longestStreak: streak.longestStreak || 0,
           goalsWithDeadlines: {
             overdue,
             upcoming,
@@ -214,7 +223,21 @@ export const AnalyticsPage: React.FC = () => {
               <p className={styles.statCard__label}>Money Earned</p>
             </div>
           </div>
-        </div>
+          <div className={styles.statCard}>
+            <div className={styles.statCard__icon}>🔥</div>
+            <div className={styles.statCard__content}>
+              <h3 className={styles.statCard__value}>{analytics.currentStreak}</h3>
+              <p className={styles.statCard__label}>Поточний страйк (днів)</p>
+            </div>
+          </div>
+
+          <div className={styles.statCard}>
+            <div className={styles.statCard__icon}>🏆</div>
+            <div className={styles.statCard__content}>
+              <h3 className={styles.statCard__value}>{analytics.longestStreak}</h3>
+              <p className={styles.statCard__label}>Найдовший страйк</p>
+            </div>
+          </div>        </div>
 
         {/* Charts Section */}
         <div className={styles.chartsGrid}>

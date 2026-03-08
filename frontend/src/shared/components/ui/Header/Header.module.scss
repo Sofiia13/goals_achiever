@@ -58,4 +58,28 @@
       opacity: 0.7;
     }
   }
+
+  &__streak {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+  }
+
+  &__streakIcon {
+    font-size: 20px;
+  }
+
+  &__streakValue {
+    font-size: 16px;
+    font-weight: 600;
+    color: $paragraph-color;
+  }
 }

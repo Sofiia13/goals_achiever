@@ -1,5 +1,8 @@
 import { prisma } from "../../prisma";
 import { UserService } from "../user/user.service";
+import { StreakService } from "../../services/streak/streak.service";
+
+const streakService = new StreakService();
 
 export class TaskService {
   async getTasksByGoalId(goalId: number) {
@@ -70,6 +73,9 @@ export class TaskService {
       const coinsPerTask = 2; 
       coinsRewarded = coinsPerTask;
       await UserService.addUserMoney(task.goal.userId, coinsRewarded);
+      
+      // Оновлюємо страйк при виконанні таски
+      await streakService.updateUserStreak(task.goal.userId);
     }
 
     if (status === "pending" && task.status === "done") {

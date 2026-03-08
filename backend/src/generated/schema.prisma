@@ -8,15 +8,18 @@ datasource db {
 }
 
 model User {
-  id           Int      @id @default(autoincrement())
-  name         String
-  email        String   @unique
-  password     String
-  refreshToken String? // для refresh токену
-  createdAt    DateTime @default(now())
-  goals        Goal[]
-  money        Float    @default(20)
-  photoUrl     String?
+  id               Int       @id @default(autoincrement())
+  name             String
+  email            String    @unique
+  password         String
+  refreshToken     String? // для refresh токену
+  createdAt        DateTime  @default(now())
+  goals            Goal[]
+  money            Float     @default(20)
+  photoUrl         String?
+  currentStreak    Int       @default(0) // поточний страйк (послідовні дні)
+  longestStreak    Int       @default(0) // найдовший страйк
+  lastActivityDate DateTime? // дата останньої активності
 }
 
 model Goal {

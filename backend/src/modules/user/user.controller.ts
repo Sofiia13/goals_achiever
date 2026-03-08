@@ -69,4 +69,18 @@ export class UserController {
       res.status(500).json({ message: (error as Error).message });
     }
   }
+
+  static async getUserStreak(req: Request, res: Response) {
+    try {
+      const user = req.user;
+      if (!user) {
+        return res.status(401).json({ message: "Unauthorized" });
+      }
+
+      const streak = await userService.getUserStreak(user.id);
+      res.json(streak);
+    } catch (err: any) {
+      res.status(500).json({ message: err.message });
+    }
+  }
 }

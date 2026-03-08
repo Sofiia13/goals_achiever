@@ -17,6 +17,9 @@ model User {
   goals        Goal[]
   money        Float    @default(20)
   photoUrl     String?
+  currentStreak Int     @default(0) // поточний страйк (послідовні дні)
+  longestStreak Int     @default(0) // найдовший страйк
+  lastActivityDate DateTime? // дата останньої активності
 }
 
 model Goal {

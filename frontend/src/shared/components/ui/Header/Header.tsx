@@ -14,6 +14,7 @@ const navItems = [
 
 export const Header: React.FC = () => {
   const [money, setMoney] = useState<number>(0);
+  const [currentStreak, setCurrentStreak] = useState<number>(0);
 
   const fetchMoney = async () => {
     try {
@@ -24,16 +25,33 @@ export const Header: React.FC = () => {
     }
   };
 
+  const fetchStreak = async () => {
+    try {
+      const res = await userApi.getUserStreak();
+      setCurrentStreak(res.data.currentStreak || 0);
+    } catch (error) {
+      console.error("Failed to fetch user streak:", error);
+    }
+  };
+
   useEffect(() => {
     fetchMoney();
+    fetchStreak();
   }, []);
 
   useEffect(() => {
     const handleMoneyUpdate = () => {
       fetchMoney();
     };
+    const handleStreakUpdate = () => {
+      fetchStreak();
+    };
     window.addEventListener("moneyUpdated", handleMoneyUpdate);
-    return () => window.removeEventListener("moneyUpdated", handleMoneyUpdate);
+    window.addEventListener("streakUpdated", handleStreakUpdate);
+    return () => {
+      window.removeEventListener("moneyUpdated", handleMoneyUpdate);
+      window.removeEventListener("streakUpdated", handleStreakUpdate);
+    };
   }, []);
 
   return (
@@ -57,6 +75,10 @@ export const Header: React.FC = () => {
         </ul>
 
         <div className={styles.header__user}>
+          <div className={styles.header__streak}>
+            <span className={styles.header__streakIcon}>🔥 </span>
+            <span className={styles.header__streakValue}>{currentStreak}</span>
+          </div>
           <MoneyItem money={money} />
           <NavLink to="/profile" className={styles.header__link}>
             <svg height="28" width="28" viewBox="0 0 24 24" fill="currentColor">
