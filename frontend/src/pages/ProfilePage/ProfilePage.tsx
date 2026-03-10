@@ -21,7 +21,7 @@ type ProfileStats = {
   weeklyDone: { day: string; value: number }[];
 };
 
-const AI_TYPES = ["learn", "practice", "review", "reflect"];
+const AI_TYPES = ["daily", "ai", "learn", "practice", "review", "reflect"];
 
 const initialStats: ProfileStats = {
   money: 0,
@@ -222,7 +222,7 @@ export const ProfilePage: React.FC = ({}) => {
         <div className={styles.profilePage__statCard}>
           <span>🤖</span>
           <h4>{stats.aiTasks}</h4>
-          <p>AI tasks</p>
+          <p>AI generated</p>
         </div>
         <div className={styles.profilePage__statCard}>
           <span>✍️</span>

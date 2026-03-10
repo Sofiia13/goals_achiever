@@ -26,7 +26,6 @@ export const RoadMapPage: React.FC = () => {
 
     navigate(`/roadmaps/${selectedGoalId}`, { replace: true });
 
-    // Отримуємо таски
     tasksApi.getTasksByGoal(selectedGoalId).then((res) => {
       const nonDailyTasks = res.data.filter(
         (task: Task) => task.type !== "daily",
@@ -34,7 +33,6 @@ export const RoadMapPage: React.FC = () => {
       setTasks(nonDailyTasks);
     });
     
-    // Отримуємо Goal окремо для прогресу
     goalsApi.getGoalById(selectedGoalId).then((res) => {
       setSelectedGoal(res.data);
     });
@@ -44,7 +42,6 @@ export const RoadMapPage: React.FC = () => {
     try {
       await goalsApi.deleteGoal(goalId);
       
-      // Якщо видаляємо поточну ціль, перенаправляємо на іншу сторінку
       if (goalId === selectedGoalId) {
         navigate('/roadmaps', { replace: true });
         setSelectedGoalId(null);

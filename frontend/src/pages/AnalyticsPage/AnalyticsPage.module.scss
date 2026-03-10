@@ -53,7 +53,7 @@
 }
 
 .statCard {
-  background: #4caf50;
+  background-color: $secondary-color;
   border-radius: 16px;
   padding: 24px;
   display: flex;
@@ -102,7 +102,7 @@
 }
 
 .chartCard {
-  background: #4caf50;
+  background-color: $secondary-color;
   border-radius: 16px;
   padding: 32px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
@@ -220,7 +220,7 @@
 
   &__bar {
     height: 8px;
-    background-color: #4caf50;
+    background-color: $highlight-color;
     border-radius: 4px;
     overflow: hidden;
   }
@@ -254,7 +254,7 @@
 }
 
 .statBox {
-  background: #4caf50;
+  background-color: $secondary-color;
   border-radius: 16px;
   padding: 24px;
   margin-top: 42px;

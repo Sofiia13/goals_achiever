@@ -227,7 +227,7 @@ export const AnalyticsPage: React.FC = () => {
             <div className={styles.statCard__icon}>🔥</div>
             <div className={styles.statCard__content}>
               <h3 className={styles.statCard__value}>{analytics.currentStreak}</h3>
-              <p className={styles.statCard__label}>Поточний страйк (днів)</p>
+              <p className={styles.statCard__label}>Current Streak (days)</p>
             </div>
           </div>
 
@@ -235,7 +235,7 @@ export const AnalyticsPage: React.FC = () => {
             <div className={styles.statCard__icon}>🏆</div>
             <div className={styles.statCard__content}>
               <h3 className={styles.statCard__value}>{analytics.longestStreak}</h3>
-              <p className={styles.statCard__label}>Найдовший страйк</p>
+              <p className={styles.statCard__label}>Longest Streak (days)</p>
             </div>
           </div>        </div>
 

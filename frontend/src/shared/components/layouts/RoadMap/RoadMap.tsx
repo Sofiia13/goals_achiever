@@ -163,7 +163,7 @@ export const RoadMap: React.FC<Props> = ({
               far: 3000,
             }}
           >
-            <color attach="background" args={["#f9f4ef"]} />
+            <color attach="background" args={["#f2ebd9"]} />
             <fog attach="fog" args={["#fbf7f2", 500, 1400]} />
             <ambientLight intensity={0.8} />
             <directionalLight position={[20, 40, 20]} intensity={1.15} />
