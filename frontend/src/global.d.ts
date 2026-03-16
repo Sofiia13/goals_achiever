@@ -15,15 +15,15 @@ declare module '*.jpg' {
   const src: string;
   export default src;
 }
-
 declare module '*.png' {
   const src: string;
   export default src;
 }
 
-// Уже додано твої VITE env
+// Типи для Vite env
 interface ImportMetaEnv {
-  readonly VITE_API_URL: string; // або додай інші свої змінні VITE_
+  readonly VITE_API_URL: string; // твоя змінна
+  readonly DEV: boolean;         // додай всі змінні, які використовуєш
 }
 
 interface ImportMeta {
