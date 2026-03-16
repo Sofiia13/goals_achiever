@@ -43,5 +43,5 @@
     "moduleDetection": "force",
 
   },
-  "include": ["src/**/*", "prisma.config.ts"]
+  "include": ["src/**/*"]
 }

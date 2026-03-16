@@ -125,13 +125,13 @@ exports.Prisma.UserScalarFieldEnum = {
   name: 'name',
   email: 'email',
   password: 'password',
-  refreshToken: 'refreshToken',
   createdAt: 'createdAt',
-  money: 'money',
+  refreshToken: 'refreshToken',
   photoUrl: 'photoUrl',
+  money: 'money',
   currentStreak: 'currentStreak',
-  longestStreak: 'longestStreak',
-  lastActivityDate: 'lastActivityDate'
+  lastActivityDate: 'lastActivityDate',
+  longestStreak: 'longestStreak'
 };
 
 exports.Prisma.GoalScalarFieldEnum = {
@@ -148,15 +148,15 @@ exports.Prisma.GoalScalarFieldEnum = {
 exports.Prisma.TaskScalarFieldEnum = {
   id: 'id',
   title: 'title',
-  description: 'description',
   status: 'status',
-  dueDate: 'dueDate',
+  goalId: 'goalId',
   generatedAt: 'generatedAt',
-  type: 'type',
+  description: 'description',
+  dueDate: 'dueDate',
   estimatedMinutes: 'estimatedMinutes',
   station: 'station',
-  progressContribution: 'progressContribution',
-  goalId: 'goalId'
+  type: 'type',
+  progressContribution: 'progressContribution'
 };
 
 exports.Prisma.SortOrder = {

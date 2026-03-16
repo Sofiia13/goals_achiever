@@ -8,47 +8,44 @@ datasource db {
 }
 
 model User {
-  id           Int      @id @default(autoincrement())
-  name         String
-  email        String   @unique
-  password     String
-  refreshToken String?  // для refresh токену
-  createdAt    DateTime @default(now())
-  goals        Goal[]
-  money        Float    @default(20)
-  photoUrl     String?
-  currentStreak Int     @default(0) // поточний страйк (послідовні дні)
-  longestStreak Int     @default(0) // найдовший страйк
-  lastActivityDate DateTime? // дата останньої активності
+  id               Int       @id @default(autoincrement())
+  name             String
+  email            String    @unique
+  password         String
+  createdAt        DateTime  @default(now())
+  refreshToken     String?
+  photoUrl         String?
+  money            Float     @default(20)
+  currentStreak    Int       @default(0)
+  lastActivityDate DateTime?
+  longestStreak    Int       @default(0)
+  goals            Goal[]
 }
 
 model Goal {
-  id          Int      @id @default(autoincrement())
-  title       String
-  context     String?
-  deadline    DateTime
-  userId      Int
-  createdAt   DateTime @default(now())
-  user        User     @relation(fields: [userId], references: [id])
-  tasks       Task[]
-  completedAt DateTime?
-  currentStationProgress Float @default(0) // прогрес до наступної станції (0-100%)
+  id                     Int       @id @default(autoincrement())
+  title                  String
+  context                String?
+  deadline               DateTime
+  userId                 Int
+  createdAt              DateTime  @default(now())
+  completedAt            DateTime?
+  currentStationProgress Float     @default(0)
+  user                   User      @relation(fields: [userId], references: [id])
+  tasks                  Task[]
 }
 
 model Task {
-  id                Int       @id @default(autoincrement())
-  title             String
-  description       String?
-  status            String    @default("pending") 
-  dueDate           DateTime?
-  generatedAt       DateTime  @default(now())
-
-  // AI / planning metadata
-  type              String?   // "learn" | "practice" | "review" | "reflect"
-  estimatedMinutes  Int?
-  station           String?   // для якої "станції" це завдання
+  id                   Int       @id @default(autoincrement())
+  title                String
+  status               String    @default("pending")
+  goalId               Int
+  generatedAt          DateTime  @default(now())
+  description          String?
+  dueDate              DateTime?
+  estimatedMinutes     Int?
+  station              String?
+  type                 String?
   progressContribution Float?
-
-  goalId            Int
-  goal              Goal      @relation(fields: [goalId], references: [id], onDelete: Cascade)
+  goal                 Goal      @relation(fields: [goalId], references: [id], onDelete: Cascade)
 }

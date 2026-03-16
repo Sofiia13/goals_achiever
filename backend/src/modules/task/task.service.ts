@@ -13,16 +13,18 @@ export class TaskService {
   }
 
   async createTask(goalId: number, data: { title: string; description?: string; dueDate?: string }) {
+    const createData = {
+      title: data.title,
+      goalId,
+      status: "pending" as const,
+      generatedAt: new Date(),
+      type: "manual",
+      ...(data.description !== undefined ? { description: data.description } : {}),
+      ...(data.dueDate !== undefined ? { dueDate: new Date(data.dueDate) } : {}),
+    };
+
     return prisma.task.create({
-      data: {
-        title: data.title,
-        description: data.description,
-        dueDate: data.dueDate ? new Date(data.dueDate) : undefined,
-        goalId,
-        status: "pending",
-        generatedAt: new Date(),
-        type: "manual",
-      },
+      data: createData,
     });
   }
 
