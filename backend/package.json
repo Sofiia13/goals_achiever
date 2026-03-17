@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "dev": "tsx watch src/server.ts",
-    "build": "tsc",
+    "build": "prisma generate && tsc && cp -r src/generated dist/",
     "start": "node dist/server.js",
     "seed": "tsx prisma/seed.ts",
     "analytics": "tsx analytics/run_analytics.ts"
