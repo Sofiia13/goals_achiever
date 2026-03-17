@@ -54,18 +54,20 @@ export const useAvatarLogic = (
     }
 
     const stations = tasks.filter(task => task.type !== "daily");
-    const completedStations = stations.filter(station => station.status === "done");
-    
+    if (stations.length === 0) {
+      const startPos: [number, number, number] = [160, 15, 0];
+      syncAvatarPosition(startPos);
+      return;
+    }
+
+    const completedStations = stations.filter((station) => station.status === "done");
+    const firstPendingIndex = stations.findIndex((station) => station.status !== "done");
+
     console.log('Completed stations:', completedStations.length, completedStations.map(t => t.id));
-    
-    const lastCompletedIndex = completedStations.length > 0 
-      ? stations.findIndex(station => station.id === completedStations[completedStations.length - 1].id)
-      : -1;
+    console.log('First pending index:', firstPendingIndex);
 
     const currentStationIndex =
-      lastCompletedIndex >= 0
-        ? Math.min(lastCompletedIndex + 1, stations.length - 1)
-        : 0;
+      firstPendingIndex === -1 ? stations.length - 1 : firstPendingIndex;
     const nextStationIndex = currentStationIndex + 1;
 
     const currentStationPos: [number, number, number] = 
@@ -78,7 +80,7 @@ export const useAvatarLogic = (
         ? [-165, 0, nextStationIndex * -150]
         : [165, 0, nextStationIndex * -150];
 
-    const progress = selectedGoal?.currentStationProgress || 0;
+    const progress = Math.max(0, Math.min(100, selectedGoal?.currentStationProgress || 0));
     
     if (nextStationIndex < stations.length && progress > 0) {
       const progressRatio = progress / 100;

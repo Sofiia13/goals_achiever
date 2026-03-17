@@ -1,5 +1,16 @@
 .itemsList {
   display: flex;
   flex-direction: row;
-  gap: 12px;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  flex-wrap: nowrap;
+  scrollbar-width: none; // Firefox
+  -ms-overflow-style: none; // IE/Edge legacy
+
+  &::-webkit-scrollbar {
+    display: none; // Chrome/Safari
+  }
 }
