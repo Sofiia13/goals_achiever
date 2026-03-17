@@ -1,4 +1,5 @@
 import { Routes, Route, useLocation, Navigate } from "react-router-dom";
+import type { ReactElement } from "react";
 import { MainLayout } from "../shared/components/layouts/MainLayout";
 import { Header } from "../shared/components/ui/Header";
 import styles from "./App.module.scss";
@@ -18,12 +19,12 @@ function App() {
   const hideHeaderRoutes = ["/", "/login"];
   const shouldShowHeader = !hideHeaderRoutes.includes(location.pathname) && !!user;
 
-  const privateRoute = (element: JSX.Element) => {
+  const privateRoute = (element: ReactElement) => {
     if (!isAuthChecked) return null;
     return user ? element : <Navigate to="/login" replace />;
   };
 
-  const publicRoute = (element: JSX.Element) => {
+  const publicRoute = (element: ReactElement) => {
     if (!isAuthChecked) return null;
     return user ? <Navigate to="/tasks" replace /> : element;
   };
