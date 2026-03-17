@@ -71,10 +71,6 @@ export const RoadMap: React.FC<Props> = ({
     setCameraLookAt([0, 0, 0]);
   }, []);
 
-  const updateAvatarPosition = useCallback(() => {
-    updateAvatarPositionFn();
-  }, [updateAvatarPositionFn]);
-
   const { handleMoveToTask, handleArrive, handleCloseModal } =
     useCameraHandlers(
       setCameraTarget,
@@ -130,8 +126,8 @@ export const RoadMap: React.FC<Props> = ({
       "Tasks statuses:",
       tasks.map((t) => ({ id: t.id, title: t.title, status: t.status })),
     );
-    updateAvatarPosition();
-  }, [tasks, selectedGoal?.currentStationProgress, selectedGoalId, updateAvatarPosition]);
+    updateAvatarPositionFn();
+  }, [tasks, selectedGoal?.currentStationProgress, selectedGoalId]);
 
   const handleAvatarReachTarget = () => {
     setIsAvatarMoving(false);
