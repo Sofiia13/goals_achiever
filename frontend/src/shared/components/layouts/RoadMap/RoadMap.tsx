@@ -14,6 +14,7 @@ import { useAvatarLogic } from "./useAvatarLogic";
 import { useCameraHandlers } from "./useCameraHandlers";
 
 // const DEFAULT_CAMERA_POS: [number, number, number] = [-50, 200, 500];
+const DEFAULT_CAMERA_POS: [number, number, number] = [-50, 200, 500];
 
 type Props = {
   tasks: Task[];
@@ -57,6 +58,7 @@ export const RoadMap: React.FC<Props> = ({
   const { updateAvatarPosition: updateAvatarPositionFn } = useAvatarLogic(
     tasks,
     selectedGoal,
+    avatarCurrentPos,
     setAvatarCurrentPos,
     setAvatarTargetPos,
     setIsAvatarMoving,
@@ -157,7 +159,7 @@ export const RoadMap: React.FC<Props> = ({
         <div className={styles.roadMap} style={{ height: "100vh" }}>
           <Canvas
             camera={{
-              position: avatarCurrentPos,
+              position: DEFAULT_CAMERA_POS,
               fov: 50,
               near: 0.1,
               far: 3000,
@@ -211,7 +213,9 @@ export const RoadMap: React.FC<Props> = ({
               onReachTarget={handleAvatarReachTarget}
             />
 
-            <OrbitControls target={[0, 0, orbitTargetZ]} />
+            <OrbitControls
+              target={cameraMode === "idle" ? [0, 0, 0] : [0, 0, orbitTargetZ]}
+            />
           </Canvas>
         </div>
       </div>

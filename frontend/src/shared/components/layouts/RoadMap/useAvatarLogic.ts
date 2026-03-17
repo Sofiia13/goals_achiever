@@ -1,13 +1,46 @@
+import { useRef } from "react";
 import type { Task, Goal } from "../../../types/api.types";
 
 export const useAvatarLogic = (
   tasks: Task[],
   selectedGoal: Goal | undefined,
+  avatarCurrentPos: [number, number, number],
   setAvatarCurrentPos: (pos: [number, number, number]) => void,
   setAvatarTargetPos: (pos: [number, number, number]) => void,
   setIsAvatarMoving: (moving: boolean) => void,
   setOrbitTargetZ: (z: number) => void
 ) => {
+  const hasInitializedRef = useRef(false);
+
+  const syncAvatarPosition = (nextPos: [number, number, number]) => {
+    const distance = Math.hypot(
+      avatarCurrentPos[0] - nextPos[0],
+      avatarCurrentPos[1] - nextPos[1],
+      avatarCurrentPos[2] - nextPos[2],
+    );
+
+    if (!hasInitializedRef.current) {
+      hasInitializedRef.current = true;
+      setAvatarCurrentPos(nextPos);
+      setAvatarTargetPos(nextPos);
+      setIsAvatarMoving(false);
+      setOrbitTargetZ(nextPos[2]);
+      return;
+    }
+
+    if (distance > 1) {
+      setAvatarTargetPos(nextPos);
+      setIsAvatarMoving(true);
+      setOrbitTargetZ(nextPos[2]);
+      return;
+    }
+
+    setAvatarCurrentPos(nextPos);
+    setAvatarTargetPos(nextPos);
+    setIsAvatarMoving(false);
+    setOrbitTargetZ(nextPos[2]);
+  };
+
   const updateAvatarPosition = () => {
     console.log('Avatar update - tasks:', tasks.length);
     console.log('Tasks statuses:', tasks.map(t => ({ id: t.id, title: t.title, status: t.status })));
@@ -16,10 +49,7 @@ export const useAvatarLogic = (
     if (tasks.length === 0) {
       const startPos: [number, number, number] = [160, 15, 0];
       console.log('No tasks, setting avatar to:', startPos);
-      setAvatarCurrentPos(startPos);
-      setAvatarTargetPos(startPos);
-      setIsAvatarMoving(false);
-      setOrbitTargetZ(0);
+      syncAvatarPosition(startPos);
       return;
     }
 
@@ -32,8 +62,10 @@ export const useAvatarLogic = (
       ? stations.findIndex(station => station.id === completedStations[completedStations.length - 1].id)
       : -1;
 
-
-    const currentStationIndex = lastCompletedIndex >= 0 ? lastCompletedIndex : 0;
+    const currentStationIndex =
+      lastCompletedIndex >= 0
+        ? Math.min(lastCompletedIndex + 1, stations.length - 1)
+        : 0;
     const nextStationIndex = currentStationIndex + 1;
 
     const currentStationPos: [number, number, number] = 
@@ -58,23 +90,14 @@ export const useAvatarLogic = (
       ];
 
       console.log(`Avatar between stations ${currentStationIndex}-${nextStationIndex}, progress: ${progress}%`, avatarPos);
-      
-      setAvatarCurrentPos(avatarPos);
-      setAvatarTargetPos(avatarPos);
-      setIsAvatarMoving(false);
-      setOrbitTargetZ(avatarPos[2]);
+
+      syncAvatarPosition(avatarPos);
     } else if (nextStationIndex >= stations.length) {
       console.log('All stations completed, avatar at last station:', currentStationPos);
-      setAvatarCurrentPos(currentStationPos);
-      setAvatarTargetPos(currentStationPos);
-      setIsAvatarMoving(false);
-      setOrbitTargetZ(currentStationPos[2]);
+      syncAvatarPosition(currentStationPos);
     } else {
       console.log('No progress, avatar at current station:', currentStationPos);
-      setAvatarCurrentPos(currentStationPos);
-      setAvatarTargetPos(currentStationPos);
-      setIsAvatarMoving(false);
-      setOrbitTargetZ(currentStationPos[2]);
+      syncAvatarPosition(currentStationPos);
     }
   };
 
