@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "build": "prisma generate && tsc && cp -r src/generated dist/",
+    "prestart": "prisma generate && mkdir -p dist && cp -r src/generated dist/",
     "start": "node dist/server.js",
     "seed": "tsx prisma/seed.ts",
     "analytics": "tsx analytics/run_analytics.ts"
