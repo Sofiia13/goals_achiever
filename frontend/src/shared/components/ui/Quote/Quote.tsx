@@ -4,9 +4,8 @@ import styles from "./Quote.module.scss";
 export const Quote: React.FC = () => {
   return (
     <div className={styles.quote}>
-      Persistence is the quality of winners.
-      <br />
-      Successful people never, never give up.
+      Believe in the power of small steps—every effort you make today builds the
+      bridge to your dreams tomorrow.
     </div>
   );
 };
