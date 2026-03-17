@@ -12,6 +12,7 @@ export interface User {
 
 interface AuthContextType {
   user: User | null;
+  isAuthChecked: boolean;
   setUser: (user: User | null) => void;
   logout: () => void;
   refreshUser: () => void;
@@ -23,12 +24,14 @@ interface AuthProviderProps {
 
 export const AuthProvider = ({ children }: AuthProviderProps) => {
   const [user, setUser] = useState<User | null>(null);
+  const [isAuthChecked, setIsAuthChecked] = useState(false);
   const navigate = useNavigate();
 
   const loadUser = async () => {
     const token = localStorage.getItem("accessToken");
     if (!token) {
       setUser(null);
+      setIsAuthChecked(true);
       return;
     }
 
@@ -48,6 +51,8 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
       } else {
         setUser(null);
       }
+    } finally {
+      setIsAuthChecked(true);
     }
   };
 
@@ -95,7 +100,9 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
   };
 
   return (
-    <AuthContext.Provider value={{ user, setUser, logout, refreshUser }}>
+    <AuthContext.Provider
+      value={{ user, isAuthChecked, setUser, logout, refreshUser }}
+    >
       {children}
     </AuthContext.Provider>
   );
