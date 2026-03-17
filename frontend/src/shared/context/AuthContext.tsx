@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import api from "../api/axios";
 
 const AuthContext = createContext<AuthContextType | null>(null);
 
@@ -34,9 +34,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
 
     try {
       console.log("TOKEN:", token);
-      const res = await axios.get(`${import.meta.env.VITE_API_URL}/auth/me`, {
-        headers: { Authorization: `Bearer ${token}` },
-      });
+      const res = await api.get("/auth/me");
       console.log("ME RESPONSE:", res.data);
       setUser(res.data);
     } catch (err: any) {
@@ -47,9 +45,9 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
         localStorage.removeItem("accessToken");
         localStorage.removeItem("refreshToken");
         navigate("/login");
+      } else {
+        setUser(null);
       }
-      setUser(null);
-      localStorage.removeItem("accessToken");
     }
   };
 
@@ -58,7 +56,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
   }, []);
 
   useEffect(() => {
-    const interceptor = axios.interceptors.response.use(
+    const interceptor = api.interceptors.response.use(
       (response) => response,
       (error) => {
         if (error.response?.status === 401) {
@@ -71,7 +69,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
       }
     );
 
-    return () => axios.interceptors.response.eject(interceptor);
+    return () => api.interceptors.response.eject(interceptor);
   }, [navigate]);
 
   useEffect(() => {
