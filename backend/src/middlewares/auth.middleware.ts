@@ -1,4 +1,4 @@
-import { prisma } from "../prisma";
+import { prisma } from "../prisma.js";
 import { verifyAccessToken } from "../utils/jwt.utils.js";
 import { Request, Response, NextFunction } from "express";
 

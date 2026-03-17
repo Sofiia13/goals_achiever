@@ -1,5 +1,5 @@
-import { authMiddleware } from "../../middlewares/auth.middleware";
-import { TaskController } from "./task.controller";
+import { authMiddleware } from "../../middlewares/auth.middleware.js";
+import { TaskController } from "./task.controller.js";
 import { Router } from "express";
 
 const router = Router();

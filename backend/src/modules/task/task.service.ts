@@ -1,6 +1,6 @@
-import { prisma } from "../../prisma";
-import { UserService } from "../user/user.service";
-import { StreakService } from "../../services/streak/streak.service";
+import { prisma } from "../../prisma.js";
+import { UserService } from "../user/user.service.js";
+import { StreakService } from "../../services/streak/streak.service.js";
 
 const streakService = new StreakService();
 

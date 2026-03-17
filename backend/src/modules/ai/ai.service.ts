@@ -1,5 +1,5 @@
 import { GoogleGenAI } from "@google/genai";
-import { prisma } from "../../prisma";
+import { prisma } from "../../prisma.js";
 
 export class AiService {
   static async getProgressInfo(goalId: number) {

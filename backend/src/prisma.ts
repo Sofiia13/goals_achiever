@@ -6,7 +6,14 @@ import pg from "pg";
 const connectionString = process.env.DATABASE_URL;
 if (!connectionString) throw new Error("DATABASE_URL is not defined");
 
-const pool = new pg.Pool({ connectionString });
+const isLocalDb =
+  connectionString.includes("localhost") ||
+  connectionString.includes("127.0.0.1");
+
+const pool = new pg.Pool({
+  connectionString,
+  ssl: isLocalDb ? false : { rejectUnauthorized: false },
+});
 const adapter = new PrismaPg(pool);
 
 const globalForPrisma = globalThis as unknown as {
