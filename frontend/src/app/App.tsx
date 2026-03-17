@@ -8,6 +8,7 @@ import { LoginPage } from "../pages/LoginPage";
 import { ProfilePage } from "../pages/ProfilePage";
 import { AnalyticsPage } from "../pages/AnalyticsPage";
 import { RoadMapPage } from "../pages/RoadMapPage";
+import { AchievementNotifier } from "../shared/components/ui/AchievementNotifier";
 
 function App() {
   const location = useLocation();
@@ -18,6 +19,7 @@ function App() {
   return (
     <div className={styles.app}>
       {shouldShowHeader && <Header />}
+      <AchievementNotifier />
 
       <Routes>
         <Route path="/" element={<RegistrationPage />} />

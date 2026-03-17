@@ -7,6 +7,7 @@ import { userApi } from "../../shared/api/user.api";
 import { goalsApi } from "../../shared/api/goals.api";
 import { tasksApi } from "../../shared/api/tasks.api";
 import type { Goal, Task } from "../../shared/types/api.types";
+import { getAchievements } from "../../shared/utils/achievements";
 
 type ProfileStats = {
   money: number;
@@ -118,50 +119,14 @@ export const ProfilePage: React.FC = ({}) => {
     const progressInLevel = xp % xpPerLevel;
     const progressPercent = Math.round((progressInLevel / xpPerLevel) * 100);
 
-    const achievements = [
-      {
-        id: "first-goal",
-        icon: "🎯",
-        title: "Перший крок",
-        subtitle: "Створено 1+ ціль",
-        unlocked: stats.totalGoals >= 1,
-      },
-      {
-        id: "task-warrior",
-        icon: "✅",
-        title: "Task Warrior",
-        subtitle: "Виконано 25+ тасок",
-        unlocked: stats.completedTasks >= 25,
-      },
-      {
-        id: "streak-keeper",
-        icon: "🔥",
-        title: "Streak Keeper",
-        subtitle: "Серія 7+ днів",
-        unlocked: stats.currentStreak >= 7,
-      },
-      {
-        id: "ai-explorer",
-        icon: "🤖",
-        title: "AI Explorer",
-        subtitle: "Зроблено 10+ AI задач",
-        unlocked: stats.aiTasks >= 10,
-      },
-      {
-        id: "coin-master",
-        icon: "💰",
-        title: "Coin Master",
-        subtitle: "Накопичено 200+ монет",
-        unlocked: stats.money >= 200,
-      },
-      {
-        id: "goal-finisher",
-        icon: "🏁",
-        title: "Goal Finisher",
-        subtitle: "Завершено 3+ цілі",
-        unlocked: stats.completedGoals >= 3,
-      },
-    ];
+    const achievements = getAchievements({
+      money: stats.money,
+      currentStreak: stats.currentStreak,
+      totalGoals: stats.totalGoals,
+      completedGoals: stats.completedGoals,
+      completedTasks: stats.completedTasks,
+      aiTasks: stats.aiTasks,
+    });
 
     return { xp, level, progressInLevel, progressPercent, xpPerLevel, achievements };
   }, [stats]);

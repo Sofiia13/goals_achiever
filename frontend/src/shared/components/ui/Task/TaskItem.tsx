@@ -22,12 +22,14 @@ export const TaskItem: React.FC<Props> = ({ task }) => {
     try {
       const response = await tasksApi.updateTaskStatus(task.id, newStatus);
       setChecked(!checked);
+      window.dispatchEvent(new Event("progressUpdated"));
       
       if (newStatus === "done" && response.data.coinsRewarded > 0) {
         setCoinsReward(response.data.coinsRewarded);
         setShowReward(true);
         setTimeout(() => setShowReward(false), 2000);
         window.dispatchEvent(new Event("moneyUpdated"));
+        window.dispatchEvent(new Event("streakUpdated"));
       } else {
         window.dispatchEvent(new Event("moneyUpdated"));
       }

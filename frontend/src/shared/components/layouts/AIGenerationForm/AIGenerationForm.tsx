@@ -30,6 +30,7 @@ export const AIGenerationForm: React.FC<Props> = ({ setLoading }) => {
       setPlan(data);
 
       window.dispatchEvent(new Event("moneyUpdated"));
+      window.dispatchEvent(new Event("progressUpdated"));
 
       if (data?.id) {
         navigate(`/roadmaps/${data.id}`);

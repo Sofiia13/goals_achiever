@@ -31,6 +31,7 @@ export const ManualGenarationForm: React.FC = () => {
     try {
       const { data } = await goalsApi.createGoal({ title: goal, deadline });
       setCreatedGoal(data);
+      window.dispatchEvent(new Event("progressUpdated"));
       setGoal("");
       setDeadline("");
     } catch (error: any) {
