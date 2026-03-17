@@ -131,7 +131,7 @@ export const RoadMap: React.FC<Props> = ({
       tasks.map((t) => ({ id: t.id, title: t.title, status: t.status })),
     );
     updateAvatarPosition();
-  }, [tasks]);
+  }, [tasks, selectedGoal?.currentStationProgress, selectedGoalId, updateAvatarPosition]);
 
   const handleAvatarReachTarget = () => {
     setIsAvatarMoving(false);

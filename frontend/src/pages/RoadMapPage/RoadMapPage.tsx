@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import styles from "./RoadMapPage.module.scss";
 import { SideBar } from "../../shared/components/layouts/Sidebar";
 import { RoadMap } from "../../shared/components/layouts/RoadMap";
@@ -14,6 +14,20 @@ export const RoadMapPage: React.FC = () => {
   const { goalId } = useParams();
   const navigate = useNavigate();
 
+  const refreshGoalData = useCallback(async (goalIdToLoad: number) => {
+    const [tasksRes, goalRes] = await Promise.all([
+      tasksApi.getTasksByGoal(goalIdToLoad),
+      goalsApi.getGoalById(goalIdToLoad),
+    ]);
+
+    const nonDailyTasks = tasksRes.data.filter(
+      (task: Task) => task.type !== "daily",
+    );
+
+    setTasks(nonDailyTasks);
+    setSelectedGoal(goalRes.data);
+  }, []);
+
   useEffect(() => {
     const parsed = goalId ? Number(goalId) : null;
     if (parsed && !Number.isNaN(parsed)) {
@@ -26,17 +40,22 @@ export const RoadMapPage: React.FC = () => {
 
     navigate(`/roadmaps/${selectedGoalId}`, { replace: true });
 
-    tasksApi.getTasksByGoal(selectedGoalId).then((res) => {
-      const nonDailyTasks = res.data.filter(
-        (task: Task) => task.type !== "daily",
-      );
-      setTasks(nonDailyTasks);
-    });
-    
-    goalsApi.getGoalById(selectedGoalId).then((res) => {
-      setSelectedGoal(res.data);
-    });
-  }, [selectedGoalId, navigate]);
+    void refreshGoalData(selectedGoalId);
+  }, [selectedGoalId, navigate, refreshGoalData]);
+
+  useEffect(() => {
+    if (selectedGoalId == null) return;
+
+    const handleProgressUpdated = () => {
+      void refreshGoalData(selectedGoalId);
+    };
+
+    window.addEventListener("progressUpdated", handleProgressUpdated);
+
+    return () => {
+      window.removeEventListener("progressUpdated", handleProgressUpdated);
+    };
+  }, [selectedGoalId, refreshGoalData]);
 
   const handleDeleteGoal = async (goalId: number) => {
     try {

@@ -1,3918 +1,3887 @@
 {
   "users": [
     {
-      "id": 143,
-      "name": "Oleksandr Poliakov",
-      "money": 18,
-      "currentStreak": 8,
-      "longestStreak": 20,
+      "id": 149,
+      "name": "Sofiia Stanishevska",
+      "money": 24,
+      "currentStreak": 14,
+      "longestStreak": 21,
       "totalGoals": 4,
       "completedGoals": 0,
-      "avgProgress": 57.724999999999994,
-      "aiGoals": 1,
-      "manualGoals": 3
-    },
-    {
-      "id": 144,
-      "name": "Ruslana Kovtunovych",
-      "money": 54,
-      "currentStreak": 21,
-      "longestStreak": 50,
-      "totalGoals": 4,
-      "completedGoals": 2,
-      "avgProgress": 66.625,
-      "aiGoals": 0,
-      "manualGoals": 4
-    },
-    {
-      "id": 145,
-      "name": "Olena Struk",
-      "money": 12,
-      "currentStreak": 3,
-      "longestStreak": 8,
-      "totalGoals": 3,
-      "completedGoals": 0,
-      "avgProgress": 46.199999999999996,
+      "avgProgress": 33.175,
       "aiGoals": 3,
-      "manualGoals": 0
-    },
-    {
-      "id": 126,
-      "name": "Sofiia Huliy",
-      "money": 36,
-      "currentStreak": 15,
-      "longestStreak": 35,
-      "totalGoals": 3,
-      "completedGoals": 1,
-      "avgProgress": 66.7,
-      "aiGoals": 2,
       "manualGoals": 1
     },
     {
-      "id": 127,
-      "name": "Iryna Bilous",
-      "money": 24,
+      "id": 150,
+      "name": "Yuliia Kovaliv",
+      "money": 33,
       "currentStreak": 9,
       "longestStreak": 18,
       "totalGoals": 3,
       "completedGoals": 1,
-      "avgProgress": 63.73333333333333,
-      "aiGoals": 1,
-      "manualGoals": 2
+      "avgProgress": 52.53333333333333,
+      "aiGoals": 2,
+      "manualGoals": 1
     },
     {
-      "id": 128,
-      "name": "Oleh Korniichuk",
-      "money": 60,
-      "currentStreak": 25,
-      "longestStreak": 43,
+      "id": 151,
+      "name": "Oleksandr Kolodiy",
+      "money": 23,
+      "currentStreak": 7,
+      "longestStreak": 14,
+      "totalGoals": 2,
+      "completedGoals": 0,
+      "avgProgress": 64.85,
+      "aiGoals": 2,
+      "manualGoals": 0
+    },
+    {
+      "id": 152,
+      "name": "Roman Pelekh",
+      "money": 33,
+      "currentStreak": 4,
+      "longestStreak": 7,
+      "totalGoals": 3,
+      "completedGoals": 0,
+      "avgProgress": 49.26666666666667,
+      "aiGoals": 3,
+      "manualGoals": 0
+    },
+    {
+      "id": 153,
+      "name": "Nataliia Stanishevska",
+      "money": 20,
+      "currentStreak": 7,
+      "longestStreak": 16,
+      "totalGoals": 3,
+      "completedGoals": 0,
+      "avgProgress": 10.466666666666667,
+      "aiGoals": 3,
+      "manualGoals": 0
+    },
+    {
+      "id": 154,
+      "name": "Andriy Stanishevskyy",
+      "money": 28,
+      "currentStreak": 3,
+      "longestStreak": 8,
       "totalGoals": 2,
       "completedGoals": 1,
-      "avgProgress": 68.55,
+      "avgProgress": 53.55,
       "aiGoals": 1,
       "manualGoals": 1
     },
     {
-      "id": 129,
+      "id": 155,
+      "name": "Anastasiia Kasatkina",
+      "money": 11,
+      "currentStreak": 2,
+      "longestStreak": 4,
+      "totalGoals": 1,
+      "completedGoals": 0,
+      "avgProgress": 10.8,
+      "aiGoals": 0,
+      "manualGoals": 1
+    },
+    {
+      "id": 156,
+      "name": "Sofiia Pylnyk",
+      "money": 7,
+      "currentStreak": 3,
+      "longestStreak": 5,
+      "totalGoals": 2,
+      "completedGoals": 0,
+      "avgProgress": 14.95,
+      "aiGoals": 1,
+      "manualGoals": 1
+    },
+    {
+      "id": 157,
+      "name": "Olena Struk",
+      "money": 14,
+      "currentStreak": 1,
+      "longestStreak": 5,
+      "totalGoals": 1,
+      "completedGoals": 0,
+      "avgProgress": 18.2,
+      "aiGoals": 1,
+      "manualGoals": 0
+    },
+    {
+      "id": 158,
       "name": "Yulia Rovetska",
-      "money": 17,
-      "currentStreak": 6,
-      "longestStreak": 14,
+      "money": 19,
+      "currentStreak": 2,
+      "longestStreak": 6,
+      "totalGoals": 1,
+      "completedGoals": 0,
+      "avgProgress": 10.5,
+      "aiGoals": 1,
+      "manualGoals": 0
+    },
+    {
+      "id": 159,
+      "name": "Volodymyr Stanishevskyy",
+      "money": 22,
+      "currentStreak": 2,
+      "longestStreak": 6,
+      "totalGoals": 2,
+      "completedGoals": 1,
+      "avgProgress": 57.35,
+      "aiGoals": 2,
+      "manualGoals": 0
+    },
+    {
+      "id": 160,
+      "name": "Ostap Kokoshko",
+      "money": 8,
+      "currentStreak": 0,
+      "longestStreak": 3,
+      "totalGoals": 1,
+      "completedGoals": 0,
+      "avgProgress": 26,
+      "aiGoals": 0,
+      "manualGoals": 1
+    },
+    {
+      "id": 161,
+      "name": "Viktoriia Savytska",
+      "money": 38,
+      "currentStreak": 10,
+      "longestStreak": 17,
       "totalGoals": 4,
       "completedGoals": 0,
-      "avgProgress": 34.45,
+      "avgProgress": 17.375,
+      "aiGoals": 4,
+      "manualGoals": 0
+    },
+    {
+      "id": 162,
+      "name": "Sofiia Huliy",
+      "money": 64,
+      "currentStreak": 8,
+      "longestStreak": 15,
+      "totalGoals": 2,
+      "completedGoals": 1,
+      "avgProgress": 76.6,
+      "aiGoals": 1,
+      "manualGoals": 1
+    },
+    {
+      "id": 163,
+      "name": "Bohuslav Stanishevskyy",
+      "money": 55,
+      "currentStreak": 6,
+      "longestStreak": 13,
+      "totalGoals": 2,
+      "completedGoals": 0,
+      "avgProgress": 11.95,
       "aiGoals": 2,
+      "manualGoals": 0
+    },
+    {
+      "id": 164,
+      "name": "Illya Shuliak",
+      "money": 22,
+      "currentStreak": 17,
+      "longestStreak": 23,
+      "totalGoals": 3,
+      "completedGoals": 0,
+      "avgProgress": 32.699999999999996,
+      "aiGoals": 1,
       "manualGoals": 2
     },
     {
-      "id": 130,
-      "name": "Yuliia Kovaliv",
-      "money": 42,
-      "currentStreak": 16,
-      "longestStreak": 40,
-      "totalGoals": 4,
-      "completedGoals": 2,
-      "avgProgress": 62.074999999999996,
+      "id": 166,
+      "name": "Iryna Bilous",
+      "money": 47,
+      "currentStreak": 5,
+      "longestStreak": 11,
+      "totalGoals": 2,
+      "completedGoals": 0,
+      "avgProgress": 31.55,
       "aiGoals": 2,
-      "manualGoals": 2
+      "manualGoals": 0
     },
     {
-      "id": 131,
-      "name": "Oleksandr Kolodiy",
-      "money": 31,
+      "id": 165,
+      "name": "Ruslana Kovtunovych",
+      "money": 28,
       "currentStreak": 13,
+      "longestStreak": 25,
+      "totalGoals": 3,
+      "completedGoals": 1,
+      "avgProgress": 53.46666666666667,
+      "aiGoals": 2,
+      "manualGoals": 1
+    },
+    {
+      "id": 167,
+      "name": "Oleh Korniichuk",
+      "money": 43,
+      "currentStreak": 20,
       "longestStreak": 28,
       "totalGoals": 3,
       "completedGoals": 1,
-      "avgProgress": 56.06666666666666,
-      "aiGoals": 2,
-      "manualGoals": 1
-    },
-    {
-      "id": 132,
-      "name": "Viktoriia Savytska",
-      "money": 50,
-      "currentStreak": 20,
-      "longestStreak": 48,
-      "totalGoals": 3,
-      "completedGoals": 0,
-      "avgProgress": 23.5,
-      "aiGoals": 1,
-      "manualGoals": 2
-    },
-    {
-      "id": 133,
-      "name": "Andriy Stanishevskyy",
-      "money": 19,
-      "currentStreak": 7,
-      "longestStreak": 16,
-      "totalGoals": 2,
-      "completedGoals": 0,
-      "avgProgress": 75.69999999999999,
-      "aiGoals": 2,
-      "manualGoals": 0
-    },
-    {
-      "id": 134,
-      "name": "Nataliia Stanishevska",
-      "money": 38,
-      "currentStreak": 11,
-      "longestStreak": 32,
-      "totalGoals": 4,
-      "completedGoals": 1,
-      "avgProgress": 75.775,
-      "aiGoals": 1,
-      "manualGoals": 3
-    },
-    {
-      "id": 135,
-      "name": "Bohuslav Stanishevskyy",
-      "money": 28,
-      "currentStreak": 12,
-      "longestStreak": 25,
-      "totalGoals": 3,
-      "completedGoals": 0,
-      "avgProgress": 39.833333333333336,
+      "avgProgress": 59.63333333333333,
       "aiGoals": 3,
       "manualGoals": 0
     },
     {
-      "id": 136,
-      "name": "Volodymyr Stanishevskyy",
-      "money": 26,
-      "currentStreak": 10,
-      "longestStreak": 22,
-      "totalGoals": 3,
-      "completedGoals": 2,
-      "avgProgress": 92.5,
-      "aiGoals": 1,
-      "manualGoals": 2
-    },
-    {
-      "id": 137,
+      "id": 168,
       "name": "Sofiia Kuzniak",
-      "money": 15,
-      "currentStreak": 7,
-      "longestStreak": 15,
-      "totalGoals": 3,
-      "completedGoals": 1,
-      "avgProgress": 43.800000000000004,
-      "aiGoals": 3,
-      "manualGoals": 0
-    },
-    {
-      "id": 138,
-      "name": "Ostap Kokoshko",
-      "money": 68,
-      "currentStreak": 8,
-      "longestStreak": 10,
+      "money": 42,
+      "currentStreak": 4,
+      "longestStreak": 8,
       "totalGoals": 2,
-      "completedGoals": 1,
-      "avgProgress": 55.6,
+      "completedGoals": 0,
+      "avgProgress": 33.7,
       "aiGoals": 2,
       "manualGoals": 0
     },
     {
-      "id": 139,
-      "name": "Anastasiia Kasatkina",
-      "money": 9,
-      "currentStreak": 2,
-      "longestStreak": 10,
-      "totalGoals": 4,
-      "completedGoals": 0,
-      "avgProgress": 61.349999999999994,
-      "aiGoals": 3,
-      "manualGoals": 1
-    },
-    {
-      "id": 140,
-      "name": "Illya Shuliak",
-      "money": 32,
-      "currentStreak": 14,
-      "longestStreak": 30,
-      "totalGoals": 2,
-      "completedGoals": 0,
-      "avgProgress": 51.1,
-      "aiGoals": 0,
-      "manualGoals": 2
-    },
-    {
-      "id": 141,
-      "name": "Sofiia Pylnyk",
-      "money": 45,
-      "currentStreak": 18,
-      "longestStreak": 31,
-      "totalGoals": 3,
-      "completedGoals": 1,
-      "avgProgress": 68.53333333333335,
-      "aiGoals": 1,
-      "manualGoals": 2
-    },
-    {
-      "id": 142,
-      "name": "Roman Pelekh",
-      "money": 21,
+      "id": 169,
+      "name": "Oleksandr Poliakov",
+      "money": 38,
       "currentStreak": 5,
-      "longestStreak": 12,
+      "longestStreak": 10,
       "totalGoals": 2,
       "completedGoals": 0,
-      "avgProgress": 11.350000000000001,
-      "aiGoals": 0,
-      "manualGoals": 2
-    },
-    {
-      "id": 125,
-      "name": "Sofiia Stanishevska",
-      "money": 14,
-      "currentStreak": 7,
-      "longestStreak": 15,
-      "totalGoals": 4,
-      "completedGoals": 2,
-      "avgProgress": 56,
+      "avgProgress": 4.15,
       "aiGoals": 1,
-      "manualGoals": 3
+      "manualGoals": 1
     }
   ],
   "goals": [
     {
-      "id": 354,
-      "userId": 143,
-      "userName": "Oleksandr Poliakov",
-      "title": "Read 12 books this year",
-      "isAI": false,
-      "progress": 65.3,
-      "completed": false,
-      "taskCount": 3,
-      "tasksDone": 2
-    },
-    {
-      "id": 355,
-      "userId": 143,
-      "userName": "Oleksandr Poliakov",
-      "title": "Meditate daily",
-      "isAI": true,
-      "progress": 74.1,
-      "completed": false,
-      "taskCount": 6,
-      "tasksDone": 4
-    },
-    {
-      "id": 356,
-      "userId": 143,
-      "userName": "Oleksandr Poliakov",
-      "title": "Improve public speaking",
-      "isAI": false,
-      "progress": 14.1,
-      "completed": false,
-      "taskCount": 2,
-      "tasksDone": 0
-    },
-    {
-      "id": 357,
-      "userId": 143,
-      "userName": "Oleksandr Poliakov",
-      "title": "Learn Spanish",
-      "isAI": false,
-      "progress": 77.4,
-      "completed": false,
-      "taskCount": 2,
-      "tasksDone": 2
-    },
-    {
-      "id": 358,
-      "userId": 144,
-      "userName": "Ruslana Kovtunovych",
-      "title": "Run a half marathon",
-      "isAI": false,
-      "progress": 100,
-      "completed": true,
-      "taskCount": 3,
-      "tasksDone": 3
-    },
-    {
-      "id": 359,
-      "userId": 144,
-      "userName": "Ruslana Kovtunovych",
-      "title": "Learn data science",
-      "isAI": false,
-      "progress": 49.3,
-      "completed": false,
-      "taskCount": 3,
-      "tasksDone": 1
-    },
-    {
-      "id": 360,
-      "userId": 144,
-      "userName": "Ruslana Kovtunovych",
-      "title": "Learn French",
-      "isAI": false,
-      "progress": 100,
-      "completed": true,
-      "taskCount": 3,
-      "tasksDone": 3
-    },
-    {
-      "id": 361,
-      "userId": 144,
-      "userName": "Ruslana Kovtunovych",
-      "title": "Master TypeScript",
-      "isAI": false,
-      "progress": 17.2,
-      "completed": false,
-      "taskCount": 3,
-      "tasksDone": 1
-    },
-    {
-      "id": 362,
-      "userId": 145,
-      "userName": "Olena Struk",
-      "title": "Learn Spanish",
-      "isAI": true,
-      "progress": 66.3,
-      "completed": false,
-      "taskCount": 7,
-      "tasksDone": 5
-    },
-    {
-      "id": 363,
-      "userId": 145,
-      "userName": "Olena Struk",
-      "title": "Read 12 books this year",
-      "isAI": true,
-      "progress": 22.2,
-      "completed": false,
-      "taskCount": 6,
-      "tasksDone": 1
-    },
-    {
-      "id": 364,
-      "userId": 145,
-      "userName": "Olena Struk",
-      "title": "Master TypeScript",
-      "isAI": true,
-      "progress": 50.1,
-      "completed": false,
-      "taskCount": 7,
-      "tasksDone": 3
-    },
-    {
-      "id": 365,
-      "userId": 126,
-      "userName": "Sofiia Huliy",
-      "title": "Write a blog",
-      "isAI": false,
-      "progress": 34.8,
-      "completed": false,
-      "taskCount": 2,
-      "tasksDone": 1
-    },
-    {
-      "id": 366,
-      "userId": 126,
-      "userName": "Sofiia Huliy",
-      "title": "Improve public speaking",
-      "isAI": true,
-      "progress": 100,
-      "completed": true,
-      "taskCount": 7,
-      "tasksDone": 6
-    },
-    {
-      "id": 367,
-      "userId": 126,
-      "userName": "Sofiia Huliy",
-      "title": "Learn data science",
-      "isAI": true,
-      "progress": 65.3,
-      "completed": false,
-      "taskCount": 8,
-      "tasksDone": 4
-    },
-    {
-      "id": 368,
-      "userId": 127,
-      "userName": "Iryna Bilous",
-      "title": "Meditate daily",
-      "isAI": true,
-      "progress": 62.6,
-      "completed": false,
-      "taskCount": 6,
-      "tasksDone": 4
-    },
-    {
-      "id": 369,
-      "userId": 127,
-      "userName": "Iryna Bilous",
-      "title": "Read 12 books this year",
-      "isAI": false,
-      "progress": 100,
-      "completed": true,
-      "taskCount": 3,
-      "tasksDone": 3
-    },
-    {
-      "id": 370,
-      "userId": 127,
-      "userName": "Iryna Bilous",
-      "title": "Master TypeScript",
-      "isAI": false,
-      "progress": 28.6,
-      "completed": false,
-      "taskCount": 3,
-      "tasksDone": 1
-    },
-    {
-      "id": 371,
-      "userId": 128,
-      "userName": "Oleh Korniichuk",
-      "title": "Run a half marathon",
-      "isAI": true,
-      "progress": 37.1,
-      "completed": false,
-      "taskCount": 8,
-      "tasksDone": 4
-    },
-    {
-      "id": 372,
-      "userId": 128,
-      "userName": "Oleh Korniichuk",
-      "title": "Meditate daily",
-      "isAI": false,
-      "progress": 100,
-      "completed": true,
-      "taskCount": 3,
-      "tasksDone": 3
-    },
-    {
       "id": 373,
-      "userId": 129,
-      "userName": "Yulia Rovetska",
-      "title": "Master TypeScript",
-      "isAI": false,
-      "progress": 26.1,
+      "userId": 149,
+      "userName": "Sofiia Stanishevska",
+      "title": "Launch a side project and get first users",
+      "isAI": true,
+      "progress": 38.7,
       "completed": false,
-      "taskCount": 3,
-      "tasksDone": 1
+      "taskCount": 8,
+      "tasksDone": 4,
+      "createdAt": "2026-03-17T15:08:52.336Z"
     },
     {
       "id": 374,
-      "userId": 129,
-      "userName": "Yulia Rovetska",
-      "title": "Learn React",
-      "isAI": true,
-      "progress": 78.8,
+      "userId": 149,
+      "userName": "Sofiia Stanishevska",
+      "title": "Reach B1 English for job interviews",
+      "isAI": false,
+      "progress": 28.3,
       "completed": false,
-      "taskCount": 9,
-      "tasksDone": 7
+      "taskCount": 3,
+      "tasksDone": 1,
+      "createdAt": "2026-03-17T15:08:52.657Z"
     },
     {
       "id": 375,
-      "userId": 129,
-      "userName": "Yulia Rovetska",
-      "title": "Learn French",
+      "userId": 149,
+      "userName": "Sofiia Stanishevska",
+      "title": "Save $5,000 emergency fund",
       "isAI": true,
-      "progress": 17.5,
+      "progress": 45.3,
       "completed": false,
-      "taskCount": 8,
-      "tasksDone": 1
+      "taskCount": 7,
+      "tasksDone": 4,
+      "createdAt": "2026-03-17T15:08:52.798Z"
     },
     {
       "id": 376,
-      "userId": 129,
+      "userId": 149,
+      "userName": "Sofiia Stanishevska",
+      "title": "Switch to a UX design career",
+      "isAI": true,
+      "progress": 20.4,
+      "completed": false,
+      "taskCount": 9,
+      "tasksDone": 2,
+      "createdAt": "2026-03-17T15:08:53.079Z"
+    },
+    {
+      "id": 400,
+      "userId": 150,
+      "userName": "Yuliia Kovaliv",
+      "title": "Switch to a UX design career",
+      "isAI": true,
+      "progress": 13.6,
+      "completed": false,
+      "taskCount": 9,
+      "tasksDone": 1,
+      "createdAt": "2026-03-17T15:09:00.144Z"
+    },
+    {
+      "id": 401,
+      "userId": 150,
+      "userName": "Yuliia Kovaliv",
+      "title": "Rebuild social life after moving to a new city",
+      "isAI": false,
+      "progress": 44,
+      "completed": false,
+      "taskCount": 3,
+      "tasksDone": 1,
+      "createdAt": "2026-03-17T15:09:00.486Z"
+    },
+    {
+      "id": 402,
+      "userId": 150,
+      "userName": "Yuliia Kovaliv",
+      "title": "Learn SQL for data analysis",
+      "isAI": true,
+      "progress": 100,
+      "completed": true,
+      "taskCount": 8,
+      "tasksDone": 7,
+      "createdAt": "2026-03-17T15:09:00.623Z"
+    },
+    {
+      "id": 403,
+      "userId": 151,
+      "userName": "Oleksandr Kolodiy",
+      "title": "Save $5,000 emergency fund",
+      "isAI": true,
+      "progress": 63.8,
+      "completed": false,
+      "taskCount": 7,
+      "tasksDone": 3,
+      "createdAt": "2026-03-17T15:09:00.932Z"
+    },
+    {
+      "id": 404,
+      "userId": 151,
+      "userName": "Oleksandr Kolodiy",
+      "title": "Reach B1 English for job interviews",
+      "isAI": true,
+      "progress": 65.9,
+      "completed": false,
+      "taskCount": 9,
+      "tasksDone": 4,
+      "createdAt": "2026-03-17T15:09:01.204Z"
+    },
+    {
+      "id": 405,
+      "userId": 152,
+      "userName": "Roman Pelekh",
+      "title": "Switch to a UX design career",
+      "isAI": true,
+      "progress": 57.6,
+      "completed": false,
+      "taskCount": 9,
+      "tasksDone": 4,
+      "createdAt": "2026-03-17T15:09:01.545Z"
+    },
+    {
+      "id": 406,
+      "userId": 152,
+      "userName": "Roman Pelekh",
+      "title": "Learn SQL for data analysis",
+      "isAI": true,
+      "progress": 66.7,
+      "completed": false,
+      "taskCount": 8,
+      "tasksDone": 4,
+      "createdAt": "2026-03-17T15:09:01.888Z"
+    },
+    {
+      "id": 407,
+      "userId": 152,
+      "userName": "Roman Pelekh",
+      "title": "Rebuild social life after moving to a new city",
+      "isAI": true,
+      "progress": 23.5,
+      "completed": false,
+      "taskCount": 7,
+      "tasksDone": 1,
+      "createdAt": "2026-03-17T15:09:02.192Z"
+    },
+    {
+      "id": 408,
+      "userId": 153,
+      "userName": "Nataliia Stanishevska",
+      "title": "Get in shape for summer",
+      "isAI": true,
+      "progress": 2.8,
+      "completed": false,
+      "taskCount": 10,
+      "tasksDone": 1,
+      "createdAt": "2026-03-17T15:09:02.473Z"
+    },
+    {
+      "id": 409,
+      "userId": 153,
+      "userName": "Nataliia Stanishevska",
+      "title": "Launch a side project and get first users",
+      "isAI": true,
+      "progress": 2.6,
+      "completed": false,
+      "taskCount": 8,
+      "tasksDone": 1,
+      "createdAt": "2026-03-17T15:09:02.859Z"
+    },
+    {
+      "id": 410,
+      "userId": 153,
+      "userName": "Nataliia Stanishevska",
+      "title": "Switch to a UX design career",
+      "isAI": true,
+      "progress": 26,
+      "completed": false,
+      "taskCount": 9,
+      "tasksDone": 3,
+      "createdAt": "2026-03-17T15:09:03.179Z"
+    },
+    {
+      "id": 411,
+      "userId": 154,
+      "userName": "Andriy Stanishevskyy",
+      "title": "Rebuild social life after moving to a new city",
+      "isAI": true,
+      "progress": 100,
+      "completed": true,
+      "taskCount": 7,
+      "tasksDone": 6,
+      "createdAt": "2026-03-17T15:09:03.515Z"
+    },
+    {
+      "id": 412,
+      "userId": 154,
+      "userName": "Andriy Stanishevskyy",
+      "title": "Get in shape for summer",
+      "isAI": false,
+      "progress": 7.1,
+      "completed": false,
+      "taskCount": 3,
+      "tasksDone": 0,
+      "createdAt": "2026-03-17T15:09:03.896Z"
+    },
+    {
+      "id": 413,
+      "userId": 155,
+      "userName": "Anastasiia Kasatkina",
+      "title": "Get in shape for summer",
+      "isAI": false,
+      "progress": 10.8,
+      "completed": false,
+      "taskCount": 3,
+      "tasksDone": 0,
+      "createdAt": "2026-03-17T15:09:04.037Z"
+    },
+    {
+      "id": 414,
+      "userId": 156,
+      "userName": "Sofiia Pylnyk",
+      "title": "Stop procrastinating and finish my thesis",
+      "isAI": false,
+      "progress": 23.8,
+      "completed": false,
+      "taskCount": 3,
+      "tasksDone": 0,
+      "createdAt": "2026-03-17T15:09:04.169Z"
+    },
+    {
+      "id": 415,
+      "userId": 156,
+      "userName": "Sofiia Pylnyk",
+      "title": "Get in shape for summer",
+      "isAI": true,
+      "progress": 6.1,
+      "completed": false,
+      "taskCount": 10,
+      "tasksDone": 0,
+      "createdAt": "2026-03-17T15:09:04.302Z"
+    },
+    {
+      "id": 416,
+      "userId": 157,
+      "userName": "Olena Struk",
+      "title": "Rebuild social life after moving to a new city",
+      "isAI": true,
+      "progress": 18.2,
+      "completed": false,
+      "taskCount": 7,
+      "tasksDone": 1,
+      "createdAt": "2026-03-17T15:09:04.672Z"
+    },
+    {
+      "id": 417,
+      "userId": 158,
       "userName": "Yulia Rovetska",
-      "title": "Improve public speaking",
-      "isAI": false,
-      "progress": 15.4,
+      "title": "Stop procrastinating and finish my thesis",
+      "isAI": true,
+      "progress": 10.5,
       "completed": false,
-      "taskCount": 2,
-      "tasksDone": 0
+      "taskCount": 9,
+      "tasksDone": 1,
+      "createdAt": "2026-03-17T15:09:04.942Z"
     },
     {
-      "id": 377,
-      "userId": 130,
-      "userName": "Yuliia Kovaliv",
-      "title": "Read 12 books this year",
-      "isAI": false,
-      "progress": 42.7,
-      "completed": false,
-      "taskCount": 3,
-      "tasksDone": 1
-    },
-    {
-      "id": 378,
-      "userId": 130,
-      "userName": "Yuliia Kovaliv",
-      "title": "Master TypeScript",
+      "id": 418,
+      "userId": 159,
+      "userName": "Volodymyr Stanishevskyy",
+      "title": "Stop procrastinating and finish my thesis",
       "isAI": true,
       "progress": 100,
       "completed": true,
-      "taskCount": 7,
-      "tasksDone": 7
+      "taskCount": 9,
+      "tasksDone": 7,
+      "createdAt": "2026-03-17T15:09:05.273Z"
     },
     {
-      "id": 379,
-      "userId": 130,
-      "userName": "Yuliia Kovaliv",
-      "title": "Improve public speaking",
+      "id": 419,
+      "userId": 159,
+      "userName": "Volodymyr Stanishevskyy",
+      "title": "Save $5,000 emergency fund",
       "isAI": true,
-      "progress": 100,
-      "completed": true,
-      "taskCount": 7,
-      "tasksDone": 7
-    },
-    {
-      "id": 380,
-      "userId": 130,
-      "userName": "Yuliia Kovaliv",
-      "title": "Learn Spanish",
-      "isAI": false,
-      "progress": 5.6,
-      "completed": false,
-      "taskCount": 2,
-      "tasksDone": 0
-    },
-    {
-      "id": 381,
-      "userId": 131,
-      "userName": "Oleksandr Kolodiy",
-      "title": "Master TypeScript",
-      "isAI": false,
-      "progress": 100,
-      "completed": true,
-      "taskCount": 3,
-      "tasksDone": 3
-    },
-    {
-      "id": 382,
-      "userId": 131,
-      "userName": "Oleksandr Kolodiy",
-      "title": "Learn Spanish",
-      "isAI": true,
-      "progress": 27,
+      "progress": 14.7,
       "completed": false,
       "taskCount": 7,
-      "tasksDone": 2
+      "tasksDone": 1,
+      "createdAt": "2026-03-17T15:09:05.697Z"
+    },
+    {
+      "id": 420,
+      "userId": 160,
+      "userName": "Ostap Kokoshko",
+      "title": "Switch to a UX design career",
+      "isAI": false,
+      "progress": 26,
+      "completed": false,
+      "taskCount": 4,
+      "tasksDone": 1,
+      "createdAt": "2026-03-17T15:09:05.963Z"
     },
     {
       "id": 383,
-      "userId": 131,
-      "userName": "Oleksandr Kolodiy",
-      "title": "Learn data science",
+      "userId": 161,
+      "userName": "Viktoriia Savytska",
+      "title": "Save $5,000 emergency fund",
       "isAI": true,
-      "progress": 41.2,
+      "progress": 3,
       "completed": false,
-      "taskCount": 8,
-      "tasksDone": 4
+      "taskCount": 7,
+      "tasksDone": 1,
+      "createdAt": "2026-03-17T15:08:55.281Z"
     },
     {
       "id": 384,
-      "userId": 132,
+      "userId": 161,
       "userName": "Viktoriia Savytska",
-      "title": "Learn Spanish",
+      "title": "Fix sleep schedule and stop feeling tired",
       "isAI": true,
-      "progress": 4.2,
+      "progress": 25.5,
       "completed": false,
-      "taskCount": 7,
-      "tasksDone": 1
+      "taskCount": 8,
+      "tasksDone": 2,
+      "createdAt": "2026-03-17T15:08:55.556Z"
     },
     {
       "id": 385,
-      "userId": 132,
+      "userId": 161,
       "userName": "Viktoriia Savytska",
-      "title": "Learn data science",
-      "isAI": false,
-      "progress": 33.2,
+      "title": "Switch to a UX design career",
+      "isAI": true,
+      "progress": 19.6,
       "completed": false,
-      "taskCount": 3,
-      "tasksDone": 1
+      "taskCount": 9,
+      "tasksDone": 2,
+      "createdAt": "2026-03-17T15:08:55.867Z"
     },
     {
       "id": 386,
-      "userId": 132,
+      "userId": 161,
       "userName": "Viktoriia Savytska",
-      "title": "Read 12 books this year",
-      "isAI": false,
-      "progress": 33.1,
-      "completed": false,
-      "taskCount": 3,
-      "tasksDone": 1
-    },
-    {
-      "id": 387,
-      "userId": 133,
-      "userName": "Andriy Stanishevskyy",
-      "title": "Run a half marathon",
+      "title": "Reduce anxiety and build mental resilience",
       "isAI": true,
-      "progress": 89.6,
+      "progress": 21.4,
       "completed": false,
       "taskCount": 8,
-      "tasksDone": 6
-    },
-    {
-      "id": 388,
-      "userId": 133,
-      "userName": "Andriy Stanishevskyy",
-      "title": "Write a blog",
-      "isAI": true,
-      "progress": 61.8,
-      "completed": false,
-      "taskCount": 7,
-      "tasksDone": 5
-    },
-    {
-      "id": 389,
-      "userId": 134,
-      "userName": "Nataliia Stanishevska",
-      "title": "Write a blog",
-      "isAI": false,
-      "progress": 70.6,
-      "completed": false,
-      "taskCount": 2,
-      "tasksDone": 1
-    },
-    {
-      "id": 390,
-      "userId": 134,
-      "userName": "Nataliia Stanishevska",
-      "title": "Master TypeScript",
-      "isAI": false,
-      "progress": 58,
-      "completed": false,
-      "taskCount": 3,
-      "tasksDone": 2
-    },
-    {
-      "id": 391,
-      "userId": 134,
-      "userName": "Nataliia Stanishevska",
-      "title": "Run a half marathon",
-      "isAI": true,
-      "progress": 74.5,
-      "completed": false,
-      "taskCount": 8,
-      "tasksDone": 6
-    },
-    {
-      "id": 392,
-      "userId": 134,
-      "userName": "Nataliia Stanishevska",
-      "title": "Learn French",
-      "isAI": false,
-      "progress": 100,
-      "completed": true,
-      "taskCount": 3,
-      "tasksDone": 3
-    },
-    {
-      "id": 340,
-      "userId": 135,
-      "userName": "Bohuslav Stanishevskyy",
-      "title": "Read 12 books this year",
-      "isAI": true,
-      "progress": 42.6,
-      "completed": false,
-      "taskCount": 6,
-      "tasksDone": 2
-    },
-    {
-      "id": 341,
-      "userId": 135,
-      "userName": "Bohuslav Stanishevskyy",
-      "title": "Write a blog",
-      "isAI": true,
-      "progress": 70.9,
-      "completed": false,
-      "taskCount": 7,
-      "tasksDone": 5
-    },
-    {
-      "id": 342,
-      "userId": 135,
-      "userName": "Bohuslav Stanishevskyy",
-      "title": "Learn Spanish",
-      "isAI": true,
-      "progress": 6,
-      "completed": false,
-      "taskCount": 7,
-      "tasksDone": 2
-    },
-    {
-      "id": 393,
-      "userId": 136,
-      "userName": "Volodymyr Stanishevskyy",
-      "title": "Meditate daily",
-      "isAI": false,
-      "progress": 77.5,
-      "completed": false,
-      "taskCount": 3,
-      "tasksDone": 2
-    },
-    {
-      "id": 394,
-      "userId": 136,
-      "userName": "Volodymyr Stanishevskyy",
-      "title": "Read 12 books this year",
-      "isAI": false,
-      "progress": 100,
-      "completed": true,
-      "taskCount": 3,
-      "tasksDone": 3
-    },
-    {
-      "id": 395,
-      "userId": 136,
-      "userName": "Volodymyr Stanishevskyy",
-      "title": "Learn data science",
-      "isAI": true,
-      "progress": 100,
-      "completed": true,
-      "taskCount": 8,
-      "tasksDone": 8
-    },
-    {
-      "id": 337,
-      "userId": 137,
-      "userName": "Sofiia Kuzniak",
-      "title": "Learn React",
-      "isAI": true,
-      "progress": 100,
-      "completed": true,
-      "taskCount": 9,
-      "tasksDone": 7
-    },
-    {
-      "id": 338,
-      "userId": 137,
-      "userName": "Sofiia Kuzniak",
-      "title": "Learn French",
-      "isAI": true,
-      "progress": 21.3,
-      "completed": false,
-      "taskCount": 8,
-      "tasksDone": 3
-    },
-    {
-      "id": 339,
-      "userId": 137,
-      "userName": "Sofiia Kuzniak",
-      "title": "Learn Spanish",
-      "isAI": true,
-      "progress": 10.1,
-      "completed": false,
-      "taskCount": 7,
-      "tasksDone": 3
+      "tasksDone": 2,
+      "createdAt": "2026-03-17T15:08:56.210Z"
     },
     {
       "id": 396,
-      "userId": 138,
-      "userName": "Ostap Kokoshko",
-      "title": "Learn React",
-      "isAI": true,
-      "progress": 11.2,
+      "userId": 162,
+      "userName": "Sofiia Huliy",
+      "title": "Save $5,000 emergency fund",
+      "isAI": false,
+      "progress": 53.2,
       "completed": false,
-      "taskCount": 9,
-      "tasksDone": 3
+      "taskCount": 3,
+      "tasksDone": 1,
+      "createdAt": "2026-03-17T15:08:58.888Z"
     },
     {
       "id": 397,
-      "userId": 138,
-      "userName": "Ostap Kokoshko",
-      "title": "Read 12 books this year",
+      "userId": 162,
+      "userName": "Sofiia Huliy",
+      "title": "Reach B1 English for job interviews",
       "isAI": true,
       "progress": 100,
       "completed": true,
-      "taskCount": 6,
-      "tasksDone": 6
+      "taskCount": 9,
+      "tasksDone": 8,
+      "createdAt": "2026-03-17T15:08:59.026Z"
     },
     {
-      "id": 343,
-      "userId": 139,
-      "userName": "Anastasiia Kasatkina",
-      "title": "Learn React",
+      "id": 392,
+      "userId": 163,
+      "userName": "Bohuslav Stanishevskyy",
+      "title": "Launch a side project and get first users",
       "isAI": true,
-      "progress": 70.9,
+      "progress": 9.2,
+      "completed": false,
+      "taskCount": 8,
+      "tasksDone": 1,
+      "createdAt": "2026-03-17T15:08:57.764Z"
+    },
+    {
+      "id": 393,
+      "userId": 163,
+      "userName": "Bohuslav Stanishevskyy",
+      "title": "Switch to a UX design career",
+      "isAI": true,
+      "progress": 14.7,
       "completed": false,
       "taskCount": 9,
-      "tasksDone": 7
+      "tasksDone": 2,
+      "createdAt": "2026-03-17T15:08:58.083Z"
     },
     {
-      "id": 344,
-      "userId": 139,
-      "userName": "Anastasiia Kasatkina",
-      "title": "Write a blog",
-      "isAI": false,
-      "progress": 89.5,
-      "completed": false,
-      "taskCount": 2,
-      "tasksDone": 2
-    },
-    {
-      "id": 345,
-      "userId": 139,
-      "userName": "Anastasiia Kasatkina",
-      "title": "Learn Spanish",
-      "isAI": true,
-      "progress": 70.8,
-      "completed": false,
-      "taskCount": 7,
-      "tasksDone": 5
-    },
-    {
-      "id": 346,
-      "userId": 139,
-      "userName": "Anastasiia Kasatkina",
-      "title": "Read 12 books this year",
-      "isAI": true,
-      "progress": 14.2,
-      "completed": false,
-      "taskCount": 6,
-      "tasksDone": 1
-    },
-    {
-      "id": 347,
-      "userId": 140,
+      "id": 387,
+      "userId": 164,
       "userName": "Illya Shuliak",
-      "title": "Run a half marathon",
+      "title": "Stop procrastinating and finish my thesis",
       "isAI": false,
-      "progress": 30.5,
+      "progress": 64.8,
       "completed": false,
       "taskCount": 3,
-      "tasksDone": 1
+      "tasksDone": 2,
+      "createdAt": "2026-03-17T15:08:56.515Z"
     },
     {
-      "id": 348,
-      "userId": 140,
+      "id": 388,
+      "userId": 164,
       "userName": "Illya Shuliak",
-      "title": "Master TypeScript",
+      "title": "Reach B1 English for job interviews",
       "isAI": false,
-      "progress": 71.7,
+      "progress": 0.1,
       "completed": false,
       "taskCount": 3,
-      "tasksDone": 2
+      "tasksDone": 0,
+      "createdAt": "2026-03-17T15:08:56.650Z"
     },
     {
-      "id": 351,
-      "userId": 141,
-      "userName": "Sofiia Pylnyk",
-      "title": "Master TypeScript",
-      "isAI": false,
-      "progress": 17.4,
-      "completed": false,
-      "taskCount": 3,
-      "tasksDone": 1
-    },
-    {
-      "id": 352,
-      "userId": 141,
-      "userName": "Sofiia Pylnyk",
-      "title": "Run a half marathon",
-      "isAI": false,
-      "progress": 100,
-      "completed": true,
-      "taskCount": 3,
-      "tasksDone": 3
-    },
-    {
-      "id": 353,
-      "userId": 141,
-      "userName": "Sofiia Pylnyk",
-      "title": "Read 12 books this year",
+      "id": 389,
+      "userId": 164,
+      "userName": "Illya Shuliak",
+      "title": "Learn SQL for data analysis",
       "isAI": true,
-      "progress": 88.2,
+      "progress": 33.2,
       "completed": false,
-      "taskCount": 6,
-      "tasksDone": 4
-    },
-    {
-      "id": 349,
-      "userId": 142,
-      "userName": "Roman Pelekh",
-      "title": "Read 12 books this year",
-      "isAI": false,
-      "progress": 5.9,
-      "completed": false,
-      "taskCount": 3,
-      "tasksDone": 0
-    },
-    {
-      "id": 350,
-      "userId": 142,
-      "userName": "Roman Pelekh",
-      "title": "Write a blog",
-      "isAI": false,
-      "progress": 16.8,
-      "completed": false,
-      "taskCount": 2,
-      "tasksDone": 0
-    },
-    {
-      "id": 333,
-      "userId": 125,
-      "userName": "Sofiia Stanishevska",
-      "title": "Learn React",
-      "isAI": false,
-      "progress": 18.6,
-      "completed": false,
-      "taskCount": 7,
-      "tasksDone": 1
-    },
-    {
-      "id": 334,
-      "userId": 125,
-      "userName": "Sofiia Stanishevska",
-      "title": "Learn Spanish",
-      "isAI": false,
-      "progress": 100,
-      "completed": true,
-      "taskCount": 2,
-      "tasksDone": 2
-    },
-    {
-      "id": 335,
-      "userId": 125,
-      "userName": "Sofiia Stanishevska",
-      "title": "Improve public speaking",
-      "isAI": false,
-      "progress": 5.4,
-      "completed": false,
-      "taskCount": 2,
-      "tasksDone": 0
-    },
-    {
-      "id": 336,
-      "userId": 125,
-      "userName": "Sofiia Stanishevska",
-      "title": "Learn French",
-      "isAI": true,
-      "progress": 100,
-      "completed": true,
       "taskCount": 8,
-      "tasksDone": 7
+      "tasksDone": 2,
+      "createdAt": "2026-03-17T15:08:56.790Z"
+    },
+    {
+      "id": 398,
+      "userId": 166,
+      "userName": "Iryna Bilous",
+      "title": "Reach B1 English for job interviews",
+      "isAI": true,
+      "progress": 0.9,
+      "completed": false,
+      "taskCount": 9,
+      "tasksDone": 1,
+      "createdAt": "2026-03-17T15:08:59.361Z"
+    },
+    {
+      "id": 399,
+      "userId": 166,
+      "userName": "Iryna Bilous",
+      "title": "Learn SQL for data analysis",
+      "isAI": true,
+      "progress": 62.2,
+      "completed": false,
+      "taskCount": 8,
+      "tasksDone": 3,
+      "createdAt": "2026-03-17T15:08:59.698Z"
+    },
+    {
+      "id": 377,
+      "userId": 165,
+      "userName": "Ruslana Kovtunovych",
+      "title": "Stop procrastinating and finish my thesis",
+      "isAI": false,
+      "progress": 100,
+      "completed": true,
+      "taskCount": 3,
+      "tasksDone": 3,
+      "createdAt": "2026-03-17T15:08:53.419Z"
+    },
+    {
+      "id": 378,
+      "userId": 165,
+      "userName": "Ruslana Kovtunovych",
+      "title": "Switch to a UX design career",
+      "isAI": true,
+      "progress": 20.8,
+      "completed": false,
+      "taskCount": 9,
+      "tasksDone": 3,
+      "createdAt": "2026-03-17T15:08:53.571Z"
+    },
+    {
+      "id": 379,
+      "userId": 165,
+      "userName": "Ruslana Kovtunovych",
+      "title": "Save $5,000 emergency fund",
+      "isAI": true,
+      "progress": 39.6,
+      "completed": false,
+      "taskCount": 7,
+      "tasksDone": 3,
+      "createdAt": "2026-03-17T15:08:54.039Z"
+    },
+    {
+      "id": 380,
+      "userId": 167,
+      "userName": "Oleh Korniichuk",
+      "title": "Launch a side project and get first users",
+      "isAI": true,
+      "progress": 18.3,
+      "completed": false,
+      "taskCount": 8,
+      "tasksDone": 1,
+      "createdAt": "2026-03-17T15:08:54.313Z"
+    },
+    {
+      "id": 381,
+      "userId": 167,
+      "userName": "Oleh Korniichuk",
+      "title": "Reduce anxiety and build mental resilience",
+      "isAI": true,
+      "progress": 60.6,
+      "completed": false,
+      "taskCount": 8,
+      "tasksDone": 5,
+      "createdAt": "2026-03-17T15:08:54.620Z"
+    },
+    {
+      "id": 382,
+      "userId": 167,
+      "userName": "Oleh Korniichuk",
+      "title": "Reach B1 English for job interviews",
+      "isAI": true,
+      "progress": 100,
+      "completed": true,
+      "taskCount": 9,
+      "tasksDone": 8,
+      "createdAt": "2026-03-17T15:08:54.927Z"
+    },
+    {
+      "id": 390,
+      "userId": 168,
+      "userName": "Sofiia Kuzniak",
+      "title": "Rebuild social life after moving to a new city",
+      "isAI": true,
+      "progress": 24.9,
+      "completed": false,
+      "taskCount": 7,
+      "tasksDone": 1,
+      "createdAt": "2026-03-17T15:08:57.098Z"
+    },
+    {
+      "id": 391,
+      "userId": 168,
+      "userName": "Sofiia Kuzniak",
+      "title": "Stop procrastinating and finish my thesis",
+      "isAI": true,
+      "progress": 42.5,
+      "completed": false,
+      "taskCount": 9,
+      "tasksDone": 3,
+      "createdAt": "2026-03-17T15:08:57.409Z"
+    },
+    {
+      "id": 394,
+      "userId": 169,
+      "userName": "Oleksandr Poliakov",
+      "title": "Learn SQL for data analysis",
+      "isAI": true,
+      "progress": 4.9,
+      "completed": false,
+      "taskCount": 8,
+      "tasksDone": 0,
+      "createdAt": "2026-03-17T15:08:58.427Z"
+    },
+    {
+      "id": 395,
+      "userId": 169,
+      "userName": "Oleksandr Poliakov",
+      "title": "Stop procrastinating and finish my thesis",
+      "isAI": false,
+      "progress": 3.4,
+      "completed": false,
+      "taskCount": 3,
+      "tasksDone": 0,
+      "createdAt": "2026-03-17T15:08:58.747Z"
     }
   ],
   "tasks": [
     {
-      "id": 2762,
-      "goalId": 354,
-      "userId": 143,
+      "id": 2336,
+      "goalId": 373,
+      "userId": 149,
+      "isAI": true,
+      "type": "learn",
+      "status": "done",
+      "estimatedMinutes": 60
+    },
+    {
+      "id": 2337,
+      "goalId": 373,
+      "userId": 149,
+      "isAI": true,
+      "type": "practice",
+      "status": "done",
+      "estimatedMinutes": 40
+    },
+    {
+      "id": 2338,
+      "goalId": 373,
+      "userId": 149,
+      "isAI": true,
+      "type": "practice",
+      "status": "done",
+      "estimatedMinutes": 240
+    },
+    {
+      "id": 2339,
+      "goalId": 373,
+      "userId": 149,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 90
+    },
+    {
+      "id": 2340,
+      "goalId": 373,
+      "userId": 149,
+      "isAI": true,
+      "type": "review",
+      "status": "pending",
+      "estimatedMinutes": 45
+    },
+    {
+      "id": 2341,
+      "goalId": 373,
+      "userId": 149,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 60
+    },
+    {
+      "id": 2342,
+      "goalId": 373,
+      "userId": 149,
+      "isAI": true,
+      "type": "reflect",
+      "status": "pending",
+      "estimatedMinutes": 30
+    },
+    {
+      "id": 2343,
+      "goalId": 373,
+      "userId": 149,
+      "isAI": true,
+      "type": "daily",
+      "status": "done",
+      "estimatedMinutes": 30
+    },
+    {
+      "id": 2344,
+      "goalId": 374,
+      "userId": 149,
       "isAI": false,
       "type": "manual",
       "status": "done",
-      "estimatedMinutes": 15
+      "estimatedMinutes": 60
     },
     {
-      "id": 2763,
-      "goalId": 354,
-      "userId": 143,
+      "id": 2345,
+      "goalId": 374,
+      "userId": 149,
+      "isAI": false,
+      "type": "manual",
+      "status": "pending",
+      "estimatedMinutes": 30
+    },
+    {
+      "id": 2346,
+      "goalId": 374,
+      "userId": 149,
+      "isAI": false,
+      "type": "manual",
+      "status": "pending",
+      "estimatedMinutes": 90
+    },
+    {
+      "id": 2347,
+      "goalId": 375,
+      "userId": 149,
+      "isAI": true,
+      "type": "learn",
+      "status": "done",
+      "estimatedMinutes": 45
+    },
+    {
+      "id": 2348,
+      "goalId": 375,
+      "userId": 149,
+      "isAI": true,
+      "type": "practice",
+      "status": "done",
+      "estimatedMinutes": 30
+    },
+    {
+      "id": 2349,
+      "goalId": 375,
+      "userId": 149,
+      "isAI": true,
+      "type": "practice",
+      "status": "done",
+      "estimatedMinutes": 40
+    },
+    {
+      "id": 2350,
+      "goalId": 375,
+      "userId": 149,
+      "isAI": true,
+      "type": "learn",
+      "status": "pending",
+      "estimatedMinutes": 25
+    },
+    {
+      "id": 2351,
+      "goalId": 375,
+      "userId": 149,
+      "isAI": true,
+      "type": "review",
+      "status": "pending",
+      "estimatedMinutes": 30
+    },
+    {
+      "id": 2352,
+      "goalId": 375,
+      "userId": 149,
+      "isAI": true,
+      "type": "reflect",
+      "status": "pending",
+      "estimatedMinutes": 20
+    },
+    {
+      "id": 2353,
+      "goalId": 375,
+      "userId": 149,
+      "isAI": true,
+      "type": "daily",
+      "status": "done",
+      "estimatedMinutes": 1
+    },
+    {
+      "id": 2354,
+      "goalId": 376,
+      "userId": 149,
+      "isAI": true,
+      "type": "learn",
+      "status": "done",
+      "estimatedMinutes": 35
+    },
+    {
+      "id": 2355,
+      "goalId": 376,
+      "userId": 149,
+      "isAI": true,
+      "type": "practice",
+      "status": "done",
+      "estimatedMinutes": 50
+    },
+    {
+      "id": 2356,
+      "goalId": 376,
+      "userId": 149,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 30
+    },
+    {
+      "id": 2357,
+      "goalId": 376,
+      "userId": 149,
+      "isAI": true,
+      "type": "learn",
+      "status": "pending",
+      "estimatedMinutes": 40
+    },
+    {
+      "id": 2358,
+      "goalId": 376,
+      "userId": 149,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 90
+    },
+    {
+      "id": 2359,
+      "goalId": 376,
+      "userId": 149,
+      "isAI": true,
+      "type": "review",
+      "status": "pending",
+      "estimatedMinutes": 45
+    },
+    {
+      "id": 2360,
+      "goalId": 376,
+      "userId": 149,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 120
+    },
+    {
+      "id": 2361,
+      "goalId": 376,
+      "userId": 149,
+      "isAI": true,
+      "type": "reflect",
+      "status": "pending",
+      "estimatedMinutes": 25
+    },
+    {
+      "id": 2362,
+      "goalId": 376,
+      "userId": 149,
+      "isAI": true,
+      "type": "daily",
+      "status": "pending",
+      "estimatedMinutes": 20
+    },
+    {
+      "id": 2526,
+      "goalId": 400,
+      "userId": 150,
+      "isAI": true,
+      "type": "learn",
+      "status": "done",
+      "estimatedMinutes": 35
+    },
+    {
+      "id": 2527,
+      "goalId": 400,
+      "userId": 150,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 50
+    },
+    {
+      "id": 2528,
+      "goalId": 400,
+      "userId": 150,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 30
+    },
+    {
+      "id": 2529,
+      "goalId": 400,
+      "userId": 150,
+      "isAI": true,
+      "type": "learn",
+      "status": "pending",
+      "estimatedMinutes": 40
+    },
+    {
+      "id": 2530,
+      "goalId": 400,
+      "userId": 150,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 90
+    },
+    {
+      "id": 2531,
+      "goalId": 400,
+      "userId": 150,
+      "isAI": true,
+      "type": "review",
+      "status": "pending",
+      "estimatedMinutes": 45
+    },
+    {
+      "id": 2532,
+      "goalId": 400,
+      "userId": 150,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 120
+    },
+    {
+      "id": 2533,
+      "goalId": 400,
+      "userId": 150,
+      "isAI": true,
+      "type": "reflect",
+      "status": "pending",
+      "estimatedMinutes": 25
+    },
+    {
+      "id": 2534,
+      "goalId": 400,
+      "userId": 150,
+      "isAI": true,
+      "type": "daily",
+      "status": "pending",
+      "estimatedMinutes": 20
+    },
+    {
+      "id": 2535,
+      "goalId": 401,
+      "userId": 150,
       "isAI": false,
       "type": "manual",
       "status": "done",
       "estimatedMinutes": 30
     },
     {
-      "id": 2764,
-      "goalId": 354,
-      "userId": 143,
+      "id": 2536,
+      "goalId": 401,
+      "userId": 150,
       "isAI": false,
       "type": "manual",
+      "status": "pending",
+      "estimatedMinutes": 15
+    },
+    {
+      "id": 2537,
+      "goalId": 401,
+      "userId": 150,
+      "isAI": false,
+      "type": "manual",
+      "status": "pending",
+      "estimatedMinutes": 180
+    },
+    {
+      "id": 2538,
+      "goalId": 402,
+      "userId": 150,
+      "isAI": true,
+      "type": "learn",
+      "status": "done",
+      "estimatedMinutes": 30
+    },
+    {
+      "id": 2539,
+      "goalId": 402,
+      "userId": 150,
+      "isAI": true,
+      "type": "practice",
+      "status": "done",
+      "estimatedMinutes": 25
+    },
+    {
+      "id": 2540,
+      "goalId": 402,
+      "userId": 150,
+      "isAI": true,
+      "type": "practice",
+      "status": "done",
+      "estimatedMinutes": 40
+    },
+    {
+      "id": 2541,
+      "goalId": 402,
+      "userId": 150,
+      "isAI": true,
+      "type": "learn",
+      "status": "done",
+      "estimatedMinutes": 45
+    },
+    {
+      "id": 2542,
+      "goalId": 402,
+      "userId": 150,
+      "isAI": true,
+      "type": "practice",
+      "status": "done",
+      "estimatedMinutes": 60
+    },
+    {
+      "id": 2543,
+      "goalId": 402,
+      "userId": 150,
+      "isAI": true,
+      "type": "review",
+      "status": "done",
+      "estimatedMinutes": 35
+    },
+    {
+      "id": 2544,
+      "goalId": 402,
+      "userId": 150,
+      "isAI": true,
+      "type": "reflect",
+      "status": "done",
+      "estimatedMinutes": 15
+    },
+    {
+      "id": 2545,
+      "goalId": 402,
+      "userId": 150,
+      "isAI": true,
+      "type": "daily",
+      "status": "pending",
+      "estimatedMinutes": 15
+    },
+    {
+      "id": 2546,
+      "goalId": 403,
+      "userId": 151,
+      "isAI": true,
+      "type": "learn",
+      "status": "done",
+      "estimatedMinutes": 45
+    },
+    {
+      "id": 2547,
+      "goalId": 403,
+      "userId": 151,
+      "isAI": true,
+      "type": "practice",
+      "status": "done",
+      "estimatedMinutes": 30
+    },
+    {
+      "id": 2548,
+      "goalId": 403,
+      "userId": 151,
+      "isAI": true,
+      "type": "practice",
+      "status": "done",
+      "estimatedMinutes": 40
+    },
+    {
+      "id": 2549,
+      "goalId": 403,
+      "userId": 151,
+      "isAI": true,
+      "type": "learn",
+      "status": "pending",
+      "estimatedMinutes": 25
+    },
+    {
+      "id": 2550,
+      "goalId": 403,
+      "userId": 151,
+      "isAI": true,
+      "type": "review",
+      "status": "pending",
+      "estimatedMinutes": 30
+    },
+    {
+      "id": 2551,
+      "goalId": 403,
+      "userId": 151,
+      "isAI": true,
+      "type": "reflect",
       "status": "pending",
       "estimatedMinutes": 20
     },
     {
-      "id": 2765,
-      "goalId": 355,
-      "userId": 143,
+      "id": 2552,
+      "goalId": 403,
+      "userId": 151,
+      "isAI": true,
+      "type": "daily",
+      "status": "pending",
+      "estimatedMinutes": 1
+    },
+    {
+      "id": 2553,
+      "goalId": 404,
+      "userId": 151,
       "isAI": true,
       "type": "learn",
       "status": "done",
-      "estimatedMinutes": 15
+      "estimatedMinutes": 40
     },
     {
-      "id": 2766,
-      "goalId": 355,
-      "userId": 143,
-      "isAI": true,
-      "type": "practice",
-      "status": "done",
-      "estimatedMinutes": 5
-    },
-    {
-      "id": 2767,
-      "goalId": 355,
-      "userId": 143,
+      "id": 2554,
+      "goalId": 404,
+      "userId": 151,
       "isAI": true,
       "type": "practice",
       "status": "done",
       "estimatedMinutes": 20
     },
     {
-      "id": 2768,
-      "goalId": 355,
-      "userId": 143,
+      "id": 2555,
+      "goalId": 404,
+      "userId": 151,
       "isAI": true,
-      "type": "review",
+      "type": "learn",
       "status": "done",
-      "estimatedMinutes": 15
+      "estimatedMinutes": 35
     },
     {
-      "id": 2769,
-      "goalId": 355,
-      "userId": 143,
+      "id": 2556,
+      "goalId": 404,
+      "userId": 151,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 25
+    },
+    {
+      "id": 2557,
+      "goalId": 404,
+      "userId": 151,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 40
+    },
+    {
+      "id": 2558,
+      "goalId": 404,
+      "userId": 151,
+      "isAI": true,
+      "type": "review",
+      "status": "pending",
+      "estimatedMinutes": 30
+    },
+    {
+      "id": 2559,
+      "goalId": 404,
+      "userId": 151,
       "isAI": true,
       "type": "reflect",
       "status": "pending",
       "estimatedMinutes": 15
     },
     {
-      "id": 2770,
-      "goalId": 355,
-      "userId": 143,
+      "id": 2560,
+      "goalId": 404,
+      "userId": 151,
+      "isAI": true,
+      "type": "daily",
+      "status": "done",
+      "estimatedMinutes": 10
+    },
+    {
+      "id": 2561,
+      "goalId": 404,
+      "userId": 151,
+      "isAI": true,
+      "type": "daily",
+      "status": "pending",
+      "estimatedMinutes": 5
+    },
+    {
+      "id": 2569,
+      "goalId": 405,
+      "userId": 152,
+      "isAI": true,
+      "type": "reflect",
+      "status": "pending",
+      "estimatedMinutes": 25
+    },
+    {
+      "id": 2570,
+      "goalId": 405,
+      "userId": 152,
+      "isAI": true,
+      "type": "daily",
+      "status": "pending",
+      "estimatedMinutes": 20
+    },
+    {
+      "id": 2562,
+      "goalId": 405,
+      "userId": 152,
+      "isAI": true,
+      "type": "learn",
+      "status": "done",
+      "estimatedMinutes": 35
+    },
+    {
+      "id": 2563,
+      "goalId": 405,
+      "userId": 152,
+      "isAI": true,
+      "type": "practice",
+      "status": "done",
+      "estimatedMinutes": 50
+    },
+    {
+      "id": 2564,
+      "goalId": 405,
+      "userId": 152,
+      "isAI": true,
+      "type": "practice",
+      "status": "done",
+      "estimatedMinutes": 30
+    },
+    {
+      "id": 2565,
+      "goalId": 405,
+      "userId": 152,
+      "isAI": true,
+      "type": "learn",
+      "status": "done",
+      "estimatedMinutes": 40
+    },
+    {
+      "id": 2566,
+      "goalId": 405,
+      "userId": 152,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 90
+    },
+    {
+      "id": 2567,
+      "goalId": 405,
+      "userId": 152,
+      "isAI": true,
+      "type": "review",
+      "status": "pending",
+      "estimatedMinutes": 45
+    },
+    {
+      "id": 2568,
+      "goalId": 405,
+      "userId": 152,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 120
+    },
+    {
+      "id": 2571,
+      "goalId": 406,
+      "userId": 152,
+      "isAI": true,
+      "type": "learn",
+      "status": "done",
+      "estimatedMinutes": 30
+    },
+    {
+      "id": 2572,
+      "goalId": 406,
+      "userId": 152,
+      "isAI": true,
+      "type": "practice",
+      "status": "done",
+      "estimatedMinutes": 25
+    },
+    {
+      "id": 2573,
+      "goalId": 406,
+      "userId": 152,
+      "isAI": true,
+      "type": "practice",
+      "status": "done",
+      "estimatedMinutes": 40
+    },
+    {
+      "id": 2574,
+      "goalId": 406,
+      "userId": 152,
+      "isAI": true,
+      "type": "learn",
+      "status": "pending",
+      "estimatedMinutes": 45
+    },
+    {
+      "id": 2575,
+      "goalId": 406,
+      "userId": 152,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 60
+    },
+    {
+      "id": 2576,
+      "goalId": 406,
+      "userId": 152,
+      "isAI": true,
+      "type": "review",
+      "status": "pending",
+      "estimatedMinutes": 35
+    },
+    {
+      "id": 2577,
+      "goalId": 406,
+      "userId": 152,
+      "isAI": true,
+      "type": "reflect",
+      "status": "pending",
+      "estimatedMinutes": 15
+    },
+    {
+      "id": 2578,
+      "goalId": 406,
+      "userId": 152,
+      "isAI": true,
+      "type": "daily",
+      "status": "done",
+      "estimatedMinutes": 15
+    },
+    {
+      "id": 2579,
+      "goalId": 407,
+      "userId": 152,
+      "isAI": true,
+      "type": "learn",
+      "status": "done",
+      "estimatedMinutes": 20
+    },
+    {
+      "id": 2580,
+      "goalId": 407,
+      "userId": 152,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 120
+    },
+    {
+      "id": 2581,
+      "goalId": 407,
+      "userId": 152,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 20
+    },
+    {
+      "id": 2582,
+      "goalId": 407,
+      "userId": 152,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 60
+    },
+    {
+      "id": 2583,
+      "goalId": 407,
+      "userId": 152,
+      "isAI": true,
+      "type": "review",
+      "status": "pending",
+      "estimatedMinutes": 20
+    },
+    {
+      "id": 2584,
+      "goalId": 407,
+      "userId": 152,
+      "isAI": true,
+      "type": "reflect",
+      "status": "pending",
+      "estimatedMinutes": 20
+    },
+    {
+      "id": 2585,
+      "goalId": 407,
+      "userId": 152,
+      "isAI": true,
+      "type": "daily",
+      "status": "pending",
+      "estimatedMinutes": 5
+    },
+    {
+      "id": 2586,
+      "goalId": 408,
+      "userId": 153,
+      "isAI": true,
+      "type": "learn",
+      "status": "pending",
+      "estimatedMinutes": 25
+    },
+    {
+      "id": 2587,
+      "goalId": 408,
+      "userId": 153,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 45
+    },
+    {
+      "id": 2588,
+      "goalId": 408,
+      "userId": 153,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 15
+    },
+    {
+      "id": 2589,
+      "goalId": 408,
+      "userId": 153,
+      "isAI": true,
+      "type": "learn",
+      "status": "pending",
+      "estimatedMinutes": 30
+    },
+    {
+      "id": 2590,
+      "goalId": 408,
+      "userId": 153,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 60
+    },
+    {
+      "id": 2591,
+      "goalId": 408,
+      "userId": 153,
+      "isAI": true,
+      "type": "review",
+      "status": "pending",
+      "estimatedMinutes": 20
+    },
+    {
+      "id": 2592,
+      "goalId": 408,
+      "userId": 153,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 40
+    },
+    {
+      "id": 2593,
+      "goalId": 408,
+      "userId": 153,
+      "isAI": true,
+      "type": "reflect",
+      "status": "pending",
+      "estimatedMinutes": 20
+    },
+    {
+      "id": 2594,
+      "goalId": 408,
+      "userId": 153,
+      "isAI": true,
+      "type": "daily",
+      "status": "done",
+      "estimatedMinutes": 5
+    },
+    {
+      "id": 2595,
+      "goalId": 408,
+      "userId": 153,
       "isAI": true,
       "type": "daily",
       "status": "pending",
       "estimatedMinutes": 10
     },
     {
-      "id": 2771,
-      "goalId": 356,
-      "userId": 143,
-      "isAI": false,
-      "type": "manual",
+      "id": 2596,
+      "goalId": 409,
+      "userId": 153,
+      "isAI": true,
+      "type": "learn",
       "status": "pending",
       "estimatedMinutes": 60
     },
     {
-      "id": 2772,
-      "goalId": 356,
-      "userId": 143,
-      "isAI": false,
-      "type": "manual",
+      "id": 2597,
+      "goalId": 409,
+      "userId": 153,
+      "isAI": true,
+      "type": "practice",
       "status": "pending",
-      "estimatedMinutes": 60
-    },
-    {
-      "id": 2773,
-      "goalId": 357,
-      "userId": 143,
-      "isAI": false,
-      "type": "manual",
-      "status": "done",
-      "estimatedMinutes": 15
-    },
-    {
-      "id": 2774,
-      "goalId": 357,
-      "userId": 143,
-      "isAI": false,
-      "type": "manual",
-      "status": "done",
-      "estimatedMinutes": 60
-    },
-    {
-      "id": 2775,
-      "goalId": 358,
-      "userId": 144,
-      "isAI": false,
-      "type": "manual",
-      "status": "done",
-      "estimatedMinutes": 60
-    },
-    {
-      "id": 2776,
-      "goalId": 358,
-      "userId": 144,
-      "isAI": false,
-      "type": "manual",
-      "status": "done",
-      "estimatedMinutes": 20
-    },
-    {
-      "id": 2777,
-      "goalId": 358,
-      "userId": 144,
-      "isAI": false,
-      "type": "manual",
-      "status": "done",
       "estimatedMinutes": 40
     },
     {
-      "id": 2778,
-      "goalId": 359,
-      "userId": 144,
-      "isAI": false,
-      "type": "manual",
+      "id": 2598,
+      "goalId": 409,
+      "userId": 153,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 240
+    },
+    {
+      "id": 2599,
+      "goalId": 409,
+      "userId": 153,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 90
+    },
+    {
+      "id": 2600,
+      "goalId": 409,
+      "userId": 153,
+      "isAI": true,
+      "type": "review",
+      "status": "pending",
+      "estimatedMinutes": 45
+    },
+    {
+      "id": 2601,
+      "goalId": 409,
+      "userId": 153,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 60
+    },
+    {
+      "id": 2602,
+      "goalId": 409,
+      "userId": 153,
+      "isAI": true,
+      "type": "reflect",
+      "status": "pending",
+      "estimatedMinutes": 30
+    },
+    {
+      "id": 2603,
+      "goalId": 409,
+      "userId": 153,
+      "isAI": true,
+      "type": "daily",
       "status": "done",
       "estimatedMinutes": 30
     },
     {
-      "id": 2779,
-      "goalId": 359,
-      "userId": 144,
-      "isAI": false,
-      "type": "manual",
-      "status": "pending",
-      "estimatedMinutes": 20
+      "id": 2604,
+      "goalId": 410,
+      "userId": 153,
+      "isAI": true,
+      "type": "learn",
+      "status": "done",
+      "estimatedMinutes": 35
     },
     {
-      "id": 2780,
-      "goalId": 359,
-      "userId": 144,
-      "isAI": false,
-      "type": "manual",
+      "id": 2605,
+      "goalId": 410,
+      "userId": 153,
+      "isAI": true,
+      "type": "practice",
+      "status": "done",
+      "estimatedMinutes": 50
+    },
+    {
+      "id": 2606,
+      "goalId": 410,
+      "userId": 153,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 30
+    },
+    {
+      "id": 2607,
+      "goalId": 410,
+      "userId": 153,
+      "isAI": true,
+      "type": "learn",
+      "status": "pending",
+      "estimatedMinutes": 40
+    },
+    {
+      "id": 2608,
+      "goalId": 410,
+      "userId": 153,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 90
+    },
+    {
+      "id": 2609,
+      "goalId": 410,
+      "userId": 153,
+      "isAI": true,
+      "type": "review",
+      "status": "pending",
+      "estimatedMinutes": 45
+    },
+    {
+      "id": 2610,
+      "goalId": 410,
+      "userId": 153,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 120
+    },
+    {
+      "id": 2611,
+      "goalId": 410,
+      "userId": 153,
+      "isAI": true,
+      "type": "reflect",
       "status": "pending",
       "estimatedMinutes": 25
     },
     {
-      "id": 2781,
-      "goalId": 360,
-      "userId": 144,
-      "isAI": false,
-      "type": "manual",
+      "id": 2612,
+      "goalId": 410,
+      "userId": 153,
+      "isAI": true,
+      "type": "daily",
       "status": "done",
-      "estimatedMinutes": 15
+      "estimatedMinutes": 20
     },
     {
-      "id": 2782,
-      "goalId": 360,
-      "userId": 144,
-      "isAI": false,
-      "type": "manual",
+      "id": 2613,
+      "goalId": 411,
+      "userId": 154,
+      "isAI": true,
+      "type": "learn",
       "status": "done",
-      "estimatedMinutes": 30
+      "estimatedMinutes": 20
     },
     {
-      "id": 2783,
-      "goalId": 360,
-      "userId": 144,
-      "isAI": false,
-      "type": "manual",
+      "id": 2614,
+      "goalId": 411,
+      "userId": 154,
+      "isAI": true,
+      "type": "practice",
       "status": "done",
       "estimatedMinutes": 120
     },
     {
-      "id": 2784,
-      "goalId": 361,
-      "userId": 144,
-      "isAI": false,
-      "type": "manual",
+      "id": 2615,
+      "goalId": 411,
+      "userId": 154,
+      "isAI": true,
+      "type": "practice",
       "status": "done",
-      "estimatedMinutes": 40
+      "estimatedMinutes": 20
     },
     {
-      "id": 2785,
-      "goalId": 361,
-      "userId": 144,
-      "isAI": false,
-      "type": "manual",
-      "status": "pending",
-      "estimatedMinutes": 90
-    },
-    {
-      "id": 2786,
-      "goalId": 361,
-      "userId": 144,
-      "isAI": false,
-      "type": "manual",
-      "status": "pending",
+      "id": 2616,
+      "goalId": 411,
+      "userId": 154,
+      "isAI": true,
+      "type": "practice",
+      "status": "done",
       "estimatedMinutes": 60
     },
     {
-      "id": 2787,
-      "goalId": 362,
-      "userId": 145,
-      "isAI": true,
-      "type": "learn",
-      "status": "done",
-      "estimatedMinutes": 40
-    },
-    {
-      "id": 2788,
-      "goalId": 362,
-      "userId": 145,
-      "isAI": true,
-      "type": "practice",
-      "status": "done",
-      "estimatedMinutes": 30
-    },
-    {
-      "id": 2789,
-      "goalId": 362,
-      "userId": 145,
-      "isAI": true,
-      "type": "learn",
-      "status": "done",
-      "estimatedMinutes": 30
-    },
-    {
-      "id": 2790,
-      "goalId": 362,
-      "userId": 145,
-      "isAI": true,
-      "type": "practice",
-      "status": "pending",
-      "estimatedMinutes": 15
-    },
-    {
-      "id": 2791,
-      "goalId": 362,
-      "userId": 145,
-      "isAI": true,
-      "type": "review",
-      "status": "pending",
-      "estimatedMinutes": 20
-    },
-    {
-      "id": 2792,
-      "goalId": 362,
-      "userId": 145,
-      "isAI": true,
-      "type": "daily",
-      "status": "done",
-      "estimatedMinutes": 15
-    },
-    {
-      "id": 2793,
-      "goalId": 362,
-      "userId": 145,
-      "isAI": true,
-      "type": "daily",
-      "status": "done",
-      "estimatedMinutes": 10
-    },
-    {
-      "id": 2794,
-      "goalId": 363,
-      "userId": 145,
-      "isAI": true,
-      "type": "learn",
-      "status": "done",
-      "estimatedMinutes": 30
-    },
-    {
-      "id": 2795,
-      "goalId": 363,
-      "userId": 145,
-      "isAI": true,
-      "type": "practice",
-      "status": "pending",
-      "estimatedMinutes": 60
-    },
-    {
-      "id": 2796,
-      "goalId": 363,
-      "userId": 145,
-      "isAI": true,
-      "type": "review",
-      "status": "pending",
-      "estimatedMinutes": 25
-    },
-    {
-      "id": 2797,
-      "goalId": 363,
-      "userId": 145,
-      "isAI": true,
-      "type": "practice",
-      "status": "pending",
-      "estimatedMinutes": 90
-    },
-    {
-      "id": 2798,
-      "goalId": 363,
-      "userId": 145,
-      "isAI": true,
-      "type": "reflect",
-      "status": "pending",
-      "estimatedMinutes": 20
-    },
-    {
-      "id": 2799,
-      "goalId": 363,
-      "userId": 145,
-      "isAI": true,
-      "type": "daily",
-      "status": "pending",
-      "estimatedMinutes": 30
-    },
-    {
-      "id": 2800,
-      "goalId": 364,
-      "userId": 145,
-      "isAI": true,
-      "type": "learn",
-      "status": "done",
-      "estimatedMinutes": 30
-    },
-    {
-      "id": 2801,
-      "goalId": 364,
-      "userId": 145,
-      "isAI": true,
-      "type": "practice",
-      "status": "done",
-      "estimatedMinutes": 35
-    },
-    {
-      "id": 2802,
-      "goalId": 364,
-      "userId": 145,
-      "isAI": true,
-      "type": "learn",
-      "status": "done",
-      "estimatedMinutes": 25
-    },
-    {
-      "id": 2803,
-      "goalId": 364,
-      "userId": 145,
-      "isAI": true,
-      "type": "practice",
-      "status": "pending",
-      "estimatedMinutes": 50
-    },
-    {
-      "id": 2804,
-      "goalId": 364,
-      "userId": 145,
-      "isAI": true,
-      "type": "review",
-      "status": "pending",
-      "estimatedMinutes": 40
-    },
-    {
-      "id": 2805,
-      "goalId": 364,
-      "userId": 145,
-      "isAI": true,
-      "type": "reflect",
-      "status": "pending",
-      "estimatedMinutes": 15
-    },
-    {
-      "id": 2806,
-      "goalId": 364,
-      "userId": 145,
-      "isAI": true,
-      "type": "daily",
-      "status": "pending",
-      "estimatedMinutes": 20
-    },
-    {
-      "id": 2807,
-      "goalId": 365,
-      "userId": 126,
-      "isAI": false,
-      "type": "manual",
-      "status": "done",
-      "estimatedMinutes": 30
-    },
-    {
-      "id": 2808,
-      "goalId": 365,
-      "userId": 126,
-      "isAI": false,
-      "type": "manual",
-      "status": "pending",
-      "estimatedMinutes": 40
-    },
-    {
-      "id": 2809,
-      "goalId": 366,
-      "userId": 126,
-      "isAI": true,
-      "type": "practice",
-      "status": "done",
-      "estimatedMinutes": 20
-    },
-    {
-      "id": 2810,
-      "goalId": 366,
-      "userId": 126,
-      "isAI": true,
-      "type": "learn",
-      "status": "done",
-      "estimatedMinutes": 25
-    },
-    {
-      "id": 2811,
-      "goalId": 366,
-      "userId": 126,
-      "isAI": true,
-      "type": "practice",
-      "status": "done",
-      "estimatedMinutes": 30
-    },
-    {
-      "id": 2812,
-      "goalId": 366,
-      "userId": 126,
-      "isAI": true,
-      "type": "practice",
-      "status": "done",
-      "estimatedMinutes": 30
-    },
-    {
-      "id": 2813,
-      "goalId": 366,
-      "userId": 126,
+      "id": 2617,
+      "goalId": 411,
+      "userId": 154,
       "isAI": true,
       "type": "review",
       "status": "done",
       "estimatedMinutes": 20
     },
     {
-      "id": 2814,
-      "goalId": 366,
-      "userId": 126,
+      "id": 2618,
+      "goalId": 411,
+      "userId": 154,
       "isAI": true,
       "type": "reflect",
       "status": "done",
-      "estimatedMinutes": 15
+      "estimatedMinutes": 20
     },
     {
-      "id": 2815,
-      "goalId": 366,
-      "userId": 126,
+      "id": 2619,
+      "goalId": 411,
+      "userId": 154,
       "isAI": true,
       "type": "daily",
       "status": "pending",
       "estimatedMinutes": 5
     },
     {
-      "id": 2816,
-      "goalId": 367,
-      "userId": 126,
-      "isAI": true,
-      "type": "learn",
-      "status": "done",
-      "estimatedMinutes": 50
-    },
-    {
-      "id": 2817,
-      "goalId": 367,
-      "userId": 126,
-      "isAI": true,
-      "type": "practice",
-      "status": "done",
-      "estimatedMinutes": 45
-    },
-    {
-      "id": 2818,
-      "goalId": 367,
-      "userId": 126,
-      "isAI": true,
-      "type": "practice",
-      "status": "done",
-      "estimatedMinutes": 40
-    },
-    {
-      "id": 2819,
-      "goalId": 367,
-      "userId": 126,
-      "isAI": true,
-      "type": "practice",
-      "status": "done",
-      "estimatedMinutes": 60
-    },
-    {
-      "id": 2820,
-      "goalId": 367,
-      "userId": 126,
-      "isAI": true,
-      "type": "review",
+      "id": 2620,
+      "goalId": 412,
+      "userId": 154,
+      "isAI": false,
+      "type": "manual",
       "status": "pending",
-      "estimatedMinutes": 35
+      "estimatedMinutes": 20
     },
     {
-      "id": 2821,
-      "goalId": 367,
-      "userId": 126,
-      "isAI": true,
-      "type": "reflect",
+      "id": 2621,
+      "goalId": 412,
+      "userId": 154,
+      "isAI": false,
+      "type": "manual",
       "status": "pending",
       "estimatedMinutes": 30
     },
     {
-      "id": 2822,
-      "goalId": 367,
-      "userId": 126,
-      "isAI": true,
-      "type": "daily",
-      "status": "pending",
-      "estimatedMinutes": 15
-    },
-    {
-      "id": 2823,
-      "goalId": 367,
-      "userId": 126,
-      "isAI": true,
-      "type": "daily",
-      "status": "pending",
-      "estimatedMinutes": 15
-    },
-    {
-      "id": 2824,
-      "goalId": 368,
-      "userId": 127,
-      "isAI": true,
-      "type": "learn",
-      "status": "done",
-      "estimatedMinutes": 15
-    },
-    {
-      "id": 2825,
-      "goalId": 368,
-      "userId": 127,
-      "isAI": true,
-      "type": "practice",
-      "status": "done",
-      "estimatedMinutes": 5
-    },
-    {
-      "id": 2826,
-      "goalId": 368,
-      "userId": 127,
-      "isAI": true,
-      "type": "practice",
-      "status": "done",
-      "estimatedMinutes": 20
-    },
-    {
-      "id": 2827,
-      "goalId": 368,
-      "userId": 127,
-      "isAI": true,
-      "type": "review",
-      "status": "pending",
-      "estimatedMinutes": 15
-    },
-    {
-      "id": 2828,
-      "goalId": 368,
-      "userId": 127,
-      "isAI": true,
-      "type": "reflect",
-      "status": "pending",
-      "estimatedMinutes": 15
-    },
-    {
-      "id": 2829,
-      "goalId": 368,
-      "userId": 127,
-      "isAI": true,
-      "type": "daily",
-      "status": "done",
-      "estimatedMinutes": 10
-    },
-    {
-      "id": 2830,
-      "goalId": 369,
-      "userId": 127,
-      "isAI": false,
-      "type": "manual",
-      "status": "done",
-      "estimatedMinutes": 15
-    },
-    {
-      "id": 2831,
-      "goalId": 369,
-      "userId": 127,
-      "isAI": false,
-      "type": "manual",
-      "status": "done",
-      "estimatedMinutes": 30
-    },
-    {
-      "id": 2832,
-      "goalId": 369,
-      "userId": 127,
-      "isAI": false,
-      "type": "manual",
-      "status": "done",
-      "estimatedMinutes": 20
-    },
-    {
-      "id": 2833,
-      "goalId": 370,
-      "userId": 127,
-      "isAI": false,
-      "type": "manual",
-      "status": "done",
-      "estimatedMinutes": 40
-    },
-    {
-      "id": 2834,
-      "goalId": 370,
-      "userId": 127,
+      "id": 2622,
+      "goalId": 412,
+      "userId": 154,
       "isAI": false,
       "type": "manual",
       "status": "pending",
       "estimatedMinutes": 90
     },
     {
-      "id": 2835,
-      "goalId": 370,
-      "userId": 127,
+      "id": 2623,
+      "goalId": 413,
+      "userId": 155,
       "isAI": false,
       "type": "manual",
-      "status": "pending",
-      "estimatedMinutes": 60
-    },
-    {
-      "id": 2836,
-      "goalId": 371,
-      "userId": 128,
-      "isAI": true,
-      "type": "practice",
-      "status": "done",
-      "estimatedMinutes": 40
-    },
-    {
-      "id": 2837,
-      "goalId": 371,
-      "userId": 128,
-      "isAI": true,
-      "type": "learn",
-      "status": "done",
-      "estimatedMinutes": 25
-    },
-    {
-      "id": 2838,
-      "goalId": 371,
-      "userId": 128,
-      "isAI": true,
-      "type": "practice",
-      "status": "pending",
-      "estimatedMinutes": 45
-    },
-    {
-      "id": 2839,
-      "goalId": 371,
-      "userId": 128,
-      "isAI": true,
-      "type": "review",
       "status": "pending",
       "estimatedMinutes": 20
     },
     {
-      "id": 2840,
-      "goalId": 371,
-      "userId": 128,
-      "isAI": true,
-      "type": "practice",
+      "id": 2624,
+      "goalId": 413,
+      "userId": 155,
+      "isAI": false,
+      "type": "manual",
       "status": "pending",
-      "estimatedMinutes": 90
+      "estimatedMinutes": 30
     },
     {
-      "id": 2841,
-      "goalId": 371,
-      "userId": 128,
-      "isAI": true,
-      "type": "reflect",
-      "status": "pending",
-      "estimatedMinutes": 20
-    },
-    {
-      "id": 2842,
-      "goalId": 371,
-      "userId": 128,
-      "isAI": true,
-      "type": "daily",
-      "status": "done",
-      "estimatedMinutes": 10
-    },
-    {
-      "id": 2843,
-      "goalId": 371,
-      "userId": 128,
-      "isAI": true,
-      "type": "daily",
-      "status": "done",
-      "estimatedMinutes": 5
-    },
-    {
-      "id": 2844,
-      "goalId": 372,
-      "userId": 128,
-      "isAI": false,
-      "type": "manual",
-      "status": "done",
-      "estimatedMinutes": 20
-    },
-    {
-      "id": 2845,
-      "goalId": 372,
-      "userId": 128,
-      "isAI": false,
-      "type": "manual",
-      "status": "done",
-      "estimatedMinutes": 10
-    },
-    {
-      "id": 2846,
-      "goalId": 372,
-      "userId": 128,
-      "isAI": false,
-      "type": "manual",
-      "status": "done",
-      "estimatedMinutes": 25
-    },
-    {
-      "id": 2847,
-      "goalId": 373,
-      "userId": 129,
-      "isAI": false,
-      "type": "manual",
-      "status": "done",
-      "estimatedMinutes": 40
-    },
-    {
-      "id": 2848,
-      "goalId": 373,
-      "userId": 129,
+      "id": 2625,
+      "goalId": 413,
+      "userId": 155,
       "isAI": false,
       "type": "manual",
       "status": "pending",
       "estimatedMinutes": 90
     },
     {
-      "id": 2849,
-      "goalId": 373,
-      "userId": 129,
+      "id": 2626,
+      "goalId": 414,
+      "userId": 156,
       "isAI": false,
       "type": "manual",
       "status": "pending",
-      "estimatedMinutes": 60
+      "estimatedMinutes": 20
     },
     {
-      "id": 2850,
-      "goalId": 374,
-      "userId": 129,
+      "id": 2627,
+      "goalId": 414,
+      "userId": 156,
+      "isAI": false,
+      "type": "manual",
+      "status": "pending",
+      "estimatedMinutes": 15
+    },
+    {
+      "id": 2628,
+      "goalId": 414,
+      "userId": 156,
+      "isAI": false,
+      "type": "manual",
+      "status": "pending",
+      "estimatedMinutes": 20
+    },
+    {
+      "id": 2629,
+      "goalId": 415,
+      "userId": 156,
       "isAI": true,
       "type": "learn",
-      "status": "done",
+      "status": "pending",
+      "estimatedMinutes": 25
+    },
+    {
+      "id": 2630,
+      "goalId": 415,
+      "userId": 156,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
       "estimatedMinutes": 45
     },
     {
-      "id": 2851,
-      "goalId": 374,
-      "userId": 129,
-      "isAI": true,
-      "type": "practice",
-      "status": "done",
-      "estimatedMinutes": 30
-    },
-    {
-      "id": 2852,
-      "goalId": 374,
-      "userId": 129,
-      "isAI": true,
-      "type": "learn",
-      "status": "done",
-      "estimatedMinutes": 40
-    },
-    {
-      "id": 2853,
-      "goalId": 374,
-      "userId": 129,
-      "isAI": true,
-      "type": "practice",
-      "status": "done",
-      "estimatedMinutes": 60
-    },
-    {
-      "id": 2854,
-      "goalId": 374,
-      "userId": 129,
-      "isAI": true,
-      "type": "review",
-      "status": "done",
-      "estimatedMinutes": 35
-    },
-    {
-      "id": 2855,
-      "goalId": 374,
-      "userId": 129,
-      "isAI": true,
-      "type": "practice",
-      "status": "done",
-      "estimatedMinutes": 50
-    },
-    {
-      "id": 2856,
-      "goalId": 374,
-      "userId": 129,
-      "isAI": true,
-      "type": "reflect",
-      "status": "pending",
-      "estimatedMinutes": 20
-    },
-    {
-      "id": 2857,
-      "goalId": 374,
-      "userId": 129,
-      "isAI": true,
-      "type": "daily",
-      "status": "done",
-      "estimatedMinutes": 30
-    },
-    {
-      "id": 2858,
-      "goalId": 374,
-      "userId": 129,
-      "isAI": true,
-      "type": "daily",
-      "status": "pending",
-      "estimatedMinutes": 15
-    },
-    {
-      "id": 2859,
-      "goalId": 375,
-      "userId": 129,
-      "isAI": true,
-      "type": "learn",
-      "status": "done",
-      "estimatedMinutes": 40
-    },
-    {
-      "id": 2860,
-      "goalId": 375,
-      "userId": 129,
-      "isAI": true,
-      "type": "practice",
-      "status": "pending",
-      "estimatedMinutes": 35
-    },
-    {
-      "id": 2861,
-      "goalId": 375,
-      "userId": 129,
-      "isAI": true,
-      "type": "learn",
-      "status": "pending",
-      "estimatedMinutes": 25
-    },
-    {
-      "id": 2862,
-      "goalId": 375,
-      "userId": 129,
-      "isAI": true,
-      "type": "practice",
-      "status": "pending",
-      "estimatedMinutes": 20
-    },
-    {
-      "id": 2863,
-      "goalId": 375,
-      "userId": 129,
-      "isAI": true,
-      "type": "review",
-      "status": "pending",
-      "estimatedMinutes": 30
-    },
-    {
-      "id": 2864,
-      "goalId": 375,
-      "userId": 129,
-      "isAI": true,
-      "type": "reflect",
-      "status": "pending",
-      "estimatedMinutes": 15
-    },
-    {
-      "id": 2865,
-      "goalId": 375,
-      "userId": 129,
-      "isAI": true,
-      "type": "daily",
-      "status": "pending",
-      "estimatedMinutes": 10
-    },
-    {
-      "id": 2866,
-      "goalId": 375,
-      "userId": 129,
-      "isAI": true,
-      "type": "daily",
-      "status": "pending",
-      "estimatedMinutes": 10
-    },
-    {
-      "id": 2867,
-      "goalId": 376,
-      "userId": 129,
-      "isAI": false,
-      "type": "manual",
-      "status": "pending",
-      "estimatedMinutes": 60
-    },
-    {
-      "id": 2868,
-      "goalId": 376,
-      "userId": 129,
-      "isAI": false,
-      "type": "manual",
-      "status": "pending",
-      "estimatedMinutes": 60
-    },
-    {
-      "id": 2869,
-      "goalId": 377,
-      "userId": 130,
-      "isAI": false,
-      "type": "manual",
-      "status": "done",
-      "estimatedMinutes": 15
-    },
-    {
-      "id": 2870,
-      "goalId": 377,
-      "userId": 130,
-      "isAI": false,
-      "type": "manual",
-      "status": "pending",
-      "estimatedMinutes": 30
-    },
-    {
-      "id": 2871,
-      "goalId": 377,
-      "userId": 130,
-      "isAI": false,
-      "type": "manual",
-      "status": "pending",
-      "estimatedMinutes": 20
-    },
-    {
-      "id": 2872,
-      "goalId": 378,
-      "userId": 130,
-      "isAI": true,
-      "type": "learn",
-      "status": "done",
-      "estimatedMinutes": 30
-    },
-    {
-      "id": 2873,
-      "goalId": 378,
-      "userId": 130,
-      "isAI": true,
-      "type": "practice",
-      "status": "done",
-      "estimatedMinutes": 35
-    },
-    {
-      "id": 2874,
-      "goalId": 378,
-      "userId": 130,
-      "isAI": true,
-      "type": "learn",
-      "status": "done",
-      "estimatedMinutes": 25
-    },
-    {
-      "id": 2875,
-      "goalId": 378,
-      "userId": 130,
-      "isAI": true,
-      "type": "practice",
-      "status": "done",
-      "estimatedMinutes": 50
-    },
-    {
-      "id": 2876,
-      "goalId": 378,
-      "userId": 130,
-      "isAI": true,
-      "type": "review",
-      "status": "done",
-      "estimatedMinutes": 40
-    },
-    {
-      "id": 2877,
-      "goalId": 378,
-      "userId": 130,
-      "isAI": true,
-      "type": "reflect",
-      "status": "done",
-      "estimatedMinutes": 15
-    },
-    {
-      "id": 2878,
-      "goalId": 378,
-      "userId": 130,
-      "isAI": true,
-      "type": "daily",
-      "status": "done",
-      "estimatedMinutes": 20
-    },
-    {
-      "id": 2879,
-      "goalId": 379,
-      "userId": 130,
-      "isAI": true,
-      "type": "practice",
-      "status": "done",
-      "estimatedMinutes": 20
-    },
-    {
-      "id": 2880,
-      "goalId": 379,
-      "userId": 130,
-      "isAI": true,
-      "type": "learn",
-      "status": "done",
-      "estimatedMinutes": 25
-    },
-    {
-      "id": 2881,
-      "goalId": 379,
-      "userId": 130,
-      "isAI": true,
-      "type": "practice",
-      "status": "done",
-      "estimatedMinutes": 30
-    },
-    {
-      "id": 2882,
-      "goalId": 379,
-      "userId": 130,
-      "isAI": true,
-      "type": "practice",
-      "status": "done",
-      "estimatedMinutes": 30
-    },
-    {
-      "id": 2883,
-      "goalId": 379,
-      "userId": 130,
-      "isAI": true,
-      "type": "review",
-      "status": "done",
-      "estimatedMinutes": 20
-    },
-    {
-      "id": 2884,
-      "goalId": 379,
-      "userId": 130,
-      "isAI": true,
-      "type": "reflect",
-      "status": "done",
-      "estimatedMinutes": 15
-    },
-    {
-      "id": 2885,
-      "goalId": 379,
-      "userId": 130,
-      "isAI": true,
-      "type": "daily",
-      "status": "done",
-      "estimatedMinutes": 5
-    },
-    {
-      "id": 2886,
-      "goalId": 380,
-      "userId": 130,
-      "isAI": false,
-      "type": "manual",
-      "status": "pending",
-      "estimatedMinutes": 15
-    },
-    {
-      "id": 2887,
-      "goalId": 380,
-      "userId": 130,
-      "isAI": false,
-      "type": "manual",
-      "status": "pending",
-      "estimatedMinutes": 60
-    },
-    {
-      "id": 2888,
-      "goalId": 381,
-      "userId": 131,
-      "isAI": false,
-      "type": "manual",
-      "status": "done",
-      "estimatedMinutes": 40
-    },
-    {
-      "id": 2889,
-      "goalId": 381,
-      "userId": 131,
-      "isAI": false,
-      "type": "manual",
-      "status": "done",
-      "estimatedMinutes": 90
-    },
-    {
-      "id": 2890,
-      "goalId": 381,
-      "userId": 131,
-      "isAI": false,
-      "type": "manual",
-      "status": "done",
-      "estimatedMinutes": 60
-    },
-    {
-      "id": 2891,
-      "goalId": 382,
-      "userId": 131,
-      "isAI": true,
-      "type": "learn",
-      "status": "done",
-      "estimatedMinutes": 40
-    },
-    {
-      "id": 2892,
-      "goalId": 382,
-      "userId": 131,
-      "isAI": true,
-      "type": "practice",
-      "status": "pending",
-      "estimatedMinutes": 30
-    },
-    {
-      "id": 2893,
-      "goalId": 382,
-      "userId": 131,
-      "isAI": true,
-      "type": "learn",
-      "status": "pending",
-      "estimatedMinutes": 30
-    },
-    {
-      "id": 2894,
-      "goalId": 382,
-      "userId": 131,
+      "id": 2631,
+      "goalId": 415,
+      "userId": 156,
       "isAI": true,
       "type": "practice",
       "status": "pending",
       "estimatedMinutes": 15
     },
     {
-      "id": 2895,
-      "goalId": 382,
-      "userId": 131,
-      "isAI": true,
-      "type": "review",
-      "status": "pending",
-      "estimatedMinutes": 20
-    },
-    {
-      "id": 2896,
-      "goalId": 382,
-      "userId": 131,
-      "isAI": true,
-      "type": "daily",
-      "status": "pending",
-      "estimatedMinutes": 15
-    },
-    {
-      "id": 2897,
-      "goalId": 382,
-      "userId": 131,
-      "isAI": true,
-      "type": "daily",
-      "status": "done",
-      "estimatedMinutes": 10
-    },
-    {
-      "id": 2898,
-      "goalId": 383,
-      "userId": 131,
+      "id": 2632,
+      "goalId": 415,
+      "userId": 156,
       "isAI": true,
       "type": "learn",
-      "status": "done",
-      "estimatedMinutes": 50
-    },
-    {
-      "id": 2899,
-      "goalId": 383,
-      "userId": 131,
-      "isAI": true,
-      "type": "practice",
-      "status": "done",
-      "estimatedMinutes": 45
-    },
-    {
-      "id": 2900,
-      "goalId": 383,
-      "userId": 131,
-      "isAI": true,
-      "type": "practice",
       "status": "pending",
-      "estimatedMinutes": 40
+      "estimatedMinutes": 30
     },
     {
-      "id": 2901,
-      "goalId": 383,
-      "userId": 131,
+      "id": 2633,
+      "goalId": 415,
+      "userId": 156,
       "isAI": true,
       "type": "practice",
       "status": "pending",
       "estimatedMinutes": 60
     },
     {
-      "id": 2902,
-      "goalId": 383,
-      "userId": 131,
+      "id": 2634,
+      "goalId": 415,
+      "userId": 156,
       "isAI": true,
       "type": "review",
       "status": "pending",
-      "estimatedMinutes": 35
+      "estimatedMinutes": 20
     },
     {
-      "id": 2903,
-      "goalId": 383,
-      "userId": 131,
+      "id": 2635,
+      "goalId": 415,
+      "userId": 156,
       "isAI": true,
-      "type": "reflect",
-      "status": "pending",
-      "estimatedMinutes": 30
-    },
-    {
-      "id": 2904,
-      "goalId": 383,
-      "userId": 131,
-      "isAI": true,
-      "type": "daily",
-      "status": "done",
-      "estimatedMinutes": 15
-    },
-    {
-      "id": 2905,
-      "goalId": 383,
-      "userId": 131,
-      "isAI": true,
-      "type": "daily",
-      "status": "done",
-      "estimatedMinutes": 15
-    },
-    {
-      "id": 2906,
-      "goalId": 384,
-      "userId": 132,
-      "isAI": true,
-      "type": "learn",
+      "type": "practice",
       "status": "pending",
       "estimatedMinutes": 40
     },
     {
-      "id": 2907,
-      "goalId": 384,
-      "userId": 132,
-      "isAI": true,
-      "type": "practice",
-      "status": "pending",
-      "estimatedMinutes": 30
-    },
-    {
-      "id": 2908,
-      "goalId": 384,
-      "userId": 132,
-      "isAI": true,
-      "type": "learn",
-      "status": "pending",
-      "estimatedMinutes": 30
-    },
-    {
-      "id": 2909,
-      "goalId": 384,
-      "userId": 132,
-      "isAI": true,
-      "type": "practice",
-      "status": "pending",
-      "estimatedMinutes": 15
-    },
-    {
-      "id": 2910,
-      "goalId": 384,
-      "userId": 132,
-      "isAI": true,
-      "type": "review",
-      "status": "pending",
-      "estimatedMinutes": 20
-    },
-    {
-      "id": 2911,
-      "goalId": 384,
-      "userId": 132,
-      "isAI": true,
-      "type": "daily",
-      "status": "pending",
-      "estimatedMinutes": 15
-    },
-    {
-      "id": 2912,
-      "goalId": 384,
-      "userId": 132,
-      "isAI": true,
-      "type": "daily",
-      "status": "done",
-      "estimatedMinutes": 10
-    },
-    {
-      "id": 2913,
-      "goalId": 385,
-      "userId": 132,
-      "isAI": false,
-      "type": "manual",
-      "status": "done",
-      "estimatedMinutes": 30
-    },
-    {
-      "id": 2914,
-      "goalId": 385,
-      "userId": 132,
-      "isAI": false,
-      "type": "manual",
-      "status": "pending",
-      "estimatedMinutes": 20
-    },
-    {
-      "id": 2915,
-      "goalId": 385,
-      "userId": 132,
-      "isAI": false,
-      "type": "manual",
-      "status": "pending",
-      "estimatedMinutes": 25
-    },
-    {
-      "id": 2916,
-      "goalId": 386,
-      "userId": 132,
-      "isAI": false,
-      "type": "manual",
-      "status": "done",
-      "estimatedMinutes": 15
-    },
-    {
-      "id": 2917,
-      "goalId": 386,
-      "userId": 132,
-      "isAI": false,
-      "type": "manual",
-      "status": "pending",
-      "estimatedMinutes": 30
-    },
-    {
-      "id": 2918,
-      "goalId": 386,
-      "userId": 132,
-      "isAI": false,
-      "type": "manual",
-      "status": "pending",
-      "estimatedMinutes": 20
-    },
-    {
-      "id": 2919,
-      "goalId": 387,
-      "userId": 133,
-      "isAI": true,
-      "type": "practice",
-      "status": "done",
-      "estimatedMinutes": 40
-    },
-    {
-      "id": 2920,
-      "goalId": 387,
-      "userId": 133,
-      "isAI": true,
-      "type": "learn",
-      "status": "done",
-      "estimatedMinutes": 25
-    },
-    {
-      "id": 2921,
-      "goalId": 387,
-      "userId": 133,
-      "isAI": true,
-      "type": "practice",
-      "status": "done",
-      "estimatedMinutes": 45
-    },
-    {
-      "id": 2922,
-      "goalId": 387,
-      "userId": 133,
-      "isAI": true,
-      "type": "review",
-      "status": "done",
-      "estimatedMinutes": 20
-    },
-    {
-      "id": 2923,
-      "goalId": 387,
-      "userId": 133,
-      "isAI": true,
-      "type": "practice",
-      "status": "done",
-      "estimatedMinutes": 90
-    },
-    {
-      "id": 2924,
-      "goalId": 387,
-      "userId": 133,
+      "id": 2636,
+      "goalId": 415,
+      "userId": 156,
       "isAI": true,
       "type": "reflect",
       "status": "pending",
       "estimatedMinutes": 20
     },
     {
-      "id": 2925,
-      "goalId": 387,
-      "userId": 133,
-      "isAI": true,
-      "type": "daily",
-      "status": "done",
-      "estimatedMinutes": 10
-    },
-    {
-      "id": 2926,
-      "goalId": 387,
-      "userId": 133,
+      "id": 2637,
+      "goalId": 415,
+      "userId": 156,
       "isAI": true,
       "type": "daily",
       "status": "pending",
       "estimatedMinutes": 5
     },
     {
-      "id": 2927,
-      "goalId": 388,
-      "userId": 133,
-      "isAI": true,
-      "type": "learn",
-      "status": "done",
-      "estimatedMinutes": 25
-    },
-    {
-      "id": 2928,
-      "goalId": 388,
-      "userId": 133,
-      "isAI": true,
-      "type": "practice",
-      "status": "done",
-      "estimatedMinutes": 45
-    },
-    {
-      "id": 2929,
-      "goalId": 388,
-      "userId": 133,
-      "isAI": true,
-      "type": "practice",
-      "status": "done",
-      "estimatedMinutes": 60
-    },
-    {
-      "id": 2930,
-      "goalId": 388,
-      "userId": 133,
-      "isAI": true,
-      "type": "practice",
-      "status": "done",
-      "estimatedMinutes": 30
-    },
-    {
-      "id": 2931,
-      "goalId": 388,
-      "userId": 133,
-      "isAI": true,
-      "type": "review",
-      "status": "pending",
-      "estimatedMinutes": 20
-    },
-    {
-      "id": 2932,
-      "goalId": 388,
-      "userId": 133,
-      "isAI": true,
-      "type": "reflect",
-      "status": "pending",
-      "estimatedMinutes": 20
-    },
-    {
-      "id": 2933,
-      "goalId": 388,
-      "userId": 133,
+      "id": 2638,
+      "goalId": 415,
+      "userId": 156,
       "isAI": true,
       "type": "daily",
-      "status": "done",
-      "estimatedMinutes": 20
-    },
-    {
-      "id": 2934,
-      "goalId": 389,
-      "userId": 134,
-      "isAI": false,
-      "type": "manual",
-      "status": "done",
-      "estimatedMinutes": 30
-    },
-    {
-      "id": 2935,
-      "goalId": 389,
-      "userId": 134,
-      "isAI": false,
-      "type": "manual",
       "status": "pending",
-      "estimatedMinutes": 40
-    },
-    {
-      "id": 2936,
-      "goalId": 390,
-      "userId": 134,
-      "isAI": false,
-      "type": "manual",
-      "status": "done",
-      "estimatedMinutes": 40
-    },
-    {
-      "id": 2937,
-      "goalId": 390,
-      "userId": 134,
-      "isAI": false,
-      "type": "manual",
-      "status": "done",
-      "estimatedMinutes": 90
-    },
-    {
-      "id": 2938,
-      "goalId": 390,
-      "userId": 134,
-      "isAI": false,
-      "type": "manual",
-      "status": "pending",
-      "estimatedMinutes": 60
-    },
-    {
-      "id": 2939,
-      "goalId": 391,
-      "userId": 134,
-      "isAI": true,
-      "type": "practice",
-      "status": "done",
-      "estimatedMinutes": 40
-    },
-    {
-      "id": 2940,
-      "goalId": 391,
-      "userId": 134,
-      "isAI": true,
-      "type": "learn",
-      "status": "done",
-      "estimatedMinutes": 25
-    },
-    {
-      "id": 2941,
-      "goalId": 391,
-      "userId": 134,
-      "isAI": true,
-      "type": "practice",
-      "status": "done",
-      "estimatedMinutes": 45
-    },
-    {
-      "id": 2942,
-      "goalId": 391,
-      "userId": 134,
-      "isAI": true,
-      "type": "review",
-      "status": "done",
-      "estimatedMinutes": 20
-    },
-    {
-      "id": 2943,
-      "goalId": 391,
-      "userId": 134,
-      "isAI": true,
-      "type": "practice",
-      "status": "pending",
-      "estimatedMinutes": 90
-    },
-    {
-      "id": 2944,
-      "goalId": 391,
-      "userId": 134,
-      "isAI": true,
-      "type": "reflect",
-      "status": "pending",
-      "estimatedMinutes": 20
-    },
-    {
-      "id": 2945,
-      "goalId": 391,
-      "userId": 134,
-      "isAI": true,
-      "type": "daily",
-      "status": "done",
       "estimatedMinutes": 10
     },
     {
-      "id": 2946,
-      "goalId": 391,
-      "userId": 134,
+      "id": 2639,
+      "goalId": 416,
+      "userId": 157,
       "isAI": true,
-      "type": "daily",
+      "type": "learn",
       "status": "done",
-      "estimatedMinutes": 5
+      "estimatedMinutes": 20
     },
     {
-      "id": 2947,
-      "goalId": 392,
-      "userId": 134,
-      "isAI": false,
-      "type": "manual",
-      "status": "done",
-      "estimatedMinutes": 15
-    },
-    {
-      "id": 2948,
-      "goalId": 392,
-      "userId": 134,
-      "isAI": false,
-      "type": "manual",
-      "status": "done",
-      "estimatedMinutes": 30
-    },
-    {
-      "id": 2949,
-      "goalId": 392,
-      "userId": 134,
-      "isAI": false,
-      "type": "manual",
-      "status": "done",
+      "id": 2640,
+      "goalId": 416,
+      "userId": 157,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
       "estimatedMinutes": 120
     },
     {
-      "id": 2695,
-      "goalId": 340,
-      "userId": 135,
-      "isAI": true,
-      "type": "learn",
-      "status": "done",
-      "estimatedMinutes": 30
-    },
-    {
-      "id": 2696,
-      "goalId": 340,
-      "userId": 135,
+      "id": 2641,
+      "goalId": 416,
+      "userId": 157,
       "isAI": true,
       "type": "practice",
-      "status": "done",
+      "status": "pending",
+      "estimatedMinutes": 20
+    },
+    {
+      "id": 2642,
+      "goalId": 416,
+      "userId": 157,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
       "estimatedMinutes": 60
     },
     {
-      "id": 2697,
-      "goalId": 340,
-      "userId": 135,
+      "id": 2643,
+      "goalId": 416,
+      "userId": 157,
       "isAI": true,
       "type": "review",
       "status": "pending",
-      "estimatedMinutes": 25
+      "estimatedMinutes": 20
     },
     {
-      "id": 2698,
-      "goalId": 340,
-      "userId": 135,
-      "isAI": true,
-      "type": "practice",
-      "status": "pending",
-      "estimatedMinutes": 90
-    },
-    {
-      "id": 2699,
-      "goalId": 340,
-      "userId": 135,
+      "id": 2644,
+      "goalId": 416,
+      "userId": 157,
       "isAI": true,
       "type": "reflect",
       "status": "pending",
       "estimatedMinutes": 20
     },
     {
-      "id": 2700,
-      "goalId": 340,
-      "userId": 135,
+      "id": 2645,
+      "goalId": 416,
+      "userId": 157,
       "isAI": true,
       "type": "daily",
       "status": "pending",
-      "estimatedMinutes": 30
+      "estimatedMinutes": 5
     },
     {
-      "id": 2701,
-      "goalId": 341,
-      "userId": 135,
-      "isAI": true,
-      "type": "learn",
-      "status": "done",
-      "estimatedMinutes": 25
-    },
-    {
-      "id": 2702,
-      "goalId": 341,
-      "userId": 135,
-      "isAI": true,
-      "type": "practice",
-      "status": "done",
-      "estimatedMinutes": 45
-    },
-    {
-      "id": 2703,
-      "goalId": 341,
-      "userId": 135,
-      "isAI": true,
-      "type": "practice",
-      "status": "done",
-      "estimatedMinutes": 60
-    },
-    {
-      "id": 2704,
-      "goalId": 341,
-      "userId": 135,
-      "isAI": true,
-      "type": "practice",
-      "status": "done",
-      "estimatedMinutes": 30
-    },
-    {
-      "id": 2705,
-      "goalId": 341,
-      "userId": 135,
-      "isAI": true,
-      "type": "review",
-      "status": "pending",
-      "estimatedMinutes": 20
-    },
-    {
-      "id": 2706,
-      "goalId": 341,
-      "userId": 135,
-      "isAI": true,
-      "type": "reflect",
-      "status": "pending",
-      "estimatedMinutes": 20
-    },
-    {
-      "id": 2707,
-      "goalId": 341,
-      "userId": 135,
-      "isAI": true,
-      "type": "daily",
-      "status": "done",
-      "estimatedMinutes": 20
-    },
-    {
-      "id": 2708,
-      "goalId": 342,
-      "userId": 135,
-      "isAI": true,
-      "type": "learn",
-      "status": "pending",
-      "estimatedMinutes": 40
-    },
-    {
-      "id": 2709,
-      "goalId": 342,
-      "userId": 135,
-      "isAI": true,
-      "type": "practice",
-      "status": "pending",
-      "estimatedMinutes": 30
-    },
-    {
-      "id": 2710,
-      "goalId": 342,
-      "userId": 135,
-      "isAI": true,
-      "type": "learn",
-      "status": "pending",
-      "estimatedMinutes": 30
-    },
-    {
-      "id": 2711,
-      "goalId": 342,
-      "userId": 135,
-      "isAI": true,
-      "type": "practice",
-      "status": "pending",
-      "estimatedMinutes": 15
-    },
-    {
-      "id": 2712,
-      "goalId": 342,
-      "userId": 135,
-      "isAI": true,
-      "type": "review",
-      "status": "pending",
-      "estimatedMinutes": 20
-    },
-    {
-      "id": 2713,
-      "goalId": 342,
-      "userId": 135,
-      "isAI": true,
-      "type": "daily",
-      "status": "done",
-      "estimatedMinutes": 15
-    },
-    {
-      "id": 2714,
-      "goalId": 342,
-      "userId": 135,
-      "isAI": true,
-      "type": "daily",
-      "status": "done",
-      "estimatedMinutes": 10
-    },
-    {
-      "id": 2950,
-      "goalId": 393,
-      "userId": 136,
-      "isAI": false,
-      "type": "manual",
-      "status": "done",
-      "estimatedMinutes": 20
-    },
-    {
-      "id": 2951,
-      "goalId": 393,
-      "userId": 136,
-      "isAI": false,
-      "type": "manual",
-      "status": "done",
-      "estimatedMinutes": 10
-    },
-    {
-      "id": 2952,
-      "goalId": 393,
-      "userId": 136,
-      "isAI": false,
-      "type": "manual",
-      "status": "pending",
-      "estimatedMinutes": 25
-    },
-    {
-      "id": 2953,
-      "goalId": 394,
-      "userId": 136,
-      "isAI": false,
-      "type": "manual",
-      "status": "done",
-      "estimatedMinutes": 15
-    },
-    {
-      "id": 2954,
-      "goalId": 394,
-      "userId": 136,
-      "isAI": false,
-      "type": "manual",
-      "status": "done",
-      "estimatedMinutes": 30
-    },
-    {
-      "id": 2955,
-      "goalId": 394,
-      "userId": 136,
-      "isAI": false,
-      "type": "manual",
-      "status": "done",
-      "estimatedMinutes": 20
-    },
-    {
-      "id": 2956,
-      "goalId": 395,
-      "userId": 136,
-      "isAI": true,
-      "type": "learn",
-      "status": "done",
-      "estimatedMinutes": 50
-    },
-    {
-      "id": 2957,
-      "goalId": 395,
-      "userId": 136,
-      "isAI": true,
-      "type": "practice",
-      "status": "done",
-      "estimatedMinutes": 45
-    },
-    {
-      "id": 2958,
-      "goalId": 395,
-      "userId": 136,
-      "isAI": true,
-      "type": "practice",
-      "status": "done",
-      "estimatedMinutes": 40
-    },
-    {
-      "id": 2959,
-      "goalId": 395,
-      "userId": 136,
-      "isAI": true,
-      "type": "practice",
-      "status": "done",
-      "estimatedMinutes": 60
-    },
-    {
-      "id": 2960,
-      "goalId": 395,
-      "userId": 136,
-      "isAI": true,
-      "type": "review",
-      "status": "done",
-      "estimatedMinutes": 35
-    },
-    {
-      "id": 2961,
-      "goalId": 395,
-      "userId": 136,
-      "isAI": true,
-      "type": "reflect",
-      "status": "done",
-      "estimatedMinutes": 30
-    },
-    {
-      "id": 2962,
-      "goalId": 395,
-      "userId": 136,
-      "isAI": true,
-      "type": "daily",
-      "status": "done",
-      "estimatedMinutes": 15
-    },
-    {
-      "id": 2963,
-      "goalId": 395,
-      "userId": 136,
-      "isAI": true,
-      "type": "daily",
-      "status": "done",
-      "estimatedMinutes": 15
-    },
-    {
-      "id": 2671,
-      "goalId": 337,
-      "userId": 137,
+      "id": 2646,
+      "goalId": 417,
+      "userId": 158,
       "isAI": true,
       "type": "learn",
       "status": "done",
       "estimatedMinutes": 45
     },
     {
-      "id": 2672,
-      "goalId": 337,
-      "userId": 137,
+      "id": 2647,
+      "goalId": 417,
+      "userId": 158,
       "isAI": true,
       "type": "practice",
-      "status": "done",
-      "estimatedMinutes": 30
-    },
-    {
-      "id": 2673,
-      "goalId": 337,
-      "userId": 137,
-      "isAI": true,
-      "type": "learn",
-      "status": "done",
-      "estimatedMinutes": 40
-    },
-    {
-      "id": 2674,
-      "goalId": 337,
-      "userId": 137,
-      "isAI": true,
-      "type": "practice",
-      "status": "done",
-      "estimatedMinutes": 60
-    },
-    {
-      "id": 2675,
-      "goalId": 337,
-      "userId": 137,
-      "isAI": true,
-      "type": "review",
-      "status": "done",
-      "estimatedMinutes": 35
-    },
-    {
-      "id": 2676,
-      "goalId": 337,
-      "userId": 137,
-      "isAI": true,
-      "type": "practice",
-      "status": "done",
-      "estimatedMinutes": 50
-    },
-    {
-      "id": 2677,
-      "goalId": 337,
-      "userId": 137,
-      "isAI": true,
-      "type": "reflect",
-      "status": "done",
-      "estimatedMinutes": 20
-    },
-    {
-      "id": 2678,
-      "goalId": 337,
-      "userId": 137,
-      "isAI": true,
-      "type": "daily",
-      "status": "pending",
-      "estimatedMinutes": 30
-    },
-    {
-      "id": 2679,
-      "goalId": 337,
-      "userId": 137,
-      "isAI": true,
-      "type": "daily",
-      "status": "pending",
-      "estimatedMinutes": 15
-    },
-    {
-      "id": 2680,
-      "goalId": 338,
-      "userId": 137,
-      "isAI": true,
-      "type": "learn",
-      "status": "done",
-      "estimatedMinutes": 40
-    },
-    {
-      "id": 2681,
-      "goalId": 338,
-      "userId": 137,
-      "isAI": true,
-      "type": "practice",
-      "status": "pending",
-      "estimatedMinutes": 35
-    },
-    {
-      "id": 2682,
-      "goalId": 338,
-      "userId": 137,
-      "isAI": true,
-      "type": "learn",
       "status": "pending",
       "estimatedMinutes": 25
     },
     {
-      "id": 2683,
-      "goalId": 338,
-      "userId": 137,
+      "id": 2648,
+      "goalId": 417,
+      "userId": 158,
       "isAI": true,
       "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 120
+    },
+    {
+      "id": 2649,
+      "goalId": 417,
+      "userId": 158,
+      "isAI": true,
+      "type": "review",
+      "status": "pending",
+      "estimatedMinutes": 60
+    },
+    {
+      "id": 2650,
+      "goalId": 417,
+      "userId": 158,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 180
+    },
+    {
+      "id": 2651,
+      "goalId": 417,
+      "userId": 158,
+      "isAI": true,
+      "type": "review",
+      "status": "pending",
+      "estimatedMinutes": 120
+    },
+    {
+      "id": 2652,
+      "goalId": 417,
+      "userId": 158,
+      "isAI": true,
+      "type": "reflect",
       "status": "pending",
       "estimatedMinutes": 20
     },
     {
-      "id": 2684,
-      "goalId": 338,
-      "userId": 137,
-      "isAI": true,
-      "type": "review",
-      "status": "pending",
-      "estimatedMinutes": 30
-    },
-    {
-      "id": 2685,
-      "goalId": 338,
-      "userId": 137,
-      "isAI": true,
-      "type": "reflect",
-      "status": "pending",
-      "estimatedMinutes": 15
-    },
-    {
-      "id": 2686,
-      "goalId": 338,
-      "userId": 137,
+      "id": 2653,
+      "goalId": 417,
+      "userId": 158,
       "isAI": true,
       "type": "daily",
-      "status": "done",
+      "status": "pending",
+      "estimatedMinutes": 40
+    },
+    {
+      "id": 2654,
+      "goalId": 417,
+      "userId": 158,
+      "isAI": true,
+      "type": "daily",
+      "status": "pending",
       "estimatedMinutes": 10
-    },
-    {
-      "id": 2687,
-      "goalId": 338,
-      "userId": 137,
-      "isAI": true,
-      "type": "daily",
-      "status": "done",
-      "estimatedMinutes": 10
-    },
-    {
-      "id": 2688,
-      "goalId": 339,
-      "userId": 137,
-      "isAI": true,
-      "type": "learn",
-      "status": "done",
-      "estimatedMinutes": 40
-    },
-    {
-      "id": 2689,
-      "goalId": 339,
-      "userId": 137,
-      "isAI": true,
-      "type": "practice",
-      "status": "pending",
-      "estimatedMinutes": 30
-    },
-    {
-      "id": 2690,
-      "goalId": 339,
-      "userId": 137,
-      "isAI": true,
-      "type": "learn",
-      "status": "pending",
-      "estimatedMinutes": 30
-    },
-    {
-      "id": 2691,
-      "goalId": 339,
-      "userId": 137,
-      "isAI": true,
-      "type": "practice",
-      "status": "pending",
-      "estimatedMinutes": 15
-    },
-    {
-      "id": 2692,
-      "goalId": 339,
-      "userId": 137,
-      "isAI": true,
-      "type": "review",
-      "status": "pending",
-      "estimatedMinutes": 20
-    },
-    {
-      "id": 2693,
-      "goalId": 339,
-      "userId": 137,
-      "isAI": true,
-      "type": "daily",
-      "status": "done",
-      "estimatedMinutes": 15
-    },
-    {
-      "id": 2694,
-      "goalId": 339,
-      "userId": 137,
-      "isAI": true,
-      "type": "daily",
-      "status": "done",
-      "estimatedMinutes": 10
-    },
-    {
-      "id": 2964,
-      "goalId": 396,
-      "userId": 138,
-      "isAI": true,
-      "type": "learn",
-      "status": "done",
-      "estimatedMinutes": 45
-    },
-    {
-      "id": 2965,
-      "goalId": 396,
-      "userId": 138,
-      "isAI": true,
-      "type": "practice",
-      "status": "pending",
-      "estimatedMinutes": 30
-    },
-    {
-      "id": 2966,
-      "goalId": 396,
-      "userId": 138,
-      "isAI": true,
-      "type": "learn",
-      "status": "pending",
-      "estimatedMinutes": 40
-    },
-    {
-      "id": 2967,
-      "goalId": 396,
-      "userId": 138,
-      "isAI": true,
-      "type": "practice",
-      "status": "pending",
-      "estimatedMinutes": 60
-    },
-    {
-      "id": 2968,
-      "goalId": 396,
-      "userId": 138,
-      "isAI": true,
-      "type": "review",
-      "status": "pending",
-      "estimatedMinutes": 35
-    },
-    {
-      "id": 2969,
-      "goalId": 396,
-      "userId": 138,
-      "isAI": true,
-      "type": "practice",
-      "status": "pending",
-      "estimatedMinutes": 50
-    },
-    {
-      "id": 2970,
-      "goalId": 396,
-      "userId": 138,
-      "isAI": true,
-      "type": "reflect",
-      "status": "pending",
-      "estimatedMinutes": 20
-    },
-    {
-      "id": 2971,
-      "goalId": 396,
-      "userId": 138,
-      "isAI": true,
-      "type": "daily",
-      "status": "done",
-      "estimatedMinutes": 30
-    },
-    {
-      "id": 2972,
-      "goalId": 396,
-      "userId": 138,
-      "isAI": true,
-      "type": "daily",
-      "status": "done",
-      "estimatedMinutes": 15
-    },
-    {
-      "id": 2973,
-      "goalId": 397,
-      "userId": 138,
-      "isAI": true,
-      "type": "learn",
-      "status": "done",
-      "estimatedMinutes": 30
-    },
-    {
-      "id": 2974,
-      "goalId": 397,
-      "userId": 138,
-      "isAI": true,
-      "type": "practice",
-      "status": "done",
-      "estimatedMinutes": 60
-    },
-    {
-      "id": 2975,
-      "goalId": 397,
-      "userId": 138,
-      "isAI": true,
-      "type": "review",
-      "status": "done",
-      "estimatedMinutes": 25
-    },
-    {
-      "id": 2976,
-      "goalId": 397,
-      "userId": 138,
-      "isAI": true,
-      "type": "practice",
-      "status": "done",
-      "estimatedMinutes": 90
-    },
-    {
-      "id": 2977,
-      "goalId": 397,
-      "userId": 138,
-      "isAI": true,
-      "type": "reflect",
-      "status": "done",
-      "estimatedMinutes": 20
-    },
-    {
-      "id": 2978,
-      "goalId": 397,
-      "userId": 138,
-      "isAI": true,
-      "type": "daily",
-      "status": "done",
-      "estimatedMinutes": 30
-    },
-    {
-      "id": 2723,
-      "goalId": 343,
-      "userId": 139,
-      "isAI": true,
-      "type": "daily",
-      "status": "done",
-      "estimatedMinutes": 15
-    },
-    {
-      "id": 2715,
-      "goalId": 343,
-      "userId": 139,
-      "isAI": true,
-      "type": "learn",
-      "status": "done",
-      "estimatedMinutes": 45
-    },
-    {
-      "id": 2716,
-      "goalId": 343,
-      "userId": 139,
-      "isAI": true,
-      "type": "practice",
-      "status": "done",
-      "estimatedMinutes": 30
-    },
-    {
-      "id": 2717,
-      "goalId": 343,
-      "userId": 139,
-      "isAI": true,
-      "type": "learn",
-      "status": "done",
-      "estimatedMinutes": 40
-    },
-    {
-      "id": 2718,
-      "goalId": 343,
-      "userId": 139,
-      "isAI": true,
-      "type": "practice",
-      "status": "done",
-      "estimatedMinutes": 60
-    },
-    {
-      "id": 2719,
-      "goalId": 343,
-      "userId": 139,
-      "isAI": true,
-      "type": "review",
-      "status": "done",
-      "estimatedMinutes": 35
-    },
-    {
-      "id": 2720,
-      "goalId": 343,
-      "userId": 139,
-      "isAI": true,
-      "type": "practice",
-      "status": "pending",
-      "estimatedMinutes": 50
-    },
-    {
-      "id": 2721,
-      "goalId": 343,
-      "userId": 139,
-      "isAI": true,
-      "type": "reflect",
-      "status": "pending",
-      "estimatedMinutes": 20
-    },
-    {
-      "id": 2722,
-      "goalId": 343,
-      "userId": 139,
-      "isAI": true,
-      "type": "daily",
-      "status": "done",
-      "estimatedMinutes": 30
-    },
-    {
-      "id": 2724,
-      "goalId": 344,
-      "userId": 139,
-      "isAI": false,
-      "type": "manual",
-      "status": "done",
-      "estimatedMinutes": 30
-    },
-    {
-      "id": 2725,
-      "goalId": 344,
-      "userId": 139,
-      "isAI": false,
-      "type": "manual",
-      "status": "done",
-      "estimatedMinutes": 40
-    },
-    {
-      "id": 2726,
-      "goalId": 345,
-      "userId": 139,
-      "isAI": true,
-      "type": "learn",
-      "status": "done",
-      "estimatedMinutes": 40
-    },
-    {
-      "id": 2727,
-      "goalId": 345,
-      "userId": 139,
-      "isAI": true,
-      "type": "practice",
-      "status": "done",
-      "estimatedMinutes": 30
-    },
-    {
-      "id": 2728,
-      "goalId": 345,
-      "userId": 139,
-      "isAI": true,
-      "type": "learn",
-      "status": "done",
-      "estimatedMinutes": 30
-    },
-    {
-      "id": 2729,
-      "goalId": 345,
-      "userId": 139,
-      "isAI": true,
-      "type": "practice",
-      "status": "done",
-      "estimatedMinutes": 15
-    },
-    {
-      "id": 2730,
-      "goalId": 345,
-      "userId": 139,
-      "isAI": true,
-      "type": "review",
-      "status": "pending",
-      "estimatedMinutes": 20
-    },
-    {
-      "id": 2731,
-      "goalId": 345,
-      "userId": 139,
-      "isAI": true,
-      "type": "daily",
-      "status": "pending",
-      "estimatedMinutes": 15
-    },
-    {
-      "id": 2732,
-      "goalId": 345,
-      "userId": 139,
-      "isAI": true,
-      "type": "daily",
-      "status": "done",
-      "estimatedMinutes": 10
-    },
-    {
-      "id": 2733,
-      "goalId": 346,
-      "userId": 139,
-      "isAI": true,
-      "type": "learn",
-      "status": "done",
-      "estimatedMinutes": 30
-    },
-    {
-      "id": 2734,
-      "goalId": 346,
-      "userId": 139,
-      "isAI": true,
-      "type": "practice",
-      "status": "pending",
-      "estimatedMinutes": 60
-    },
-    {
-      "id": 2735,
-      "goalId": 346,
-      "userId": 139,
-      "isAI": true,
-      "type": "review",
-      "status": "pending",
-      "estimatedMinutes": 25
-    },
-    {
-      "id": 2736,
-      "goalId": 346,
-      "userId": 139,
-      "isAI": true,
-      "type": "practice",
-      "status": "pending",
-      "estimatedMinutes": 90
-    },
-    {
-      "id": 2737,
-      "goalId": 346,
-      "userId": 139,
-      "isAI": true,
-      "type": "reflect",
-      "status": "pending",
-      "estimatedMinutes": 20
-    },
-    {
-      "id": 2738,
-      "goalId": 346,
-      "userId": 139,
-      "isAI": true,
-      "type": "daily",
-      "status": "pending",
-      "estimatedMinutes": 30
-    },
-    {
-      "id": 2739,
-      "goalId": 347,
-      "userId": 140,
-      "isAI": false,
-      "type": "manual",
-      "status": "done",
-      "estimatedMinutes": 60
-    },
-    {
-      "id": 2740,
-      "goalId": 347,
-      "userId": 140,
-      "isAI": false,
-      "type": "manual",
-      "status": "pending",
-      "estimatedMinutes": 20
-    },
-    {
-      "id": 2741,
-      "goalId": 347,
-      "userId": 140,
-      "isAI": false,
-      "type": "manual",
-      "status": "pending",
-      "estimatedMinutes": 40
-    },
-    {
-      "id": 2742,
-      "goalId": 348,
-      "userId": 140,
-      "isAI": false,
-      "type": "manual",
-      "status": "done",
-      "estimatedMinutes": 40
-    },
-    {
-      "id": 2743,
-      "goalId": 348,
-      "userId": 140,
-      "isAI": false,
-      "type": "manual",
-      "status": "done",
-      "estimatedMinutes": 90
-    },
-    {
-      "id": 2744,
-      "goalId": 348,
-      "userId": 140,
-      "isAI": false,
-      "type": "manual",
-      "status": "pending",
-      "estimatedMinutes": 60
-    },
-    {
-      "id": 2750,
-      "goalId": 351,
-      "userId": 141,
-      "isAI": false,
-      "type": "manual",
-      "status": "done",
-      "estimatedMinutes": 40
-    },
-    {
-      "id": 2751,
-      "goalId": 351,
-      "userId": 141,
-      "isAI": false,
-      "type": "manual",
-      "status": "pending",
-      "estimatedMinutes": 90
-    },
-    {
-      "id": 2752,
-      "goalId": 351,
-      "userId": 141,
-      "isAI": false,
-      "type": "manual",
-      "status": "pending",
-      "estimatedMinutes": 60
-    },
-    {
-      "id": 2753,
-      "goalId": 352,
-      "userId": 141,
-      "isAI": false,
-      "type": "manual",
-      "status": "done",
-      "estimatedMinutes": 60
-    },
-    {
-      "id": 2754,
-      "goalId": 352,
-      "userId": 141,
-      "isAI": false,
-      "type": "manual",
-      "status": "done",
-      "estimatedMinutes": 20
-    },
-    {
-      "id": 2755,
-      "goalId": 352,
-      "userId": 141,
-      "isAI": false,
-      "type": "manual",
-      "status": "done",
-      "estimatedMinutes": 40
-    },
-    {
-      "id": 2756,
-      "goalId": 353,
-      "userId": 141,
-      "isAI": true,
-      "type": "learn",
-      "status": "done",
-      "estimatedMinutes": 30
-    },
-    {
-      "id": 2757,
-      "goalId": 353,
-      "userId": 141,
-      "isAI": true,
-      "type": "practice",
-      "status": "done",
-      "estimatedMinutes": 60
-    },
-    {
-      "id": 2758,
-      "goalId": 353,
-      "userId": 141,
-      "isAI": true,
-      "type": "review",
-      "status": "done",
-      "estimatedMinutes": 25
-    },
-    {
-      "id": 2759,
-      "goalId": 353,
-      "userId": 141,
-      "isAI": true,
-      "type": "practice",
-      "status": "done",
-      "estimatedMinutes": 90
-    },
-    {
-      "id": 2760,
-      "goalId": 353,
-      "userId": 141,
-      "isAI": true,
-      "type": "reflect",
-      "status": "pending",
-      "estimatedMinutes": 20
-    },
-    {
-      "id": 2761,
-      "goalId": 353,
-      "userId": 141,
-      "isAI": true,
-      "type": "daily",
-      "status": "pending",
-      "estimatedMinutes": 30
-    },
-    {
-      "id": 2745,
-      "goalId": 349,
-      "userId": 142,
-      "isAI": false,
-      "type": "manual",
-      "status": "pending",
-      "estimatedMinutes": 15
-    },
-    {
-      "id": 2746,
-      "goalId": 349,
-      "userId": 142,
-      "isAI": false,
-      "type": "manual",
-      "status": "pending",
-      "estimatedMinutes": 30
-    },
-    {
-      "id": 2747,
-      "goalId": 349,
-      "userId": 142,
-      "isAI": false,
-      "type": "manual",
-      "status": "pending",
-      "estimatedMinutes": 20
-    },
-    {
-      "id": 2748,
-      "goalId": 350,
-      "userId": 142,
-      "isAI": false,
-      "type": "manual",
-      "status": "pending",
-      "estimatedMinutes": 30
-    },
-    {
-      "id": 2749,
-      "goalId": 350,
-      "userId": 142,
-      "isAI": false,
-      "type": "manual",
-      "status": "pending",
-      "estimatedMinutes": 40
     },
     {
       "id": 2655,
-      "goalId": 333,
-      "userId": 125,
+      "goalId": 418,
+      "userId": 159,
+      "isAI": true,
+      "type": "learn",
+      "status": "done",
+      "estimatedMinutes": 45
+    },
+    {
+      "id": 2656,
+      "goalId": 418,
+      "userId": 159,
+      "isAI": true,
+      "type": "practice",
+      "status": "done",
+      "estimatedMinutes": 25
+    },
+    {
+      "id": 2657,
+      "goalId": 418,
+      "userId": 159,
+      "isAI": true,
+      "type": "practice",
+      "status": "done",
+      "estimatedMinutes": 120
+    },
+    {
+      "id": 2658,
+      "goalId": 418,
+      "userId": 159,
+      "isAI": true,
+      "type": "review",
+      "status": "done",
+      "estimatedMinutes": 60
+    },
+    {
+      "id": 2659,
+      "goalId": 418,
+      "userId": 159,
+      "isAI": true,
+      "type": "practice",
+      "status": "done",
+      "estimatedMinutes": 180
+    },
+    {
+      "id": 2660,
+      "goalId": 418,
+      "userId": 159,
+      "isAI": true,
+      "type": "review",
+      "status": "done",
+      "estimatedMinutes": 120
+    },
+    {
+      "id": 2661,
+      "goalId": 418,
+      "userId": 159,
+      "isAI": true,
+      "type": "reflect",
+      "status": "done",
+      "estimatedMinutes": 20
+    },
+    {
+      "id": 2662,
+      "goalId": 418,
+      "userId": 159,
+      "isAI": true,
+      "type": "daily",
+      "status": "pending",
+      "estimatedMinutes": 40
+    },
+    {
+      "id": 2663,
+      "goalId": 418,
+      "userId": 159,
+      "isAI": true,
+      "type": "daily",
+      "status": "pending",
+      "estimatedMinutes": 10
+    },
+    {
+      "id": 2664,
+      "goalId": 419,
+      "userId": 159,
+      "isAI": true,
+      "type": "learn",
+      "status": "done",
+      "estimatedMinutes": 45
+    },
+    {
+      "id": 2665,
+      "goalId": 419,
+      "userId": 159,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 30
+    },
+    {
+      "id": 2666,
+      "goalId": 419,
+      "userId": 159,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 40
+    },
+    {
+      "id": 2667,
+      "goalId": 419,
+      "userId": 159,
+      "isAI": true,
+      "type": "learn",
+      "status": "pending",
+      "estimatedMinutes": 25
+    },
+    {
+      "id": 2668,
+      "goalId": 419,
+      "userId": 159,
+      "isAI": true,
+      "type": "review",
+      "status": "pending",
+      "estimatedMinutes": 30
+    },
+    {
+      "id": 2669,
+      "goalId": 419,
+      "userId": 159,
+      "isAI": true,
+      "type": "reflect",
+      "status": "pending",
+      "estimatedMinutes": 20
+    },
+    {
+      "id": 2670,
+      "goalId": 419,
+      "userId": 159,
+      "isAI": true,
+      "type": "daily",
+      "status": "pending",
+      "estimatedMinutes": 1
+    },
+    {
+      "id": 2671,
+      "goalId": 420,
+      "userId": 160,
       "isAI": false,
       "type": "manual",
       "status": "done",
       "estimatedMinutes": 60
     },
     {
-      "id": 2656,
-      "goalId": 333,
-      "userId": 125,
+      "id": 2672,
+      "goalId": 420,
+      "userId": 160,
       "isAI": false,
       "type": "manual",
       "status": "pending",
       "estimatedMinutes": 20
     },
     {
-      "id": 2657,
-      "goalId": 333,
-      "userId": 125,
+      "id": 2673,
+      "goalId": 420,
+      "userId": 160,
       "isAI": false,
       "type": "manual",
       "status": "pending",
       "estimatedMinutes": 45
     },
     {
-      "id": 2658,
-      "goalId": 333,
-      "userId": 125,
-      "isAI": false,
-      "type": "manual",
-      "status": "pending",
-      "estimatedMinutes": 30
-    },
-    {
-      "id": 2979,
-      "goalId": 333,
-      "userId": 125,
-      "isAI": false,
-      "type": "daily",
-      "status": "pending",
-      "estimatedMinutes": 30
-    },
-    {
-      "id": 2980,
-      "goalId": 333,
-      "userId": 125,
-      "isAI": false,
-      "type": "daily",
-      "status": "pending",
-      "estimatedMinutes": 45
-    },
-    {
-      "id": 2981,
-      "goalId": 333,
-      "userId": 125,
-      "isAI": false,
-      "type": "daily",
-      "status": "pending",
-      "estimatedMinutes": 45
-    },
-    {
-      "id": 2659,
-      "goalId": 334,
-      "userId": 125,
-      "isAI": false,
-      "type": "manual",
-      "status": "done",
-      "estimatedMinutes": 15
-    },
-    {
-      "id": 2660,
-      "goalId": 334,
-      "userId": 125,
-      "isAI": false,
-      "type": "manual",
-      "status": "done",
-      "estimatedMinutes": 60
-    },
-    {
-      "id": 2661,
-      "goalId": 335,
-      "userId": 125,
+      "id": 2674,
+      "goalId": 420,
+      "userId": 160,
       "isAI": false,
       "type": "manual",
       "status": "pending",
       "estimatedMinutes": 60
     },
     {
-      "id": 2662,
-      "goalId": 335,
-      "userId": 125,
-      "isAI": false,
-      "type": "manual",
-      "status": "pending",
-      "estimatedMinutes": 60
-    },
-    {
-      "id": 2663,
-      "goalId": 336,
-      "userId": 125,
+      "id": 2407,
+      "goalId": 383,
+      "userId": 161,
       "isAI": true,
       "type": "learn",
-      "status": "done",
+      "status": "pending",
+      "estimatedMinutes": 45
+    },
+    {
+      "id": 2408,
+      "goalId": 383,
+      "userId": 161,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 30
+    },
+    {
+      "id": 2409,
+      "goalId": 383,
+      "userId": 161,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
       "estimatedMinutes": 40
     },
     {
-      "id": 2664,
-      "goalId": 336,
-      "userId": 125,
+      "id": 2410,
+      "goalId": 383,
+      "userId": 161,
+      "isAI": true,
+      "type": "learn",
+      "status": "pending",
+      "estimatedMinutes": 25
+    },
+    {
+      "id": 2411,
+      "goalId": 383,
+      "userId": 161,
+      "isAI": true,
+      "type": "review",
+      "status": "pending",
+      "estimatedMinutes": 30
+    },
+    {
+      "id": 2412,
+      "goalId": 383,
+      "userId": 161,
+      "isAI": true,
+      "type": "reflect",
+      "status": "pending",
+      "estimatedMinutes": 20
+    },
+    {
+      "id": 2413,
+      "goalId": 383,
+      "userId": 161,
+      "isAI": true,
+      "type": "daily",
+      "status": "done",
+      "estimatedMinutes": 1
+    },
+    {
+      "id": 2414,
+      "goalId": 384,
+      "userId": 161,
+      "isAI": true,
+      "type": "learn",
+      "status": "done",
+      "estimatedMinutes": 5
+    },
+    {
+      "id": 2415,
+      "goalId": 384,
+      "userId": 161,
+      "isAI": true,
+      "type": "learn",
+      "status": "done",
+      "estimatedMinutes": 20
+    },
+    {
+      "id": 2416,
+      "goalId": 384,
+      "userId": 161,
       "isAI": true,
       "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 20
+    },
+    {
+      "id": 2417,
+      "goalId": 384,
+      "userId": 161,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 60
+    },
+    {
+      "id": 2418,
+      "goalId": 384,
+      "userId": 161,
+      "isAI": true,
+      "type": "review",
+      "status": "pending",
+      "estimatedMinutes": 15
+    },
+    {
+      "id": 2419,
+      "goalId": 384,
+      "userId": 161,
+      "isAI": true,
+      "type": "reflect",
+      "status": "pending",
+      "estimatedMinutes": 15
+    },
+    {
+      "id": 2420,
+      "goalId": 384,
+      "userId": 161,
+      "isAI": true,
+      "type": "daily",
+      "status": "pending",
+      "estimatedMinutes": 1
+    },
+    {
+      "id": 2421,
+      "goalId": 384,
+      "userId": 161,
+      "isAI": true,
+      "type": "daily",
+      "status": "pending",
+      "estimatedMinutes": 5
+    },
+    {
+      "id": 2422,
+      "goalId": 385,
+      "userId": 161,
+      "isAI": true,
+      "type": "learn",
       "status": "done",
       "estimatedMinutes": 35
     },
     {
-      "id": 2665,
-      "goalId": 336,
-      "userId": 125,
+      "id": 2423,
+      "goalId": 385,
+      "userId": 161,
+      "isAI": true,
+      "type": "practice",
+      "status": "done",
+      "estimatedMinutes": 50
+    },
+    {
+      "id": 2424,
+      "goalId": 385,
+      "userId": 161,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 30
+    },
+    {
+      "id": 2425,
+      "goalId": 385,
+      "userId": 161,
+      "isAI": true,
+      "type": "learn",
+      "status": "pending",
+      "estimatedMinutes": 40
+    },
+    {
+      "id": 2426,
+      "goalId": 385,
+      "userId": 161,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 90
+    },
+    {
+      "id": 2427,
+      "goalId": 385,
+      "userId": 161,
+      "isAI": true,
+      "type": "review",
+      "status": "pending",
+      "estimatedMinutes": 45
+    },
+    {
+      "id": 2428,
+      "goalId": 385,
+      "userId": 161,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 120
+    },
+    {
+      "id": 2429,
+      "goalId": 385,
+      "userId": 161,
+      "isAI": true,
+      "type": "reflect",
+      "status": "pending",
+      "estimatedMinutes": 25
+    },
+    {
+      "id": 2430,
+      "goalId": 385,
+      "userId": 161,
+      "isAI": true,
+      "type": "daily",
+      "status": "pending",
+      "estimatedMinutes": 20
+    },
+    {
+      "id": 2431,
+      "goalId": 386,
+      "userId": 161,
       "isAI": true,
       "type": "learn",
       "status": "done",
       "estimatedMinutes": 25
     },
     {
-      "id": 2666,
-      "goalId": 336,
-      "userId": 125,
+      "id": 2432,
+      "goalId": 386,
+      "userId": 161,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 10
+    },
+    {
+      "id": 2433,
+      "goalId": 386,
+      "userId": 161,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 20
+    },
+    {
+      "id": 2434,
+      "goalId": 386,
+      "userId": 161,
+      "isAI": true,
+      "type": "learn",
+      "status": "pending",
+      "estimatedMinutes": 25
+    },
+    {
+      "id": 2435,
+      "goalId": 386,
+      "userId": 161,
+      "isAI": true,
+      "type": "review",
+      "status": "pending",
+      "estimatedMinutes": 30
+    },
+    {
+      "id": 2436,
+      "goalId": 386,
+      "userId": 161,
+      "isAI": true,
+      "type": "reflect",
+      "status": "pending",
+      "estimatedMinutes": 20
+    },
+    {
+      "id": 2437,
+      "goalId": 386,
+      "userId": 161,
+      "isAI": true,
+      "type": "daily",
+      "status": "done",
+      "estimatedMinutes": 5
+    },
+    {
+      "id": 2438,
+      "goalId": 386,
+      "userId": 161,
+      "isAI": true,
+      "type": "daily",
+      "status": "pending",
+      "estimatedMinutes": 5
+    },
+    {
+      "id": 2497,
+      "goalId": 396,
+      "userId": 162,
+      "isAI": false,
+      "type": "manual",
+      "status": "done",
+      "estimatedMinutes": 20
+    },
+    {
+      "id": 2498,
+      "goalId": 396,
+      "userId": 162,
+      "isAI": false,
+      "type": "manual",
+      "status": "pending",
+      "estimatedMinutes": 15
+    },
+    {
+      "id": 2499,
+      "goalId": 396,
+      "userId": 162,
+      "isAI": false,
+      "type": "manual",
+      "status": "pending",
+      "estimatedMinutes": 20
+    },
+    {
+      "id": 2500,
+      "goalId": 397,
+      "userId": 162,
+      "isAI": true,
+      "type": "learn",
+      "status": "done",
+      "estimatedMinutes": 40
+    },
+    {
+      "id": 2501,
+      "goalId": 397,
+      "userId": 162,
       "isAI": true,
       "type": "practice",
       "status": "done",
       "estimatedMinutes": 20
     },
     {
-      "id": 2667,
-      "goalId": 336,
-      "userId": 125,
+      "id": 2502,
+      "goalId": 397,
+      "userId": 162,
+      "isAI": true,
+      "type": "learn",
+      "status": "done",
+      "estimatedMinutes": 35
+    },
+    {
+      "id": 2503,
+      "goalId": 397,
+      "userId": 162,
+      "isAI": true,
+      "type": "practice",
+      "status": "done",
+      "estimatedMinutes": 25
+    },
+    {
+      "id": 2504,
+      "goalId": 397,
+      "userId": 162,
+      "isAI": true,
+      "type": "practice",
+      "status": "done",
+      "estimatedMinutes": 40
+    },
+    {
+      "id": 2505,
+      "goalId": 397,
+      "userId": 162,
       "isAI": true,
       "type": "review",
       "status": "done",
       "estimatedMinutes": 30
     },
     {
-      "id": 2668,
-      "goalId": 336,
-      "userId": 125,
+      "id": 2506,
+      "goalId": 397,
+      "userId": 162,
       "isAI": true,
       "type": "reflect",
       "status": "done",
       "estimatedMinutes": 15
     },
     {
-      "id": 2669,
-      "goalId": 336,
-      "userId": 125,
+      "id": 2507,
+      "goalId": 397,
+      "userId": 162,
+      "isAI": true,
+      "type": "daily",
+      "status": "done",
+      "estimatedMinutes": 10
+    },
+    {
+      "id": 2508,
+      "goalId": 397,
+      "userId": 162,
+      "isAI": true,
+      "type": "daily",
+      "status": "pending",
+      "estimatedMinutes": 5
+    },
+    {
+      "id": 2469,
+      "goalId": 392,
+      "userId": 163,
+      "isAI": true,
+      "type": "learn",
+      "status": "done",
+      "estimatedMinutes": 60
+    },
+    {
+      "id": 2470,
+      "goalId": 392,
+      "userId": 163,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 40
+    },
+    {
+      "id": 2471,
+      "goalId": 392,
+      "userId": 163,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 240
+    },
+    {
+      "id": 2472,
+      "goalId": 392,
+      "userId": 163,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 90
+    },
+    {
+      "id": 2473,
+      "goalId": 392,
+      "userId": 163,
+      "isAI": true,
+      "type": "review",
+      "status": "pending",
+      "estimatedMinutes": 45
+    },
+    {
+      "id": 2474,
+      "goalId": 392,
+      "userId": 163,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 60
+    },
+    {
+      "id": 2475,
+      "goalId": 392,
+      "userId": 163,
+      "isAI": true,
+      "type": "reflect",
+      "status": "pending",
+      "estimatedMinutes": 30
+    },
+    {
+      "id": 2476,
+      "goalId": 392,
+      "userId": 163,
+      "isAI": true,
+      "type": "daily",
+      "status": "pending",
+      "estimatedMinutes": 30
+    },
+    {
+      "id": 2477,
+      "goalId": 393,
+      "userId": 163,
+      "isAI": true,
+      "type": "learn",
+      "status": "done",
+      "estimatedMinutes": 35
+    },
+    {
+      "id": 2478,
+      "goalId": 393,
+      "userId": 163,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 50
+    },
+    {
+      "id": 2479,
+      "goalId": 393,
+      "userId": 163,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 30
+    },
+    {
+      "id": 2480,
+      "goalId": 393,
+      "userId": 163,
+      "isAI": true,
+      "type": "learn",
+      "status": "pending",
+      "estimatedMinutes": 40
+    },
+    {
+      "id": 2481,
+      "goalId": 393,
+      "userId": 163,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 90
+    },
+    {
+      "id": 2482,
+      "goalId": 393,
+      "userId": 163,
+      "isAI": true,
+      "type": "review",
+      "status": "pending",
+      "estimatedMinutes": 45
+    },
+    {
+      "id": 2483,
+      "goalId": 393,
+      "userId": 163,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 120
+    },
+    {
+      "id": 2484,
+      "goalId": 393,
+      "userId": 163,
+      "isAI": true,
+      "type": "reflect",
+      "status": "pending",
+      "estimatedMinutes": 25
+    },
+    {
+      "id": 2485,
+      "goalId": 393,
+      "userId": 163,
+      "isAI": true,
+      "type": "daily",
+      "status": "done",
+      "estimatedMinutes": 20
+    },
+    {
+      "id": 2439,
+      "goalId": 387,
+      "userId": 164,
+      "isAI": false,
+      "type": "manual",
+      "status": "done",
+      "estimatedMinutes": 20
+    },
+    {
+      "id": 2440,
+      "goalId": 387,
+      "userId": 164,
+      "isAI": false,
+      "type": "manual",
+      "status": "done",
+      "estimatedMinutes": 15
+    },
+    {
+      "id": 2441,
+      "goalId": 387,
+      "userId": 164,
+      "isAI": false,
+      "type": "manual",
+      "status": "pending",
+      "estimatedMinutes": 20
+    },
+    {
+      "id": 2442,
+      "goalId": 388,
+      "userId": 164,
+      "isAI": false,
+      "type": "manual",
+      "status": "pending",
+      "estimatedMinutes": 60
+    },
+    {
+      "id": 2443,
+      "goalId": 388,
+      "userId": 164,
+      "isAI": false,
+      "type": "manual",
+      "status": "pending",
+      "estimatedMinutes": 30
+    },
+    {
+      "id": 2444,
+      "goalId": 388,
+      "userId": 164,
+      "isAI": false,
+      "type": "manual",
+      "status": "pending",
+      "estimatedMinutes": 90
+    },
+    {
+      "id": 2445,
+      "goalId": 389,
+      "userId": 164,
+      "isAI": true,
+      "type": "learn",
+      "status": "done",
+      "estimatedMinutes": 30
+    },
+    {
+      "id": 2446,
+      "goalId": 389,
+      "userId": 164,
+      "isAI": true,
+      "type": "practice",
+      "status": "done",
+      "estimatedMinutes": 25
+    },
+    {
+      "id": 2447,
+      "goalId": 389,
+      "userId": 164,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 40
+    },
+    {
+      "id": 2448,
+      "goalId": 389,
+      "userId": 164,
+      "isAI": true,
+      "type": "learn",
+      "status": "pending",
+      "estimatedMinutes": 45
+    },
+    {
+      "id": 2449,
+      "goalId": 389,
+      "userId": 164,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 60
+    },
+    {
+      "id": 2450,
+      "goalId": 389,
+      "userId": 164,
+      "isAI": true,
+      "type": "review",
+      "status": "pending",
+      "estimatedMinutes": 35
+    },
+    {
+      "id": 2451,
+      "goalId": 389,
+      "userId": 164,
+      "isAI": true,
+      "type": "reflect",
+      "status": "pending",
+      "estimatedMinutes": 15
+    },
+    {
+      "id": 2452,
+      "goalId": 389,
+      "userId": 164,
+      "isAI": true,
+      "type": "daily",
+      "status": "pending",
+      "estimatedMinutes": 15
+    },
+    {
+      "id": 2509,
+      "goalId": 398,
+      "userId": 166,
+      "isAI": true,
+      "type": "learn",
+      "status": "pending",
+      "estimatedMinutes": 40
+    },
+    {
+      "id": 2510,
+      "goalId": 398,
+      "userId": 166,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 20
+    },
+    {
+      "id": 2511,
+      "goalId": 398,
+      "userId": 166,
+      "isAI": true,
+      "type": "learn",
+      "status": "pending",
+      "estimatedMinutes": 35
+    },
+    {
+      "id": 2512,
+      "goalId": 398,
+      "userId": 166,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 25
+    },
+    {
+      "id": 2513,
+      "goalId": 398,
+      "userId": 166,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 40
+    },
+    {
+      "id": 2514,
+      "goalId": 398,
+      "userId": 166,
+      "isAI": true,
+      "type": "review",
+      "status": "pending",
+      "estimatedMinutes": 30
+    },
+    {
+      "id": 2515,
+      "goalId": 398,
+      "userId": 166,
+      "isAI": true,
+      "type": "reflect",
+      "status": "pending",
+      "estimatedMinutes": 15
+    },
+    {
+      "id": 2516,
+      "goalId": 398,
+      "userId": 166,
       "isAI": true,
       "type": "daily",
       "status": "pending",
       "estimatedMinutes": 10
     },
     {
-      "id": 2670,
-      "goalId": 336,
-      "userId": 125,
+      "id": 2517,
+      "goalId": 398,
+      "userId": 166,
       "isAI": true,
       "type": "daily",
       "status": "done",
+      "estimatedMinutes": 5
+    },
+    {
+      "id": 2518,
+      "goalId": 399,
+      "userId": 166,
+      "isAI": true,
+      "type": "learn",
+      "status": "done",
+      "estimatedMinutes": 30
+    },
+    {
+      "id": 2519,
+      "goalId": 399,
+      "userId": 166,
+      "isAI": true,
+      "type": "practice",
+      "status": "done",
+      "estimatedMinutes": 25
+    },
+    {
+      "id": 2520,
+      "goalId": 399,
+      "userId": 166,
+      "isAI": true,
+      "type": "practice",
+      "status": "done",
+      "estimatedMinutes": 40
+    },
+    {
+      "id": 2521,
+      "goalId": 399,
+      "userId": 166,
+      "isAI": true,
+      "type": "learn",
+      "status": "pending",
+      "estimatedMinutes": 45
+    },
+    {
+      "id": 2522,
+      "goalId": 399,
+      "userId": 166,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 60
+    },
+    {
+      "id": 2523,
+      "goalId": 399,
+      "userId": 166,
+      "isAI": true,
+      "type": "review",
+      "status": "pending",
+      "estimatedMinutes": 35
+    },
+    {
+      "id": 2524,
+      "goalId": 399,
+      "userId": 166,
+      "isAI": true,
+      "type": "reflect",
+      "status": "pending",
+      "estimatedMinutes": 15
+    },
+    {
+      "id": 2525,
+      "goalId": 399,
+      "userId": 166,
+      "isAI": true,
+      "type": "daily",
+      "status": "pending",
+      "estimatedMinutes": 15
+    },
+    {
+      "id": 2363,
+      "goalId": 377,
+      "userId": 165,
+      "isAI": false,
+      "type": "manual",
+      "status": "done",
+      "estimatedMinutes": 20
+    },
+    {
+      "id": 2364,
+      "goalId": 377,
+      "userId": 165,
+      "isAI": false,
+      "type": "manual",
+      "status": "done",
+      "estimatedMinutes": 15
+    },
+    {
+      "id": 2365,
+      "goalId": 377,
+      "userId": 165,
+      "isAI": false,
+      "type": "manual",
+      "status": "done",
+      "estimatedMinutes": 20
+    },
+    {
+      "id": 2366,
+      "goalId": 378,
+      "userId": 165,
+      "isAI": true,
+      "type": "learn",
+      "status": "done",
+      "estimatedMinutes": 35
+    },
+    {
+      "id": 2367,
+      "goalId": 378,
+      "userId": 165,
+      "isAI": true,
+      "type": "practice",
+      "status": "done",
+      "estimatedMinutes": 50
+    },
+    {
+      "id": 2368,
+      "goalId": 378,
+      "userId": 165,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 30
+    },
+    {
+      "id": 2369,
+      "goalId": 378,
+      "userId": 165,
+      "isAI": true,
+      "type": "learn",
+      "status": "pending",
+      "estimatedMinutes": 40
+    },
+    {
+      "id": 2370,
+      "goalId": 378,
+      "userId": 165,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 90
+    },
+    {
+      "id": 2371,
+      "goalId": 378,
+      "userId": 165,
+      "isAI": true,
+      "type": "review",
+      "status": "pending",
+      "estimatedMinutes": 45
+    },
+    {
+      "id": 2372,
+      "goalId": 378,
+      "userId": 165,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 120
+    },
+    {
+      "id": 2373,
+      "goalId": 378,
+      "userId": 165,
+      "isAI": true,
+      "type": "reflect",
+      "status": "pending",
+      "estimatedMinutes": 25
+    },
+    {
+      "id": 2374,
+      "goalId": 378,
+      "userId": 165,
+      "isAI": true,
+      "type": "daily",
+      "status": "done",
+      "estimatedMinutes": 20
+    },
+    {
+      "id": 2375,
+      "goalId": 379,
+      "userId": 165,
+      "isAI": true,
+      "type": "learn",
+      "status": "done",
+      "estimatedMinutes": 45
+    },
+    {
+      "id": 2376,
+      "goalId": 379,
+      "userId": 165,
+      "isAI": true,
+      "type": "practice",
+      "status": "done",
+      "estimatedMinutes": 30
+    },
+    {
+      "id": 2377,
+      "goalId": 379,
+      "userId": 165,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 40
+    },
+    {
+      "id": 2378,
+      "goalId": 379,
+      "userId": 165,
+      "isAI": true,
+      "type": "learn",
+      "status": "pending",
+      "estimatedMinutes": 25
+    },
+    {
+      "id": 2379,
+      "goalId": 379,
+      "userId": 165,
+      "isAI": true,
+      "type": "review",
+      "status": "pending",
+      "estimatedMinutes": 30
+    },
+    {
+      "id": 2380,
+      "goalId": 379,
+      "userId": 165,
+      "isAI": true,
+      "type": "reflect",
+      "status": "pending",
+      "estimatedMinutes": 20
+    },
+    {
+      "id": 2381,
+      "goalId": 379,
+      "userId": 165,
+      "isAI": true,
+      "type": "daily",
+      "status": "done",
+      "estimatedMinutes": 1
+    },
+    {
+      "id": 2382,
+      "goalId": 380,
+      "userId": 167,
+      "isAI": true,
+      "type": "learn",
+      "status": "done",
+      "estimatedMinutes": 60
+    },
+    {
+      "id": 2383,
+      "goalId": 380,
+      "userId": 167,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 40
+    },
+    {
+      "id": 2384,
+      "goalId": 380,
+      "userId": 167,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 240
+    },
+    {
+      "id": 2385,
+      "goalId": 380,
+      "userId": 167,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 90
+    },
+    {
+      "id": 2386,
+      "goalId": 380,
+      "userId": 167,
+      "isAI": true,
+      "type": "review",
+      "status": "pending",
+      "estimatedMinutes": 45
+    },
+    {
+      "id": 2387,
+      "goalId": 380,
+      "userId": 167,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 60
+    },
+    {
+      "id": 2388,
+      "goalId": 380,
+      "userId": 167,
+      "isAI": true,
+      "type": "reflect",
+      "status": "pending",
+      "estimatedMinutes": 30
+    },
+    {
+      "id": 2389,
+      "goalId": 380,
+      "userId": 167,
+      "isAI": true,
+      "type": "daily",
+      "status": "pending",
+      "estimatedMinutes": 30
+    },
+    {
+      "id": 2390,
+      "goalId": 381,
+      "userId": 167,
+      "isAI": true,
+      "type": "learn",
+      "status": "done",
+      "estimatedMinutes": 25
+    },
+    {
+      "id": 2391,
+      "goalId": 381,
+      "userId": 167,
+      "isAI": true,
+      "type": "practice",
+      "status": "done",
       "estimatedMinutes": 10
+    },
+    {
+      "id": 2392,
+      "goalId": 381,
+      "userId": 167,
+      "isAI": true,
+      "type": "practice",
+      "status": "done",
+      "estimatedMinutes": 20
+    },
+    {
+      "id": 2393,
+      "goalId": 381,
+      "userId": 167,
+      "isAI": true,
+      "type": "learn",
+      "status": "done",
+      "estimatedMinutes": 25
+    },
+    {
+      "id": 2394,
+      "goalId": 381,
+      "userId": 167,
+      "isAI": true,
+      "type": "review",
+      "status": "pending",
+      "estimatedMinutes": 30
+    },
+    {
+      "id": 2395,
+      "goalId": 381,
+      "userId": 167,
+      "isAI": true,
+      "type": "reflect",
+      "status": "pending",
+      "estimatedMinutes": 20
+    },
+    {
+      "id": 2396,
+      "goalId": 381,
+      "userId": 167,
+      "isAI": true,
+      "type": "daily",
+      "status": "pending",
+      "estimatedMinutes": 5
+    },
+    {
+      "id": 2397,
+      "goalId": 381,
+      "userId": 167,
+      "isAI": true,
+      "type": "daily",
+      "status": "done",
+      "estimatedMinutes": 5
+    },
+    {
+      "id": 2398,
+      "goalId": 382,
+      "userId": 167,
+      "isAI": true,
+      "type": "learn",
+      "status": "done",
+      "estimatedMinutes": 40
+    },
+    {
+      "id": 2399,
+      "goalId": 382,
+      "userId": 167,
+      "isAI": true,
+      "type": "practice",
+      "status": "done",
+      "estimatedMinutes": 20
+    },
+    {
+      "id": 2400,
+      "goalId": 382,
+      "userId": 167,
+      "isAI": true,
+      "type": "learn",
+      "status": "done",
+      "estimatedMinutes": 35
+    },
+    {
+      "id": 2401,
+      "goalId": 382,
+      "userId": 167,
+      "isAI": true,
+      "type": "practice",
+      "status": "done",
+      "estimatedMinutes": 25
+    },
+    {
+      "id": 2402,
+      "goalId": 382,
+      "userId": 167,
+      "isAI": true,
+      "type": "practice",
+      "status": "done",
+      "estimatedMinutes": 40
+    },
+    {
+      "id": 2403,
+      "goalId": 382,
+      "userId": 167,
+      "isAI": true,
+      "type": "review",
+      "status": "done",
+      "estimatedMinutes": 30
+    },
+    {
+      "id": 2404,
+      "goalId": 382,
+      "userId": 167,
+      "isAI": true,
+      "type": "reflect",
+      "status": "done",
+      "estimatedMinutes": 15
+    },
+    {
+      "id": 2405,
+      "goalId": 382,
+      "userId": 167,
+      "isAI": true,
+      "type": "daily",
+      "status": "pending",
+      "estimatedMinutes": 10
+    },
+    {
+      "id": 2406,
+      "goalId": 382,
+      "userId": 167,
+      "isAI": true,
+      "type": "daily",
+      "status": "done",
+      "estimatedMinutes": 5
+    },
+    {
+      "id": 2453,
+      "goalId": 390,
+      "userId": 168,
+      "isAI": true,
+      "type": "learn",
+      "status": "done",
+      "estimatedMinutes": 20
+    },
+    {
+      "id": 2454,
+      "goalId": 390,
+      "userId": 168,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 120
+    },
+    {
+      "id": 2455,
+      "goalId": 390,
+      "userId": 168,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 20
+    },
+    {
+      "id": 2456,
+      "goalId": 390,
+      "userId": 168,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 60
+    },
+    {
+      "id": 2457,
+      "goalId": 390,
+      "userId": 168,
+      "isAI": true,
+      "type": "review",
+      "status": "pending",
+      "estimatedMinutes": 20
+    },
+    {
+      "id": 2458,
+      "goalId": 390,
+      "userId": 168,
+      "isAI": true,
+      "type": "reflect",
+      "status": "pending",
+      "estimatedMinutes": 20
+    },
+    {
+      "id": 2459,
+      "goalId": 390,
+      "userId": 168,
+      "isAI": true,
+      "type": "daily",
+      "status": "pending",
+      "estimatedMinutes": 5
+    },
+    {
+      "id": 2460,
+      "goalId": 391,
+      "userId": 168,
+      "isAI": true,
+      "type": "learn",
+      "status": "done",
+      "estimatedMinutes": 45
+    },
+    {
+      "id": 2461,
+      "goalId": 391,
+      "userId": 168,
+      "isAI": true,
+      "type": "practice",
+      "status": "done",
+      "estimatedMinutes": 25
+    },
+    {
+      "id": 2462,
+      "goalId": 391,
+      "userId": 168,
+      "isAI": true,
+      "type": "practice",
+      "status": "done",
+      "estimatedMinutes": 120
+    },
+    {
+      "id": 2463,
+      "goalId": 391,
+      "userId": 168,
+      "isAI": true,
+      "type": "review",
+      "status": "pending",
+      "estimatedMinutes": 60
+    },
+    {
+      "id": 2464,
+      "goalId": 391,
+      "userId": 168,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 180
+    },
+    {
+      "id": 2465,
+      "goalId": 391,
+      "userId": 168,
+      "isAI": true,
+      "type": "review",
+      "status": "pending",
+      "estimatedMinutes": 120
+    },
+    {
+      "id": 2466,
+      "goalId": 391,
+      "userId": 168,
+      "isAI": true,
+      "type": "reflect",
+      "status": "pending",
+      "estimatedMinutes": 20
+    },
+    {
+      "id": 2467,
+      "goalId": 391,
+      "userId": 168,
+      "isAI": true,
+      "type": "daily",
+      "status": "pending",
+      "estimatedMinutes": 40
+    },
+    {
+      "id": 2468,
+      "goalId": 391,
+      "userId": 168,
+      "isAI": true,
+      "type": "daily",
+      "status": "pending",
+      "estimatedMinutes": 10
+    },
+    {
+      "id": 2486,
+      "goalId": 394,
+      "userId": 169,
+      "isAI": true,
+      "type": "learn",
+      "status": "pending",
+      "estimatedMinutes": 30
+    },
+    {
+      "id": 2487,
+      "goalId": 394,
+      "userId": 169,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 25
+    },
+    {
+      "id": 2488,
+      "goalId": 394,
+      "userId": 169,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 40
+    },
+    {
+      "id": 2489,
+      "goalId": 394,
+      "userId": 169,
+      "isAI": true,
+      "type": "learn",
+      "status": "pending",
+      "estimatedMinutes": 45
+    },
+    {
+      "id": 2490,
+      "goalId": 394,
+      "userId": 169,
+      "isAI": true,
+      "type": "practice",
+      "status": "pending",
+      "estimatedMinutes": 60
+    },
+    {
+      "id": 2491,
+      "goalId": 394,
+      "userId": 169,
+      "isAI": true,
+      "type": "review",
+      "status": "pending",
+      "estimatedMinutes": 35
+    },
+    {
+      "id": 2492,
+      "goalId": 394,
+      "userId": 169,
+      "isAI": true,
+      "type": "reflect",
+      "status": "pending",
+      "estimatedMinutes": 15
+    },
+    {
+      "id": 2493,
+      "goalId": 394,
+      "userId": 169,
+      "isAI": true,
+      "type": "daily",
+      "status": "pending",
+      "estimatedMinutes": 15
+    },
+    {
+      "id": 2494,
+      "goalId": 395,
+      "userId": 169,
+      "isAI": false,
+      "type": "manual",
+      "status": "pending",
+      "estimatedMinutes": 20
+    },
+    {
+      "id": 2495,
+      "goalId": 395,
+      "userId": 169,
+      "isAI": false,
+      "type": "manual",
+      "status": "pending",
+      "estimatedMinutes": 15
+    },
+    {
+      "id": 2496,
+      "goalId": 395,
+      "userId": 169,
+      "isAI": false,
+      "type": "manual",
+      "status": "pending",
+      "estimatedMinutes": 20
     }
   ]
 }

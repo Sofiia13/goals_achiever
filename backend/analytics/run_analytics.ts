@@ -19,7 +19,6 @@ async function main() {
     },
   });
 
-  // Формуємо плоский формат для Python
   const usersData = users.map((u) => ({
     id: u.id,
     name: u.name,
@@ -48,6 +47,8 @@ async function main() {
       completed: g.completedAt !== null,
       taskCount: g.tasks.length,
       tasksDone: g.tasks.filter((t) => t.status === "done").length,
+      // ← потрібне для графіку "частота AI vs Manual по місяцях"
+      createdAt: g.createdAt?.toISOString() ?? null,
     })),
   );
 
@@ -73,7 +74,6 @@ async function main() {
     `✅ Saved analytics_data.json (${users.length} users, ${goalsData.length} goals, ${tasksData.length} tasks)`,
   );
 
-  // Запускаємо Python скрипт
   console.log("🐍 Running Python analytics...");
   try {
     execSync("python3 analytics.py", {
