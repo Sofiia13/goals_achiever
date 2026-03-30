@@ -25,15 +25,35 @@ const allowedOrigins = [
   .filter(Boolean)
   .map((origin) => normalizeOrigin(origin!.trim()));
 
+const defaultAllowedOriginPatterns: RegExp[] = [
+  /^https:\/\/.*\.vercel\.app$/,
+];
+
+const envAllowedOriginPatterns = (process.env.FRONTEND_URL_PATTERNS?.split(",") ?? [])
+  .map((pattern) => pattern.trim())
+  .filter(Boolean)
+  .map((pattern) => new RegExp(pattern));
+
+const allowedOriginPatterns = [
+  ...defaultAllowedOriginPatterns,
+  ...envAllowedOriginPatterns,
+];
+
 const corsOptions: cors.CorsOptions = {
   origin: (origin, callback) => {
     if (!origin) return callback(null, true);
 
     const requestOrigin = normalizeOrigin(origin);
-    if (allowedOrigins.includes(requestOrigin)) {
+    const isAllowedByList = allowedOrigins.includes(requestOrigin);
+    const isAllowedByPattern = allowedOriginPatterns.some((pattern) =>
+      pattern.test(requestOrigin)
+    );
+
+    if (isAllowedByList || isAllowedByPattern) {
       return callback(null, true);
     }
 
+    console.log(`CORS blocked for origin: ${origin}`);
     return callback(new Error(`CORS blocked for origin: ${origin}`));
   },
   credentials: true,
