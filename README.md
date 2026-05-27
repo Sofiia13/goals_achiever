@@ -1,4 +1,4 @@
-# 📘 Goals Achiever
+<img width="1280" height="859" alt="image" src="https://github.com/user-attachments/assets/f93add82-65f9-4200-b5cf-bc313ab1937b" /># 📘 Goals Achiever
 
 > *Веб-застосунок для постановки та досягнення цілей з AI-генерацією планів, системою гейміфікації та інтерактивною дорожньою картою прогресу.*
 
@@ -242,12 +242,12 @@ npm run dev
 
 ## 🖱️ Інструкція для користувача
 
-1. **Вітальна сторінка** — 3D-анімована заставка з кнопками:
+1. **Сторінка реєстрації/логіну** — форма з кнопками:
    - `Увійти` — авторизація існуючого користувача
    - `Зареєструватись` — створення нового акаунту
 
 2. **Після входу**:
-   - Кнопка `Нова ціль` — відкриває форму, де AI автоматично генерує план завдань за назвою та дедлайном
+   - Кнопка `New Goal` — відкриває форму, де AI автоматично генерує план завдань за назвою та дедлайном
    - `Дорожня карта` — 3D-візуалізація прогресу по станціях цілі
    - `Денні завдання` — AI пропонує завдання на сьогодні
 
@@ -260,18 +260,6 @@ npm run dev
    - Фото профілю, статистика активності
 
 5. **Аналітика** — графіки прогресу, активності та виконаних завдань
-
----
-
-## 📷 Приклади / скриншоти
-
-- Головна (вітальна) сторінка
-- Форма створення цілі з AI-планом
-- 3D дорожня карта прогресу
-- Профіль з гейміфікацією
-- Сторінка аналітики
-
-*(додайте зображення у папку `/screenshots/`)*
 
 ---
 
@@ -302,4 +290,15 @@ npm run dev
 ---
 
 ## 📷 Screenshots
-
+<img width="1280" height="823" alt="image" src="https://github.com/user-attachments/assets/d7ee5097-cda3-40bf-bb95-7e6eb07a9b0f" />
+<img width="1280" height="820" alt="image" src="https://github.com/user-attachments/assets/ef7d88df-b3f7-41b7-aca7-c3c38e22fc62" />
+<img width="1280" height="855" alt="image" src="https://github.com/user-attachments/assets/2cc657ba-8c73-457f-96bb-0d7bdef9d855" />
+<img width="1280" height="849" alt="image" src="https://github.com/user-attachments/assets/38f8058b-e254-4b72-bef1-d9d26d4b0844" />
+<img width="1280" height="851" alt="image" src="https://github.com/user-attachments/assets/7972b990-ce08-4db4-87b4-a77c05de511a" />
+<img width="1280" height="854" alt="image" src="https://github.com/user-attachments/assets/8494e017-7813-4a88-bde4-c285b94dc6c7" />
+<img width="1280" height="851" alt="image" src="https://github.com/user-attachments/assets/7fccd47c-305e-4ce0-a0ce-2d38ef31bf65" />
+<img width="1280" height="859" alt="image" src="https://github.com/user-attachments/assets/bed7b573-9cb5-4204-ae57-8cd0dd648970" />
+<img width="1280" height="854" alt="image" src="https://github.com/user-attachments/assets/2f15ac2f-fcd0-462d-bc4f-45c12e952086" />
+<img width="1280" height="855" alt="image" src="https://github.com/user-attachments/assets/8e087342-f200-4015-89d4-70639bd825da" />
+<img width="1280" height="849" alt="image" src="https://github.com/user-attachments/assets/92ee12d2-66fa-4e6d-ad75-0d534a0da1bd" />
+<img width="1280" height="851" alt="image" src="https://github.com/user-attachments/assets/2be8a0ef-050c-443d-89cc-2bf1c3c0eb10" />
