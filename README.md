@@ -1,4 +1,4 @@
-<img width="1280" height="859" alt="image" src="https://github.com/user-attachments/assets/f93add82-65f9-4200-b5cf-bc313ab1937b" /># 📘 Goals Achiever
+# 📘 Goals Achiever
 
 > *Веб-застосунок для постановки та досягнення цілей з AI-генерацією планів, системою гейміфікації та інтерактивною дорожньою картою прогресу.*
 
